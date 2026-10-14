@@ -61,7 +61,7 @@ export default function PortfolioSection() {
         {/* Feature Hero Card of Sampan Highway Inn */}
         <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-14 shadow-lg border border-stone-200">
           <Image
-            src="/images/highway-inn.webp"
+            src="/images/sampan_highway.jpg"
             alt="Sampan Highway Inn - Operating Project"
             fill
             className="object-cover"
