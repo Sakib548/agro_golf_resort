@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f6f8f2;
+  --surface: #ffffff;
+  --ink: #14261c;
+  --mute: #52665a;
+  --green: #0b4a32;
+  --green-dark: #07291c;
+  --lime: #66b447;
+  --lime-hover: #559e38;
+  --gold: #b8892b;
+  --gold-light: #d9aa4a;
+  --line: #d9e2d3;
+  --hero: #0b3a28;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: "Hind Siliguri", "DM Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+h1, h2, h3, h4, .font-heading {
+  font-family: "Bricolage Grotesque", "Lora", serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f4ec;
+}
+::-webkit-scrollbar-thumb {
+  background: #b5c7b0;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0b4a32;
+}
+
+/* Focus outline */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
