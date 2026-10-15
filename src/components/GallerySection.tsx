@@ -15,11 +15,60 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   // Sports & Games
   {
+    title: "Championship Fairway Golf Swing",
+    category: "sports",
+    src: "/images/golf-swing-action.webp",
+    tag: "Golf Swing Action",
+    desc: "Player executing a dynamic tee-off drive over the lake hazard in afternoon golden sunlight.",
+  },
+  {
+    title: "Tournament Putting Green & Pin",
+    category: "sports",
+    src: "/images/golf-putting-green.webp",
+    tag: "Putting Action",
+    desc: "Golfer lining up a birdie putt towards the yellow flagstick with partner and golf cart alongside.",
+  },
+  {
+    title: "Golf Academy Tiered Driving Range",
+    category: "sports",
+    src: "/images/golf-driving-range.webp",
+    tag: "Driving Range",
+    desc: "Covered luxury driving range bays with automated ball targets spanning a misty valley.",
+  },
+  {
     title: "Championship 9-Hole Golf Fairway",
     category: "sports",
     src: "/images/GOLF.webp",
     tag: "Golf Course",
     desc: "Scenic golf course with water bodies and greens.",
+  },
+  {
+    title: "Championship Lake-View Fairway",
+    category: "sports",
+    src: "/images/high-angle-view-golf-course-by-lake (2).webp",
+    tag: "Lake Fairways",
+    desc: "Aerial view of championship fairways contoured around natural water hazards.",
+  },
+  {
+    title: "Golf Putting Greens & Carts",
+    category: "sports",
+    src: "/images/golf-vehicle-fiesld.webp",
+    tag: "Golf Greens",
+    desc: "Golf buggies and practice greens contoured into the hillside landscape.",
+  },
+  {
+    title: "Sunset Putting Green & Golf Cart",
+    category: "sports",
+    src: "/images/scenic-villa-overlooking-golf-course-(2).webp",
+    tag: "Sunset Green",
+    desc: "Evening putting green with golf bag and cart positioned along the lakeside villa contour.",
+  },
+  {
+    title: "Modern Golf Clubhouse & Pro Shop",
+    category: "sports",
+    src: "/images/modern-architecture-golf-course-clubhouses.webp",
+    tag: "Clubhouse",
+    desc: "Luxury clubhouse facilities with player lounges, locker rooms, and terrace viewpoints.",
   },
   {
     title: "Football Fields & Turfs",
@@ -159,6 +208,13 @@ const galleryItems: GalleryItem[] = [
     desc: "Private waterfront villas overlooking natural ponds with wooden decks.",
   },
   {
+    title: "Fairway Overlook Luxury Villas",
+    category: "stay",
+    src: "/images/scenic-villa-overlooking-golf-course (1).webp",
+    tag: "Golf Villas",
+    desc: "Exclusive villas situated along fairway edges offering private balcony views of the greens.",
+  },
+  {
     title: "Presidential Luxury Bedroom Suites",
     category: "stay",
     src: "/images/Room-Web-image.webp",
@@ -230,6 +286,48 @@ const galleryItems: GalleryItem[] = [
     tag: "Wellness",
     desc: "Therapeutic massage treatments, herbal steam rooms, and salon care.",
   },
+  {
+    title: "Sunset Outdoor Clubhouse Lounge",
+    category: "leisure",
+    src: "/images/cozy-outdoor-golf-clubhouse-seating-sunset.webp",
+    tag: "Clubhouse Lounge",
+    desc: "Cozy open-air terrace with plush sofa seating facing the sunset across the fairways.",
+  },
+  {
+    title: "Executive Library & Reading Lounge",
+    category: "leisure",
+    src: "/images/reading-lounge.webp",
+    tag: "Reading Lounge",
+    desc: "Quiet reading sanctuary with curated books, private workspaces, and garden views.",
+  },
+  {
+    title: "Private Fireside Dining Lounge",
+    category: "leisure",
+    src: "/images/restaurant-table-12-persons-with-blue-chairs-fireplace-white-brick-walls-wide-window.webp",
+    tag: "Dining Lounge",
+    desc: "Private 12-person dining hall and fireside lounge for intimate celebrations.",
+  },
+  {
+    title: "Aerial 3D Master View & Amusement Park",
+    category: "leisure",
+    src: "/images/1.webp",
+    tag: "3D Aerial Master View",
+    desc: "Official 3D architectural aerial rendering showing resort hotel, water park, lake, and golf grounds.",
+  },
+  {
+    title: "Grand Entrance Gateway & Fountains",
+    category: "leisure",
+    src: "/images/3.webp",
+    tag: "Grand Entrance",
+    desc: "Majestic daytime entrance portal with cascading water fountains, drop tower, and palm tree promenade.",
+  },
+  {
+    title: "Night Illumination Grand Gateway & Fountains",
+    category: "leisure",
+    src: "/images/4.webp",
+    tag: "Night Entrance",
+    desc: "Stunning night illumination with full moon, lit fountains, and glowing neon resort attractions.",
+  },
 
   // Documents & Certificates
   {
@@ -252,6 +350,13 @@ const galleryItems: GalleryItem[] = [
     src: "/images/certificate-of-share.webp",
     tag: "Deed & Title",
     desc: "Land ownership certificate backing physical sub-kabula deed registration.",
+  },
+  {
+    title: "Official 100+ Acre Masterplan Drawing",
+    category: "docs",
+    src: "/images/2.webp",
+    tag: "Masterplan Blueprint",
+    desc: "Top-down architectural masterplan drawing showing signature 'S' resort complex, water rides, amphitheatre, and 100+ acre estate zones.",
   },
 ];
 
@@ -299,14 +404,18 @@ export default function GallerySection() {
         {/* Filter Pills */}
         <div className="flex flex-wrap gap-2 pb-8 border-b border-stone-100 mb-10">
           {[
-            { id: "all", label: "All Photos", count: galleryItems.length },
-            { id: "sports", label: "Golf & Sports Arena", count: 6 },
-            { id: "agro", label: "Agro, Wheat & Paddy Fields", count: 6 },
-            { id: "stay", label: "Cottages & Villas", count: 5 },
-            { id: "leisure", label: "Dining, Pools & Leisure", count: 7 },
-            { id: "docs", label: "Cards & Certificates", count: 3 },
+            { id: "all", label: "All Photos" },
+            { id: "sports", label: "Golf & Sports Arena" },
+            { id: "agro", label: "Agro, Wheat & Paddy Fields" },
+            { id: "stay", label: "Cottages & Villas" },
+            { id: "leisure", label: "Dining, Pools & Lounge" },
+            { id: "docs", label: "Cards & Certificates" },
           ].map((tab) => {
             const isActive = activeTab === tab.id;
+            const count =
+              tab.id === "all"
+                ? galleryItems.length
+                : galleryItems.filter((item) => item.category === tab.id).length;
             return (
               <button
                 key={tab.id}
@@ -319,7 +428,7 @@ export default function GallerySection() {
                 }`}
               >
                 <span>{tab.label}</span>
-                <span className="ml-1.5 opacity-60 text-[11px]">({tab.count})</span>
+                <span className="ml-1.5 opacity-60 text-[11px]">({count})</span>
               </button>
             );
           })}

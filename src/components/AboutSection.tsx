@@ -5,8 +5,13 @@ import { Eye, Target, Lightbulb, Leaf, Award, Users, Users2, Flag, TrendingUp, B
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-[#ffffff] text-[#14261c] border-t border-stone-200">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-gradient-to-b from-[#f8faf6] via-white to-[#f4f7f0] text-[#14261c] border-t border-stone-200 relative overflow-hidden">
+      {/* Ambient background light glows for glassmorphism refraction */}
+      <div className="absolute top-20 -left-40 size-96 rounded-full bg-emerald-200/30 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 -right-40 size-96 rounded-full bg-lime-200/30 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-20 left-1/3 size-96 rounded-full bg-amber-200/20 blur-3xl pointer-events-none" />
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="hero-reveal max-w-3xl mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100/70 px-3.5 py-1 rounded-full">
@@ -20,31 +25,33 @@ export default function AboutSection() {
           </p>
         </div>
 
-        {/* Feature Wide Banner */}
-        <div className="reveal-slow relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-14 shadow-lg border border-stone-200">
+        {/* Feature Wide Banner with Floating Glass Card */}
+        <div className="reveal-slow relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-14 shadow-2xl border border-stone-200/80">
           <Image
             src="/images/lakeside-villas.webp"
             alt="Sampan Agro & Golf Resort Landscape"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-          <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 text-white max-w-2xl">
-            <span className="inline-block text-xs uppercase tracking-wider font-bold text-[#b6e59c] bg-emerald-950/80 px-3 py-1 rounded-full mb-2">
-              Podunapur, Moulvibazar
-            </span>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold leading-tight">
-              Where untouched nature meets five-star luxury.
-            </h3>
-            <p className="text-emerald-100/90 text-xs sm:text-sm mt-1">
-              Preserving 10 natural water ponds while creating Bangladesh&apos;s foremost agro-tourism and championship golf retreat.
-            </p>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-auto max-w-2xl">
+            <div className="glassmorphism-dark rounded-2xl p-5 sm:p-7 text-white">
+              <span className="inline-block text-xs uppercase tracking-wider font-bold text-[#b6e59c] bg-white/10 backdrop-blur-md px-3 py-1 rounded-full mb-2">
+                Podunapur, Moulvibazar
+              </span>
+              <h3 className="font-heading text-xl sm:text-3xl font-bold leading-tight">
+                Where untouched nature meets five-star luxury.
+              </h3>
+              <p className="text-emerald-100/90 text-xs sm:text-sm mt-1.5">
+                Preserving 10 natural water ponds while creating Bangladesh&apos;s foremost agro-tourism and championship golf retreat.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* 3 Pillar Summary Cards */}
+        {/* 3 Pillar Summary Cards - Glassmorphism */}
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="rounded-2xl border-l-4 border-l-[#66b447] border border-stone-200 bg-[#fbfcf9] p-6 sm:p-7">
+          <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#66b447] p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1">
             <span className="text-xs uppercase font-bold text-[#0b4a32] tracking-wider">The Project</span>
             <h4 className="font-heading text-xl font-bold text-[#14261c] mt-2 mb-2">Sampan Developments Ltd</h4>
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -52,7 +59,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="rounded-2xl border-l-4 border-l-[#b8892b] border border-stone-200 bg-[#fbfcf9] p-6 sm:p-7">
+          <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#b8892b] p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1">
             <span className="text-xs uppercase font-bold text-[#b8892b] tracking-wider">The Location</span>
             <h4 className="font-heading text-xl font-bold text-[#14261c] mt-2 mb-2">Podunapur, Moulvibazar</h4>
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -60,7 +67,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="rounded-2xl border-l-4 border-l-[#0b4a32] border border-stone-200 bg-[#fbfcf9] p-6 sm:p-7">
+          <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#0b4a32] p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1">
             <span className="text-xs uppercase font-bold text-[#0b4a32] tracking-wider">The Positioning</span>
             <h4 className="font-heading text-xl font-bold text-[#14261c] mt-2 mb-2">Integrated Eco-Luxury</h4>
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -69,10 +76,11 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Vision & Mission */}
+        {/* Vision & Mission - High End Glass Panels */}
         <div className="reveal-slow grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          <div className="rounded-3xl border border-stone-200/90 bg-gradient-to-br from-emerald-950 to-[#0b3a28] text-white p-8 sm:p-10 shadow-md">
-            <div className="size-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+          <div className="glassmorphism-dark rounded-3xl text-white p-8 sm:p-10 relative overflow-hidden group">
+            <div className="absolute -top-24 -right-24 size-48 rounded-full bg-emerald-500/15 blur-2xl group-hover:scale-125 transition-transform duration-700" />
+            <div className="size-12 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-6">
               <Eye className="size-6 text-[#b6e59c]" />
             </div>
             <span className="text-xs uppercase tracking-widest text-[#b6e59c] font-bold">
@@ -86,8 +94,9 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-stone-200/90 bg-[#f6f8f2] p-8 sm:p-10 shadow-sm">
-            <div className="size-12 rounded-xl bg-emerald-100 flex items-center justify-center mb-6 text-[#0b4a32]">
+          <div className="glassmorphism rounded-3xl p-8 sm:p-10 relative overflow-hidden group">
+            <div className="absolute -top-24 -right-24 size-48 rounded-full bg-lime-400/10 blur-2xl group-hover:scale-125 transition-transform duration-700" />
+            <div className="size-12 rounded-xl bg-emerald-100/80 backdrop-blur-md border border-emerald-200 flex items-center justify-center mb-6 text-[#0b4a32]">
               <Target className="size-6" />
             </div>
             <span className="text-xs uppercase tracking-widest text-[#0b4a32] font-bold">
@@ -102,14 +111,14 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Guiding Principles */}
+        {/* Guiding Principles - Frosted Glass Cards */}
         <div className="reveal-slow mb-20">
           <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#14261c] mb-8 text-center">
             What guides the group
           </h3>
           <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <div className="size-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center mb-3">
+            <div className="glassmorphism rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+              <div className="size-11 rounded-xl bg-amber-50/80 border border-amber-200/70 flex items-center justify-center mb-3">
                 <Lightbulb className="size-5 text-amber-600" />
               </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Innovation</h4>
@@ -118,8 +127,8 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <div className="size-11 rounded-xl bg-lime-50 border border-lime-100 flex items-center justify-center mb-3">
+            <div className="glassmorphism rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+              <div className="size-11 rounded-xl bg-lime-50/80 border border-lime-200/70 flex items-center justify-center mb-3">
                 <Leaf className="size-5 text-[#559e38]" />
               </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Sustainability</h4>
@@ -128,8 +137,8 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <div className="size-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center mb-3">
+            <div className="glassmorphism rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+              <div className="size-11 rounded-xl bg-amber-50/80 border border-amber-200/70 flex items-center justify-center mb-3">
                 <Award className="size-5 text-amber-600" />
               </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Excellence</h4>
@@ -138,8 +147,8 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <div className="size-11 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-3">
+            <div className="glassmorphism rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
+              <div className="size-11 rounded-xl bg-emerald-50/80 border border-emerald-200/70 flex items-center justify-center mb-3">
                 <Users className="size-5 text-[#0b4a32]" />
               </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Community</h4>
@@ -150,10 +159,10 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Who the resort is for */}
-        <div className="reveal-slow rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 sm:p-12 mb-20">
+        {/* Who the resort is for - Glass Container & Cards */}
+        <div className="reveal-slow glassmorphism rounded-3xl p-8 sm:p-12 mb-20">
           <div className="max-w-xl mb-8">
-            <span className="text-xs uppercase tracking-widest text-[#0b4a32] font-bold bg-emerald-100 px-3 py-1 rounded-full">
+            <span className="text-xs uppercase tracking-widest text-[#0b4a32] font-bold bg-emerald-100/80 px-3 py-1 rounded-full">
               Audience
             </span>
             <h3 className="font-heading text-3xl font-bold text-[#14261c] mt-2">
@@ -162,7 +171,7 @@ export default function AboutSection() {
           </div>
 
           <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm">
+            <div className="glassmorphism rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
               <div className="size-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-3 text-[#0b4a32]">
                 <Users2 className="size-5" />
               </div>
@@ -172,7 +181,7 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm">
+            <div className="glassmorphism rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
               <div className="size-10 rounded-xl bg-lime-50 border border-lime-100 flex items-center justify-center mb-3 text-[#559e38]">
                 <Flag className="size-5" />
               </div>
@@ -182,7 +191,7 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm">
+            <div className="glassmorphism rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
               <div className="size-10 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center mb-3 text-[#b8892b]">
                 <TrendingUp className="size-5" />
               </div>
@@ -192,7 +201,7 @@ export default function AboutSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm">
+            <div className="glassmorphism rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
               <div className="size-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-3 text-blue-800">
                 <Building2 className="size-5" />
               </div>

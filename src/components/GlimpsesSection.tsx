@@ -5,34 +5,64 @@ import Link from "next/link";
 
 const glimpses = [
   {
-    title: "Nine-hole golf course",
-    tag: "Championship Fairway",
-    image: "/images/GOLF.webp",
+    title: "Championship golf swing",
+    tag: "9-Hole Course",
+    image: "/images/golf-swing-action.webp",
   },
   {
-    title: "Lakeside villas",
+    title: "Grand entrance gateway",
+    tag: "Grand Entrance",
+    image: "/images/3.webp",
+  },
+  {
+    title: "Lakeside villas & cottages",
     tag: "Sub-Kabula Living",
     image: "/images/lakeside-villas.webp",
   },
   {
-    title: "Organic orchards",
+    title: "100+ acre masterplan drawing",
+    tag: "Architectural Blueprint",
+    image: "/images/2.webp",
+  },
+  {
+    title: "Sunset clubhouse lounge",
+    tag: "Clubhouse Leisure",
+    image: "/images/cozy-outdoor-golf-clubhouse-seating-sunset.webp",
+  },
+  {
+    title: "Night illuminated gateway",
+    tag: "Night Ambiance",
+    image: "/images/4.webp",
+  },
+  {
+    title: "Tournament putting green",
+    tag: "Putting Action",
+    image: "/images/golf-putting-green.webp",
+  },
+  {
+    title: "3D aerial park & lake view",
+    tag: "Amusement & Lake",
+    image: "/images/1.webp",
+  },
+  {
+    title: "Organic agro orchards",
     tag: "Farm & Agro",
     image: "/images/Argo.webp",
   },
   {
-    title: "Swimming pool",
-    tag: "4 Luxury Pools",
+    title: "4 Luxury swimming pools",
+    tag: "Aquatic Oasis",
     image: "/images/Swimming-Pool.webp",
   },
   {
-    title: "Boating and kayaking",
-    tag: "10 Natural Ponds",
+    title: "10 Natural ponds & kayaking",
+    tag: "Kayaking Docks",
     image: "/images/Boating-and-Kayaking.webp",
   },
   {
-    title: "Evening bonfire",
-    tag: "Lakeside Leisure",
-    image: "/images/Movie-Theater.webp",
+    title: "Executive reading lounge",
+    tag: "Quiet Retreat",
+    image: "/images/reading-lounge.webp",
   },
 ];
 
@@ -104,8 +134,8 @@ export default function GlimpsesSection() {
           </div>
         </div>
 
-        {/* 6 Glimpse Photos Grid */}
-        <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+        {/* 8 Glimpse Photos Grid */}
+        <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {glimpses.map((item, idx) => (
             <Link
               key={idx}
@@ -117,7 +147,7 @@ export default function GlimpsesSection() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />

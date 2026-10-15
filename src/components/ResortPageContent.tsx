@@ -29,6 +29,27 @@ interface GalleryPhoto {
 const galleryPhotos: GalleryPhoto[] = [
   // 1. Elite Sports & Athletics
   {
+    title: "Championship Fairway Golf Swing",
+    category: "sports",
+    src: "/images/golf-swing-action.webp",
+    tag: "Golf Swing Action",
+    desc: "Player executing a dynamic tee-off drive over the lake hazard in afternoon golden sunlight.",
+  },
+  {
+    title: "Tournament Putting Green & Pin",
+    category: "sports",
+    src: "/images/golf-putting-green.webp",
+    tag: "Putting Action",
+    desc: "Golfer lining up a birdie putt towards the yellow flagstick with partner and golf cart alongside.",
+  },
+  {
+    title: "Golf Academy Tiered Driving Range",
+    category: "sports",
+    src: "/images/golf-driving-range.webp",
+    tag: "Driving Range",
+    desc: "Covered luxury driving range bays with automated ball targets spanning a misty valley.",
+  },
+  {
     title: "Championship 9-Hole Golf Course",
     category: "sports",
     src: "/images/GOLF.webp",
@@ -36,11 +57,32 @@ const galleryPhotos: GalleryPhoto[] = [
     desc: "Nine holes with scenic water ponds, short & long driving ranges, and professional trainers.",
   },
   {
+    title: "Championship Lake-View Fairway",
+    category: "sports",
+    src: "/images/high-angle-view-golf-course-by-lake (2).webp",
+    tag: "Lake Fairways",
+    desc: "Aerial view of championship fairways contoured around natural water hazards.",
+  },
+  {
     title: "International Golf Green & Contours",
     category: "sports",
     src: "/images/golf-vehicle-fiesld.webp",
     tag: "Golf Greens",
     desc: "Undulating fairways surrounded by Moulvibazar's natural tea valley topography.",
+  },
+  {
+    title: "Sunset Putting Green & Golf Cart",
+    category: "sports",
+    src: "/images/scenic-villa-overlooking-golf-course-(2).webp",
+    tag: "Sunset Green",
+    desc: "Evening putting green with golf bag and cart positioned along the lakeside villa contour.",
+  },
+  {
+    title: "Modern Golf Course Clubhouse",
+    category: "sports",
+    src: "/images/modern-architecture-golf-course-clubhouses.webp",
+    tag: "Golf Clubhouse",
+    desc: "Luxury clubhouse facilities with player lounges, pro shop, and terrace viewpoints.",
   },
   {
     title: "FIFA Football Turfs & Tournaments",
@@ -107,6 +149,13 @@ const galleryPhotos: GalleryPhoto[] = [
     tag: "Living Room",
     desc: "Family living suites designed for leisurely gatherings and weekend retreats.",
   },
+  {
+    title: "Fairway Overlook Luxury Villas",
+    category: "stay",
+    src: "/images/scenic-villa-overlooking-golf-course (1).webp",
+    tag: "Golf Villas",
+    desc: "Exclusive villas situated along fairway edges offering private balcony views of the greens.",
+  },
 
   // 3. Aquatic Leisure, Dining & Wellness
   {
@@ -157,6 +206,48 @@ const galleryPhotos: GalleryPhoto[] = [
     src: "/images/Salon-and-Spa.webp",
     tag: "Spa & Salon",
     desc: "Rejuvenating therapies, herbal steam rooms, sauna, and premium salon grooming.",
+  },
+  {
+    title: "Sunset Outdoor Clubhouse Lounge",
+    category: "leisure",
+    src: "/images/cozy-outdoor-golf-clubhouse-seating-sunset.webp",
+    tag: "Clubhouse Lounge",
+    desc: "Cozy open-air terrace with plush sofa seating facing the sunset across the fairways.",
+  },
+  {
+    title: "Executive Library & Reading Lounge",
+    category: "leisure",
+    src: "/images/reading-lounge.webp",
+    tag: "Reading Lounge",
+    desc: "Quiet reading sanctuary with curated books, private workspaces, and garden views.",
+  },
+  {
+    title: "Private Fireside Dining Lounge",
+    category: "leisure",
+    src: "/images/restaurant-table-12-persons-with-blue-chairs-fireplace-white-brick-walls-wide-window.webp",
+    tag: "Dining Lounge",
+    desc: "Private 12-person dining hall and fireside lounge for intimate celebrations.",
+  },
+  {
+    title: "Aerial 3D Master View & Amusement Park",
+    category: "leisure",
+    src: "/images/1.webp",
+    tag: "3D Aerial Master View",
+    desc: "Official 3D architectural aerial rendering showing resort hotel, water park, lake, and golf grounds.",
+  },
+  {
+    title: "Grand Entrance Gateway & Fountains",
+    category: "leisure",
+    src: "/images/3.webp",
+    tag: "Grand Entrance",
+    desc: "Majestic daytime entrance portal with cascading water fountains, drop tower, and palm tree promenade.",
+  },
+  {
+    title: "Night Illumination Grand Gateway & Fountains",
+    category: "leisure",
+    src: "/images/4.webp",
+    tag: "Night Entrance",
+    desc: "Stunning night illumination with full moon, lit fountains, and glowing neon resort attractions.",
   },
 
   // 4. Nature, Agro-Ecosystem & Farmland
@@ -274,6 +365,13 @@ const galleryPhotos: GalleryPhoto[] = [
     tag: "Share Certificate",
     desc: "Land ownership certificate backing physical sub-kabula deed registration.",
   },
+  {
+    title: "Official 100+ Acre Masterplan Drawing",
+    category: "docs",
+    src: "/images/2.webp",
+    tag: "Masterplan Blueprint",
+    desc: "Top-down architectural masterplan drawing showing signature 'S' resort complex, water rides, amphitheatre, and 100+ acre estate zones.",
+  },
 ];
 
 const categoryTabs = [
@@ -295,12 +393,16 @@ export default function ResortPageContent() {
       : galleryPhotos.filter((p) => p.category === activeTab);
 
   return (
-    <div className="bg-[#f6f8f2] text-[#14261c]">
+    <div className="bg-gradient-to-b from-[#f6f8f2] via-white to-[#f4f7f0] text-[#14261c] relative overflow-hidden">
+      {/* Ambient background light glows for glassmorphism refraction */}
+      <div className="absolute top-1/4 -right-48 size-[500px] rounded-full bg-emerald-100/40 blur-3xl pointer-events-none" />
+      <div className="absolute top-2/3 -left-48 size-[500px] rounded-full bg-lime-100/40 blur-3xl pointer-events-none" />
+
       {/* 1. HERO / HEADER & AERIAL VIEW */}
       <section className="relative bg-[#07291c] text-white overflow-hidden pt-12 pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="hero-reveal max-w-3xl mb-8">
-            <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#b6e59c] bg-white/10 px-3.5 py-1 rounded-full mb-3">
+            <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#b6e59c] bg-white/10 backdrop-blur-md px-3.5 py-1 rounded-full mb-3">
               Podunapur, Moulvibazar Sadar &bull; 100+ Acres
             </span>
             <h1 className="font-heading text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-4">
@@ -311,23 +413,23 @@ export default function ResortPageContent() {
             </p>
           </div>
 
-          {/* Aerial View Banner of the Estate */}
+          {/* Aerial View Banner with Floating Frosted Glass Deck */}
           <div className="hero-reveal relative aspect-[21/9] w-full rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/40">
             <Image
-              src="/images/golf-hero.webp"
-              alt="Aerial view of the 100+ acre Sampan Agro & Golf Resort estate"
+              src="/images/1.webp"
+              alt="Official 3D Aerial View of the Sampan Agro & Golf Resort estate and amusement park"
               fill
               priority
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white">
+            <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 glassmorphism-dark rounded-2xl p-5 sm:p-6 shadow-2xl flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white">
               <div>
-                <span className="text-xs uppercase font-bold tracking-wider text-[#b6e59c] bg-black/50 backdrop-blur-md px-3 py-1 rounded-full">
-                  Aerial View of the Estate
+                <span className="text-xs uppercase font-bold tracking-wider text-[#b6e59c] bg-white/10 backdrop-blur-md px-3 py-1 rounded-full">
+                  Official 3D Aerial Master View
                 </span>
                 <p className="font-heading text-xl sm:text-2xl font-bold mt-1.5">
-                  100+ Acres of Championship Golf, Ponds, Farmlands &amp; Luxury Stays
+                  100+ Acres of Championship Golf, Amusement Park, Ponds &amp; Luxury Stays
                 </p>
               </div>
               <div className="shrink-0 flex gap-3">
@@ -350,7 +452,7 @@ export default function ResortPageContent() {
       </section>
 
       {/* 2. SIGNATURE EXPERIENCES (4 CARDS MATCHING HTML) */}
-      <section className="py-20 bg-[#ffffff] border-b border-stone-200">
+      <section className="py-20 bg-transparent border-b border-stone-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="reveal-slow max-w-2xl mb-12">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
@@ -365,7 +467,7 @@ export default function ResortPageContent() {
           </div>
 
           <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-2xl border-l-4 border-l-[#0b4a32] border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#0b4a32] p-6 transition-all duration-300 hover:-translate-y-1">
               <div className="size-11 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-3 text-[#0b4a32]">
                 <Flag className="size-5" />
               </div>
@@ -377,7 +479,7 @@ export default function ResortPageContent() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-l-4 border-l-[#66b447] border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#66b447] p-6 transition-all duration-300 hover:-translate-y-1">
               <div className="size-11 rounded-xl bg-lime-50 border border-lime-100 flex items-center justify-center mb-3 text-[#559e38]">
                 <UtensilsCrossed className="size-5" />
               </div>
@@ -389,7 +491,7 @@ export default function ResortPageContent() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-l-4 border-l-[#b8892b] border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#b8892b] p-6 transition-all duration-300 hover:-translate-y-1">
               <div className="size-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center mb-3 text-[#b8892b]">
                 <Music className="size-5" />
               </div>
@@ -401,7 +503,7 @@ export default function ResortPageContent() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-l-4 border-l-[#0284c7] border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#0284c7] p-6 transition-all duration-300 hover:-translate-y-1">
               <div className="size-11 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center mb-3 text-[#0284c7]">
                 <Sparkles className="size-5" />
               </div>
@@ -416,10 +518,10 @@ export default function ResortPageContent() {
         </div>
       </section>
 
-      {/* 3. STAY (LUXURY VILLAS, COTTAGES, PRESIDENTIAL SUITES) */}
-      <section className="py-20 bg-[#f6f8f2]">
+      {/* 3. STAY (LUXURY VILLAS, COTTAGES, PRESIDENTIAL SUITES) - Frosted Glass Container */}
+      <section className="py-20 bg-transparent">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="reveal-slow rounded-3xl border border-stone-200 bg-white p-8 sm:p-12 shadow-sm">
+          <div className="reveal-slow glassmorphism rounded-3xl p-8 sm:p-12 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#b8892b] bg-amber-100/80 px-3 py-1 rounded-full">
@@ -436,11 +538,11 @@ export default function ResortPageContent() {
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 text-center mb-6">
-                  <div className="rounded-xl border border-stone-200 bg-[#fbfcf9] p-4">
+                  <div className="glassmorphism rounded-xl p-4 shadow-sm">
                     <span className="block font-heading text-xl font-bold text-[#0b4a32]">100% Sub-Kabula</span>
                     <span className="text-xs text-stone-500 font-medium">Deeded Villa Ownership</span>
                   </div>
-                  <div className="rounded-xl border border-stone-200 bg-[#fbfcf9] p-4">
+                  <div className="glassmorphism rounded-xl p-4 shadow-sm">
                     <span className="block font-heading text-xl font-bold text-[#b8892b]">Managed</span>
                     <span className="text-xs text-stone-500 font-medium">By Sampan Group</span>
                   </div>
@@ -463,7 +565,7 @@ export default function ResortPageContent() {
                 </div>
               </div>
 
-              <div className="lg:col-span-6 grid grid-cols-2 gap-4">
+              <div className="lg:col-span-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-3.5">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-stone-200">
                   <Image
                     src="/images/lakeside-villas.webp"
@@ -488,6 +590,28 @@ export default function ResortPageContent() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-stone-200">
                   <Image
+                    src="/images/3.webp"
+                    alt="Grand Entrance Gateway & Fountains"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-2 left-2 right-2 bg-black/60 backdrop-blur-sm rounded-lg p-2 text-white text-[11px] font-semibold text-center">
+                    Grand Entrance Gateway
+                  </div>
+                </div>
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-stone-200">
+                  <Image
+                    src="/images/cozy-outdoor-golf-clubhouse-seating-sunset.webp"
+                    alt="Sunset lounge"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute bottom-2 left-2 right-2 bg-black/60 backdrop-blur-sm rounded-lg p-2 text-white text-[11px] font-semibold text-center">
+                    Sunset Clubhouse Lounge
+                  </div>
+                </div>
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-stone-200">
+                  <Image
                     src="/images/Room-Web-image.webp"
                     alt="Presidential suite"
                     fill
@@ -499,13 +623,13 @@ export default function ResortPageContent() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-stone-200">
                   <Image
-                    src="/images/Room-Web-image7.webp"
-                    alt="Living room"
+                    src="/images/reading-lounge.webp"
+                    alt="Reading lounge"
                     fill
                     className="object-cover"
                   />
                   <div className="absolute bottom-2 left-2 right-2 bg-black/60 backdrop-blur-sm rounded-lg p-2 text-white text-[11px] font-semibold text-center">
-                    Living Lounge
+                    Executive Reading Lounge
                   </div>
                 </div>
               </div>
@@ -515,9 +639,9 @@ export default function ResortPageContent() {
       </section>
 
       {/* 4. MASTERPLAN SECTION */}
-      <section className="py-20 bg-[#ffffff] border-y border-stone-200">
+      <section className="py-20 bg-transparent border-y border-stone-200/80">
         <div className="reveal-slow mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100/80 px-3.5 py-1 rounded-full">
             100+ Acre Architectural Map
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#14261c] mt-3 mb-3">
@@ -527,40 +651,58 @@ export default function ResortPageContent() {
             Masterplan drawing of the 100+ acres, thoughtfully preserving 10 natural ponds, integrating international sports fields, organic farmlands, and villa zones.
           </p>
 
-          <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden shadow-xl border border-stone-200 bg-stone-100 flex items-center justify-center">
+          <div className="relative aspect-[21/9] sm:aspect-[16/8] w-full rounded-3xl overflow-hidden shadow-2xl border border-stone-300 bg-stone-900 flex items-center justify-center">
             <Image
-              src="/images/golf-hero.webp"
-              alt="Masterplan map of the 100+ acres"
+              src="/images/2.webp"
+              alt="Official 3D Masterplan drawing of the 100+ acre estate"
               fill
-              className="object-cover opacity-75"
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-[#07291c]/75 backdrop-blur-[2px] flex flex-col items-center justify-center p-6 text-white">
-              <div className="size-16 rounded-full bg-white/10 border border-white/30 flex items-center justify-center mb-3 shadow-lg">
-                <Map className="size-8 text-white" />
-              </div>
-              <h3 className="font-heading text-2xl sm:text-3xl font-bold">
-                100+ Acre Masterplan Drawing
-              </h3>
-              <p className="text-emerald-100 text-xs sm:text-sm max-w-lg mt-1 mb-5">
-                Full high-resolution masterplan blueprints, architectural layouts, and zoning diagrams are accessible in our official brochure.
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-3">
-                <a
-                  href="/brochure.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-xl bg-[#66b447] px-6 py-3 text-xs uppercase tracking-wider font-bold text-[#06210f] hover:bg-[#77c955] transition-all shadow-md"
-                >
-                  <FileText className="size-4" />
-                  <span>View Official Brochure</span>
-                  <span>↗</span>
-                </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3 text-xs uppercase tracking-wider font-bold text-white hover:bg-white/20 transition-all"
-                >
-                  <span>Request Masterplan Blueprint</span>
-                </Link>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-5 sm:p-8 text-white">
+              <div className="glassmorphism-dark rounded-2xl p-5 sm:p-7 max-w-2xl text-left shadow-2xl">
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-3.5 py-1 text-xs uppercase tracking-wider font-bold text-[#b6e59c] mb-2.5">
+                  <Map className="size-4" />
+                  <span>Official 3D Masterplan Layout</span>
+                </div>
+                <h3 className="font-heading text-xl sm:text-3xl font-bold">
+                  100+ Acre Masterplan Drawing
+                </h3>
+                <p className="text-emerald-100/90 text-xs sm:text-sm mt-1 mb-4 leading-relaxed">
+                  Top-down architectural masterplan featuring the signature &ldquo;S&rdquo; curved resort complex, amphitheatre, waterpark, 10 natural ponds, and championship 9-hole golf grounds.
+                </p>
+                <div className="flex flex-wrap items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setSelectedPhoto({
+                        title: "Official 100+ Acre Masterplan Drawing",
+                        category: "docs",
+                        src: "/images/2.webp",
+                        tag: "Masterplan Blueprint",
+                        desc: "Top-down architectural masterplan drawing showing signature 'S' resort complex, water rides, amphitheatre, and 100+ acre estate zones.",
+                      })
+                    }
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#66b447] px-4 sm:px-5 py-2.5 text-xs uppercase tracking-wider font-bold text-[#06210f] hover:bg-[#77c955] transition-all shadow-md active:scale-95"
+                  >
+                    <Search className="size-4" />
+                    <span>Enlarge Masterplan</span>
+                  </button>
+                  <a
+                    href="/brochure.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md px-4 sm:px-5 py-2.5 text-xs uppercase tracking-wider font-bold text-white hover:bg-white/20 transition-all"
+                  >
+                    <FileText className="size-4" />
+                    <span>View Brochure ↗</span>
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 backdrop-blur-md px-4 sm:px-5 py-2.5 text-xs uppercase tracking-wider font-bold text-white hover:bg-white/20 transition-all"
+                  >
+                    <span>Request Blueprint</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -736,10 +878,10 @@ export default function ResortPageContent() {
       </section>
 
       {/* 6. ZONES (THE 4 CARDS WITH DETAILED BULLETS MATCHING HTML) */}
-      <section id="zones" className="py-20 bg-[#ffffff] border-t border-stone-200 scroll-mt-24">
+      <section id="zones" className="py-20 bg-transparent border-t border-stone-200/80 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="reveal-slow max-w-2xl mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100/80 px-3.5 py-1 rounded-full">
               Zoning Breakdown
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#14261c] mt-3">
@@ -751,9 +893,9 @@ export default function ResortPageContent() {
           </div>
 
           <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {/* Zone 1: Elite sports and athletics */}
-            <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
+            {/* Zone 1: Elite sports and athletics - Frosted Glass */}
+            <div className="glassmorphism rounded-3xl border-l-4 !border-l-[#0b4a32] p-8 transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200/80">
                 <div className="size-11 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-[#0b4a32]">
                   <Flag className="size-5" />
                 </div>
@@ -792,9 +934,9 @@ export default function ResortPageContent() {
               </ul>
             </div>
 
-            {/* Zone 2: Aquatic leisure and wellness */}
-            <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
+            {/* Zone 2: Aquatic leisure and wellness - Frosted Glass */}
+            <div className="glassmorphism rounded-3xl border-l-4 !border-l-[#0284c7] p-8 transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200/80">
                 <div className="size-11 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-[#0284c7]">
                   <Waves className="size-5" />
                 </div>
@@ -833,9 +975,9 @@ export default function ResortPageContent() {
               </ul>
             </div>
 
-            {/* Zone 3: Entertainment and hospitality */}
-            <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
+            {/* Zone 3: Entertainment and hospitality - Frosted Glass */}
+            <div className="glassmorphism rounded-3xl border-l-4 !border-l-[#b8892b] p-8 transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200/80">
                 <div className="size-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-[#b8892b]">
                   <Home className="size-5" />
                 </div>
@@ -878,9 +1020,9 @@ export default function ResortPageContent() {
               </ul>
             </div>
 
-            {/* Zone 4: Nature and agro-ecosystem */}
-            <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
+            {/* Zone 4: Nature and agro-ecosystem - Frosted Glass */}
+            <div className="glassmorphism rounded-3xl border-l-4 !border-l-[#66b447] p-8 transition-all duration-300 hover:-translate-y-1">
+              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200/80">
                 <div className="size-11 rounded-xl bg-lime-50 border border-lime-100 flex items-center justify-center text-[#66b447]">
                   <Sprout className="size-5" />
                 </div>
@@ -920,8 +1062,8 @@ export default function ResortPageContent() {
             </div>
           </div>
 
-          {/* Bottom Booking & Enquiry CTA Banner */}
-          <div className="reveal-slow rounded-3xl bg-linear-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 shadow-xl border border-emerald-900/40">
+          {/* Bottom Booking & Enquiry CTA Banner with Luxury Glass Tint */}
+          <div className="reveal-slow glassmorphism-dark rounded-3xl text-white p-8 sm:p-12 shadow-2xl border border-emerald-500/25">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="max-w-2xl">
                 <span className="inline-block text-xs uppercase tracking-widest text-[#b6e59c] font-bold bg-white/10 px-3.5 py-1 rounded-full mb-3">

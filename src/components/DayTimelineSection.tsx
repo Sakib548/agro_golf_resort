@@ -41,9 +41,14 @@ const timelineEvents = [
 
 const galleryHighlights = [
   {
-    title: "9-Hole Golf Fairway",
-    tag: "Championship Course",
-    src: "/images/golf-hero.webp",
+    title: "Championship Golf Swing",
+    tag: "9-Hole Golf Action",
+    src: "/images/golf-swing-action.webp",
+  },
+  {
+    title: "Sunset Clubhouse Lounge",
+    tag: "Clubhouse Leisure",
+    src: "/images/cozy-outdoor-golf-clubhouse-seating-sunset.webp",
   },
   {
     title: "Lakeside Luxury Villas",
@@ -51,14 +56,9 @@ const galleryHighlights = [
     src: "/images/lakeside-villas.webp",
   },
   {
-    title: "Organic Agro Orchards",
-    tag: "Commercial Agrotourism",
-    src: "/images/agro-orchard.webp",
-  },
-  {
-    title: "Resort Swimming Oasis",
-    tag: "Aquatic Leisure & Spa",
-    src: "/images/resort-pool.webp",
+    title: "Executive Reading Lounge",
+    tag: "Quiet Retreat",
+    src: "/images/reading-lounge.webp",
   },
 ];
 

@@ -12,7 +12,7 @@ const portalCards = [
     desc: "Explore our 9-hole golf course, baseball diamond, FIFA football turfs, authentic thatched cottages, divided photo gallery, and 4 specialized masterplan zones.",
     href: "/resort",
     badge: "Masterplan",
-    image: "/images/GOLF.webp",
+    image: "/images/2.webp",
     action: "Explore The Resort & Gallery",
   },
   {
@@ -39,7 +39,7 @@ const portalCards = [
     desc: "Sampan Highway Inn serving 5,000+ daily travelers (৳95L–1.30Cr/mo), operating Sampan Eco-Agro, and 6 active premier developments across Dhaka.",
     href: "/portfolio",
     badge: "Operating Proof",
-    image: "/images/highway-inn.webp",
+    image: "/images/sampan_highway.jpg",
     action: "Explore Our Portfolio",
   },
 ];
