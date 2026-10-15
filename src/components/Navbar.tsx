@@ -10,7 +10,9 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "The Resort", href: "/resort" },
   { label: "Invest", href: "/invest" },
-  { label: "Track Record", href: "/portfolio" },
+  // { label: "Track Record", href: "/portfolio" },
+  { label: "Our Portfolio", href: "/portfolio" },
+
   { label: "Membership", href: "/membership" },
   { label: "Contact", href: "/contact" },
 ];
@@ -36,8 +38,8 @@ export default function Navbar() {
       {/* Top-Sticking, Edge-to-Edge Luxury Header */}
       <header
         className={`sticky top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${isScrolled
-            ? "bg-[#0b3a28]/95 backdrop-blur-md border-b border-emerald-900/40 shadow-sm py-2.5 sm:py-3"
-            : "bg-[#07291c]/85 backdrop-blur-md border-b border-white/10 py-3 sm:py-3.5"
+          ? "bg-[#0b3a28]/95 backdrop-blur-md border-b border-emerald-900/40 shadow-sm py-2.5 sm:py-3"
+          : "bg-[#07291c]/85 backdrop-blur-md border-b border-white/10 py-3 sm:py-3.5"
           }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -75,8 +77,8 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   className={`relative rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition-all duration-200 ${isActive
-                      ? "bg-[#66b447] text-[#06210f] shadow-sm font-bold"
-                      : "text-emerald-100/90 hover:text-white hover:bg-white/10"
+                    ? "bg-[#66b447] text-[#06210f] shadow-sm font-bold"
+                    : "text-emerald-100/90 hover:text-white hover:bg-white/10"
                     }`}
                 >
                   {link.label}
@@ -165,16 +167,16 @@ export default function Navbar() {
       {/* Sleek Mobile Drawer / Overlay */}
       <div
         className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${mobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
           }`}
         onClick={() => setMobileMenuOpen(false)}
       >
         <div
           onClick={(e) => e.stopPropagation()}
           className={`absolute top-20 left-4 right-4 rounded-3xl border border-white/20 bg-[#07291c]/95 p-6 shadow-xl backdrop-blur-2xl transition-all duration-300 text-white ${mobileMenuOpen
-              ? "translate-y-0 opacity-100 scale-100"
-              : "-translate-y-6 opacity-0 scale-95"
+            ? "translate-y-0 opacity-100 scale-100"
+            : "-translate-y-6 opacity-0 scale-95"
             }`}
         >
           <div className="flex flex-col gap-1.5">
@@ -186,8 +188,8 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between rounded-xl px-4 py-3 text-sm uppercase tracking-wider font-semibold transition-colors ${isActive
-                      ? "bg-[#66b447] text-[#06210f]"
-                      : "text-emerald-100 hover:bg-white/10 hover:text-white"
+                    ? "bg-[#66b447] text-[#06210f]"
+                    : "text-emerald-100 hover:bg-white/10 hover:text-white"
                     }`}
                 >
                   <span>{link.label}</span>

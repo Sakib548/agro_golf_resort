@@ -106,7 +106,7 @@ export default function DayTimelineSection() {
 
               <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400">
                 <span>Phase {idx + 1} of 4</span>
-                <span className="text-[#0b4a32] font-semibold">Explore →</span>
+                {/* <span className="text-[#0b4a32] font-semibold">Explore →</span> */}
               </div>
             </div>
           ))}
