@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { FileText, Flag, Sprout, Home, FileCheck } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -56,7 +57,8 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-lime-400/40 bg-emerald-950/75 px-5 sm:px-6 py-3.5 text-sm uppercase tracking-wider font-bold text-[#b6e59c] backdrop-blur-sm transition-all duration-300 hover:bg-emerald-900 hover:border-lime-400 active:scale-95"
             >
-              <span>📄 Master Brochure</span>
+              <FileText className="size-4" />
+              <span>Master Brochure</span>
               <span>↗</span>
             </a>
 
@@ -129,8 +131,8 @@ export default function HeroSection() {
 
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="group rounded-2xl border border-stone-200/90 bg-white p-6 shadow-sm hover:border-emerald-700/40 transition-all duration-300">
-            <div className="size-12 rounded-xl bg-emerald-900/10 text-[#0b4a32] flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-[#0b4a32] group-hover:text-white transition-colors">
-              ⛳
+            <div className="size-12 rounded-xl bg-emerald-900/10 text-[#0b4a32] flex items-center justify-center mb-4 group-hover:bg-[#0b4a32] group-hover:text-white transition-colors">
+              <Flag className="size-5" />
             </div>
             <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">Golf Lifestyle</h3>
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -139,8 +141,8 @@ export default function HeroSection() {
           </div>
 
           <div className="group rounded-2xl border border-stone-200/90 bg-white p-6 shadow-sm hover:border-emerald-700/40 transition-all duration-300">
-            <div className="size-12 rounded-xl bg-lime-500/15 text-[#529434] flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-[#66b447] group-hover:text-white transition-colors">
-              🌱
+            <div className="size-12 rounded-xl bg-lime-500/15 text-[#529434] flex items-center justify-center mb-4 group-hover:bg-[#66b447] group-hover:text-white transition-colors">
+              <Sprout className="size-5" />
             </div>
             <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">Agro-Farming</h3>
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -149,8 +151,8 @@ export default function HeroSection() {
           </div>
 
           <div className="group rounded-2xl border border-stone-200/90 bg-white p-6 shadow-sm hover:border-emerald-700/40 transition-all duration-300">
-            <div className="size-12 rounded-xl bg-amber-500/15 text-[#b8892b] flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-[#b8892b] group-hover:text-white transition-colors">
-              🏡
+            <div className="size-12 rounded-xl bg-amber-500/15 text-[#b8892b] flex items-center justify-center mb-4 group-hover:bg-[#b8892b] group-hover:text-white transition-colors">
+              <Home className="size-5" />
             </div>
             <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">Hospitality</h3>
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -159,8 +161,8 @@ export default function HeroSection() {
           </div>
 
           <div className="group rounded-2xl border border-stone-200/90 bg-white p-6 shadow-sm hover:border-emerald-700/40 transition-all duration-300">
-            <div className="size-12 rounded-xl bg-blue-500/15 text-blue-800 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-[#0b4a32] group-hover:text-white transition-colors">
-              📜
+            <div className="size-12 rounded-xl bg-blue-500/15 text-blue-800 flex items-center justify-center mb-4 group-hover:bg-[#0b4a32] group-hover:text-white transition-colors">
+              <FileCheck className="size-5" />
             </div>
             <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">Secure Land</h3>
             <p className="text-stone-600 text-sm leading-relaxed">

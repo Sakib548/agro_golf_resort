@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Flag, Waves, Home, Sprout, UtensilsCrossed, Music, Sparkles, Map, Check } from "lucide-react";
 
 interface ZoneData {
   id: string;
   name: string;
   tagline: string;
-  icon: string;
+  Icon: React.ComponentType<{ className?: string }>;
   color: string;
   image: string;
   amenities: string[];
@@ -19,7 +20,7 @@ const resortZones: ZoneData[] = [
     id: "sports",
     name: "Elite Sports & Athletics",
     tagline: "International Standard Championship Facilities",
-    icon: "⛳",
+    Icon: Flag,
     color: "#0b4a32",
     image: "/images/GOLF.webp",
     description:
@@ -39,7 +40,7 @@ const resortZones: ZoneData[] = [
     id: "aquatics",
     name: "Aquatic Leisure & Wellness",
     tagline: "10 Natural Ponds & 4 Luxury Pools",
-    icon: "🏊",
+    Icon: Waves,
     color: "#0284c7",
     image: "/images/Swimming-Pool.webp",
     description:
@@ -58,7 +59,7 @@ const resortZones: ZoneData[] = [
     id: "hospitality",
     name: "Entertainment & Hospitality",
     tagline: "Eco-Cottages, Luxury Villas & Amphitheatre",
-    icon: "🏡",
+    Icon: Home,
     color: "#b8892b",
     image: "/images/Room-Web-image.webp",
     description:
@@ -79,7 +80,7 @@ const resortZones: ZoneData[] = [
     id: "nature",
     name: "Nature & Agro-Ecosystem",
     tagline: "Wheat & Paddy Fields, Mango Gardens & Orchards",
-    icon: "🌱",
+    Icon: Sprout,
     color: "#66b447",
     image: "/images/Argo.webp",
     description:
@@ -121,7 +122,9 @@ export default function ResortZonesSection() {
         {/* 4 Signature Experiences Cards */}
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="rounded-2xl border-l-4 border-l-[#0b4a32] border border-stone-200 bg-white p-6 shadow-sm">
-            <span className="text-2xl mb-2 block">🏌️</span>
+            <div className="size-10 rounded-xl bg-emerald-50 border border-emerald-100/80 flex items-center justify-center mb-3 text-[#0b4a32]">
+              <Flag className="size-5" />
+            </div>
             <h3 className="font-heading text-lg font-bold text-[#14261c] mb-1">Golf on the Water</h3>
             <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
               9 holes weaving across sparkling ponds, short &amp; long driving ranges, and professional trainers.
@@ -129,7 +132,9 @@ export default function ResortZonesSection() {
           </div>
 
           <div className="rounded-2xl border-l-4 border-l-[#66b447] border border-stone-200 bg-white p-6 shadow-sm">
-            <span className="text-2xl mb-2 block">🥗</span>
+            <div className="size-10 rounded-xl bg-lime-50 border border-lime-100/80 flex items-center justify-center mb-3 text-[#559e38]">
+              <UtensilsCrossed className="size-5" />
+            </div>
             <h3 className="font-heading text-lg font-bold text-[#14261c] mb-1">Farm to Table</h3>
             <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
               Mango, dragon fruit, and malta freshly plucked, plus dairy and organic produce served in the restaurant.
@@ -137,7 +142,9 @@ export default function ResortZonesSection() {
           </div>
 
           <div className="rounded-2xl border-l-4 border-l-[#b8892b] border border-stone-200 bg-white p-6 shadow-sm">
-            <span className="text-2xl mb-2 block">🎶</span>
+            <div className="size-10 rounded-xl bg-amber-50 border border-amber-100/80 flex items-center justify-center mb-3 text-[#b8892b]">
+              <Music className="size-5" />
+            </div>
             <h3 className="font-heading text-lg font-bold text-[#14261c] mb-1">Lakeside Evenings</h3>
             <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
               Live concerts at the MP Centre, evening bonfires, sizzling barbecue zones, and a private movie theatre.
@@ -145,7 +152,9 @@ export default function ResortZonesSection() {
           </div>
 
           <div className="rounded-2xl border-l-4 border-l-[#0284c7] border border-stone-200 bg-white p-6 shadow-sm">
-            <span className="text-2xl mb-2 block">🧖</span>
+            <div className="size-10 rounded-xl bg-sky-50 border border-sky-100/80 flex items-center justify-center mb-3 text-[#0284c7]">
+              <Sparkles className="size-5" />
+            </div>
             <h3 className="font-heading text-lg font-bold text-[#14261c] mb-1">Holistic Wellness</h3>
             <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
               Premium spa and salon, 4 swimming pools, high-standard gym, and quiet nature trails through greenery.
@@ -169,16 +178,17 @@ export default function ResortZonesSection() {
             <div className="flex flex-wrap gap-2">
               {resortZones.map((z) => {
                 const isActive = activeZone === z.id;
+                const ZoneIcon = z.Icon;
                 return (
                   <button
                     key={z.id}
                     onClick={() => setActiveZone(z.id)}
-                    className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 ${isActive
+                    className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 ${isActive
                       ? "bg-[#0b4a32] text-white shadow-md scale-105"
                       : "bg-stone-100 text-stone-700 hover:bg-stone-200/80"
                       }`}
                   >
-                    <span>{z.icon}</span>
+                    <ZoneIcon className="size-4" />
                     <span>{z.name}</span>
                   </button>
                 );
@@ -223,7 +233,7 @@ export default function ResortZonesSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {currentZone.amenities.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-stone-700">
-                    <span className="text-[#66b447] font-bold text-base leading-none">✓</span>
+                    <Check className="size-4 text-[#66b447] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -306,8 +316,8 @@ export default function ResortZonesSection() {
               className="object-cover opacity-80"
             />
             <div className="absolute inset-0 bg-[#07291c]/70 backdrop-blur-[2px] flex flex-col items-center justify-center p-6 text-white">
-              <div className="size-16 rounded-full bg-white/10 border border-white/30 flex items-center justify-center text-3xl mb-3 shadow-lg">
-                🗺️
+              <div className="size-16 rounded-full bg-white/10 border border-white/30 flex items-center justify-center mb-3 shadow-lg">
+                <Map className="size-7 text-white" />
               </div>
               <h4 className="font-heading text-2xl sm:text-3xl font-bold">100+ Acre Masterplan Drawing</h4>
               <p className="text-emerald-100 text-xs sm:text-sm max-w-lg mt-1 mb-5">

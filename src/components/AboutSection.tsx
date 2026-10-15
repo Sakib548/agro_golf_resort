@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Eye, Target, Lightbulb, Leaf, Award, Users, Users2, Flag, TrendingUp, Building2 } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -71,8 +72,8 @@ export default function AboutSection() {
         {/* Vision & Mission */}
         <div className="reveal-slow grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           <div className="rounded-3xl border border-stone-200/90 bg-gradient-to-br from-emerald-950 to-[#0b3a28] text-white p-8 sm:p-10 shadow-md">
-            <div className="size-12 rounded-xl bg-white/10 flex items-center justify-center text-2xl mb-6">
-              🔭
+            <div className="size-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
+              <Eye className="size-6 text-[#b6e59c]" />
             </div>
             <span className="text-xs uppercase tracking-widest text-[#b6e59c] font-bold">
               Our Vision
@@ -86,8 +87,8 @@ export default function AboutSection() {
           </div>
 
           <div className="rounded-3xl border border-stone-200/90 bg-[#f6f8f2] p-8 sm:p-10 shadow-sm">
-            <div className="size-12 rounded-xl bg-emerald-100 flex items-center justify-center text-2xl mb-6 text-[#0b4a32]">
-              🎯
+            <div className="size-12 rounded-xl bg-emerald-100 flex items-center justify-center mb-6 text-[#0b4a32]">
+              <Target className="size-6" />
             </div>
             <span className="text-xs uppercase tracking-widest text-[#0b4a32] font-bold">
               Our Mission
@@ -108,7 +109,9 @@ export default function AboutSection() {
           </h3>
           <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <div className="text-2xl mb-3">💡</div>
+              <div className="size-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center mb-3">
+                <Lightbulb className="size-5 text-amber-600" />
+              </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Innovation</h4>
               <p className="text-stone-600 text-sm leading-relaxed">
                 Smart irrigation, precision agriculture, and modern hospitality operations implemented across every acre.
@@ -116,7 +119,9 @@ export default function AboutSection() {
             </div>
 
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <div className="text-2xl mb-3">🌿</div>
+              <div className="size-11 rounded-xl bg-lime-50 border border-lime-100 flex items-center justify-center mb-3">
+                <Leaf className="size-5 text-[#559e38]" />
+              </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Sustainability</h4>
               <p className="text-stone-600 text-sm leading-relaxed">
                 10 zero-waste natural ponds, 100% organic fruit farming, and zero-carbon walking zones anchor the layout.
@@ -124,7 +129,9 @@ export default function AboutSection() {
             </div>
 
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <div className="text-2xl mb-3">⭐</div>
+              <div className="size-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center mb-3">
+                <Award className="size-5 text-amber-600" />
+              </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Excellence</h4>
               <p className="text-stone-600 text-sm leading-relaxed">
                 International standard 9-hole golf architecture, luxury villa specifications, and fine dining service.
@@ -132,7 +139,9 @@ export default function AboutSection() {
             </div>
 
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <div className="text-2xl mb-3">🤝</div>
+              <div className="size-11 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-3">
+                <Users className="size-5 text-[#0b4a32]" />
+              </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Community</h4>
               <p className="text-stone-600 text-sm leading-relaxed">
                 Transforming rural land into engines of local employment, skill development, and proud national benchmarks.
@@ -154,32 +163,40 @@ export default function AboutSection() {
 
           <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm">
-              <span className="text-xl">👨‍👩‍👧‍👦</span>
-              <h4 className="font-heading text-lg font-bold text-[#14261c] mt-3 mb-2">Families</h4>
+              <div className="size-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-3 text-[#0b4a32]">
+                <Users2 className="size-5" />
+              </div>
+              <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Families</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
                 Kids&apos; club, dedicated shallow children&apos;s pool, gaming arcade, picnic lawns, and serene organic gardens.
               </p>
             </div>
 
             <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm">
-              <span className="text-xl">🏌️‍♂️</span>
-              <h4 className="font-heading text-lg font-bold text-[#14261c] mt-3 mb-2">Golfers &amp; Athletes</h4>
+              <div className="size-10 rounded-xl bg-lime-50 border border-lime-100 flex items-center justify-center mb-3 text-[#559e38]">
+                <Flag className="size-5" />
+              </div>
+              <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Golfers &amp; Athletes</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
                 9-hole course, dual driving ranges, certified pros, cricket stadium, 4 football turfs, gym, and tennis courts.
               </p>
             </div>
 
             <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm">
-              <span className="text-xl">💼</span>
-              <h4 className="font-heading text-lg font-bold text-[#14261c] mt-3 mb-2">Investors</h4>
+              <div className="size-10 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center mb-3 text-[#b8892b]">
+                <TrendingUp className="size-5" />
+              </div>
+              <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Investors</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
                 100% Sub-Kabula deed freehold land shares, villa ownership, hands-off hotel management, and dual payouts.
               </p>
             </div>
 
             <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm">
-              <span className="text-xl">🏢</span>
-              <h4 className="font-heading text-lg font-bold text-[#14261c] mt-3 mb-2">Corporate Teams</h4>
+              <div className="size-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-3 text-blue-800">
+                <Building2 className="size-5" />
+              </div>
+              <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Corporate Teams</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
                 Annual retreats, executive strategy summits, golf invitationals, banquet dining, and amphitheatre concerts.
               </p>

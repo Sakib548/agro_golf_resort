@@ -219,7 +219,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex w-full items-center justify-center gap-2 rounded-full border border-lime-400/40 bg-emerald-950 py-2.5 text-center text-xs uppercase tracking-wider font-bold text-[#b6e59c]"
               >
-                <span>📄 View Master Brochure ↗</span>
+                <span>View Master Brochure ↗</span>
               </a>
             </div>
             */}

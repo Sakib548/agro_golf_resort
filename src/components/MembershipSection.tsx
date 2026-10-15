@@ -1,5 +1,7 @@
 "use client";
 
+import { CreditCard, Award, Landmark } from "lucide-react";
+
 const partnersData = [
   {
     partner: "Sampan Group Hotels & Motels",
@@ -58,8 +60,8 @@ export default function MembershipSection() {
         {/* 3 Physical Credential Cards */}
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-emerald-100 text-[#0b4a32] flex items-center justify-center text-2xl mb-4 font-bold">
-              💳
+            <div className="size-12 rounded-xl bg-emerald-100 text-[#0b4a32] flex items-center justify-center mb-4">
+              <CreditCard className="size-6" />
             </div>
             <span className="text-xs uppercase font-bold text-[#66b447] tracking-wider">
               Physical Credential
@@ -73,8 +75,8 @@ export default function MembershipSection() {
           </div>
 
           <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-amber-100 text-[#b8892b] flex items-center justify-center text-2xl mb-4 font-bold">
-              📜
+            <div className="size-12 rounded-xl bg-amber-100 text-[#b8892b] flex items-center justify-center mb-4">
+              <Award className="size-6" />
             </div>
             <span className="text-xs uppercase font-bold text-[#b8892b] tracking-wider">
               Club Accreditation
@@ -87,9 +89,9 @@ export default function MembershipSection() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-blue-100 text-[#0b4a32] flex items-center justify-center text-2xl mb-4 font-bold">
-              🏛️
+          <div className="rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
+            <div className="size-12 rounded-xl bg-blue-100 text-[#0b4a32] flex items-center justify-center mb-4">
+              <Landmark className="size-6" />
             </div>
             <span className="text-xs uppercase font-bold text-[#0b4a32] tracking-wider">
               Title Proof

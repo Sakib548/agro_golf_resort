@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Sprout, Building, Check } from "lucide-react";
 
 export default function InvestSection() {
   const [sharesCount, setSharesCount] = useState<number>(1);
@@ -62,8 +63,8 @@ export default function InvestSection() {
         {/* 2 Revenue Streams Breakdown */}
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-lime-100 text-[#0b4a32] flex items-center justify-center text-2xl mb-4 font-bold">
-              🌾
+            <div className="size-12 rounded-xl bg-lime-100 text-[#0b4a32] flex items-center justify-center mb-4">
+              <Sprout className="size-6 text-[#559e38]" />
             </div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#66b447]">
               Income Stream 1
@@ -80,8 +81,8 @@ export default function InvestSection() {
           </div>
 
           <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-amber-100 text-[#b8892b] flex items-center justify-center text-2xl mb-4 font-bold">
-              🏨
+            <div className="size-12 rounded-xl bg-amber-100 text-[#b8892b] flex items-center justify-center mb-4">
+              <Building className="size-6 text-[#b8892b]" />
             </div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#b8892b]">
               Income Stream 2
@@ -196,19 +197,19 @@ export default function InvestSection() {
 
               <div className="space-y-2.5 text-xs sm:text-sm text-emerald-100 mb-8 border-t border-emerald-800/60 pt-4">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#66b447] font-bold">✓</span>
+                  <Check className="size-4 text-[#66b447] shrink-0" />
                   <span>100% Sub-Kabula deed registration in your name</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#66b447] font-bold">✓</span>
+                  <Check className="size-4 text-[#66b447] shrink-0" />
                   <span>Dual annual payouts: Agro harvest + Hospitality yield</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#66b447] font-bold">✓</span>
+                  <Check className="size-4 text-[#66b447] shrink-0" />
                   <span>Free 2-Night, 3-Day stay package at Sampan Eco &amp; Agro Resort</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#66b447] font-bold">✓</span>
+                  <Check className="size-4 text-[#66b447] shrink-0" />
                   <span>Express Highway Club loyalty card with 10%–50% group discounts</span>
                 </div>
               </div>
@@ -363,21 +364,27 @@ export default function InvestSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm space-y-3">
               <div className="flex items-start gap-3">
-                <span className="text-[#66b447] font-bold text-lg">✓</span>
+                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#66b447]" />
+                </div>
                 <div>
                   <h5 className="font-bold text-[#14261c] text-sm sm:text-base">100% Sub-Kabula Land Deed</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Permanent registered ownership recorded with the sub-registry office.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-[#66b447] font-bold text-lg">✓</span>
+                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#66b447]" />
+                </div>
                 <div>
                   <h5 className="font-bold text-[#14261c] text-sm sm:text-base">10% to 50% Off Stays</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Substantial discounts across all Sampan Group hotels, motels, and lounges.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-[#66b447] font-bold text-lg">✓</span>
+                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#66b447]" />
+                </div>
                 <div>
                   <h5 className="font-bold text-[#14261c] text-sm sm:text-base">Complimentary Resort Stay</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Free 2-night, 3-day holiday package at Sampan Eco &amp; Agro Resort, Kashiani.</p>
@@ -387,21 +394,27 @@ export default function InvestSection() {
 
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm space-y-3">
               <div className="flex items-start gap-3">
-                <span className="text-[#66b447] font-bold text-lg">✓</span>
+                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#66b447]" />
+                </div>
                 <div>
                   <h5 className="font-bold text-[#14261c] text-sm sm:text-base">Express Highway Club &amp; Lounge</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Exclusive loyalty card granting VIP privileges across national highway rest stops.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-[#66b447] font-bold text-lg">✓</span>
+                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#66b447]" />
+                </div>
                 <div>
                   <h5 className="font-bold text-[#14261c] text-sm sm:text-base">10% to 30% Off Arunima Resort</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Reciprocal discount privileges at Arunima Resort Golf Club.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-[#66b447] font-bold text-lg">✓</span>
+                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#66b447]" />
+                </div>
                 <div>
                   <h5 className="font-bold text-[#14261c] text-sm sm:text-base">Shooters Shooting Club Affiliation</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Affiliated sporting privileges at Shooters Shooting Club.</p>

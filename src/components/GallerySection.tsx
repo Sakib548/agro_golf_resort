@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { FileText, Search, X, Check } from "lucide-react";
 
 interface GalleryItem {
   title: string;
@@ -288,7 +289,8 @@ export default function GallerySection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-[#0b4a32] px-5 py-3 text-xs uppercase tracking-wider font-bold text-white shadow-md hover:bg-[#12583d] transition-all hover:scale-105"
             >
-              <span>📄 View Official Brochure</span>
+              <FileText className="size-4" />
+              <span>View Official Brochure</span>
               <span>↗</span>
             </a>
           </div>
@@ -353,8 +355,8 @@ export default function GallerySection() {
               </div>
 
               {/* Hover Zoom Icon */}
-              <div className="absolute top-3 right-3 size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-xs">
-                🔍
+              <div className="absolute top-3 right-3 size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <Search className="size-4" />
               </div>
             </div>
           ))}
@@ -374,9 +376,9 @@ export default function GallerySection() {
                 Access the official brochure pages online. Note: Newer facilities—such as our <strong className="text-white font-semibold">Baseball diamond</strong>, <strong className="text-white font-semibold">FIFA football fields</strong>, <strong className="text-white font-semibold">Tennis &amp; Cricket grounds</strong>, authentic <strong className="text-white font-semibold">cottages</strong>, and expansive <strong className="text-white font-semibold">Wheat &amp; Paddy fields</strong>—are our latest masterplan expansions.
               </p>
               <div className="flex flex-wrap gap-2 text-xs text-emerald-200/80">
-                <span className="bg-white/10 px-3 py-1 rounded-full">✓ 38MB High-Res Brochure</span>
-                <span className="bg-white/10 px-3 py-1 rounded-full">✓ Complete Masterplan Drawings</span>
-                <span className="bg-white/10 px-3 py-1 rounded-full">✓ Free Online Preview</span>
+                <span className="bg-white/10 px-3 py-1 rounded-full inline-flex items-center gap-1.5"><Check className="size-3 text-[#b6e59c]" /> 38MB High-Res Brochure</span>
+                <span className="bg-white/10 px-3 py-1 rounded-full inline-flex items-center gap-1.5"><Check className="size-3 text-[#b6e59c]" /> Complete Masterplan Drawings</span>
+                <span className="bg-white/10 px-3 py-1 rounded-full inline-flex items-center gap-1.5"><Check className="size-3 text-[#b6e59c]" /> Free Online Preview</span>
               </div>
             </div>
 
@@ -418,7 +420,7 @@ export default function GallerySection() {
                 className="absolute top-4 right-4 z-10 size-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition-colors"
                 aria-label="Close"
               >
-                ✕
+                <X className="size-5" />
               </button>
 
               <div className="relative aspect-[16/10] w-full bg-black">

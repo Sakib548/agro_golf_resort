@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Phone, Mail, Flag, Building2 } from "lucide-react";
 
 const faqItems = [
   {
@@ -73,8 +74,8 @@ export default function ContactSection() {
         {/* 4 Contact Channels Cards */}
         <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="rounded-2xl border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-emerald-100 text-[#0b4a32] flex items-center justify-center font-bold text-lg mb-3">
-              📞
+            <div className="size-10 rounded-xl bg-emerald-100 text-[#0b4a32] flex items-center justify-center mb-3">
+              <Phone className="size-5" />
             </div>
             <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Direct Hotline</h4>
             <div className="space-y-1 text-sm font-medium text-stone-700">
@@ -85,8 +86,8 @@ export default function ContactSection() {
           </div>
 
           <div className="rounded-2xl border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-lime-100 text-[#529434] flex items-center justify-center font-bold text-lg mb-3">
-              ✉️
+            <div className="size-10 rounded-xl bg-lime-100 text-[#529434] flex items-center justify-center mb-3">
+              <Mail className="size-5" />
             </div>
             <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Email &amp; Web</h4>
             <div className="space-y-1 text-sm font-medium text-stone-700">
@@ -97,8 +98,8 @@ export default function ContactSection() {
           </div>
 
           <div className="rounded-2xl border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-amber-100 text-[#b8892b] flex items-center justify-center font-bold text-lg mb-3">
-              ⛳
+            <div className="size-10 rounded-xl bg-amber-100 text-[#b8892b] flex items-center justify-center mb-3">
+              <Flag className="size-5" />
             </div>
             <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Resort Site</h4>
             <p className="text-stone-600 text-sm leading-relaxed">
@@ -107,8 +108,8 @@ export default function ContactSection() {
           </div>
 
           <div className="rounded-2xl border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-lg mb-3">
-              🏢
+            <div className="size-10 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center mb-3">
+              <Building2 className="size-5" />
             </div>
             <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Head Office</h4>
             <p className="text-stone-600 text-sm leading-relaxed">

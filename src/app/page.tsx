@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FileText } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import DayTimelineSection from "@/components/DayTimelineSection";
 import GlimpsesSection from "@/components/GlimpsesSection";
@@ -101,7 +102,8 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-stone-300 bg-white px-5 py-3 text-xs uppercase tracking-wider font-bold text-stone-800 hover:bg-stone-50 transition-colors shadow-sm"
               >
-                <span>📄 View Master Brochure</span>
+                <FileText className="size-4" />
+                <span>View Master Brochure</span>
                 <span>↗</span>
               </a>
             </div>

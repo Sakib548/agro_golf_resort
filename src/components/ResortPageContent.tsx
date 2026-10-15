@@ -3,6 +3,20 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Sparkles,
+  Flag,
+  Home,
+  Waves,
+  Sprout,
+  FileCheck,
+  UtensilsCrossed,
+  Music,
+  Map,
+  FileText,
+  Search,
+  X,
+} from "lucide-react";
 
 interface GalleryPhoto {
   title: string;
@@ -263,12 +277,12 @@ const galleryPhotos: GalleryPhoto[] = [
 ];
 
 const categoryTabs = [
-  { id: "all", label: "All Facilities (Divided)", icon: "✨", desc: "Complete visual tour divided by estate zones" },
-  { id: "sports", label: "Golf & Sports Arena", icon: "⛳", desc: "9-hole championship course, driving ranges, FIFA turfs & gym" },
-  { id: "stay", label: "Villas & Cottages", icon: "🏡", desc: "Lakeside villas, presidential suites & authentic thatched cottages" },
-  { id: "leisure", label: "Aquatics, Dining & Spa", icon: "🏊", desc: "4 pools, 10 natural ponds, farm-to-table dining & cinema" },
-  { id: "agro", label: "Agro Orchards & Trails", icon: "🌱", desc: "Organic fruit orchards, golden paddy fields & equestrian trails" },
-  { id: "docs", label: "Cards & Certificates", icon: "📜", desc: "Official member loyalty card & 100% sub-kabula deed certificates" },
+  { id: "all", label: "All Facilities (Divided)", Icon: Sparkles, desc: "Complete visual tour divided by estate zones" },
+  { id: "sports", label: "Golf & Sports Arena", Icon: Flag, desc: "9-hole championship course, driving ranges, FIFA turfs & gym" },
+  { id: "stay", label: "Villas & Cottages", Icon: Home, desc: "Lakeside villas, presidential suites & authentic thatched cottages" },
+  { id: "leisure", label: "Aquatics, Dining & Spa", Icon: Waves, desc: "4 pools, 10 natural ponds, farm-to-table dining & cinema" },
+  { id: "agro", label: "Agro Orchards & Trails", Icon: Sprout, desc: "Organic fruit orchards, golden paddy fields & equestrian trails" },
+  { id: "docs", label: "Cards & Certificates", Icon: FileCheck, desc: "Official member loyalty card & 100% sub-kabula deed certificates" },
 ];
 
 export default function ResortPageContent() {
@@ -352,7 +366,9 @@ export default function ResortPageContent() {
 
           <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl border-l-4 border-l-[#0b4a32] border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-3xl mb-3 block">🏌️</span>
+              <div className="size-11 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mb-3 text-[#0b4a32]">
+                <Flag className="size-5" />
+              </div>
               <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
                 Golf on the water
               </h3>
@@ -362,7 +378,9 @@ export default function ResortPageContent() {
             </div>
 
             <div className="rounded-2xl border-l-4 border-l-[#66b447] border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-3xl mb-3 block">🥗</span>
+              <div className="size-11 rounded-xl bg-lime-50 border border-lime-100 flex items-center justify-center mb-3 text-[#559e38]">
+                <UtensilsCrossed className="size-5" />
+              </div>
               <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
                 Farm to table
               </h3>
@@ -372,7 +390,9 @@ export default function ResortPageContent() {
             </div>
 
             <div className="rounded-2xl border-l-4 border-l-[#b8892b] border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-3xl mb-3 block">🎶</span>
+              <div className="size-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center mb-3 text-[#b8892b]">
+                <Music className="size-5" />
+              </div>
               <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
                 Lakeside evenings
               </h3>
@@ -382,7 +402,9 @@ export default function ResortPageContent() {
             </div>
 
             <div className="rounded-2xl border-l-4 border-l-[#0284c7] border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-3xl mb-3 block">🧖</span>
+              <div className="size-11 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center mb-3 text-[#0284c7]">
+                <Sparkles className="size-5" />
+              </div>
               <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
                 Wellness
               </h3>
@@ -513,8 +535,8 @@ export default function ResortPageContent() {
               className="object-cover opacity-75"
             />
             <div className="absolute inset-0 bg-[#07291c]/75 backdrop-blur-[2px] flex flex-col items-center justify-center p-6 text-white">
-              <div className="size-16 rounded-full bg-white/10 border border-white/30 flex items-center justify-center text-3xl mb-3 shadow-lg">
-                🗺️
+              <div className="size-16 rounded-full bg-white/10 border border-white/30 flex items-center justify-center mb-3 shadow-lg">
+                <Map className="size-8 text-white" />
               </div>
               <h3 className="font-heading text-2xl sm:text-3xl font-bold">
                 100+ Acre Masterplan Drawing
@@ -529,7 +551,8 @@ export default function ResortPageContent() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-[#66b447] px-6 py-3 text-xs uppercase tracking-wider font-bold text-[#06210f] hover:bg-[#77c955] transition-all shadow-md"
                 >
-                  <span>📄 View Official Brochure</span>
+                  <FileText className="size-4" />
+                  <span>View Official Brochure</span>
                   <span>↗</span>
                 </a>
                 <Link
@@ -586,7 +609,7 @@ export default function ResortPageContent() {
                     : "bg-white border border-stone-200 text-stone-700 hover:bg-stone-100"
                     }`}
                 >
-                  <span>{tab.icon}</span>
+                  <tab.Icon className="size-4 shrink-0" />
                   <span>{tab.label}</span>
                   <span className="opacity-60 text-[11px]">({count})</span>
                 </button>
@@ -608,8 +631,8 @@ export default function ResortPageContent() {
                       {/* Divided Section Header */}
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 mb-6 border-b border-stone-200">
                         <div className="flex items-center gap-3">
-                          <span className="text-2xl p-2 rounded-xl bg-emerald-50 border border-emerald-100/80">
-                            {tab.icon}
+                          <span className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-100/80 text-[#0b4a32] flex items-center justify-center">
+                            <tab.Icon className="size-5" />
                           </span>
                           <div>
                             <div className="flex items-center gap-2">
@@ -664,8 +687,8 @@ export default function ResortPageContent() {
                               </h4>
                             </div>
 
-                            <div className="absolute top-3 right-3 size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-xs">
-                              🔍
+                            <div className="absolute top-3 right-3 size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                              <Search className="size-4" />
                             </div>
                           </div>
                         ))}
@@ -702,8 +725,8 @@ export default function ResortPageContent() {
                     </h4>
                   </div>
 
-                  <div className="absolute top-3 right-3 size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-xs">
-                    🔍
+                  <div className="absolute top-3 right-3 size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Search className="size-4" />
                   </div>
                 </div>
               ))}
@@ -731,7 +754,9 @@ export default function ResortPageContent() {
             {/* Zone 1: Elite sports and athletics */}
             <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
-                <span className="text-3xl">⛳</span>
+                <div className="size-11 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-[#0b4a32]">
+                  <Flag className="size-5" />
+                </div>
                 <div>
                   <h3 className="font-heading text-2xl font-bold text-[#0b4a32]">
                     Elite sports and athletics
@@ -770,7 +795,9 @@ export default function ResortPageContent() {
             {/* Zone 2: Aquatic leisure and wellness */}
             <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
-                <span className="text-3xl">🏊</span>
+                <div className="size-11 rounded-xl bg-sky-50 border border-sky-100 flex items-center justify-center text-[#0284c7]">
+                  <Waves className="size-5" />
+                </div>
                 <div>
                   <h3 className="font-heading text-2xl font-bold text-[#0284c7]">
                     Aquatic leisure and wellness
@@ -809,7 +836,9 @@ export default function ResortPageContent() {
             {/* Zone 3: Entertainment and hospitality */}
             <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
-                <span className="text-3xl">🏡</span>
+                <div className="size-11 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-[#b8892b]">
+                  <Home className="size-5" />
+                </div>
                 <div>
                   <h3 className="font-heading text-2xl font-bold text-[#b8892b]">
                     Entertainment and hospitality
@@ -852,7 +881,9 @@ export default function ResortPageContent() {
             {/* Zone 4: Nature and agro-ecosystem */}
             <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
-                <span className="text-3xl">🌱</span>
+                <div className="size-11 rounded-xl bg-lime-50 border border-lime-100 flex items-center justify-center text-[#66b447]">
+                  <Sprout className="size-5" />
+                </div>
                 <div>
                   <h3 className="font-heading text-2xl font-bold text-[#66b447]">
                     Nature and agro-ecosystem
@@ -940,7 +971,7 @@ export default function ResortPageContent() {
               className="absolute top-4 right-4 z-10 size-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition-colors"
               aria-label="Close"
             >
-              ✕
+              <X className="size-5" />
             </button>
 
             <div className="relative aspect-[16/10] w-full bg-black">

@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Sunrise, UtensilsCrossed, Compass, Flame, Flag, Waves, Home, Sprout } from "lucide-react";
 
 const timelineEvents = [
   {
     time: "Morning",
-    icon: "🌅",
+    Icon: Sunrise,
     title: "Championship Fairways & Driving Range",
     description:
       "Tee off across the tranquil morning mist on the 9-hole international course, or refine your swing under the guidance of professional instructors at the driving range.",
@@ -14,7 +15,7 @@ const timelineEvents = [
   },
   {
     time: "Midday",
-    icon: "🍽️",
+    Icon: UtensilsCrossed,
     title: "Farm-to-Table Dining & Spa Rejuvenation",
     description:
       "Savor gourmet organic cuisine sourced fresh from the estate's own orchards and dairy farm, followed by a dip in the temperature-controlled pool or a wellness treatment at the spa.",
@@ -22,7 +23,7 @@ const timelineEvents = [
   },
   {
     time: "Afternoon",
-    icon: "🛶",
+    Icon: Compass,
     title: "Pond Kayaking & Agro Orchard Trails",
     description:
       "Paddle through 10 natural ponds, fish peacefully, or explore miles of cycling, hiking, and horse-riding trails winding through lush mango, dragon fruit, and malta groves.",
@@ -30,7 +31,7 @@ const timelineEvents = [
   },
   {
     time: "Evening",
-    icon: "🔥",
+    Icon: Flame,
     title: "Bonfire BBQ, Cinema & Lakeside Concerts",
     description:
       "Gather around glowing barbecue bonfires under the starlit Moulvibazar sky, watch a screening in the private cinema, or experience a musical performance at the lakeside MP Centre.",
@@ -86,8 +87,8 @@ export default function DayTimelineSection() {
               className="relative flex flex-col justify-between rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm hover:shadow-md hover:border-[#66b447]/60 transition-all duration-300"
             >
               <div className="absolute -top-3 left-6">
-                <span className="inline-flex items-center gap-1 rounded-full bg-[#0b4a32] px-3 py-0.5 text-xs font-semibold text-white shadow-sm">
-                  <span>{item.icon}</span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#0b4a32] px-3 py-1 text-xs font-semibold text-white shadow-sm">
+                  <item.Icon className="size-3.5" />
                   <span>{item.time}</span>
                 </span>
               </div>
@@ -250,7 +251,10 @@ export default function DayTimelineSection() {
           </h3>
           <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="rounded-xl border border-stone-200 bg-white p-5">
-              <span className="font-bold text-[#0b4a32] text-sm block mb-2">⛳ Sports &amp; Golf</span>
+              <span className="font-bold text-[#0b4a32] text-sm flex items-center gap-1.5 mb-2">
+                <Flag className="size-4" />
+                <span>Sports &amp; Golf</span>
+              </span>
               <ul className="text-stone-600 text-sm space-y-1.5 list-disc list-inside">
                 <li>9-hole golf course</li>
                 <li>Long &amp; short driving ranges</li>
@@ -260,7 +264,10 @@ export default function DayTimelineSection() {
             </div>
 
             <div className="rounded-xl border border-stone-200 bg-white p-5">
-              <span className="font-bold text-[#0b4a32] text-sm block mb-2">🏊 Aquatics &amp; Wellness</span>
+              <span className="font-bold text-[#0b4a32] text-sm flex items-center gap-1.5 mb-2">
+                <Waves className="size-4" />
+                <span>Aquatics &amp; Wellness</span>
+              </span>
               <ul className="text-stone-600 text-sm space-y-1.5 list-disc list-inside">
                 <li>4 swimming pools</li>
                 <li>10 natural ponds &amp; fishing</li>
@@ -270,7 +277,10 @@ export default function DayTimelineSection() {
             </div>
 
             <div className="rounded-xl border border-stone-200 bg-white p-5">
-              <span className="font-bold text-[#0b4a32] text-sm block mb-2">🏡 Stay &amp; Living</span>
+              <span className="font-bold text-[#0b4a32] text-sm flex items-center gap-1.5 mb-2">
+                <Home className="size-4" />
+                <span>Stay &amp; Living</span>
+              </span>
               <ul className="text-stone-600 text-sm space-y-1.5 list-disc list-inside">
                 <li>Lakeside villas &amp; cottages</li>
                 <li>Presidential luxury suites</li>
@@ -280,7 +290,10 @@ export default function DayTimelineSection() {
             </div>
 
             <div className="rounded-xl border border-stone-200 bg-white p-5">
-              <span className="font-bold text-[#0b4a32] text-sm block mb-2">🌱 Eco &amp; Agri</span>
+              <span className="font-bold text-[#0b4a32] text-sm flex items-center gap-1.5 mb-2">
+                <Sprout className="size-4" />
+                <span>Eco &amp; Agri</span>
+              </span>
               <ul className="text-stone-600 text-sm space-y-1.5 list-disc list-inside">
                 <li>Commercial organic farm</li>
                 <li>Mango, dragon &amp; malta groves</li>

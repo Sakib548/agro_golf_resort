@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Briefcase, Sprout, CreditCard, MapPin } from "lucide-react";
 
 const ongoingProjects = [
   {
@@ -181,7 +182,9 @@ export default function PortfolioSection() {
           </h3>
           <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <span className="text-2xl mb-2 block">💼</span>
+              <div className="size-11 rounded-xl bg-emerald-50 border border-emerald-100/80 flex items-center justify-center mb-3 text-[#0b4a32]">
+                <Briefcase className="size-5" />
+              </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Operating Experience</h4>
               <p className="text-stone-600 text-sm leading-relaxed">
                 Management systems tested across hotel rooms, dining halls, convenience retail, and fueling stations operated in unison.
@@ -189,7 +192,9 @@ export default function PortfolioSection() {
             </div>
 
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <span className="text-2xl mb-2 block">🌾</span>
+              <div className="size-11 rounded-xl bg-lime-50 border border-lime-100/80 flex items-center justify-center mb-3 text-[#559e38]">
+                <Sprout className="size-5" />
+              </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Agro Know-How</h4>
               <p className="text-stone-600 text-sm leading-relaxed">
                 Sampan Eco and Agro already harvests and distributes commercial produce, guaranteeing seasoned agricultural management.
@@ -197,7 +202,9 @@ export default function PortfolioSection() {
             </div>
 
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <span className="text-2xl mb-2 block">💳</span>
+              <div className="size-11 rounded-xl bg-amber-50 border border-amber-100/80 flex items-center justify-center mb-3 text-[#b8892b]">
+                <CreditCard className="size-5" />
+              </div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Shared Membership Network</h4>
               <p className="text-stone-600 text-sm leading-relaxed">
                 Owners immediately enjoy reciprocal VIP access across Express Highway Club, lounges, and all sister properties.
@@ -229,8 +236,9 @@ export default function PortfolioSection() {
                 <h4 className="font-heading text-lg font-bold text-[#14261c] mb-1">
                   {p.name}
                 </h4>
-                <p className="text-xs font-semibold text-stone-500 mb-2">
-                  📍 {p.location}
+                <p className="text-xs font-semibold text-stone-500 mb-2 flex items-center gap-1.5">
+                  <MapPin className="size-3.5 text-stone-400 shrink-0" />
+                  <span>{p.location}</span>
                 </p>
                 <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
                   {p.desc}
