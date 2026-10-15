@@ -47,8 +47,8 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-white transition-colors">About &amp; Vision</Link></li>
               <li><Link href="/resort" className="hover:text-white transition-colors">The 4 Resort Zones &amp; Masterplan</Link></li>
               <li><Link href="/#gallery" className="hover:text-white transition-colors">Photo Gallery &amp; Brochure</Link></li>
-              <li><Link href="/membership" className="hover:text-white transition-colors">Membership &amp; Land Shares (From ৳2.50L)</Link></li>
-              <li><Link href="/portfolio" className="hover:text-white transition-colors">Sampan Group Track Record</Link></li>
+              <li><Link href="/invest" className="hover:text-white transition-colors">Invest &amp; Membership</Link></li>
+              <li><Link href="/portfolio" className="hover:text-white transition-colors">Our Portfolio</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Visit &amp; Contact Desk</Link></li>
             </ul>
           </div>

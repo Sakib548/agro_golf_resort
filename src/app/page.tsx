@@ -27,19 +27,19 @@ const portalCards = [
     title: "Membership & Privileges",
     subtitle: "High-Tier Golf Club & Partner Discounts",
     desc: "Exclusive access to championship courses, wellness spas, 10%–50% discounts across Sampan Group hotels, Arunima Resort, and Shooters Shooting Club.",
-    href: "/membership",
+    href: "/invest#membership",
     badge: "Club Access",
     image: "/images/loyalty-card-permanent-member.webp",
     action: "Explore Membership Privileges",
   },
   {
-    title: "Proven Track Record",
+    title: "Our Portfolio",
     subtitle: "Sampan Group Operating Benchmarks",
     desc: "Sampan Highway Inn serving 5,000+ daily travelers (৳95L–1.30Cr/mo), operating Sampan Eco-Agro, and 6 active premier developments across Dhaka.",
     href: "/portfolio",
     badge: "Operating Proof",
     image: "/images/highway-inn.webp",
-    action: "Review Track Record",
+    action: "Explore Our Portfolio",
   },
 ];
 

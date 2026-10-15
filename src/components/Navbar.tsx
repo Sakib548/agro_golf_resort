@@ -9,11 +9,8 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "The Resort", href: "/resort" },
-  { label: "Invest", href: "/invest" },
-  // { label: "Track Record", href: "/portfolio" },
+  { label: "Invest & Membership", href: "/invest" },
   { label: "Our Portfolio", href: "/portfolio" },
-
-  { label: "Membership", href: "/membership" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -99,7 +96,7 @@ export default function Navbar() {
               Brochure ↗
             </a>
             <Link
-              href="/membership"
+              href="/invest"
               className="inline-flex text-xs uppercase tracking-wider font-bold text-[#b6e59c] hover:text-white px-2.5 py-1.5 rounded-full hover:bg-white/10 transition-colors"
             >
               From ৳2.50L
@@ -209,11 +206,11 @@ export default function Navbar() {
                 <span>Book Site Visit</span>
               </Link>
               <Link
-                href="/membership"
+                href="/invest"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 py-3 text-center text-xs uppercase tracking-wider font-bold text-white"
               >
-                <span>Membership &amp; Shares (From ৳2.50L)</span>
+                <span>Invest &amp; Membership (From ৳2.50L)</span>
               </Link>
               <a
                 href="/brochure.html"

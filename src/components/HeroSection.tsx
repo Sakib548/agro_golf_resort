@@ -43,10 +43,10 @@ export default function HeroSection() {
           {/* Action CTAs */}
           <div className="hero-reveal flex flex-wrap items-center gap-3.5">
             <Link
-              href="/membership"
+              href="/invest"
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#66b447] px-6 sm:px-7 py-3.5 text-sm uppercase tracking-wider font-bold text-[#06210f] shadow-sm transition-all duration-300 hover:bg-[#77c955] hover:scale-105 active:scale-95"
             >
-              <span>See Membership &amp; Shares</span>
+              <span>See Invest &amp; Membership</span>
               {/* <span className="text-xs">৳2.50L+</span> */}
             </Link>
 
