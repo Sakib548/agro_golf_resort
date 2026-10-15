@@ -57,7 +57,7 @@ const galleryPhotos: GalleryPhoto[] = [
     desc: "Indoor billiards, snooker, table games, and executive cards room.",
   },
 
-  // 2. Stay: Luxury Villas & শণ Shan Cottages
+  // 2. Stay: Luxury Villas & Cottages
   {
     title: "Lakeside Luxury Villas",
     category: "stay",
@@ -66,11 +66,11 @@ const galleryPhotos: GalleryPhoto[] = [
     desc: "Waterfront villas overlooking natural ponds with wooden decks and private verandas.",
   },
   {
-    title: "Traditional শণ (Shan) Eco-Cottages",
+    title: "Traditional Eco-Cottages",
     category: "stay",
     src: "/images/Sampan-Agro-%26-Golf-Resort%201.webp",
-    tag: "শণ Cottages",
-    desc: "Authentic Bengali thatched Shan eco-cottages blending rustic heritage with 5-star amenities.",
+    tag: "Cottages",
+    desc: "Authentic thatched eco-cottages blending rustic heritage with 5-star amenities.",
   },
   {
     title: "Presidential Bedroom Suite",
@@ -265,7 +265,7 @@ const galleryPhotos: GalleryPhoto[] = [
 const categoryTabs = [
   { id: "all", label: "All Facilities (Divided)", icon: "✨", desc: "Complete visual tour divided by estate zones" },
   { id: "sports", label: "Golf & Sports Arena", icon: "⛳", desc: "9-hole championship course, driving ranges, FIFA turfs & gym" },
-  { id: "stay", label: "Villas & শণ Cottages", icon: "🏡", desc: "Lakeside villas, presidential suites & authentic thatched cottages" },
+  { id: "stay", label: "Villas & Cottages", icon: "🏡", desc: "Lakeside villas, presidential suites & authentic thatched cottages" },
   { id: "leisure", label: "Aquatics, Dining & Spa", icon: "🏊", desc: "4 pools, 10 natural ponds, farm-to-table dining & cinema" },
   { id: "agro", label: "Agro Orchards & Trails", icon: "🌱", desc: "Organic fruit orchards, golden paddy fields & equestrian trails" },
   { id: "docs", label: "Cards & Certificates", icon: "📜", desc: "Official member loyalty card & 100% sub-kabula deed certificates" },
@@ -285,7 +285,7 @@ export default function ResortPageContent() {
       {/* 1. HERO / HEADER & AERIAL VIEW */}
       <section className="relative bg-[#07291c] text-white overflow-hidden pt-12 pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl mb-8">
+          <div className="hero-reveal max-w-3xl mb-8">
             <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#b6e59c] bg-white/10 px-3.5 py-1 rounded-full mb-3">
               Podunapur, Moulvibazar Sadar &bull; 100+ Acres
             </span>
@@ -298,7 +298,7 @@ export default function ResortPageContent() {
           </div>
 
           {/* Aerial View Banner of the Estate */}
-          <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/40">
+          <div className="hero-reveal relative aspect-[21/9] w-full rounded-3xl overflow-hidden shadow-2xl border border-emerald-900/40">
             <Image
               src="/images/golf-hero.webp"
               alt="Aerial view of the 100+ acre Sampan Agro & Golf Resort estate"
@@ -338,7 +338,7 @@ export default function ResortPageContent() {
       {/* 2. SIGNATURE EXPERIENCES (4 CARDS MATCHING HTML) */}
       <section className="py-20 bg-[#ffffff] border-b border-stone-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-12">
+          <div className="reveal-slow max-w-2xl mb-12">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
               Core Pillars
             </span>
@@ -350,7 +350,7 @@ export default function ResortPageContent() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl border-l-4 border-l-[#0b4a32] border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm hover:shadow-md transition-shadow">
               <span className="text-3xl mb-3 block">🏌️</span>
               <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
@@ -394,10 +394,10 @@ export default function ResortPageContent() {
         </div>
       </section>
 
-      {/* 3. STAY (LUXURY VILLAS, শণ SHAN COTTAGES, PRESIDENTIAL SUITES) */}
+      {/* 3. STAY (LUXURY VILLAS, COTTAGES, PRESIDENTIAL SUITES) */}
       <section className="py-20 bg-[#f6f8f2]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl border border-stone-200 bg-white p-8 sm:p-12 shadow-sm">
+          <div className="reveal-slow rounded-3xl border border-stone-200 bg-white p-8 sm:p-12 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#b8892b] bg-amber-100/80 px-3 py-1 rounded-full">
@@ -410,7 +410,7 @@ export default function ResortPageContent() {
                   Luxury villas and cottages sit within the estate. Owners can hold a cottage or villa outright, and guests can book stays. The brochure shows a presidential suite, restaurant, and gym as part of the resort.
                 </p>
                 <p className="text-stone-600 text-base leading-relaxed mb-6">
-                  Experience authentic rustic Bengali <strong className="text-stone-900 font-semibold">শণ (Shan) thatched cottages</strong> that stay naturally cool in the summer, alongside waterfront luxury villas with floor-to-ceiling glass looking onto the ponds.
+                  Experience authentic rustic Bengali <strong className="text-stone-900 font-semibold">thatched cottages</strong> that stay naturally cool in the summer, alongside waterfront luxury villas with floor-to-ceiling glass looking onto the ponds.
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 text-center mb-6">
@@ -456,12 +456,12 @@ export default function ResortPageContent() {
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-stone-200">
                   <Image
                     src="/images/Sampan-Agro-%26-Golf-Resort%201.webp"
-                    alt="শণ Shan eco cottages"
+                    alt="Eco cottages"
                     fill
                     className="object-cover"
                   />
                   <div className="absolute bottom-2 left-2 right-2 bg-black/60 backdrop-blur-sm rounded-lg p-2 text-white text-[11px] font-semibold text-center">
-                    শণ (Shan) Cottages
+                    Eco Cottages
                   </div>
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-stone-200">
@@ -494,7 +494,7 @@ export default function ResortPageContent() {
 
       {/* 4. MASTERPLAN SECTION */}
       <section className="py-20 bg-[#ffffff] border-y border-stone-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <div className="reveal-slow mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
             100+ Acre Architectural Map
           </span>
@@ -547,7 +547,7 @@ export default function ResortPageContent() {
       {/* 5. DIVIDED GALLERY SECTION */}
       <section id="gallery" className="py-20 bg-[#f6f8f2] scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div className="reveal-slow flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
                 Curated Visuals
@@ -637,7 +637,7 @@ export default function ResortPageContent() {
                       </div>
 
                       {/* Photo Grid for this Divided Zone */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                      <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         {photos.map((photo, idx) => (
                           <div
                             key={idx}
@@ -675,7 +675,7 @@ export default function ResortPageContent() {
                 })}
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {filteredPhotos.map((photo, idx) => (
                 <div
                   key={idx}
@@ -715,7 +715,7 @@ export default function ResortPageContent() {
       {/* 6. ZONES (THE 4 CARDS WITH DETAILED BULLETS MATCHING HTML) */}
       <section id="zones" className="py-20 bg-[#ffffff] border-t border-stone-200 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-12">
+          <div className="reveal-slow max-w-2xl mb-12">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
               Zoning Breakdown
             </span>
@@ -727,7 +727,7 @@ export default function ResortPageContent() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Zone 1: Elite sports and athletics */}
             <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
@@ -820,7 +820,7 @@ export default function ResortPageContent() {
               <ul className="space-y-2.5 text-sm text-stone-700">
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#b8892b] font-bold text-base">•</span>
-                  <span>Luxury waterfront villas and authentic <strong>শণ (Shan) cottages</strong></span>
+                  <span>Luxury waterfront villas and authentic <strong>cottages</strong></span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="text-[#b8892b] font-bold text-base">•</span>
@@ -890,7 +890,7 @@ export default function ResortPageContent() {
           </div>
 
           {/* Bottom Booking & Enquiry CTA Banner */}
-          <div className="rounded-3xl bg-linear-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 shadow-xl border border-emerald-900/40">
+          <div className="reveal-slow rounded-3xl bg-linear-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 shadow-xl border border-emerald-900/40">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="max-w-2xl">
                 <span className="inline-block text-xs uppercase tracking-widest text-[#b6e59c] font-bold bg-white/10 px-3.5 py-1 rounded-full mb-3">
@@ -900,7 +900,7 @@ export default function ResortPageContent() {
                   Experience The Resort in person
                 </h3>
                 <p className="text-emerald-100/90 text-sm sm:text-base leading-relaxed">
-                  Walk through the nine-hole course, view our শণ (Shan) cottages, taste fresh farm-to-table harvests, and meet our property counselors at Podunapur, Moulvibazar.
+                  Walk through the nine-hole course, view our cottages, taste fresh farm-to-table harvests, and meet our property counselors at Podunapur, Moulvibazar.
                 </p>
               </div>
 

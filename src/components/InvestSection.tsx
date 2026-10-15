@@ -47,7 +47,7 @@ export default function InvestSection() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16">
         {/* Section Intro */}
-        <div className="max-w-3xl mb-14">
+        <div className="reveal-slow max-w-3xl mb-14">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
             Wealth Generation
           </span>
@@ -60,7 +60,7 @@ export default function InvestSection() {
         </div>
 
         {/* 2 Revenue Streams Breakdown */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
             <div className="size-12 rounded-xl bg-lime-100 text-[#0b4a32] flex items-center justify-center text-2xl mb-4 font-bold">
               🌾
@@ -99,7 +99,7 @@ export default function InvestSection() {
         </div>
 
         {/* Interactive Share Calculator Widget */}
-        <div id="calculator" className="rounded-3xl border border-emerald-900/20 bg-gradient-to-br from-white via-[#fcfdfa] to-emerald-50/40 p-8 sm:p-12 shadow-md mb-20">
+        <div id="calculator" className="reveal-slow rounded-3xl border border-emerald-900/20 bg-gradient-to-br from-white via-[#fcfdfa] to-emerald-50/40 p-8 sm:p-12 shadow-md mb-20">
           <div className="max-w-2xl mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
               Interactive Estimator
@@ -293,7 +293,7 @@ export default function InvestSection() {
         </div>
 
         {/* How Buying Works (4-step Roadmap) */}
-        <div className="mb-20">
+        <div className="reveal-slow mb-20">
           <div className="max-w-2xl mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
               Acquisition Process
@@ -306,7 +306,7 @@ export default function InvestSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
               <span className="size-8 rounded-full bg-[#0b4a32] text-white flex items-center justify-center font-bold text-xs mb-4">
                 1
@@ -350,7 +350,7 @@ export default function InvestSection() {
         </div>
 
         {/* Benefits of Ownership Cards */}
-        <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 sm:p-12">
+        <div className="reveal-slow rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 sm:p-12">
           <div className="max-w-2xl mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
               Privileges

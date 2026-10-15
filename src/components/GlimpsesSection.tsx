@@ -58,7 +58,7 @@ const facilities = [
   {
     title: "Hospitality & Stays",
     items: [
-      "Waterfront villas & শণ (Shan) cottages",
+      "Waterfront villas & cottages",
       "Presidential suites & butler services",
       "Farm-to-table organic restaurant",
       "3D movie theater & executive library",

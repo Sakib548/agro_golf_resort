@@ -58,7 +58,7 @@ export default function ContactSection() {
     <section id="contact" className="py-24 bg-[#ffffff] text-[#14261c] border-t border-stone-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-14">
+        <div className="hero-reveal max-w-3xl mb-14">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
             Connect &bull; Visit &bull; Invest
           </span>
@@ -71,7 +71,7 @@ export default function ContactSection() {
         </div>
 
         {/* 4 Contact Channels Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="rounded-2xl border border-stone-200 bg-[#fbfcf9] p-6 shadow-sm">
             <div className="size-10 rounded-xl bg-emerald-100 text-[#0b4a32] flex items-center justify-center font-bold text-lg mb-3">
               📞
@@ -118,7 +118,7 @@ export default function ContactSection() {
         </div>
 
         {/* Main Grid: Enquiry Form & Interactive FAQ Accordion */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
+        <div className="reveal-slow grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
           {/* Interactive Form */}
           <div className="lg:col-span-6 rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 sm:p-10 shadow-sm">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">

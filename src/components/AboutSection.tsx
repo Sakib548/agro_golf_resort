@@ -7,7 +7,7 @@ export default function AboutSection() {
     <section id="about" className="py-24 bg-[#ffffff] text-[#14261c] border-t border-stone-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-12">
+        <div className="hero-reveal max-w-3xl mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100/70 px-3.5 py-1 rounded-full">
             Visionary Estate
           </span>
@@ -20,7 +20,7 @@ export default function AboutSection() {
         </div>
 
         {/* Feature Wide Banner */}
-        <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-14 shadow-lg border border-stone-200">
+        <div className="reveal-slow relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-14 shadow-lg border border-stone-200">
           <Image
             src="/images/lakeside-villas.webp"
             alt="Sampan Agro & Golf Resort Landscape"
@@ -42,7 +42,7 @@ export default function AboutSection() {
         </div>
 
         {/* 3 Pillar Summary Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div className="rounded-2xl border-l-4 border-l-[#66b447] border border-stone-200 bg-[#fbfcf9] p-6 sm:p-7">
             <span className="text-xs uppercase font-bold text-[#0b4a32] tracking-wider">The Project</span>
             <h4 className="font-heading text-xl font-bold text-[#14261c] mt-2 mb-2">Sampan Developments Ltd</h4>
@@ -69,7 +69,7 @@ export default function AboutSection() {
         </div>
 
         {/* Vision & Mission */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <div className="reveal-slow grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           <div className="rounded-3xl border border-stone-200/90 bg-gradient-to-br from-emerald-950 to-[#0b3a28] text-white p-8 sm:p-10 shadow-md">
             <div className="size-12 rounded-xl bg-white/10 flex items-center justify-center text-2xl mb-6">
               🔭
@@ -102,11 +102,11 @@ export default function AboutSection() {
         </div>
 
         {/* Guiding Principles */}
-        <div className="mb-20">
+        <div className="reveal-slow mb-20">
           <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#14261c] mb-8 text-center">
             What guides the group
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
               <div className="text-2xl mb-3">💡</div>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Innovation</h4>
@@ -142,7 +142,7 @@ export default function AboutSection() {
         </div>
 
         {/* Who the resort is for */}
-        <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 sm:p-12 mb-20">
+        <div className="reveal-slow rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 sm:p-12 mb-20">
           <div className="max-w-xl mb-8">
             <span className="text-xs uppercase tracking-widest text-[#0b4a32] font-bold bg-emerald-100 px-3 py-1 rounded-full">
               Audience
@@ -152,7 +152,7 @@ export default function AboutSection() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="rounded-2xl bg-white p-6 border border-stone-200 shadow-sm">
               <span className="text-xl">👨‍👩‍👧‍👦</span>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mt-3 mb-2">Families</h4>
@@ -188,7 +188,7 @@ export default function AboutSection() {
         </div>
 
         {/* Our approach to the land */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="reveal-slow grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-6 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-stone-200">
             <Image
               src="/images/agro-orchard.webp"

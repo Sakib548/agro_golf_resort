@@ -154,7 +154,7 @@ export default function HeroSection() {
             </div>
             <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">Hospitality</h3>
             <p className="text-stone-600 text-sm leading-relaxed">
-              Luxury villas, শণ (Shan) cottages, wellness spa, pools, kayaking, cinema, and lakeside amphitheatre.
+              Luxury villas, cottages, wellness spa, pools, kayaking, cinema, and lakeside amphitheatre.
             </p>
           </div>
 

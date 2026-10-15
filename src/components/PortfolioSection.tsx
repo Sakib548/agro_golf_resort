@@ -46,7 +46,7 @@ export default function PortfolioSection() {
     <section id="portfolio" className="py-24 bg-[#ffffff] text-[#14261c] border-t border-stone-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-12">
+        <div className="hero-reveal max-w-3xl mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
             Proven Performance
           </span>
@@ -59,7 +59,7 @@ export default function PortfolioSection() {
         </div>
 
         {/* Feature Hero Card of Sampan Highway Inn */}
-        <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-14 shadow-lg border border-stone-200">
+        <div className="reveal-slow relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-14 shadow-lg border border-stone-200">
           <Image
             src="/images/sampan_highway.jpg"
             alt="Sampan Highway Inn - Operating Project"
@@ -81,7 +81,7 @@ export default function PortfolioSection() {
         </div>
 
         {/* Operating Projects Detailed Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div className="rounded-2xl border border-stone-200 bg-[#fbfcf9] p-7 shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
@@ -144,7 +144,7 @@ export default function PortfolioSection() {
         </div>
 
         {/* In Numbers Stats Strip */}
-        <div className="rounded-3xl border border-stone-200 bg-[#07291c] text-white p-8 sm:p-12 mb-20 shadow-md">
+        <div className="reveal-slow rounded-3xl border border-stone-200 bg-[#07291c] text-white p-8 sm:p-12 mb-20 shadow-md">
           <div className="text-center max-w-xl mx-auto mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-[#b6e59c]">
               Scale In Numbers
@@ -175,11 +175,11 @@ export default function PortfolioSection() {
         </div>
 
         {/* What Carries Over to the Golf Resort */}
-        <div className="mb-20">
+        <div className="reveal-slow mb-20">
           <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#14261c] mb-6">
             What carries over to the golf resort
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
               <span className="text-2xl mb-2 block">💼</span>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Operating Experience</h4>
@@ -207,7 +207,7 @@ export default function PortfolioSection() {
         </div>
 
         {/* Ongoing Projects Grid */}
-        <div>
+        <div className="reveal-slow">
           <div className="max-w-2xl mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
               Development Pipeline
@@ -217,7 +217,7 @@ export default function PortfolioSection() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {ongoingProjects.map((p) => (
               <div
                 key={p.name}

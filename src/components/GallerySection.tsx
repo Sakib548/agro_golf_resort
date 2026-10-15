@@ -144,11 +144,11 @@ const galleryItems: GalleryItem[] = [
 
   // Stay & Cottages
   {
-    title: "শণ (Shan) Eco Cottages & Thatch Pavilions",
+    title: "Eco Cottages & Thatch Pavilions",
     category: "stay",
     src: "/images/Sampan-Agro-%26-Golf-Resort%201.webp",
-    tag: "শণ Cottages",
-    desc: "Traditional Bengali thatched Shan cottages blending rustic charm with 5-star comfort.",
+    tag: "Cottages",
+    desc: "Traditional thatched eco-cottages blending rustic charm with 5-star comfort.",
   },
   {
     title: "Scenic Waterfront Villas",
@@ -276,7 +276,7 @@ export default function GallerySection() {
               Estate &amp; Facilities Gallery
             </h2>
             <p className="text-stone-600 text-base sm:text-lg mt-3 max-w-2xl leading-relaxed">
-              Explore authentic glimpses of our 100+ acre grounds — from international sports courts and শণ (Shan) eco-cottages to golden wheat and paddy fields.
+              Explore authentic glimpses of our 100+ acre grounds — from international sports courts and eco-cottages to golden wheat and paddy fields.
             </p>
           </div>
 
@@ -300,7 +300,7 @@ export default function GallerySection() {
             { id: "all", label: "All Photos", count: galleryItems.length },
             { id: "sports", label: "Golf & Sports Arena", count: 6 },
             { id: "agro", label: "Agro, Wheat & Paddy Fields", count: 6 },
-            { id: "stay", label: "শণ Cottages & Villas", count: 5 },
+            { id: "stay", label: "Cottages & Villas", count: 5 },
             { id: "leisure", label: "Dining, Pools & Leisure", count: 7 },
             { id: "docs", label: "Cards & Certificates", count: 3 },
           ].map((tab) => {
@@ -371,7 +371,7 @@ export default function GallerySection() {
                 View the complete original project brochure
               </h3>
               <p className="text-emerald-100/90 text-sm sm:text-base leading-relaxed mb-3">
-                Access the official brochure pages online. Note: Newer facilities—such as our <strong className="text-white font-semibold">Baseball diamond</strong>, <strong className="text-white font-semibold">FIFA football fields</strong>, <strong className="text-white font-semibold">Tennis &amp; Cricket grounds</strong>, authentic <strong className="text-white font-semibold">শণ (Shan) cottages</strong>, and expansive <strong className="text-white font-semibold">Wheat &amp; Paddy fields</strong>—are our latest masterplan expansions.
+                Access the official brochure pages online. Note: Newer facilities—such as our <strong className="text-white font-semibold">Baseball diamond</strong>, <strong className="text-white font-semibold">FIFA football fields</strong>, <strong className="text-white font-semibold">Tennis &amp; Cricket grounds</strong>, authentic <strong className="text-white font-semibold">cottages</strong>, and expansive <strong className="text-white font-semibold">Wheat &amp; Paddy fields</strong>—are our latest masterplan expansions.
               </p>
               <div className="flex flex-wrap gap-2 text-xs text-emerald-200/80">
                 <span className="bg-white/10 px-3 py-1 rounded-full">✓ 38MB High-Res Brochure</span>

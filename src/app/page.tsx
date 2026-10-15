@@ -7,7 +7,7 @@ import GlimpsesSection from "@/components/GlimpsesSection";
 const portalCards = [
   {
     title: "The Resort & Masterplan",
-    subtitle: "Championship Sports, শণ Shan Cottages & Farmlands",
+    subtitle: "Championship Sports, Cottages & Farmlands",
     desc: "Explore our 9-hole golf course, baseball diamond, FIFA football turfs, authentic thatched cottages, divided photo gallery, and 4 specialized masterplan zones.",
     href: "/resort",
     badge: "Masterplan",

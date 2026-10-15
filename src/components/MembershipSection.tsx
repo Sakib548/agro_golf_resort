@@ -43,7 +43,7 @@ export default function MembershipSection() {
     <section id="membership" className="py-24 bg-[#f6f8f2] text-[#14261c] border-t border-stone-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-12">
+        <div className="hero-reveal max-w-3xl mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
             Elite Privileges
           </span>
@@ -56,7 +56,7 @@ export default function MembershipSection() {
         </div>
 
         {/* 3 Physical Credential Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
             <div className="size-12 rounded-xl bg-emerald-100 text-[#0b4a32] flex items-center justify-center text-2xl mb-4 font-bold">
               💳
@@ -104,7 +104,7 @@ export default function MembershipSection() {
         </div>
 
         {/* Visual Card Showcase Banner */}
-        <div className="rounded-3xl bg-gradient-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 mb-20 shadow-xl border border-emerald-900/40 relative overflow-hidden">
+        <div className="reveal-slow rounded-3xl bg-gradient-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 mb-20 shadow-xl border border-emerald-900/40 relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div className="lg:col-span-7">
               <span className="text-xs uppercase tracking-widest text-[#b6e59c] font-bold">
@@ -167,7 +167,7 @@ export default function MembershipSection() {
         </div>
 
         {/* Partners Privileges Table */}
-        <div className="mb-14">
+        <div className="reveal-slow mb-14">
           <div className="max-w-2xl mb-8">
             <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
               Reciprocal Privileges

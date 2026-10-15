@@ -57,14 +57,14 @@ const resortZones: ZoneData[] = [
   {
     id: "hospitality",
     name: "Entertainment & Hospitality",
-    tagline: "শণ (Shan) Cottages, Luxury Villas & Amphitheatre",
+    tagline: "Eco-Cottages, Luxury Villas & Amphitheatre",
     icon: "🏡",
     color: "#b8892b",
     image: "/images/Room-Web-image.webp",
     description:
-      "Five-star hospitality blending authentic rustic Bengali শণ (Shan) eco-cottages with modern luxury villas, gourmet farm dining, private cinema, and amusement park.",
+      "Five-star hospitality blending authentic rustic eco-cottages with modern luxury villas, gourmet farm dining, private cinema, and amusement park.",
     amenities: [
-      "Traditional শণ (Shan) eco-cottages with thatched roof architecture",
+      "Traditional eco-cottages with thatched roof architecture",
       "Luxury waterfront private villas & lakeside cottages",
       "Presidential suites with butler service & panoramic views",
       "Organic farm-to-table gourmet restaurant",
@@ -106,7 +106,7 @@ export default function ResortZonesSection() {
     <section id="resort" className="py-24 bg-[#f6f8f2] text-[#14261c]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-12">
+        <div className="reveal-slow max-w-3xl mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
             Masterplan Zones
           </span>
@@ -119,7 +119,7 @@ export default function ResortZonesSection() {
         </div>
 
         {/* 4 Signature Experiences Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="rounded-2xl border-l-4 border-l-[#0b4a32] border border-stone-200 bg-white p-6 shadow-sm">
             <span className="text-2xl mb-2 block">🏌️</span>
             <h3 className="font-heading text-lg font-bold text-[#14261c] mb-1">Golf on the Water</h3>
@@ -154,7 +154,7 @@ export default function ResortZonesSection() {
         </div>
 
         {/* Interactive Zone Explorer Tabs */}
-        <div className="rounded-3xl border border-stone-200 bg-white p-6 sm:p-10 shadow-sm mb-20">
+        <div className="reveal-slow rounded-3xl border border-stone-200 bg-white p-6 sm:p-10 shadow-sm mb-20">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-100 pb-6 mb-8">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#66b447]">
@@ -243,17 +243,17 @@ export default function ResortZonesSection() {
         </div>
 
         {/* Stay & Villas Showcase */}
-        <div className="rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 sm:p-12 mb-20">
+        <div className="reveal-slow rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 sm:p-12 mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-6">
               <span className="text-xs font-bold uppercase tracking-widest text-[#b8892b] bg-amber-100/80 px-3 py-1 rounded-full">
                 Accommodations
               </span>
               <h3 className="font-heading text-3xl sm:text-4xl font-bold text-[#14261c] mt-3 mb-4">
-                Stay in luxury villas &amp; শণ (Shan) eco-cottages
+                Stay in luxury villas &amp; cottages
               </h3>
               <p className="text-stone-600 text-base leading-relaxed mb-4">
-                Experience authentic Bengali heritage in handcrafted <strong className="text-stone-900 font-semibold">শণ (Shan) thatched cottages</strong>, or unwind in modern multi-bedroom waterfront villas. Qualified buyers can acquire a full cottage or villa with 100% Sub-Kabula deed registration, while guests enjoy 5-star hotel service.
+                Experience authentic Bengali heritage in handcrafted <strong className="text-stone-900 font-semibold">thatched cottages</strong>, or unwind in modern multi-bedroom waterfront villas. Qualified buyers can acquire a full cottage or villa with 100% Sub-Kabula deed registration, while guests enjoy 5-star hotel service.
               </p>
               <p className="text-stone-600 text-base leading-relaxed mb-6">
                 Featured facilities include presidential suites with golf panoramas, organic farm-to-table breakfast, room service, private plunge pools, and priority access to golf tee times.
@@ -287,7 +287,7 @@ export default function ResortZonesSection() {
         </div>
 
         {/* Masterplan Map Callout */}
-        <div className="rounded-3xl border border-stone-200 bg-white p-8 sm:p-12 text-center">
+        <div className="reveal-slow rounded-3xl border border-stone-200 bg-white p-8 sm:p-12 text-center">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
             Engineering Layout
           </span>
