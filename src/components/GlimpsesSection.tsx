@@ -17,7 +17,7 @@ export default function GlimpsesSection() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100/80 px-3.5 py-1 text-xs uppercase tracking-widest font-extrabold text-[#0b4a32] border border-emerald-200">
               <Sparkles className="size-3.5" />
-              <span>Bento Architecture Showcase</span>
+              <span>Our  Architecture Showcase</span>
             </div>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#14261c] mt-3">
               Glimpses of the Estate
