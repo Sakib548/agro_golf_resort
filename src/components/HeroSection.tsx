@@ -75,23 +75,9 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Undulating Golf Course SVG Curve */}
-      <div className="relative z-10 w-full overflow-hidden leading-none">
-        <svg
-          viewBox="0 0 1200 160"
-          preserveAspectRatio="none"
-          className="w-full h-20 sm:h-28 text-[#f6f8f2] fill-current"
-          aria-hidden="true"
-        >
-          <path d="M0 80 C250 20 450 140 700 70 S1050 20 1200 60 V160 H0Z" fill="#1f6b3f" opacity="0.6" />
-          <path d="M0 110 C300 70 520 150 800 100 S1100 80 1200 95 V160 H0Z" fill="#66b447" opacity="0.75" />
-          <path d="M0 135 C350 110 700 155 1200 125 V160 H0Z" fill="#f6f8f2" />
-        </svg>
-      </div>
-
       {/* Floating Key Metrics Strip - Soft Bento Floating Dock */}
-      <div className="hero-reveal relative z-20 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-10 sm:-mt-14 mb-12">
-        <div className="bento-card neo-hairline grid grid-cols-2 md:grid-cols-5 gap-0 bg-white/95 backdrop-blur-md shadow-xl divide-x divide-y md:divide-y-0 divide-stone-200 overflow-hidden">
+      <div className="hero-reveal relative z-20 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-4 sm:-mt-6 mb-16">
+        <div className="bento-card neo-hairline grid grid-cols-2 md:grid-cols-5 gap-0 bg-white/95 backdrop-blur-md shadow-2xl divide-x divide-y md:divide-y-0 divide-stone-200 overflow-hidden rounded-2xl ring-1 ring-white/20">
           <div className="p-4 sm:p-6 text-center">
             <span className="font-heading block text-3xl sm:text-4xl font-extrabold text-[#0b4a32]">100+</span>
             <span className="text-xs sm:text-sm font-medium text-stone-500 uppercase tracking-wide">Acres Estate</span>
@@ -170,6 +156,20 @@ export default function HeroSection() {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Undulating Transition to Beige Timeline Section */}
+      <div className="relative z-10 w-full overflow-hidden leading-none mt-12 -mb-1">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="w-full h-10 sm:h-16 text-[#f6f8f2] fill-current block"
+          aria-hidden="true"
+        >
+          <path d="M0 50 C250 20 450 90 700 50 S1050 20 1200 45 V120 H0Z" fill="#1f6b3f" opacity="0.4" />
+          <path d="M0 75 C300 45 520 100 800 65 S1100 50 1200 70 V120 H0Z" fill="#66b447" opacity="0.7" />
+          <path d="M0 95 C350 75 700 115 1200 85 V120 H0Z" fill="#f6f8f2" />
+        </svg>
       </div>
     </section>
   );
