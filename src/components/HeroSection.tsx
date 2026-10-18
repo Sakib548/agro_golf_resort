@@ -10,7 +10,7 @@ export default function HeroSection() {
       {/* Background Visual with Translucent, Airy Luxury Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/golf-hero.webp"
+          src="/images/hero.webp"
           alt="Sampan Agro & Golf Resort Golf Course"
           fill
           priority

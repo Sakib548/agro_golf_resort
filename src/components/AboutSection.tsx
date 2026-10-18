@@ -28,7 +28,7 @@ export default function AboutSection() {
         {/* Feature Wide Banner with Floating Glass Card */}
         <div className="reveal-slow relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-14 shadow-2xl border border-stone-200/80">
           <Image
-            src="/images/lakeside-villas.webp"
+            src="/images/golf-hero.webp"
             alt="Sampan Agro & Golf Resort Landscape"
             fill
             className="object-cover"
@@ -237,7 +237,7 @@ export default function AboutSection() {
               Our approach to the land
             </h3>
             <p className="text-stone-600 text-base leading-relaxed mb-4">
-              Rather than bulldozing natural waterways, Sampan Agro &amp; Golf Resort preserves all ten natural ponds and builds organically around them. 
+              Rather than bulldozing natural waterways, Sampan Agro &amp; Golf Resort preserves all ten natural ponds and builds organically around them.
             </p>
             <p className="text-stone-600 text-base leading-relaxed mb-6">
               Commercial agriculture is not an afterthought pushed to the perimeter — it forms the living, breathing heart of daily resort life with farm-to-table dining, organic honey and dairy, and seasonal fruit harvests.
