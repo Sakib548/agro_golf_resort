@@ -43,7 +43,7 @@ const galleryHighlights = [
   {
     title: "Championship Golf Swing",
     tag: "9-Hole Golf Action",
-    src: "/images/golf-swing-action.webp",
+    src: "/images/Web-1.webp",
   },
   {
     title: "Sunset Clubhouse Lounge",
@@ -53,7 +53,7 @@ const galleryHighlights = [
   {
     title: "Lakeside Luxury Villas",
     tag: "Eco Villas & Cottages",
-    src: "/images/lakeside-villas.webp",
+    src: "/images/scenic-villa-overlooking-golf-course.webp",
   },
   {
     title: "Executive Reading Lounge",
