@@ -114,7 +114,7 @@ export default function Home() {
               <Link
                 key={card.title}
                 href={card.href}
-                className="group relative overflow-hidden rounded-3xl border border-stone-200 bg-white p-7 sm:p-8 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl hover:border-emerald-800/40 flex flex-col justify-between"
+                className="bento-card neo-hairline group relative overflow-hidden p-7 sm:p-8 flex flex-col justify-between"
               >
                 <div>
                   <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden mb-6 shadow-sm border border-stone-200 bg-stone-100">

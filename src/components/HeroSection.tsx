@@ -32,7 +32,7 @@ export default function HeroSection() {
           {/* Main Title */}
           <h1 className="hero-reveal font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] mb-6 drop-shadow-md">
             Luxury of nature <br className="hidden sm:inline" />
-            <span className="text-[#66b447] italic font-serif">with leisure.</span>
+            <span className="text-[#66b447] italic font-heading">with leisure.</span>
           </h1>
 
           {/* Subtitle */}
@@ -89,9 +89,9 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      {/* Floating Key Metrics Strip - Soft and light shadow with slow reveal */}
+      {/* Floating Key Metrics Strip - Soft Bento Floating Dock */}
       <div className="hero-reveal relative z-20 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 -mt-10 sm:-mt-14 mb-12">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-0 rounded-2xl border border-stone-200/90 bg-white/95 backdrop-blur-sm shadow-sm divide-x divide-y md:divide-y-0 divide-stone-200 overflow-hidden">
+        <div className="bento-card neo-hairline grid grid-cols-2 md:grid-cols-5 gap-0 bg-white/95 backdrop-blur-md shadow-xl divide-x divide-y md:divide-y-0 divide-stone-200 overflow-hidden">
           <div className="p-4 sm:p-6 text-center">
             <span className="font-heading block text-3xl sm:text-4xl font-extrabold text-[#0b4a32]">100+</span>
             <span className="text-xs sm:text-sm font-medium text-stone-500 uppercase tracking-wide">Acres Estate</span>
@@ -108,9 +108,9 @@ export default function HeroSection() {
             <span className="font-heading block text-3xl sm:text-4xl font-extrabold text-[#0b4a32]">4</span>
             <span className="text-xs sm:text-sm font-medium text-stone-500 uppercase tracking-wide">Swimming Pools</span>
           </div>
-          <div className="col-span-2 md:col-span-1 p-4 sm:p-6 text-center bg-emerald-50/70">
-            <span className="font-heading block text-3xl sm:text-4xl font-extrabold text-[#66b447]">100%</span>
-            <span className="text-xs sm:text-sm font-bold text-emerald-900 uppercase tracking-wide">Sub-Kabula Deed</span>
+          <div className="col-span-2 md:col-span-1 p-4 sm:p-6 text-center bg-emerald-50/80">
+            <span className="font-heading block text-3xl sm:text-4xl font-extrabold text-[#0b4a32]">100%</span>
+            <span className="text-xs sm:text-sm font-bold text-[#0b4a32] uppercase tracking-wide">Sub-Kabula Deed</span>
           </div>
         </div>
       </div>
@@ -124,14 +124,14 @@ export default function HeroSection() {
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-neutral-50 mt-3">
             One estate, four ways to enjoy it
           </h2>
-          <p className="text-stone-400 text-sm sm:text-base mt-2">
+          <p className="text-stone-300 text-sm sm:text-base mt-2">
             A harmonious integration of sports, sustainable agriculture, world-class leisure, and permanent wealth.
           </p>
         </div>
 
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="group rounded-2xl border border-stone-200/90 bg-white p-6 shadow-sm hover:border-emerald-700/40 transition-all duration-300">
-            <div className="size-12 rounded-xl bg-emerald-900/10 text-[#0b4a32] flex items-center justify-center mb-4 group-hover:bg-[#0b4a32] group-hover:text-white transition-colors">
+          <div className="bento-card neo-hairline p-6 transition-all duration-300">
+            <div className="size-12 rounded-xl bg-emerald-900/10 text-[#0b4a32] flex items-center justify-center mb-4 transition-colors">
               <Flag className="size-5" />
             </div>
             <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">Golf Lifestyle</h3>
@@ -140,8 +140,8 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <div className="group rounded-2xl border border-stone-200/90 bg-white p-6 shadow-sm hover:border-emerald-700/40 transition-all duration-300">
-            <div className="size-12 rounded-xl bg-lime-500/15 text-[#529434] flex items-center justify-center mb-4 group-hover:bg-[#66b447] group-hover:text-white transition-colors">
+          <div className="bento-card neo-hairline p-6 transition-all duration-300">
+            <div className="size-12 rounded-xl bg-lime-500/15 text-[#529434] flex items-center justify-center mb-4 transition-colors">
               <Sprout className="size-5" />
             </div>
             <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">Agro-Farming</h3>
@@ -150,8 +150,8 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <div className="group rounded-2xl border border-stone-200/90 bg-white p-6 shadow-sm hover:border-emerald-700/40 transition-all duration-300">
-            <div className="size-12 rounded-xl bg-amber-500/15 text-[#b8892b] flex items-center justify-center mb-4 group-hover:bg-[#b8892b] group-hover:text-white transition-colors">
+          <div className="bento-card neo-hairline p-6 transition-all duration-300">
+            <div className="size-12 rounded-xl bg-amber-500/15 text-[#b8892b] flex items-center justify-center mb-4 transition-colors">
               <Home className="size-5" />
             </div>
             <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">Hospitality</h3>
@@ -160,8 +160,8 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <div className="group rounded-2xl border border-stone-200/90 bg-white p-6 shadow-sm hover:border-emerald-700/40 transition-all duration-300">
-            <div className="size-12 rounded-xl bg-blue-500/15 text-blue-800 flex items-center justify-center mb-4 group-hover:bg-[#0b4a32] group-hover:text-white transition-colors">
+          <div className="bento-card neo-hairline p-6 transition-all duration-300">
+            <div className="size-12 rounded-xl bg-blue-500/15 text-blue-800 flex items-center justify-center mb-4 transition-colors">
               <FileCheck className="size-5" />
             </div>
             <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">Secure Land</h3>

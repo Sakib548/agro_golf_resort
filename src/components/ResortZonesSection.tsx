@@ -86,8 +86,8 @@ const resortZones: ZoneData[] = [
     description:
       "A 100+ acre working agricultural sanctuary featuring lush mango gardens, seasonal golden paddy and wheat fields, dragon fruit orchards, and dairy farming.",
     amenities: [
-      "Sweet mango gardens (আমের বাগান) & malta groves",
-      "Golden paddy fields (ধান ক্ষেত) & wheat fields (গম ক্ষেত)",
+      "Sweet mango gardens & malta groves",
+      "Golden paddy fields & wheat fields",
       "Dragon fruit trellises & commercial organic agriculture",
       "Fresh dairy farm & apiary for organic honey",
       "Lush botanical eco-park & perennial flower gardens",
