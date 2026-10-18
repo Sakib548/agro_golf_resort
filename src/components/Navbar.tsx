@@ -10,6 +10,7 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "The Resort", href: "/resort" },
   { label: "Invest & Membership", href: "/invest" },
+  { label: "Sampan Group", href: "https://www.sampangroup.com.bd/" },
   { label: "Our Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
 ];
