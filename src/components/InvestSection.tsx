@@ -10,7 +10,7 @@ export default function InvestSection() {
   const totalInvestment = sharesCount * pricePerShare;
 
   return (
-    <section id="invest" className="bg-[#f6f8f2] text-[#14261c] pb-24 border-t border-stone-200">
+    <section id="invest" className="bg-[#f6f8f2] text-[#14261c] pb-24">
       {/* Top Gold Banner Highlight */}
       <div className="bg-gradient-to-r from-[#07291c] via-[#0b4a32] to-[#07291c] text-white py-16 px-4 sm:px-6 lg:px-8 shadow-inner">
         <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-8">

@@ -8,9 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function PortfolioPage() {
-  return (
-    <div className="pt-20 lg:pt-24">
-      <PortfolioSection />
-    </div>
-  );
+  return <PortfolioSection />;
 }

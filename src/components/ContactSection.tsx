@@ -56,7 +56,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#ffffff] text-[#14261c] border-t border-stone-200">
+    <section id="contact" className="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-[#ffffff] text-[#14261c]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="hero-reveal max-w-3xl mb-14">

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function InvestPage() {
   return (
-    <div className="pt-16 sm:pt-20">
+    <div>
       <InvestSection />
       <MembershipSection />
     </div>

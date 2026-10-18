@@ -8,9 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function GalleryPage() {
-  return (
-    <div className="pt-20 lg:pt-24">
-      <GallerySection />
-    </div>
-  );
+  return <GallerySection />;
 }

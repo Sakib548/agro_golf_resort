@@ -26,7 +26,7 @@ export default function HeroSection() {
           {/* Location pill */}
           <div className="hero-reveal inline-flex items-center gap-2 rounded-full border border-lime-400/30 bg-[#07291c]/75 px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide text-[#b6e59c] backdrop-blur-md mb-6 shadow-sm">
             <span className="size-2 rounded-full bg-[#66b447] animate-pulse" />
-            <span>Podunapur, Moulvibazar Sadar</span>
+            <span>Dhaka-Sylhet Highway</span>
           </div>
 
           {/* Main Title */}
@@ -58,11 +58,11 @@ export default function HeroSection() {
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-lime-400/40 bg-emerald-950/75 px-5 sm:px-6 py-3.5 text-sm uppercase tracking-wider font-bold text-[#b6e59c] backdrop-blur-sm transition-all duration-300 hover:bg-emerald-900 hover:border-lime-400 active:scale-95"
             >
               <FileText className="size-4" />
-              <span>Master Brochure</span>
+              <span>Download Brochure</span>
               <span>↗</span>
             </a>
 
-            <Link
+            {/* <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/40 bg-black/20 px-5 sm:px-6 py-3.5 text-sm uppercase tracking-wider font-bold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:border-white/70 active:scale-95"
             >
@@ -70,7 +70,7 @@ export default function HeroSection() {
               <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

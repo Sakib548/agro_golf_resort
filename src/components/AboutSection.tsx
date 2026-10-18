@@ -5,7 +5,7 @@ import { Eye, Target, Lightbulb, Leaf, Award, Users, Users2, Flag, TrendingUp, B
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-[#f8faf6] via-white to-[#f4f7f0] text-[#14261c] border-t border-stone-200 relative overflow-hidden">
+    <section id="about" className="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-gradient-to-b from-[#f8faf6] via-white to-[#f4f7f0] text-[#14261c] relative overflow-hidden">
       {/* Ambient background light glows for glassmorphism refraction */}
       <div className="absolute top-20 -left-40 size-96 rounded-full bg-emerald-200/30 blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 -right-40 size-96 rounded-full bg-lime-200/30 blur-3xl pointer-events-none" />

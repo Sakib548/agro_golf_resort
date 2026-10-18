@@ -8,9 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function ResortPage() {
-  return (
-    <div className="pt-16 sm:pt-20">
-      <ResortPageContent />
-    </div>
-  );
+  return <ResortPageContent />;
 }
