@@ -86,7 +86,7 @@ export default function Footer() {
             Renderings, photographic representations, architectural sketches, and masterplan illustrations demonstrate planned and envisioned resort facilities. Actual land allocation and specifications are governed strictly by the executed and registered Sub-Kabula deeds and purchase agreements.
           </p> */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4  text-emerald-200/50">
-            <p>© 2026 Sampan Agro &amp; Golf Resort. A project of Sampan Developments Ltd / Sampan Group. All rights reserved..</p>
+            <p>© 2026 Sampan Agro &amp; Golf Resort. A project of Sampan Developments Ltd / Sampan Group. All rights reserved.</p>
             <p>Designed with luxury standards &bull; Bangladesh</p>
           </div>
         </div>
