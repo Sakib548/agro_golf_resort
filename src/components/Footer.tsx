@@ -82,10 +82,10 @@ export default function Footer() {
 
         {/* Disclaimer Fine Print */}
         <div className="pt-8 text-[11px] text-emerald-300/60 leading-relaxed space-y-2">
-          <p>
+          {/* <p>
             Renderings, photographic representations, architectural sketches, and masterplan illustrations demonstrate planned and envisioned resort facilities. Actual land allocation and specifications are governed strictly by the executed and registered Sub-Kabula deeds and purchase agreements.
-          </p>
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-white/5 text-xs text-emerald-200/50">
+          </p> */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4  text-emerald-200/50">
             <p>© 2026 Sampan Agro &amp; Golf Resort. A project of Sampan Developments Ltd / Sampan Group. All rights reserved.</p>
             <p>Designed with luxury standards &bull; Bangladesh</p>
           </div>

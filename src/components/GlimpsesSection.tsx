@@ -90,7 +90,7 @@ export default function GlimpsesSection() {
           >
             <div className="absolute inset-0 bg-stone-900">
               <Image
-                src="/images/lakeside-villas.webp"
+                src="/images/Golden_Sunset_Resort Balcony_Retreat.png"
                 alt="Lakeside Luxury Villas"
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -192,7 +192,8 @@ export default function GlimpsesSection() {
 
             <div className="relative z-10 p-5 text-white">
               <h3 className="font-heading text-xl font-bold leading-tight">
-                Architectural Masterplan &bull; Signature &ldquo;S&rdquo; Curve Complex
+                Architectural Masterplan
+                {/* &bull; Signature &ldquo;S&rdquo; Curve Complex */}
               </h3>
               <p className="text-emerald-100/80 text-xs mt-1">
                 Preserving 10 natural ponds, integrating waterpark rides, sports grounds, and eco-parks.
