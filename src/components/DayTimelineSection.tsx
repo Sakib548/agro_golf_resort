@@ -237,7 +237,7 @@ export default function DayTimelineSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#b6e59c]">International Standards</span>
-                  <p className="font-heading text-sm font-semibold mt-0.5">Cricket Ground • 4 Football Turfs • Tennis • Golf</p>
+                  <p className="font-heading text-sm font-semibold mt-0.5">Cricket Ground • Football Turfs • Tennis • Golf</p>
                 </div>
               </div>
             </div>
@@ -259,7 +259,7 @@ export default function DayTimelineSection() {
                 <li>9-hole golf course</li>
                 <li>Long &amp; short driving ranges</li>
                 <li>Professional trainers</li>
-                <li>Cricket &amp; 4 football turfs</li>
+                <li>Cricket &amp; football turfs</li>
               </ul>
             </div>
 
