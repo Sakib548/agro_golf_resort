@@ -21,7 +21,7 @@ const portalCards = [
     desc: "Calculate your deeded land share with our real-time estimator. 100% Sub-Kabula deed registration, dual agro & hospitality yields, and partner loyalty cards.",
     href: "/invest",
     badge: "From ৳2.50L",
-    image: "/images/lakeside-villas.webp",
+    image: "/images/sampan_golf_resort_hero.webp",
     action: "See Ownership Options",
   },
   {

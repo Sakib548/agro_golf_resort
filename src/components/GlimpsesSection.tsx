@@ -49,7 +49,7 @@ export default function GlimpsesSection() {
           >
             <div className="absolute inset-0 bg-stone-900">
               <Image
-                src="/images/golf-swing-action.webp"
+                src="/images/golf-swing.webp"
                 alt="Championship Golf Fairway Swing"
                 fill
                 priority
