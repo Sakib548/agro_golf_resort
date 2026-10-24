@@ -156,10 +156,10 @@ export default function DayTimelineSection() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
-                Estate Gallery
+                Resort Gallery
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#14261c] mt-2">
-                Glimpses of the estate
+                Life across the resort
               </h2>
             </div>
             <a
