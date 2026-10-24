@@ -48,7 +48,7 @@ export default function ContactSection() {
     )}&body=Phone: ${encodeURIComponent(formData.phone)}%0AInterest: ${encodeURIComponent(
       formData.interest
     )}%0A%0AMessage:%0A${encodeURIComponent(formData.message)}`;
-    
+
     setSubmitted(true);
     setTimeout(() => {
       window.location.href = mailto;
@@ -80,7 +80,7 @@ export default function ContactSection() {
             <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Direct Hotline</h4>
             <div className="space-y-1 text-sm font-medium text-stone-700">
               <p><a href="tel:+8801906896327" className="hover:text-[#0b4a32] transition-colors">+88 01906-896327</a></p>
-              <p><a href="tel:+8801906896326" className="hover:text-[#0b4a32] transition-colors">+88 019 0689 6326</a></p>
+              {/* <p><a href="tel:+8801906896326" className="hover:text-[#0b4a32] transition-colors">+88 019 0689 6326</a></p> */}
               <p><a href="tel:+8801329669701" className="hover:text-[#0b4a32] transition-colors">+88 013 2966 9701</a></p>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function ContactSection() {
             </div>
             <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Resort Site</h4>
             <p className="text-stone-600 text-sm leading-relaxed">
-              Podunapur, Moulvibazar Sadar, Moulvibazar, Sylhet Division, Bangladesh.
+              Dhaka-Sylhet Highway, Sylhet Division, Bangladesh.
             </p>
           </div>
 

@@ -4,6 +4,8 @@ import { FileText } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import DayTimelineSection from "@/components/DayTimelineSection";
 import GlimpsesSection from "@/components/GlimpsesSection";
+import AffiliationSection from "@/components/AffiliationSection";
+import EndorsementBar from "@/components/EndorsementBar";
 
 const portalCards = [
   {
@@ -57,7 +59,7 @@ export default function Home() {
       <GlimpsesSection />
 
       {/* 4. The Village Will Be the City Band (From HTML Template) */}
-      <div className="bg-[#0b4a32] text-white py-16 px-4 sm:px-6 lg:px-8 border-y border-emerald-900/40">
+      {/* <div className="bg-[#0b4a32] text-white py-16 px-4 sm:px-6 lg:px-8 border-y border-emerald-900/40">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-5 font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#d9aa4a] leading-tight">
@@ -77,7 +79,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* 5. Sleek Hub: Explore Dedicated Sections */}
       <section className="py-20 bg-[#fbfcf9] border-t border-stone-200">
@@ -152,7 +154,7 @@ export default function Home() {
           </div>
 
           {/* Site Visit & Booking Banner */}
-          <div className="reveal-slow rounded-3xl bg-gradient-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 shadow-xl border border-emerald-900/40">
+          {/* <div className="reveal-slow rounded-3xl bg-gradient-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 shadow-xl border border-emerald-900/40">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="max-w-2xl">
                 <span className="inline-block text-xs uppercase tracking-widest text-[#b6e59c] font-bold bg-white/10 px-3.5 py-1 rounded-full mb-3">
@@ -182,9 +184,15 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
+
+      {/* 6. Institutional Affiliations */}
+      <AffiliationSection />
+
+      {/* 7. Endorsement Bar */}
+      <EndorsementBar />
     </div>
   );
 }

@@ -275,7 +275,7 @@ export default function GlimpsesSection() {
         {/* ========================================================
             EVENTS & TOURNAMENTS (BENTO TREATMENT)
            ======================================================== */}
-        <div className="bento-card p-8 sm:p-12 mb-20 bg-gradient-to-br from-white via-[#fbfcf9] to-emerald-50/25">
+        {/* <div className="bento-card p-8 sm:p-12 mb-20 bg-gradient-to-br from-white via-[#fbfcf9] to-emerald-50/25">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100/80 px-3.5 py-1 text-xs uppercase tracking-widest font-extrabold text-[#0b4a32] border border-emerald-200 mb-3">
@@ -313,7 +313,7 @@ export default function GlimpsesSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* ========================================================
             FACILITIES AT A GLANCE (BENTO GRID TILES)

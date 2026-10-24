@@ -66,8 +66,8 @@ export default function DayTimelineSection() {
   return (
     <section className="py-20 bg-[#f6f8f2] text-[#14261c]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Timeline Header */}
-        <div className="reveal-slow max-w-3xl mb-14">
+
+        {/* <div className="reveal-slow max-w-3xl mb-14">
           <span className="inline-block text-xs font-bold uppercase tracking-wider text-[#0b4a32] bg-emerald-100/80 px-3.5 py-1 rounded-full mb-3">
             The Resort Experience
           </span>
@@ -77,10 +77,10 @@ export default function DayTimelineSection() {
           <p className="text-stone-600 text-base sm:text-lg mt-3">
             From the crisp morning dew on the golf greens to bonfire gatherings along serene water bodies, every hour is crafted for peace, health, and leisure.
           </p>
-        </div>
+        </div> */}
 
-        {/* Timeline Cards */}
-        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+
+        {/* <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {timelineEvents.map((item, idx) => (
             <div
               key={item.time}
@@ -105,13 +105,13 @@ export default function DayTimelineSection() {
                 </p>
               </div>
 
-              {/* <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400">
+              <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs text-stone-400">
                 <span>Phase {idx + 1} of 4</span>
                 <span className="text-[#0b4a32] font-semibold">Explore →</span>
-              </div> */}
+              </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Why Owners Choose It */}
         <div className="mb-20">
@@ -200,7 +200,7 @@ export default function DayTimelineSection() {
         </div>
 
         {/* Events & Tournaments Section */}
-        <div className="rounded-3xl border border-stone-200 bg-white p-8 sm:p-12 shadow-sm mb-16">
+        {/* <div className="rounded-3xl border border-stone-200 bg-white p-8 sm:p-12 shadow-sm mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7">
               <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100/80 px-3 py-1 rounded-full">
@@ -242,7 +242,7 @@ export default function DayTimelineSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Facilities at a glance */}
         <div className="mb-14">

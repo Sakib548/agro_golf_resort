@@ -33,7 +33,7 @@ export default function Footer() {
             </p>
 
             <p className="text-xs text-emerald-300/80 font-mono">
-              Site: Podunapur, Moulvibazar Sadar, Moulvibazar
+              Site: Dhaka-Sylhet Highway
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs sm:text-sm text-emerald-200/80">
               <li><Link href="/" className="hover:text-white transition-colors">Home Overview</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About &amp; Vision</Link></li>
-              <li><Link href="/resort" className="hover:text-white transition-colors">The 4 Resort Zones &amp; Masterplan</Link></li>
+              <li><Link href="/resort" className="hover:text-white transition-colors">Resort Zones &amp; Masterplan</Link></li>
               <li><Link href="/#gallery" className="hover:text-white transition-colors">Photo Gallery &amp; Brochure</Link></li>
               <li><Link href="/invest" className="hover:text-white transition-colors">Invest &amp; Membership</Link></li>
               <li><Link href="/portfolio" className="hover:text-white transition-colors">Our Portfolio</Link></li>
@@ -65,11 +65,11 @@ export default function Footer() {
               </div>
               <div>
                 <strong className="text-white block font-medium">Resort Grounds:</strong>
-                <span>Podunapur, Moulvibazar Sadar, Moulvibazar</span>
+                <span>Dhaka-Sylhet Highway</span>
               </div>
               <div>
                 <strong className="text-white block font-medium">Hotlines:</strong>
-                <span className="block">+88 01906-896327 / +88 019 0689 6326</span>
+                <span className="block">+88 01906-896327 </span>
                 <span className="block">+88 013 2966 9701</span>
               </div>
               <div>

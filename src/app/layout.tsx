@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Sampan Agro & Golf Resort",
   },
   description:
-    "A 100+ acre green estate in Podunapur, Moulvibazar Sadar by Sampan Group: 9-hole international golf, a working organic agro farm, lakeside villas, and secure land ownership with 100% sub-kabula registration.",
+    "A 100+ acre green resort in Dhaka-Sylhet Highway by Sampan Group: 9-hole international golf, a working organic agro farm, lakeside villas, and secure land ownership with 100% sub-kabula registration.",
   keywords: [
     "Sampan Agro Golf Resort",
     "Moulvibazar golf resort",
@@ -20,6 +20,14 @@ export const metadata: Metadata = {
     "Luxury golf resort Moulvibazar",
     "Podunapur Moulvibazar",
   ],
+  icons: {
+    icon: [
+      { url: "/images/agroandgolf.webp" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    shortcut: "/images/agroandgolf.webp",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -34,6 +42,7 @@ export default function RootLayout({
       className="antialiased"
     >
       <head>
+        <link rel="icon" href="/images/agroandgolf.webp" type="image/webp" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

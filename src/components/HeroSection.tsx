@@ -62,7 +62,7 @@ export default function HeroSection() {
               <span>↗</span>
             </a>
 
-            <Link
+            {/* <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/40 bg-black/20 px-5 sm:px-6 py-3.5 text-sm uppercase tracking-wider font-bold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:border-white/70 active:scale-95"
             >
@@ -70,7 +70,7 @@ export default function HeroSection() {
               <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
