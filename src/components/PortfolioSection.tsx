@@ -76,7 +76,7 @@ export default function PortfolioSection() {
               Sampan Highway Inn &bull; Dhaka–Khulna Highway
             </h3>
             <p className="text-emerald-100/90 text-xs sm:text-sm mt-1">
-              Serving 5,000+ travelers every single day, generating ৳95 Lakh to ৳1.30 Crore in proven monthly revenues.
+              Serving 5,000+ travelers every single day with 24/7 dining, lodging, fuel, and retail services.
             </p>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function PortfolioSection() {
               </p>
             </div>
             <div className="pt-3 border-t border-stone-200/80 text-xs font-bold text-[#0b4a32]">
-              Monthly Revenue: ৳95 Lakh – 1.30 Crore
+              24/7 Full-Service Highway Stopover
             </div>
           </div>
 
@@ -161,8 +161,8 @@ export default function PortfolioSection() {
               <span className="text-xs sm:text-sm text-emerald-100/80 font-medium">Daily Visitors at Highway Inn</span>
             </div>
             <div className="p-2">
-              <span className="font-heading text-3xl sm:text-4xl font-extrabold text-[#d9aa4a] block">৳95L–1.3Cr</span>
-              <span className="text-xs sm:text-sm text-emerald-100/80 font-medium">Monthly Highway Inn Revenue</span>
+              <span className="font-heading text-3xl sm:text-4xl font-extrabold text-[#d9aa4a] block">24/7</span>
+              <span className="text-xs sm:text-sm text-emerald-100/80 font-medium">Round-the-Clock Highway Operations</span>
             </div>
             <div className="p-2">
               <span className="font-heading text-3xl sm:text-4xl font-extrabold text-[#66b447] block">3</span>

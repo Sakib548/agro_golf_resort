@@ -36,7 +36,7 @@ const portalCards = [
   {
     title: "Our Portfolio",
     subtitle: "Sampan Group Operating Benchmarks",
-    desc: "Sampan Highway Inn serving 5,000+ daily travelers (৳95L–1.30Cr/mo), operating Sampan Eco-Agro, and 6 active premier developments across Dhaka.",
+    desc: "Sampan Highway Inn serving 5,000+ daily travelers , operating Sampan Eco-Agro, and 6 active premier developments across Dhaka.",
     href: "/portfolio",
     badge: "Operating Proof",
     image: "/images/sampan_highway.jpg",

@@ -145,7 +145,7 @@ export default function DayTimelineSection() {
               <span className="text-xs font-bold text-[#0b4a32] uppercase tracking-wider">Established Group</span>
               <h3 className="font-heading text-2xl font-bold text-[#14261c] mt-2 mb-3">Proven track record</h3>
               <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-                Sampan Highway Inn (generating ৳95L–1.30Cr/month) and Sampan Eco & Agro are actively operating ventures proving commercial delivery capacity.
+                Sampan Highway Inn  and Sampan Eco & Agro are actively operating ventures proving commercial delivery capacity.
               </p>
             </div>
           </div>
