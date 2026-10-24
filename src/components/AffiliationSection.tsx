@@ -31,7 +31,7 @@ const affiliations = [
   { num: "17", name: "Sampan Golf Academy", logo: "/affiliation/Sampan Golf Academy.png" },
 ];
 
-export default function AffiliationSection() {
+export default function AffiliationSection({ className = "" }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -81,36 +81,36 @@ export default function AffiliationSection() {
     <section
       id="affiliations"
       ref={containerRef}
-      className="relative w-full bg-[#f8f9fb] pt-20 pb-16 md:pt-28 md:pb-20 border-t border-stone-200 overflow-hidden text-stone-900"
+      className={`relative w-full bg-[#fbfcf9] pt-20 pb-16 md:pt-28 md:pb-20 border-t border-stone-200 overflow-hidden text-stone-900 ${className}`}
     >
-      {/* Brand Tri-Color Ambient Lighting (Gentle Blue & Gold Tints) */}
+      {/* Resort Ambient Glows (Gentle Emerald & Warm Gold) */}
       <div 
         className="pointer-events-none absolute top-1/3 right-0 -translate-y-1/2 w-[700px] h-[700px] rounded-full opacity-60"
-        style={{ background: "radial-gradient(circle, rgba(0,114,188,0.06) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(11,74,50,0.05) 0%, transparent 70%)" }}
       />
       <div 
         className="pointer-events-none absolute bottom-10 left-0 w-[550px] h-[550px] rounded-full opacity-50"
-        style={{ background: "radial-gradient(circle, rgba(250,181,22,0.05) 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(184,137,43,0.05) 0%, transparent 70%)" }}
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         {/* ─── Section Header ─── */}
         <div className="affil-header flex flex-col md:flex-row md:items-end md:justify-between gap-8 md:gap-12 mb-16 md:mb-20">
           <div className="max-w-2xl">
-            {/* Tri-Color Badge matching site design system */}
+            {/* Signature Resort Tri-Dot Badge */}
             <div className="affil-header-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-stone-300 bg-white shadow-2xs text-[10px] font-mono uppercase text-stone-700 mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#0072bc]" />
-              <span className="w-1.5 h-1.5 rounded-full bg-[#fab516]" />
-              <span className="w-1.5 h-1.5 rounded-full bg-[#c8102e]" />
-              <span className="text-[#0072bc] font-semibold ml-1">Governance & Trust</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0b4a32]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#66b447]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#b8892b]" />
+              <span className="text-[#0b4a32] font-semibold ml-1">Governance & Trust</span>
             </div>
-            <h2 className="affil-header-anim font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-stone-900 leading-[1.08] tracking-tight">
+            <h2 className="affil-header-anim font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-[#14261c] leading-[1.08] tracking-tight">
               Affiliations &<br />
-              <span className="italic text-[#0072bc]">Accreditations.</span>
+              <span className="italic text-[#0b4a32]">Accreditations.</span>
             </h2>
           </div>
           <div className="max-w-sm md:text-right">
-            <div className="hidden md:block w-16 h-[2px] bg-gradient-to-r from-[#0072bc] via-[#fab516] to-[#c8102e] mb-6 ml-auto rounded-full" />
+            <div className="hidden md:block w-16 h-[2px] bg-gradient-to-r from-[#0b4a32] via-[#66b447] to-[#b8892b] mb-6 ml-auto rounded-full" />
             <p className="affil-header-anim text-sm md:text-base font-light text-stone-600 leading-[1.8]">
               Our commitment to excellence is recognized by leading national and international bodies. We partner with the best to ensure unparalleled standards.
             </p>
@@ -122,20 +122,20 @@ export default function AffiliationSection() {
           {affiliations.map((item, i) => (
             <div
               key={`${item.num}-${i}`}
-              className="affil-card group relative bg-white hover:bg-stone-50/80 rounded-2xl border border-stone-200/90 shadow-2xs hover:shadow-xl hover:shadow-stone-200/70 hover:border-[#0072bc]/40 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 w-[calc(50%-0.4rem)] sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] aspect-[5/4] sm:aspect-[4/3] overflow-hidden flex flex-col items-center justify-center p-5 sm:p-6 md:p-7 transform-gpu"
+              className="affil-card group relative bg-white hover:bg-stone-50/80 rounded-2xl border border-stone-200/90 shadow-2xs hover:shadow-xl hover:shadow-emerald-950/5 hover:border-[#0b4a32]/35 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 w-[calc(50%-0.4rem)] sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] aspect-[5/4] sm:aspect-[4/3] overflow-hidden flex flex-col items-center justify-center p-5 sm:p-6 md:p-7 transform-gpu"
             >
-              {/* Top Accent Gradient Line on Hover */}
-              <span className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#0072bc] via-[#0ea5e9] to-[#0072bc] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-center" />
+              {/* Top Accent Gradient Line on Hover (Resort Emerald to Lime) */}
+              <span className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#0b4a32] via-[#66b447] to-[#0b4a32] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-center" />
 
               {/* Ghost Architectural Index */}
-              <span className="absolute top-3.5 left-3.5 sm:top-4 sm:left-4 text-[10px] font-mono tracking-[0.25em] text-stone-400 font-medium transition-colors duration-300 group-hover:text-[#0072bc] z-10">
+              <span className="absolute top-3.5 left-3.5 sm:top-4 sm:left-4 text-[10px] font-mono tracking-[0.25em] text-stone-400 font-medium transition-colors duration-300 group-hover:text-[#0b4a32] z-10">
                 {item.num}
               </span>
 
               {/* Radial Brand Glow Behind Logo on Hover */}
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"
-                style={{ background: "radial-gradient(circle, rgba(0,114,188,0.06) 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle, rgba(11,74,50,0.06) 0%, transparent 70%)" }}
               />
 
               {/* Logo Wrapper */}
@@ -156,7 +156,7 @@ export default function AffiliationSection() {
                 <p className="text-[11px] sm:text-xs leading-snug font-medium text-stone-600 group-hover:text-stone-900 transition-colors duration-300 line-clamp-2">
                   {item.name}
                 </p>
-                <div className="h-[1.5px] w-6 bg-stone-200 mt-2.5 mx-auto transition-all duration-500 ease-out group-hover:w-12 group-hover:bg-[#0072bc]" />
+                <div className="h-[1.5px] w-6 bg-stone-200 mt-2.5 mx-auto transition-all duration-500 ease-out group-hover:w-12 group-hover:bg-[#0b4a32]" />
               </div>
             </div>
           ))}

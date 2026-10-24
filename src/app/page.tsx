@@ -7,7 +7,23 @@ import GlimpsesSection from "@/components/GlimpsesSection";
 import AffiliationSection from "@/components/AffiliationSection";
 import EndorsementBar from "@/components/EndorsementBar";
 
-const portalCards = [
+interface PortalCardItem {
+  title: string;
+  subtitle: string;
+  desc: string;
+  href: string;
+  badge: string;
+  action: string;
+  image?: string;
+  isTriImage?: boolean;
+  triImages?: {
+    label: string;
+    position: string;
+    src: string;
+  }[];
+}
+
+const portalCards: PortalCardItem[] = [
   {
     title: "The Resort & Masterplan",
     subtitle: "Championship Sports, Cottages & Farmlands",
@@ -18,31 +34,48 @@ const portalCards = [
     action: "Explore The Resort & Gallery",
   },
   {
-    title: "Ownership & Investment",
-    subtitle: "Deeded Land Shares From ৳2.50L",
-    desc: "Calculate your deeded land share with our real-time estimator. 100% Sub-Kabula deed registration, dual agro & hospitality yields, and partner loyalty cards.",
-    href: "/invest",
-    badge: "From ৳2.50L",
-    image: "/images/sampan_golf_resort_hero.webp",
-    action: "See Ownership Options",
-  },
-  {
-    title: "Membership & Privileges",
-    subtitle: "High-Tier Golf Club & Partner Discounts",
-    desc: "Exclusive access to championship courses, wellness spas, 10%–50% discounts across Sampan Group hotels, Arunima Resort, and Shooters Shooting Club.",
-    href: "/invest#membership",
-    badge: "Club Access",
-    image: "/images/loyalty-card-permanent-member.webp",
-    action: "Explore Membership Privileges",
-  },
-  {
-    title: "Our Portfolio",
-    subtitle: "Sampan Group Operating Benchmarks",
-    desc: "Sampan Highway Inn serving 5,000+ daily travelers , operating Sampan Eco-Agro, and 6 active premier developments across Dhaka.",
+    title: "Sampan Express Highway Inn & Complex",
+    subtitle: "Tri-Development: Trade Emporium • Highway Inn • Condominium",
+    desc: "A flagship landmark on the national highway corridor uniting Sampan Trade Emporium on the left, the luxury 24/7 Express Highway Inn at the center, and Sampan Condominium on the right.",
     href: "/portfolio",
-    badge: "Operating Proof",
-    image: "/images/sampan_highway.jpg",
-    action: "Explore Our Portfolio",
+    badge: "3-in-1 Landmark",
+    action: "Explore Integrated Complex",
+    isTriImage: true,
+    triImages: [
+      {
+        label: "Trade Emporium",
+        position: "Left Flank",
+        src: "/images/portfolio/trade.webp",
+      },
+      {
+        label: "Express Highway Inn",
+        position: "Center Landmark",
+        src: "/images/portfolio/express-highway-inn.webp",
+      },
+      {
+        label: "Condominium",
+        position: "Right Flank",
+        src: "/images/portfolio/condo.webp",
+      },
+    ],
+  },
+  {
+    title: "Sampan Metro Square",
+    subtitle: "Commercial & Business High-Rise",
+    desc: "A state-of-the-art commercial high-rise development featuring modern corporate office floors, a premium retail atrium, and institutional-grade business infrastructure.",
+    href: "/portfolio",
+    badge: "Commercial High-Rise",
+    image: "/images/portfolio/metro.webp",
+    action: "Explore Metro Square",
+  },
+  {
+    title: "Sampan Highway Inn",
+    subtitle: "Completed & Actively Operating Benchmark",
+    desc: "Our flagship highway stopover on the Dhaka–Khulna Highway serving over 5,000 travelers daily with 24/7 dining, motel suites, VVIP executive lounge, and fueling station.",
+    href: "/portfolio",
+    badge: "5,000+ Daily Visitors",
+    image: "/images/sampan_highway.webp",
+    action: "View Operating Benchmark",
   },
 ];
 
@@ -87,13 +120,13 @@ export default function Home() {
           <div className="reveal-slow flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
-                Estate Directory
+                Estate &amp; Developments Directory
               </span>
               <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-[#14261c] mt-3">
                 Explore the project in depth
               </h2>
               <p className="text-stone-600 text-base sm:text-lg mt-3 max-w-2xl">
-                Dive into dedicated sections for architectural masterplans, transparent investment calculators, full galleries, and corporate governance.
+                Discover our flagship resort masterplan alongside Sampan Group&apos;s proven commercial, hospitality, and residential landmarks across Bangladesh.
               </p>
             </div>
 
@@ -119,20 +152,51 @@ export default function Home() {
                 className="bento-card neo-hairline group relative overflow-hidden p-7 sm:p-8 flex flex-col justify-between"
               >
                 <div>
-                  <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden mb-6 shadow-sm border border-stone-200 bg-stone-100">
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      fill
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                    <div className="absolute top-4 left-4">
-                      <span className="inline-block rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#b6e59c]">
-                        {card.badge}
-                      </span>
+                  {card.isTriImage && card.triImages ? (
+                    <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden mb-6 shadow-sm border border-stone-200 bg-stone-900 grid grid-cols-3 gap-1 p-1">
+                      {card.triImages.map((tri) => (
+                        <div key={tri.label} className="relative h-full w-full overflow-hidden rounded-xl">
+                          <Image
+                            src={tri.src}
+                            alt={tri.label}
+                            fill
+                            className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                            sizes="(max-width: 768px) 33vw, 20vw"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                          <div className="absolute bottom-2 left-1.5 right-1.5 text-white">
+                            {/* <span className="block text-[8px] sm:text-[9px] uppercase tracking-wider font-extrabold text-[#b6e59c] leading-tight">
+                              {tri.position}
+                            </span> */}
+                            <p className="font-heading text-[10px] sm:text-xs font-bold leading-tight truncate mt-0.5">
+                              {tri.label}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                      <div className="absolute top-2.5 left-2.5 z-10 pointer-events-none">
+                        <span className="inline-block rounded-full bg-black/70 backdrop-blur-md px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#b6e59c] border border-white/10 shadow-sm">
+                          {card.badge}
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden mb-6 shadow-sm border border-stone-200 bg-stone-100">
+                      <Image
+                        src={card.image!}
+                        alt={card.title}
+                        fill
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                      <div className="absolute top-4 left-4">
+                        <span className="inline-block rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#b6e59c]">
+                          {card.badge}
+                        </span>
+                      </div>
+                    </div>
+                  )}
 
                   <span className="text-xs uppercase font-bold text-[#66b447] tracking-wider block mb-1">
                     {card.subtitle}

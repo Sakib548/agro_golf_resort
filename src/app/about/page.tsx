@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import AboutSection from "@/components/AboutSection";
+import AffiliationSection from "@/components/AffiliationSection";
 
 export const metadata: Metadata = {
   title: "About The Project & Vision",
@@ -8,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutSection />;
+  return (
+    <>
+      <AboutSection />
+      <AffiliationSection />
+    </>
+  );
 }

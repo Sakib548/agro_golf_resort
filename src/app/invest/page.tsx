@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import InvestSection from "@/components/InvestSection";
 import MembershipSection from "@/components/MembershipSection";
+import AffiliationSection from "@/components/AffiliationSection";
 
 export const metadata: Metadata = {
   title: "Invest & Membership | Sampan Agro & Golf Resort",
@@ -13,6 +14,7 @@ export default function InvestPage() {
     <div>
       <InvestSection />
       <MembershipSection />
+      <AffiliationSection />
     </div>
   );
 }

@@ -29,6 +29,12 @@ const ongoingProjects = [
     desc: "Exclusive urban condominiums in one of Dhaka's most central and prime commercial zones.",
   },
   {
+    name: "Sampan Metro Square",
+    category: "Commercial High-Rise",
+    location: "Prime Urban Commercial Hub",
+    desc: "State-of-the-art commercial high-rise development featuring modern corporate office floors, a premium retail atrium, and enterprise infrastructure.",
+  },
+  {
     name: "Sampan Trade Emporium",
     category: "Commercial Hub",
     location: "Dhaka Commercial District",
