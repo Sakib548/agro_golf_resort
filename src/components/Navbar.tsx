@@ -11,7 +11,7 @@ const navLinks = [
   { label: "The Resort", href: "/resort" },
   { label: "Invest & Membership", href: "/invest" },
   { label: "Sampan Group", href: "https://www.sampangroup.com.bd/", isExternal: true },
-  { label: "Our Portfolio", href: "/portfolio" },
+  // { label: "Our Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
 ];
 
