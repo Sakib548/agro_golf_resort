@@ -1,18 +1,33 @@
 @import "tailwindcss";
 
+@theme {
+  --font-heading: "DM Serif Display", Georgia, serif;
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+
+  --color-outer: #708564;
+  --color-forest: #42732E;
+  --color-pale-sage: #EEF1DE;
+  --color-warm-white: #FBFAF6;
+  --color-dark-emerald: #134630;
+  --color-dark-olive: #134630;
+}
+
 :root {
-  --bg: #f6f8f2;
-  --surface: #ffffff;
-  --ink: #14261c;
-  --mute: #52665a;
-  --green: #0b4a32;
-  --green-dark: #07291c;
-  --lime: #66b447;
-  --lime-hover: #559e38;
-  --gold: #b8892b;
-  --gold-light: #d9aa4a;
-  --line: #d9e2d3;
-  --hero: #0b3a28;
+  --bg: #EEF1DE; /* Pale Sage */
+  --outer: #708564; /* Muted Sage Green */
+  --surface: #FBFAF6; /* Warm Off-White */
+  --ink: #134630; /* Deep Forest Emerald */
+  --mute: #708564; /* Muted Sage */
+  --green: #42732E; /* Forest / Leaf Green */
+  --green-dark: #134630; /* Deep Forest Emerald */
+  --sage: #708564; /* Muted Sage */
+  --lime: #42732E; /* Forest Green */
+  --lime-hover: #365e25;
+  --gold: #42732E; /* Forest Green accent */
+  --gold-light: #708564;
+  --line: #708564;
+  --hero: #134630; /* Deep Forest Emerald */
 }
 
 html {
@@ -23,103 +38,100 @@ html {
 body {
   background-color: var(--bg);
   color: var(--ink);
-  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.01em;
 }
 
 h1, h2, h3, h4, .font-heading {
-  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  letter-spacing: -0.025em;
+  font-family: "DM Serif Display", Georgia, serif;
+  letter-spacing: -0.015em;
   font-feature-settings: "kern" 1;
 }
 
 .font-serif-luxury {
-  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  letter-spacing: -0.02em;
+  font-family: "DM Serif Display", Georgia, serif;
+  letter-spacing: -0.015em;
 }
 
 .font-sans-luxury {
-  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
-
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f4ec;
+  background: #EEF1DE;
 }
 ::-webkit-scrollbar-thumb {
-  background: #b5c7b0;
+  background: #708564;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0b4a32;
+  background: #42732E;
 }
 
 /* Focus outline */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid #42732E;
   outline-offset: 2px;
 }
 
-/* Authentic Glassmorphism Utility Classes */
+/* Warm Off-White Card / Glassmorphism Utility Classes */
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.6) !important;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.75) !important;
-  box-shadow: 0 8px 32px 0 rgba(11, 74, 50, 0.06), inset 0 1px 2px 0 rgba(255, 255, 255, 0.9) !important;
+  background: #FBFAF6 !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(112, 133, 100, 0.25) !important;
+  box-shadow: 0 8px 30px 0 rgba(19, 70, 48, 0.05) !important;
 }
 
 .glassmorphism:hover {
-  background: rgba(255, 255, 255, 0.8) !important;
-  border-color: rgba(255, 255, 255, 0.95) !important;
-  box-shadow: 0 12px 40px 0 rgba(11, 74, 50, 0.12), inset 0 1px 2px 0 rgba(255, 255, 255, 1) !important;
+  background: #ffffff !important;
+  border-color: rgba(66, 115, 46, 0.45) !important;
+  box-shadow: 0 12px 36px 0 rgba(19, 70, 48, 0.1) !important;
 }
 
 .glassmorphism-dark {
-  background: rgba(7, 41, 28, 0.65) !important;
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35), inset 0 1px 2px 0 rgba(255, 255, 255, 0.2) !important;
+  background: rgba(19, 70, 48, 0.92) !important;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(238, 241, 222, 0.2) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35) !important;
 }
 
 .glassmorphism-pill {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.8) !important;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9) !important;
+  background: #FBFAF6 !important;
+  border: 1px solid rgba(112, 133, 100, 0.3) !important;
+  box-shadow: 0 2px 8px 0 rgba(19, 70, 48, 0.05) !important;
 }
 
 /* Neo-Minimalist Bento Card & Glow Utilities */
 .bento-card {
   position: relative;
-  background-color: #ffffff;
-  border: 1px solid rgba(217, 226, 211, 0.85);
+  background-color: #FBFAF6;
+  border: 1px solid rgba(112, 133, 100, 0.25);
   border-radius: 1.5rem;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 20px -2px rgba(11, 74, 50, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 20px -2px rgba(19, 70, 48, 0.04);
 }
 
 .bento-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(102, 180, 71, 0.45);
-  box-shadow: 0 20px 40px -10px rgba(11, 74, 50, 0.1), 0 0 35px -5px rgba(102, 180, 71, 0.22);
+  border-color: rgba(66, 115, 46, 0.5);
+  box-shadow: 0 20px 40px -10px rgba(19, 70, 48, 0.1);
 }
 
 .bento-glow-gold:hover {
-  border-color: rgba(217, 170, 74, 0.5) !important;
-  box-shadow: 0 20px 40px -10px rgba(184, 137, 43, 0.12), 0 0 35px -5px rgba(217, 170, 74, 0.25) !important;
+  border-color: rgba(208, 173, 103, 0.6) !important;
+  box-shadow: 0 20px 40px -10px rgba(208, 173, 103, 0.15), 0 0 35px -5px rgba(208, 173, 103, 0.3) !important;
 }
 
 .bento-glow-dark {
-  background: rgba(7, 41, 28, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(19, 70, 48, 0.95);
+  border: 1px solid rgba(238, 241, 222, 0.2);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -127,12 +139,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .bento-glow-dark:hover {
   transform: translateY(-4px);
-  border-color: rgba(102, 180, 71, 0.5);
-  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5), 0 0 40px 0 rgba(102, 180, 71, 0.25);
+  border-color: rgba(66, 115, 46, 0.6);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.4);
 }
 
 .neo-hairline {
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px 0 rgba(19, 70, 48, 0.04);
 }
 
 

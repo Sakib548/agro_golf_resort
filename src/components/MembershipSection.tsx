@@ -32,7 +32,7 @@ const credentialsData: CredentialPreview[] = [
     desc: "Personalized membership card recognizing full club privileges across all athletic grounds, sports tournaments, fitness suites, and dining lounges.",
     highlights: [
       "Full access to 9-hole golf course and driving ranges",
-      "Priority booking for 4 FIFA football turfs and courts",
+      "Priority booking for 4 championship football turfs and courts",
       "Exclusive invitations to private tournaments and galas",
       "Family access to swimming pools and amusement amenities",
     ],
@@ -106,14 +106,14 @@ export default function MembershipSection() {
   const [activeCardTab, setActiveCardTab] = useState<"permanent" | "member">("permanent");
 
   return (
-    <section id="membership" className="py-24 bg-[#f6f8f2] text-[#14261c] border-t border-stone-200">
+    <section id="membership" className="py-24 bg-[#EEF1DE] text-[#134630] border-t border-[#708564]/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="hero-reveal max-w-3xl mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3.5 py-1 rounded-full border border-[#708564]/30">
             Elite Privileges &amp; Physical Cards
           </span>
-          <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#14261c] mt-3">
+          <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#134630] mt-3">
             Membership and loyalty credentials
           </h2>
           <p className="text-stone-600 text-base sm:text-lg mt-3 leading-relaxed">
@@ -126,9 +126,9 @@ export default function MembershipSection() {
            ======================================================== */}
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {/* Card 1: Official Numbered Loyalty Card */}
-          <div className="rounded-3xl border border-stone-200 bg-white p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
             <div>
-              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-stone-200/80 shadow-md">
+              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-[#708564]/30 shadow-md">
                 <Image
                   src="/images/loyalty-card-permanent-member.webp"
                   alt="Official Member Loyalty Card"
@@ -150,12 +150,12 @@ export default function MembershipSection() {
               </div>
 
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs uppercase font-extrabold text-[#0b4a32] tracking-wider bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                <span className="text-xs uppercase font-extrabold text-[#42732E] tracking-wider bg-[#EEF1DE] px-2.5 py-0.5 rounded-full border border-[#708564]/20">
                   Physical Loyalty Card
                 </span>
-                <span className="text-[11px] font-mono font-bold text-[#b8892b]">10%–50% Off</span>
+                <span className="text-[11px] font-mono font-bold text-[#42732E]">10%–50% Off</span>
               </div>
-              <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
+              <h3 className="font-heading text-xl font-bold text-[#134630] mb-2">
                 Official VIP Loyalty Card
               </h3>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4">
@@ -166,7 +166,7 @@ export default function MembershipSection() {
             <button
               type="button"
               onClick={() => setSelectedCredential(credentialsData[0])}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 hover:bg-[#0b4a32] hover:text-white px-4 py-2.5 text-xs font-bold text-stone-800 transition-all shadow-xs"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-4 py-2.5 text-xs font-bold text-[#134630] transition-all shadow-xs"
             >
               <Eye className="size-3.5" />
               <span>Inspect Loyalty Card Details</span>
@@ -174,9 +174,9 @@ export default function MembershipSection() {
           </div>
 
           {/* Card 2: Certificate of Member */}
-          <div className="rounded-3xl border border-stone-200 bg-white p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
             <div>
-              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-stone-200/80 shadow-md">
+              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-[#708564]/30 shadow-md">
                 <Image
                   src="/images/Certificate of Member.jpg.webp"
                   alt="Certificate of Member"
@@ -198,12 +198,12 @@ export default function MembershipSection() {
               </div>
 
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs uppercase font-extrabold text-[#b8892b] tracking-wider bg-amber-100 px-2.5 py-0.5 rounded-full">
+                <span className="text-xs uppercase font-extrabold text-[#708564] tracking-wider bg-[#EEF1DE] px-2.5 py-0.5 rounded-full border border-[#708564]/20">
                   Club Accreditation
                 </span>
-                <span className="text-[11px] font-mono font-bold text-[#0b4a32]">Accredited</span>
+                <span className="text-[11px] font-mono font-bold text-[#134630]">Accredited</span>
               </div>
-              <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
+              <h3 className="font-heading text-xl font-bold text-[#134630] mb-2">
                 Certificate of Member
               </h3>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4">
@@ -214,7 +214,7 @@ export default function MembershipSection() {
             <button
               type="button"
               onClick={() => setSelectedCredential(credentialsData[2])}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 hover:bg-[#0b4a32] hover:text-white px-4 py-2.5 text-xs font-bold text-stone-800 transition-all shadow-xs"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-4 py-2.5 text-xs font-bold text-[#134630] transition-all shadow-xs"
             >
               <Eye className="size-3.5" />
               <span>Inspect Certificate Details</span>
@@ -222,9 +222,9 @@ export default function MembershipSection() {
           </div>
 
           {/* Card 3: Certificate of Share (Sub-Kabula) */}
-          <div className="rounded-3xl border border-stone-200 bg-white p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
             <div>
-              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-stone-200/80 shadow-md">
+              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-[#708564]/30 shadow-md">
                 <Image
                   src="/images/Certificate.jpg.webp"
                   alt="Certificate of Share (Sub-Kabula)"
@@ -246,12 +246,12 @@ export default function MembershipSection() {
               </div>
 
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs uppercase font-extrabold text-[#0b4a32] tracking-wider bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                <span className="text-xs uppercase font-extrabold text-[#42732E] tracking-wider bg-[#EEF1DE] px-2.5 py-0.5 rounded-full border border-[#708564]/20">
                   100% Sub-Kabula Title
                 </span>
-                <span className="text-[11px] font-mono font-bold text-[#b8892b]">Deeded Share</span>
+                <span className="text-[11px] font-mono font-bold text-[#708564]">Deeded Share</span>
               </div>
-              <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
+              <h3 className="font-heading text-xl font-bold text-[#134630] mb-2">
                 Certificate of Share
               </h3>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4">
@@ -262,7 +262,7 @@ export default function MembershipSection() {
             <button
               type="button"
               onClick={() => setSelectedCredential(credentialsData[3])}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 hover:bg-[#0b4a32] hover:text-white px-4 py-2.5 text-xs font-bold text-stone-800 transition-all shadow-xs"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-4 py-2.5 text-xs font-bold text-[#134630] transition-all shadow-xs"
             >
               <Eye className="size-3.5" />
               <span>Inspect Share Deed Details</span>
@@ -273,16 +273,16 @@ export default function MembershipSection() {
         {/* ========================================================
             PREMIUM CARD SHOWCASE BANNER WITH AUTHENTIC CARD IMAGES
            ======================================================== */}
-        <div className="reveal-slow rounded-3xl bg-gradient-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 mb-20 shadow-xl border border-emerald-900/40 relative overflow-hidden">
+        <div className="reveal-slow rounded-3xl bg-[#134630] text-white p-8 sm:p-12 mb-20 shadow-xl border border-[#708564]/40 relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             <div className="lg:col-span-7">
-              <span className="text-xs uppercase tracking-widest text-[#b6e59c] font-bold">
+              <span className="text-xs uppercase tracking-widest text-[#EEF1DE] font-bold">
                 Physical Card Accreditation
               </span>
               <h3 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">
                 Two tiers of membership designed for flexibility
               </h3>
-              <p className="text-emerald-100/90 text-sm sm:text-base leading-relaxed mb-6">
+              <p className="text-stone-300 text-sm sm:text-base leading-relaxed mb-6">
                 Whether you join as an active golf member or acquire deeded land shares, your physical card credentials unlock unprecedented hospitality and leisure privileges across Bangladesh.
               </p>
 
@@ -292,11 +292,11 @@ export default function MembershipSection() {
                     <h4 className="font-heading text-base font-bold text-white">
                       1. Golf &amp; Wellness Club Membership Card
                     </h4>
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#b6e59c] bg-white/10 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#EEF1DE] bg-white/10 px-2.5 py-0.5 rounded-full">
                       Club Tier
                     </span>
                   </div>
-                  <p className="text-xs sm:text-sm text-emerald-200/90 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
                     Designed for avid golfers and wellness seekers wanting full access to championship fairways, covered driving ranges, swimming pools, gym, and spa without purchasing real land.
                   </p>
                 </div>
@@ -306,11 +306,11 @@ export default function MembershipSection() {
                     <h4 className="font-heading text-base font-bold text-white">
                       2. Express Highway Club VIP Loyalty Card
                     </h4>
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-amber-300 bg-amber-400/20 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#EEF1DE] bg-white/10 px-2.5 py-0.5 rounded-full">
                       VIP Elite Tier
                     </span>
                   </div>
-                  <p className="text-xs sm:text-sm text-emerald-200/90 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
                     Automatically bundled complimentary with all land share and villa acquisitions, unlocking 10%–50% discounts across Sampan Group hotels, motels, and roadside VIP lounges nationwide.
                   </p>
                 </div>
@@ -326,8 +326,8 @@ export default function MembershipSection() {
                   onClick={() => setActiveCardTab("permanent")}
                   className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                     activeCardTab === "permanent"
-                      ? "bg-[#66b447] text-[#06210f] shadow-md"
-                      : "text-emerald-100 hover:text-white"
+                      ? "bg-[#42732E] text-white shadow-md"
+                      : "text-stone-300 hover:text-white"
                   }`}
                 >
                   VIP Loyalty Card
@@ -337,8 +337,8 @@ export default function MembershipSection() {
                   onClick={() => setActiveCardTab("member")}
                   className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                     activeCardTab === "member"
-                      ? "bg-[#66b447] text-[#06210f] shadow-md"
-                      : "text-emerald-100 hover:text-white"
+                      ? "bg-[#42732E] text-white shadow-md"
+                      : "text-stone-300 hover:text-white"
                   }`}
                 >
                   Club Member Card
@@ -352,7 +352,7 @@ export default function MembershipSection() {
                     activeCardTab === "permanent" ? credentialsData[0] : credentialsData[1]
                   )
                 }
-                className="w-full max-w-md aspect-[1.58/1] rounded-2xl overflow-hidden relative shadow-2xl border-2 border-emerald-400/40 group cursor-pointer transition-transform duration-500 hover:scale-105"
+                className="w-full max-w-md aspect-[1.58/1] rounded-2xl overflow-hidden relative shadow-2xl border-2 border-[#708564]/40 group cursor-pointer transition-transform duration-500 hover:scale-105"
               >
                 <Image
                   src={
@@ -371,7 +371,7 @@ export default function MembershipSection() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity flex items-end justify-between p-5">
                   <div>
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#b6e59c] block">
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#EEF1DE] block">
                       {activeCardTab === "permanent" ? "VIP ELITE CARD" : "MEMBER STANDING"}
                     </span>
                     <span className="font-heading text-sm font-bold text-white">
@@ -388,7 +388,7 @@ export default function MembershipSection() {
                 </div>
               </div>
 
-              <p className="text-[11px] text-emerald-200/70 text-center mt-3">
+              <p className="text-[11px] text-stone-300 text-center mt-3">
                 *Click the card to inspect full high-resolution credentials, security seal, and perks.
               </p>
             </div>
@@ -398,10 +398,10 @@ export default function MembershipSection() {
         {/* Partners Privileges Table */}
         <div className="reveal-slow mb-14">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3.5 py-1 rounded-full border border-[#708564]/30">
               Reciprocal Privileges
             </span>
-            <h3 className="font-heading text-3xl font-bold text-[#14261c] mt-2">
+            <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
               National partner privileges
             </h3>
             <p className="text-stone-600 text-sm mt-1">
@@ -409,26 +409,26 @@ export default function MembershipSection() {
             </p>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-stone-200 bg-white shadow-sm">
+          <div className="overflow-x-auto rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] shadow-sm">
             <table className="w-full min-w-[580px] text-left border-collapse text-sm">
               <thead>
-                <tr className="bg-stone-50 border-b border-stone-200 text-stone-600 font-heading text-xs uppercase tracking-wider">
+                <tr className="bg-[#EEF1DE] border-b border-[#708564]/20 text-[#134630] font-heading text-xs uppercase tracking-wider">
                   <th className="p-4 sm:p-5">Partner &amp; Affiliate</th>
                   <th className="p-4 sm:p-5">Exclusive Benefit</th>
                   <th className="p-4 sm:p-5 text-right">Network Category</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-stone-100 text-stone-700">
+              <tbody className="divide-y divide-[#708564]/10 text-stone-700">
                 {partnersData.map((row) => (
-                  <tr key={row.partner} className="hover:bg-stone-50/60 transition-colors">
-                    <td className="p-4 sm:p-5 font-bold text-stone-900">
+                  <tr key={row.partner} className="hover:bg-[#EEF1DE]/40 transition-colors">
+                    <td className="p-4 sm:p-5 font-bold text-[#134630]">
                       {row.partner}
                     </td>
                     <td className="p-4 sm:p-5 text-stone-600">
                       {row.benefit}
                     </td>
                     <td className="p-4 sm:p-5 text-right">
-                      <span className="inline-block bg-emerald-50 text-[#0b4a32] border border-emerald-900/10 text-xs font-semibold px-2.5 py-1 rounded-full">
+                      <span className="inline-block bg-[#EEF1DE] text-[#42732E] border border-[#708564]/20 text-xs font-semibold px-2.5 py-1 rounded-full">
                         {row.badge}
                       </span>
                     </td>
@@ -449,16 +449,16 @@ export default function MembershipSection() {
           onClick={() => setSelectedCredential(null)}
         >
           <div
-            className="relative max-w-3xl w-full bg-[#07291c] rounded-3xl overflow-hidden border border-emerald-600/40 shadow-2xl flex flex-col max-h-[92vh] text-white"
+            className="relative max-w-3xl w-full bg-[#134630] rounded-3xl overflow-hidden border border-[#708564]/40 shadow-2xl flex flex-col max-h-[92vh] text-white"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-emerald-900/60 bg-[#051f15]">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#708564]/30 bg-[#134630]">
               <div className="flex items-center gap-3">
-                <span className="text-xs uppercase font-extrabold tracking-widest text-[#b6e59c] bg-white/10 px-3 py-1 rounded-full">
+                <span className="text-xs uppercase font-extrabold tracking-widest text-[#EEF1DE] bg-white/10 px-3 py-1 rounded-full border border-white/10">
                   {selectedCredential.badge}
                 </span>
-                <span className="text-xs text-emerald-200/80 font-semibold hidden sm:inline">
+                <span className="text-xs text-[#EEF1DE]/80 font-semibold hidden sm:inline">
                   Verified Physical Credential
                 </span>
               </div>
@@ -485,20 +485,20 @@ export default function MembershipSection() {
             </div>
 
             {/* Modal Footer Description */}
-            <div className="p-6 bg-gradient-to-t from-[#051f15] to-[#07291c] border-t border-emerald-900/60 space-y-3">
+            <div className="p-6 bg-[#134630] border-t border-[#708564]/30 space-y-3">
               <div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold text-white">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FBFAF6]">
                   {selectedCredential.title}
                 </h3>
-                <p className="text-emerald-100/90 text-xs sm:text-sm mt-1 leading-relaxed">
+                <p className="text-stone-300 text-xs sm:text-sm mt-1 leading-relaxed">
                   {selectedCredential.desc}
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-emerald-900/40">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-[#708564]/20">
                 {selectedCredential.highlights.map((h, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-emerald-200">
-                    <Check className="size-3.5 text-[#66b447] shrink-0" />
+                  <div key={i} className="flex items-center gap-2 text-xs text-[#EEF1DE]">
+                    <Check className="size-3.5 text-[#42732E] shrink-0" />
                     <span>{h}</span>
                   </div>
                 ))}

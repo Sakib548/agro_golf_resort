@@ -99,11 +99,11 @@ const allGalleryPhotos: GalleryPhotoItem[] = [
   },
   {
     id: "g-sp-9",
-    title: "FIFA Football Turfs & Tournaments",
+    title: "Championship Football Turfs & Tournaments",
     category: "sports",
     src: "/images/Football-.webp",
     tag: "4 Football Turfs",
-    desc: "4 high-grade FIFA-specification turfs for professional tournaments and corporate leagues.",
+    desc: "4 high-grade championship-specification turfs for professional tournaments and corporate leagues.",
   },
   {
     id: "g-sp-10",
@@ -683,9 +683,9 @@ const galleryChapters = [
     id: "sports",
     num: "01",
     title: "Elite Sports & Athletics Arena",
-    tag: "9-Hole Golf · 4 Football Turfs · FIFA Standard",
+    tag: "9-Hole Golf · 4 Football Turfs · Professional Standard",
     Icon: Flag,
-    accent: "#0b4a32",
+    accent: "#42732E",
   },
   {
     id: "stay",
@@ -693,7 +693,7 @@ const galleryChapters = [
     title: "Living & Stays — Shan Cottages & Waterfront Villas",
     tag: "Shan Cottages · Waterfront Villas · Presidential Suites",
     Icon: Home,
-    accent: "#b8892b",
+    accent: "#708564",
   },
   {
     id: "agro",
@@ -701,7 +701,7 @@ const galleryChapters = [
     title: "Nature, Farmlands & Working Agro Sanctuary",
     tag: "Paddy & Wheat Fields · Tea Garden · Tropical Orchards",
     Icon: Sprout,
-    accent: "#66b447",
+    accent: "#42732E",
   },
   {
     id: "leisure",
@@ -709,7 +709,7 @@ const galleryChapters = [
     title: "Aquatic Leisure, 5-Star Dining & Wellness",
     tag: "4 Pools · 10 Ponds · Farm-to-Table · Spa · Theme Park",
     Icon: Waves,
-    accent: "#0284c7",
+    accent: "#708564",
   },
   {
     id: "docs",
@@ -717,7 +717,7 @@ const galleryChapters = [
     title: "Masterplan, Architecture & Blueprints",
     tag: "100+ Acre Blueprint · 3D Master Aerial · Topography Layout",
     Icon: Map,
-    accent: "#d9aa4a",
+    accent: "#134630",
   },
 ];
 
@@ -764,18 +764,18 @@ export default function GallerySection() {
   }, [selectedPhoto, handlePrev, handleNext]);
 
   return (
-    <section id="gallery" className="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-[#f6f8f2] text-[#14261c]">
+    <section id="gallery" className="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-[#FBFAF6] text-[#134630]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] border border-[#708564]/30 px-3.5 py-1 rounded-full">
               Divided Photo Showcase
             </span>
-            <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#14261c] mt-3">
+            <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#134630] mt-3">
               Estate &amp; Facilities Gallery
             </h2>
-            <p className="text-stone-600 text-base sm:text-lg mt-3 max-w-2xl leading-relaxed">
+            <p className="text-[#134630]/80 text-base sm:text-lg mt-3 max-w-2xl leading-relaxed">
               Explore authentic glimpses across our 100+ acre grounds — divided by masterplan texts into championship sports, authentic thatched cottages, golden farmlands, and lakes.
             </p>
           </div>
@@ -785,7 +785,7 @@ export default function GallerySection() {
               href="/brochure.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#0b4a32] px-6 py-3.5 text-xs uppercase tracking-wider font-bold text-white shadow-md hover:bg-[#12583d] transition-all hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#42732E] px-6 py-3.5 text-xs uppercase tracking-wider font-bold text-white shadow-md hover:bg-[#134630] transition-all hover:scale-105 active:scale-95"
             >
               <span>📄 View Official Brochure</span>
               <span>↗</span>
@@ -794,15 +794,15 @@ export default function GallerySection() {
         </div>
 
         {/* Quick Filter Pill Dock */}
-        <div className="sticky top-20 z-20 bg-[#f6f8f2]/95 backdrop-blur-md py-4 mb-12 border-y border-stone-200/80">
+        <div className="sticky top-20 z-20 bg-[#FBFAF6]/95 backdrop-blur-md py-4 mb-12 border-y border-[#708564]/20">
           <div className="flex items-center justify-between gap-4 overflow-x-auto pb-1 scrollbar-none">
             <div className="flex flex-wrap items-center gap-2">
               <button
                 type="button"
                 onClick={() => setActiveTab("all")}
                 className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-bold transition-all duration-200 ${activeTab === "all"
-                    ? "bg-[#0b4a32] text-white shadow-md scale-105"
-                    : "bg-white border border-stone-200 text-stone-700 hover:bg-stone-100"
+                    ? "bg-[#42732E] text-white shadow-md scale-105"
+                    : "bg-[#FBFAF6] border border-[#708564]/25 text-[#134630] hover:bg-[#EEF1DE]"
                   }`}
               >
                 <Sparkles className="size-4" />
@@ -821,8 +821,8 @@ export default function GallerySection() {
                     type="button"
                     onClick={() => setActiveTab(ch.id)}
                     className={`inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 ${isActive
-                        ? "bg-[#0b4a32] text-white shadow-md scale-105 font-bold"
-                        : "bg-white border border-stone-200 text-stone-700 hover:bg-stone-100"
+                        ? "bg-[#42732E] text-white shadow-md scale-105 font-bold"
+                        : "bg-[#FBFAF6] border border-[#708564]/25 text-[#134630] hover:bg-[#EEF1DE]"
                       }`}
                   >
                     <ChapterIcon className="size-3.5 shrink-0" />
@@ -837,7 +837,7 @@ export default function GallerySection() {
               <button
                 type="button"
                 onClick={() => setActiveTab("all")}
-                className="shrink-0 text-xs font-bold text-[#0b4a32] hover:text-[#66b447] underline ml-auto"
+                className="shrink-0 text-xs font-bold text-[#42732E] hover:text-[#134630] underline ml-auto"
               >
                 Show All
               </button>
@@ -860,17 +860,17 @@ export default function GallerySection() {
               return (
                 <div key={ch.id} className="pt-2 border-t border-stone-200/90 first:border-t-0">
                   {/* Chapter Header */}
-                  <div className="glassmorphism rounded-3xl p-6 sm:p-8 mb-8 border border-stone-200/90 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div className="glassmorphism rounded-3xl p-6 sm:p-8 mb-8 border border-[#708564]/20 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-2.5 mb-1.5">
-                        <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">
+                        <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full border border-[#708564]/30">
                           Chapter {ch.num}
                         </span>
-                        <span className="text-xs uppercase font-bold text-stone-500">
+                        <span className="text-xs uppercase font-bold text-[#708564]">
                           {photos.length} Photos
                         </span>
                       </div>
-                      <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#14261c]">
+                      <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#134630]">
                         {ch.title}
                       </h3>
                     </div>
@@ -878,142 +878,105 @@ export default function GallerySection() {
                     <button
                       type="button"
                       onClick={() => setActiveTab(ch.id)}
-                      className="self-start md:self-auto inline-flex items-center gap-2 rounded-xl bg-[#0b4a32] px-5 py-2.5 text-xs uppercase tracking-wider font-bold text-white hover:bg-[#155a40] transition-colors shadow-sm"
+                      className="self-start md:self-auto inline-flex items-center gap-2 rounded-xl bg-[#42732E] px-5 py-2.5 text-xs uppercase tracking-wider font-bold text-white hover:bg-[#365e25] transition-colors shadow-xs"
                     >
                       <span>Focus Zone</span>
                       <ArrowRight className="size-3.5" />
                     </button>
                   </div>
 
-                  {/* Asymmetrical Layout */}
-                  <div className="space-y-6">
-                    {featuredPhotos.length > 0 && (
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        {featuredPhotos.map((photo) => (
-                          <div
-                            key={photo.id}
-                            onClick={() => setSelectedPhoto(photo)}
-                            className="bento-card neo-hairline group relative cursor-pointer overflow-hidden p-0"
-                          >
-                            <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden bg-stone-900 rounded-t-[1.4rem]">
-                              <Image
-                                src={photo.src}
-                                alt={photo.title}
-                                fill
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+                  {/* Modern Luxury Travel Card Grid (4 cards in a row on big screens, lessened height) */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+                    {photos.map((photo) => (
+                      <div
+                        key={photo.id}
+                        onClick={() => setSelectedPhoto(photo)}
+                        className="group relative cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.35)] hover:-translate-y-1.5 transition-all duration-500 aspect-[4/5] flex flex-col justify-end"
+                      >
+                        {/* Full-bleed Photo across the ENTIRE card */}
+                        <Image
+                          src={photo.src}
+                          alt={photo.title}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                        />
 
-                              <div className="absolute top-4 left-4">
-                                <span className="inline-block text-[11px] uppercase font-extrabold tracking-wider text-[#b6e59c] bg-black/60 backdrop-blur-md px-3.5 py-1 rounded-full border border-white/20">
-                                  ★ Featured {photo.tag}
-                                </span>
-                              </div>
+                        {/* Smooth gradient overlay without blur for pristine photo clarity */}
+                        <div className="absolute inset-x-0 bottom-0 h-[55%] bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
 
-                              <div className="absolute top-4 right-4 size-9 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <Eye className="size-4" />
-                              </div>
-                            </div>
-
-                            <div className="p-5 sm:p-6 bg-white">
-                              <h4 className="font-heading text-lg sm:text-xl font-bold text-[#14261c] group-hover:text-[#0b4a32] transition-colors mb-1">
-                                {photo.title}
-                              </h4>
-                              <p className="text-stone-600 text-xs sm:text-sm leading-relaxed line-clamp-2">
-                                {photo.desc}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                      {standardPhotos.map((photo) => (
-                        <div
-                          key={photo.id}
-                          onClick={() => setSelectedPhoto(photo)}
-                          className="bento-card neo-hairline group relative cursor-pointer overflow-hidden p-0 flex flex-col justify-between"
-                        >
-                          <div>
-                            <div className="relative aspect-[4/3] w-full overflow-hidden bg-stone-100 rounded-t-[1.4rem]">
-                              <Image
-                                src={photo.src}
-                                alt={photo.title}
-                                fill
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
-
-                              <div className="absolute top-3 left-3">
-                                <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-[#b6e59c] bg-black/50 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/10">
-                                  {photo.tag}
-                                </span>
-                              </div>
-
-                              <div className="absolute top-3 right-3 size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <Eye className="size-4" />
-                              </div>
-                            </div>
-
-                            <div className="p-4 bg-white rounded-b-[1.4rem]">
-                              <h4 className="font-heading text-sm font-bold text-[#14261c] leading-snug line-clamp-2 group-hover:text-[#0b4a32] transition-colors mb-1">
-                                {photo.title}
-                              </h4>
-                              <p className="text-stone-500 text-xs leading-relaxed line-clamp-2">
-                                {photo.desc}
-                              </p>
-                            </div>
-                          </div>
+                        {/* Hover Eye */}
+                        <div className="absolute top-3.5 right-3.5 z-10 size-8 rounded-full bg-black/40 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                          <Eye className="size-4" />
                         </div>
-                      ))}
-                    </div>
+
+                        {/* Text Content Layer */}
+                        <div className="relative z-10 p-4 sm:p-5 text-white flex flex-col">
+                          {/* Title (Full width, bold, radiant) */}
+                          <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#EEF1DE] transition-colors">
+                            {photo.title}
+                          </h4>
+
+                          {/* Description (reveals only on hover) */}
+                          {photo.desc && (
+                            <div className="grid grid-rows-[0fr] opacity-0 group-hover:grid-rows-[1fr] group-hover:opacity-100 transition-all duration-300 ease-out">
+                              <div className="overflow-hidden">
+                                <p className="pt-2 text-white/85 text-xs leading-relaxed line-clamp-2 font-normal">
+                                  {photo.desc}
+                                </p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               );
             })}
           </div>
         ) : (
-          /* Focused Category Grid */
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
             {currentList.map((photo) => (
               <div
                 key={photo.id}
                 onClick={() => setSelectedPhoto(photo)}
-                className="bento-card neo-hairline group relative cursor-pointer overflow-hidden p-0 flex flex-col justify-between"
+                className="group relative cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.35)] hover:-translate-y-1.5 transition-all duration-500 aspect-[4/5] flex flex-col justify-end"
               >
-                <div>
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-stone-100 rounded-t-[1.4rem]">
-                    <Image
-                      src={photo.src}
-                      alt={photo.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+                {/* Full-bleed Photo across the ENTIRE card */}
+                <Image
+                  src={photo.src}
+                  alt={photo.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                />
 
-                    <div className="absolute top-3 left-3">
-                      <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-[#b6e59c] bg-black/50 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/10">
-                        {photo.tag}
-                      </span>
+                {/* Smooth gradient overlay without blur for pristine photo clarity */}
+                <div className="absolute inset-x-0 bottom-0 h-[55%] bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
+
+                {/* Hover Eye */}
+                <div className="absolute top-3.5 right-3.5 z-10 size-8 rounded-full bg-black/40 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Eye className="size-4" />
+                </div>
+
+                {/* Text Content Layer */}
+                <div className="relative z-10 p-4 sm:p-5 text-white flex flex-col">
+                  {/* Title (Full width, bold, radiant) */}
+                  <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#EEF1DE] transition-colors">
+                    {photo.title}
+                  </h4>
+
+                  {/* Description (reveals only on hover) */}
+                  {photo.desc && (
+                    <div className="grid grid-rows-[0fr] opacity-0 group-hover:grid-rows-[1fr] group-hover:opacity-100 transition-all duration-300 ease-out">
+                      <div className="overflow-hidden">
+                        <p className="pt-2 text-white/85 text-xs leading-relaxed line-clamp-2 font-normal">
+                          {photo.desc}
+                        </p>
+                      </div>
                     </div>
-
-                    <div className="absolute top-3 right-3 size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                      <Eye className="size-4" />
-                    </div>
-                  </div>
-
-                  <div className="p-4 bg-white rounded-b-[1.4rem]">
-                    <h4 className="font-heading text-sm font-bold text-[#14261c] leading-snug line-clamp-2 group-hover:text-[#0b4a32] transition-colors mb-1">
-                      {photo.title}
-                    </h4>
-                    <p className="text-stone-500 text-xs leading-relaxed line-clamp-2">
-                      {photo.desc}
-                    </p>
-                  </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -1021,27 +984,27 @@ export default function GallerySection() {
         )}
 
         {/* Brochure Highlight Callout Box */}
-        <div className="mt-20 rounded-3xl bg-gradient-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 shadow-2xl border border-emerald-900/40">
+        <div className="mt-20 rounded-3xl bg-[#134630] text-white p-8 sm:p-12 shadow-2xl border border-[#708564]/30">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="max-w-2xl">
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#b6e59c] bg-white/10 px-3.5 py-1 rounded-full mb-3">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#EEF1DE] bg-white/10 px-3.5 py-1 rounded-full mb-3">
                 Official Documentation
               </span>
               <h3 className="font-heading text-2xl sm:text-4xl font-extrabold text-white mb-3">
                 View the Complete Master Project Brochure
               </h3>
-              <p className="text-emerald-100/90 text-sm sm:text-base leading-relaxed mb-4">
+              <p className="text-[#EEF1DE]/90 text-sm sm:text-base leading-relaxed mb-4">
                 Access official masterplan blueprints, deed schedules, and project architectural drawings online.
               </p>
-              <div className="flex flex-wrap gap-2 text-xs text-emerald-200/80">
+              <div className="flex flex-wrap gap-2 text-xs text-[#EEF1DE]/80">
                 <span className="bg-white/10 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
-                  <Check className="size-3 text-[#b6e59c]" /> 38MB High-Res Brochure
+                  <Check className="size-3 text-[#EEF1DE]" /> 38MB High-Res Brochure
                 </span>
                 <span className="bg-white/10 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
-                  <Check className="size-3 text-[#b6e59c]" /> Complete Masterplan Drawings
+                  <Check className="size-3 text-[#EEF1DE]" /> Complete Masterplan Drawings
                 </span>
                 <span className="bg-white/10 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
-                  <Check className="size-3 text-[#b6e59c]" /> Free Online Preview
+                  <Check className="size-3 text-[#EEF1DE]" /> Free Online Preview
                 </span>
               </div>
             </div>
@@ -1051,7 +1014,7 @@ export default function GallerySection() {
                 href="/brochure.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#66b447] px-7 py-3.5 text-xs uppercase tracking-wider font-bold text-[#06210f] hover:bg-[#77c955] transition-all shadow-lg hover:scale-105 active:scale-95 text-center"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#42732E] px-7 py-3.5 text-xs uppercase tracking-wider font-bold text-white hover:bg-[#365e25] transition-all shadow-lg hover:scale-105 active:scale-95 text-center"
               >
                 <span>Open Brochure in New Tab</span>
                 <span>↗</span>
@@ -1075,15 +1038,15 @@ export default function GallerySection() {
             onClick={() => setSelectedPhoto(null)}
           >
             <div
-              className="relative max-w-5xl w-full bg-[#0b3a28] rounded-3xl overflow-hidden border border-emerald-600/40 shadow-2xl flex flex-col max-h-[92vh]"
+              className="relative max-w-5xl w-full bg-[#134630] rounded-3xl overflow-hidden border border-[#708564]/40 shadow-2xl flex flex-col max-h-[92vh]"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between px-6 py-4 border-b border-emerald-900/60 bg-[#07291c] text-white">
+              <div className="flex items-center justify-between px-6 py-4 border-b border-[#708564]/30 bg-[#134630] text-white">
                 <div className="flex items-center gap-3">
-                  <span className="text-xs uppercase font-extrabold tracking-widest text-[#b6e59c] bg-white/10 px-3 py-1 rounded-full">
+                  <span className="text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full">
                     {selectedPhoto.tag}
                   </span>
-                  <span className="text-xs text-emerald-200/70 font-mono">
+                  <span className="text-xs text-[#EEF1DE]/70 font-mono">
                     {selectedIndex + 1} of {currentList.length}
                   </span>
                 </div>
@@ -1132,14 +1095,14 @@ export default function GallerySection() {
                 </button>
               </div>
 
-              <div className="p-6 bg-gradient-to-t from-[#051f15] to-[#07291c] text-white border-t border-emerald-900/60">
+              <div className="p-6 bg-[#134630] text-white border-t border-[#708564]/30">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
                     <h3 className="font-heading text-xl sm:text-2xl font-bold text-white mb-0.5">
                       {selectedPhoto.title}
                     </h3>
                     {selectedPhoto.desc && (
-                      <p className="text-emerald-100/80 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                      <p className="text-[#EEF1DE]/80 text-xs sm:text-sm leading-relaxed max-w-3xl">
                         {selectedPhoto.desc}
                       </p>
                     )}
@@ -1148,7 +1111,7 @@ export default function GallerySection() {
                   <div className="shrink-0 flex items-center gap-2">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-1.5 rounded-xl bg-[#66b447] px-4 py-2 text-xs uppercase tracking-wider font-bold text-[#06210f] hover:bg-[#77c955] transition-all"
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-[#42732E] px-4 py-2 text-xs uppercase tracking-wider font-bold text-white hover:bg-[#708564] transition-all"
                     >
                       <span>Inquire About This</span>
                       <ArrowRight className="size-3" />

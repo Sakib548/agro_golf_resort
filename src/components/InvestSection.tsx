@@ -59,21 +59,21 @@ export default function InvestSection() {
   const totalInvestment = sharesCount * pricePerShare;
 
   return (
-    <section id="invest" className="bg-[#f6f8f2] text-[#14261c] pb-24">
+    <section id="invest" className="bg-[#EEF1DE] text-[#134630] pb-24">
       {/* Top Gold Banner Highlight */}
-      <div className="bg-gradient-to-r from-[#07291c] via-[#0b4a32] to-[#07291c] text-white py-16 px-4 sm:px-6 lg:px-8 shadow-inner">
+      <div className="bg-[#134630] text-white py-16 px-4 sm:px-6 lg:px-8 shadow-inner border-b border-[#708564]/30">
         <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#b6e59c] bg-white/10 px-3.5 py-1 rounded-full mb-3">
+            <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#EEF1DE] bg-white/10 px-3.5 py-1 rounded-full mb-3 border border-white/15">
               Fractional Land Ownership
             </span>
-            <p className="text-emerald-100/90 text-sm sm:text-base">
+            <p className="text-stone-300 text-sm sm:text-base">
               Share ownership starts from
             </p>
-            <div className="font-heading text-4xl sm:text-6xl font-extrabold text-[#d9aa4a] mt-1 mb-2">
+            <div className="font-heading text-4xl sm:text-6xl font-extrabold text-[#FBFAF6] mt-1 mb-2">
               ৳2.50 Lakh
             </div>
-            <p className="text-emerald-200/80 text-xs sm:text-sm max-w-xl">
+            <p className="text-stone-300 text-xs sm:text-sm max-w-xl">
               For a fractional share equal to <strong className="text-white font-semibold">1 shotok (decimal)</strong> of land, backed by 100% Sub-Kabula deed registration in your name.
             </p>
           </div>
@@ -81,13 +81,13 @@ export default function InvestSection() {
           <div className="shrink-0 flex flex-col sm:flex-row gap-3">
             <a
               href="#calculator"
-              className="inline-flex items-center justify-center rounded-xl bg-[#66b447] px-6 py-3 text-xs uppercase tracking-wider font-bold text-[#06210f] hover:bg-[#77c955] transition-all shadow-md"
+              className="inline-flex items-center justify-center rounded-xl bg-[#42732E] px-6 py-3 text-xs uppercase tracking-wider font-bold text-white hover:bg-[#708564] transition-all shadow-md"
             >
               Calculate Shares &amp; Perks
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-xl border border-white/30 bg-white/10 px-6 py-3 text-xs uppercase tracking-wider font-bold text-white hover:bg-white/20 transition-all"
+              className="inline-flex items-center justify-center rounded-xl border border-[#EEF1DE]/40 bg-[#FBFAF6]/10 px-6 py-3 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] hover:bg-[#FBFAF6]/20 transition-all"
             >
               Ask For Share Plan
             </a>
@@ -98,10 +98,10 @@ export default function InvestSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16">
         {/* Section Intro */}
         <div className="reveal-slow max-w-3xl mb-14">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3.5 py-1 rounded-full border border-[#708564]/30">
             Wealth Generation
           </span>
-          <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#14261c] mt-3">
+          <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#134630] mt-3">
             Ownership and revenue
           </h2>
           <p className="text-stone-600 text-base sm:text-lg mt-3 leading-relaxed">
@@ -111,50 +111,50 @@ export default function InvestSection() {
 
         {/* 2 Revenue Streams Breakdown */}
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-lime-100 text-[#0b4a32] flex items-center justify-center mb-4">
-              <Sprout className="size-6 text-[#559e38]" />
+          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 shadow-sm">
+            <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 text-[#42732E] flex items-center justify-center mb-4">
+              <Sprout className="size-6 text-[#42732E]" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#66b447]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#42732E]">
               Income Stream 1
             </span>
-            <h3 className="font-heading text-2xl font-bold text-[#14261c] mt-1 mb-3">
+            <h3 className="font-heading text-2xl font-bold text-[#134630] mt-1 mb-3">
               Commercial Agro-Yield
             </h3>
             <p className="text-stone-600 text-sm leading-relaxed mb-4">
               Continuous agricultural revenue derived from high-value commercial orchards (sweet mango, dragon fruit, and malta), organic vegetables, freshwater fish farming, and dairy operations.
             </p>
-            <div className="bg-stone-50 rounded-xl p-3 text-xs text-stone-700 font-medium">
+            <div className="bg-[#EEF1DE] rounded-xl p-3 text-xs text-stone-700 font-medium">
               Harvested and commercialized annually by Sampan Agro division.
             </div>
           </div>
 
-          <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-amber-100 text-[#b8892b] flex items-center justify-center mb-4">
-              <Building className="size-6 text-[#b8892b]" />
+          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 shadow-sm">
+            <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 text-[#708564] flex items-center justify-center mb-4">
+              <Building className="size-6 text-[#708564]" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#b8892b]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#708564]">
               Income Stream 2
             </span>
-            <h3 className="font-heading text-2xl font-bold text-[#14261c] mt-1 mb-3">
+            <h3 className="font-heading text-2xl font-bold text-[#134630] mt-1 mb-3">
               Hospitality &amp; Sports Revenue
             </h3>
             <p className="text-stone-600 text-sm leading-relaxed mb-4">
               Cashflow generated from luxury villa and cottage bookings, presidential suite stays, 9-hole golf green fees, sports tournament registrations, corporate retreats, and restaurant dining.
             </p>
-            <div className="bg-stone-50 rounded-xl p-3 text-xs text-stone-700 font-medium">
+            <div className="bg-[#EEF1DE] rounded-xl p-3 text-xs text-stone-700 font-medium">
               Managed under Sampan Hospitality&apos;s proven operational infrastructure.
             </div>
           </div>
         </div>
 
         {/* Interactive Share Calculator Widget */}
-        <div id="calculator" className="reveal-slow rounded-3xl border border-emerald-900/20 bg-gradient-to-br from-white via-[#fcfdfa] to-emerald-50/40 p-8 sm:p-12 shadow-md mb-20">
+        <div id="calculator" className="reveal-slow rounded-3xl border border-[#708564]/25 bg-[#FBFAF6] p-8 sm:p-12 shadow-md mb-20">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full border border-[#708564]/30">
               Interactive Estimator
             </span>
-            <h3 className="font-heading text-3xl font-bold text-[#14261c] mt-2">
+            <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
               Calculate your land share holding
             </h3>
             <p className="text-stone-600 text-sm sm:text-base mt-1">
@@ -184,7 +184,7 @@ export default function InvestSection() {
                     step="1"
                     value={sharesCount}
                     onChange={(e) => setSharesCount(Number(e.target.value))}
-                    className="w-full accent-[#0b4a32] cursor-pointer"
+                    className="w-full accent-[#42732E] cursor-pointer"
                   />
                   <button
                     type="button"
@@ -205,7 +205,7 @@ export default function InvestSection() {
                     onClick={() => setSharesCount(num)}
                     className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-all ${
                       sharesCount === num
-                        ? "bg-[#0b4a32] text-white shadow-sm"
+                        ? "bg-[#42732E] text-white shadow-sm"
                         : "bg-white border border-stone-200 text-stone-700 hover:bg-stone-100"
                     }`}
                   >
@@ -214,58 +214,58 @@ export default function InvestSection() {
                 ))}
               </div>
 
-              <div className="rounded-2xl border border-stone-200 bg-white p-5 space-y-2 text-xs sm:text-sm text-stone-700">
-                <div className="flex justify-between pb-2 border-b border-stone-100">
+              <div className="rounded-2xl border border-[#708564]/20 bg-[#EEF1DE] p-5 space-y-2 text-xs sm:text-sm text-stone-700">
+                <div className="flex justify-between pb-2 border-b border-stone-200">
                   <span className="text-stone-500">Rate per Shotok (Decimal):</span>
-                  <span className="font-bold text-stone-900">৳2,50,000</span>
+                  <span className="font-bold text-[#134630]">৳2,50,000</span>
                 </div>
-                <div className="flex justify-between pb-2 border-b border-stone-100">
+                <div className="flex justify-between pb-2 border-b border-stone-200">
                   <span className="text-stone-500">Registered Land Deeded:</span>
-                  <span className="font-bold text-[#0b4a32]">{sharesCount} Decimal(s)</span>
+                  <span className="font-bold text-[#42732E]">{sharesCount} Decimal(s)</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-stone-500">Deed Type:</span>
-                  <span className="font-bold text-[#66b447]">100% Sub-Kabula Freehold</span>
+                  <span className="font-bold text-[#134630]">100% Sub-Kabula Freehold</span>
                 </div>
               </div>
             </div>
 
             {/* Calculated Card */}
-            <div className="lg:col-span-6 rounded-3xl bg-[#07291c] text-white p-8 shadow-xl border border-emerald-900/40 relative overflow-hidden">
-              <div className="absolute right-0 top-0 size-48 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
+            <div className="lg:col-span-6 rounded-3xl bg-[#134630] text-white p-8 shadow-xl border border-[#708564]/30 relative overflow-hidden">
+              <div className="absolute right-0 top-0 size-48 bg-[#42732E]/20 rounded-full blur-2xl pointer-events-none" />
               
-              <span className="text-xs uppercase tracking-widest text-[#b6e59c] font-bold">
+              <span className="text-xs uppercase tracking-widest text-[#EEF1DE] font-bold">
                 Estimated Investment
               </span>
-              <div className="font-heading text-4xl sm:text-5xl font-extrabold text-[#d9aa4a] mt-1 mb-4">
+              <div className="font-heading text-4xl sm:text-5xl font-extrabold text-[#FBFAF6] mt-1 mb-4">
                 ৳{(totalInvestment / 100000).toFixed(2)} Lakh
               </div>
-              <p className="text-xs text-emerald-100/80 mb-6">
+              <p className="text-xs text-stone-300 mb-6">
                 Total for {sharesCount} shotok(s) of physical estate land with registered sub-kabula deed.
               </p>
 
-              <div className="space-y-2.5 text-xs sm:text-sm text-emerald-100 mb-8 border-t border-emerald-800/60 pt-4">
+              <div className="space-y-2.5 text-xs sm:text-sm text-stone-200 mb-8 border-t border-[#708564]/30 pt-4">
                 <div className="flex items-center gap-2">
-                  <Check className="size-4 text-[#66b447] shrink-0" />
+                  <Check className="size-4 text-[#42732E] shrink-0" />
                   <span>100% Sub-Kabula deed registration in your name</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="size-4 text-[#66b447] shrink-0" />
+                  <Check className="size-4 text-[#42732E] shrink-0" />
                   <span>Dual annual payouts: Agro harvest + Hospitality yield</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="size-4 text-[#66b447] shrink-0" />
+                  <Check className="size-4 text-[#42732E] shrink-0" />
                   <span>Free 2-Night, 3-Day stay package at Sampan Eco &amp; Agro Resort</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="size-4 text-[#66b447] shrink-0" />
+                  <Check className="size-4 text-[#42732E] shrink-0" />
                   <span>Official Member Loyalty Card unlocking 10%–50% group discounts</span>
                 </div>
               </div>
 
               <a
                 href="#contact"
-                className="w-full inline-flex items-center justify-center rounded-xl bg-[#66b447] py-3 text-xs uppercase tracking-wider font-bold text-[#06210f] hover:bg-[#77c955] transition-all shadow-md active:scale-98"
+                className="w-full inline-flex items-center justify-center rounded-xl bg-[#42732E] py-3 text-xs uppercase tracking-wider font-bold text-white hover:bg-[#708564] transition-all shadow-md active:scale-98"
               >
                 <span>Reserve {sharesCount} Share(s) Now</span>
               </a>
@@ -276,13 +276,13 @@ export default function InvestSection() {
         {/* ========================================================
             OFFICIAL CREDENTIALS & LOYALTY CARDS SHOWCASE
            ======================================================== */}
-        <div className="reveal-slow rounded-3xl border border-stone-200/90 bg-white p-8 sm:p-12 shadow-sm mb-20">
+        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 sm:p-12 shadow-sm mb-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3.5 py-1 rounded-full border border-[#708564]/30">
                 Physical Credentials
               </span>
-              <h3 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#14261c] mt-3">
+              <h3 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#134630] mt-3">
                 Cards and certificates you receive
               </h3>
               <p className="text-stone-600 text-sm sm:text-base mt-2 max-w-2xl">
@@ -291,8 +291,8 @@ export default function InvestSection() {
             </div>
 
             <div className="shrink-0">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0b4a32] bg-emerald-50 border border-emerald-200 px-3.5 py-2 rounded-xl">
-                <ShieldCheck className="size-4 text-[#66b447]" />
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#134630] bg-[#EEF1DE] border border-[#708564]/30 px-3.5 py-2 rounded-xl">
+                <ShieldCheck className="size-4 text-[#42732E]" />
                 <span>100% Deeded Ownership</span>
               </span>
             </div>
@@ -302,10 +302,10 @@ export default function InvestSection() {
             {investCredentials.map((cred, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-stone-200 bg-[#fbfcf9] p-5 shadow-xs flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
+                className="rounded-2xl border border-[#708564]/20 bg-[#EEF1DE] p-5 shadow-xs flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
               >
                 <div>
-                  <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-stone-900 mb-4 border border-stone-200">
+                  <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-stone-900 mb-4 border border-[#708564]/30">
                     <Image
                       src={cred.src}
                       alt={cred.title}
@@ -326,10 +326,10 @@ export default function InvestSection() {
                     />
                   </div>
 
-                  <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-[#0b4a32] bg-emerald-100 px-2.5 py-0.5 rounded-full mb-2">
+                  <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-[#134630] bg-[#FBFAF6] px-2.5 py-0.5 rounded-full mb-2 border border-[#708564]/20">
                     {cred.badge}
                   </span>
-                  <h4 className="font-heading text-lg font-bold text-[#14261c] mb-1.5">
+                  <h4 className="font-heading text-lg font-bold text-[#134630] mb-1.5">
                     {cred.title}
                   </h4>
                   <p className="text-stone-600 text-xs leading-relaxed mb-4">
@@ -340,7 +340,7 @@ export default function InvestSection() {
                 <button
                   type="button"
                   onClick={() => setSelectedDoc(cred)}
-                  className="w-full inline-flex items-center justify-center gap-1.5 rounded-xl bg-white border border-stone-300 hover:bg-[#0b4a32] hover:text-white px-3 py-2 text-xs font-bold text-stone-800 transition-all shadow-xs"
+                  className="w-full inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#FBFAF6] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-3 py-2 text-xs font-bold text-[#134630] transition-all shadow-xs"
                 >
                   <Eye className="size-3.5" />
                   <span>Inspect Physical Document</span>
@@ -353,69 +353,69 @@ export default function InvestSection() {
         {/* Compare Your Options Table */}
         <div className="mb-20">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3 py-1 rounded-full border border-[#708564]/30">
               Transparent Framework
             </span>
-            <h3 className="font-heading text-3xl font-bold text-[#14261c] mt-2">
+            <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
               Compare your ownership options
             </h3>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-stone-200 bg-white shadow-sm">
+          <div className="overflow-x-auto rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] shadow-sm">
             <table className="w-full min-w-[620px] text-left border-collapse text-sm">
               <thead>
-                <tr className="bg-stone-50 border-b border-stone-200 text-stone-600 font-heading text-xs uppercase tracking-wider">
+                <tr className="bg-[#EEF1DE] border-b border-[#708564]/20 text-[#134630] font-heading text-xs uppercase tracking-wider">
                   <th className="p-4 sm:p-5">Feature</th>
-                  <th className="p-4 sm:p-5 text-[#0b4a32] font-bold">Land Share</th>
-                  <th className="p-4 sm:p-5 text-[#b8892b] font-bold">Cottage or Villa</th>
-                  <th className="p-4 sm:p-5 text-stone-700 font-bold">Club Membership</th>
+                  <th className="p-4 sm:p-5 text-[#42732E] font-bold">Land Share</th>
+                  <th className="p-4 sm:p-5 text-[#708564] font-bold">Cottage or Villa</th>
+                  <th className="p-4 sm:p-5 text-[#134630] font-bold">Club Membership</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-stone-100 text-stone-700">
+              <tbody className="divide-y divide-[#708564]/10 text-stone-700">
                 <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-stone-900">What you get</td>
+                  <td className="p-4 sm:p-5 font-semibold text-[#134630]">What you get</td>
                   <td className="p-4 sm:p-5">Fractional land share (from 1 shotok)</td>
                   <td className="p-4 sm:p-5">A full private cottage or villa</td>
                   <td className="p-4 sm:p-5">Access to golf, wellness and private dining</td>
                 </tr>
                 <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-stone-900">Registration</td>
+                  <td className="p-4 sm:p-5 font-semibold text-[#134630]">Registration</td>
                   <td className="p-4 sm:p-5">
-                    <span className="inline-block bg-emerald-100 text-[#0b4a32] text-xs font-bold px-2.5 py-1 rounded-full">
+                    <span className="inline-block bg-[#EEF1DE] text-[#42732E] border border-[#708564]/30 text-xs font-bold px-2.5 py-1 rounded-full">
                       100% Sub-Kabula
                     </span>
                   </td>
                   <td className="p-4 sm:p-5">
-                    <span className="inline-block bg-emerald-100 text-[#0b4a32] text-xs font-bold px-2.5 py-1 rounded-full">
+                    <span className="inline-block bg-[#EEF1DE] text-[#42732E] border border-[#708564]/30 text-xs font-bold px-2.5 py-1 rounded-full">
                       100% Sub-Kabula
                     </span>
                   </td>
                   <td className="p-4 sm:p-5">
-                    <span className="inline-block bg-stone-100 text-stone-700 text-xs font-bold px-2.5 py-1 rounded-full">
+                    <span className="inline-block bg-[#EEF1DE] text-[#134630] border border-[#708564]/30 text-xs font-bold px-2.5 py-1 rounded-full">
                       Loyalty Card &amp; Certificate
                     </span>
                   </td>
                 </tr>
                 <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-stone-900">Physical Cards</td>
-                  <td className="p-4 sm:p-5 font-medium text-[#0b4a32]">Share Deed + VIP Loyalty Card</td>
-                  <td className="p-4 sm:p-5 font-medium text-[#0b4a32]">Villa Deed + VIP Loyalty Card</td>
-                  <td className="p-4 sm:p-5 font-medium text-stone-700">Club Member Card</td>
+                  <td className="p-4 sm:p-5 font-semibold text-[#134630]">Physical Cards</td>
+                  <td className="p-4 sm:p-5 font-medium text-[#42732E]">Share Deed + VIP Loyalty Card</td>
+                  <td className="p-4 sm:p-5 font-medium text-[#42732E]">Villa Deed + VIP Loyalty Card</td>
+                  <td className="p-4 sm:p-5 font-medium text-[#134630]">Club Member Card</td>
                 </tr>
                 <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-stone-900">Managed by</td>
+                  <td className="p-4 sm:p-5 font-semibold text-[#134630]">Managed by</td>
                   <td className="p-4 sm:p-5 font-medium">Sampan Group</td>
                   <td className="p-4 sm:p-5 font-medium">Sampan Group</td>
                   <td className="p-4 sm:p-5 font-medium">Sampan Group</td>
                 </tr>
                 <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-stone-900">Annual Return</td>
+                  <td className="p-4 sm:p-5 font-semibold text-[#134630]">Annual Return</td>
                   <td className="p-4 sm:p-5">Dual Yield (Agro + Hospitality)</td>
                   <td className="p-4 sm:p-5">Full Rental Pool Revenue</td>
                   <td className="p-4 sm:p-5">Exclusive Member Privileges</td>
                 </tr>
                 <tr>
-                  <td className="p-4 sm:p-5 font-semibold text-stone-900">Resort Access</td>
+                  <td className="p-4 sm:p-5 font-semibold text-[#134630]">Resort Access</td>
                   <td className="p-4 sm:p-5">VIP Access &amp; Discounts</td>
                   <td className="p-4 sm:p-5">Full Private Access &amp; Stays</td>
                   <td className="p-4 sm:p-5">Member Priority Access</td>
@@ -428,10 +428,10 @@ export default function InvestSection() {
         {/* How Buying Works (4-step Roadmap) */}
         <div className="reveal-slow mb-20">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3 py-1 rounded-full border border-[#708564]/30">
               Acquisition Process
             </span>
-            <h3 className="font-heading text-3xl font-bold text-[#14261c] mt-2">
+            <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
               How buying works in 4 simple steps
             </h3>
             <p className="text-stone-600 text-sm mt-1">
@@ -440,41 +440,41 @@ export default function InvestSection() {
           </div>
 
           <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <span className="size-8 rounded-full bg-[#0b4a32] text-white flex items-center justify-center font-bold text-xs mb-4">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
+              <span className="size-8 rounded-full bg-[#42732E] text-white flex items-center justify-center font-bold text-xs mb-4">
                 1
               </span>
-              <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Enquire</h4>
+              <h4 className="font-heading text-lg font-bold text-[#134630] mb-2">Enquire</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
                 Contact the Sampan sales desk, request the official share prospectus, payment schedule, and terms.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <span className="size-8 rounded-full bg-[#0b4a32] text-white flex items-center justify-center font-bold text-xs mb-4">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
+              <span className="size-8 rounded-full bg-[#42732E] text-white flex items-center justify-center font-bold text-xs mb-4">
                 2
               </span>
-              <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Visit the Site</h4>
+              <h4 className="font-heading text-lg font-bold text-[#134630] mb-2">Visit the Site</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
                 Experience the 100+ acre estate at Podunapur, Moulvibazar Sadar, inspecting ponds, orchards, and golf contours.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <span className="size-8 rounded-full bg-[#0b4a32] text-white flex items-center justify-center font-bold text-xs mb-4">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
+              <span className="size-8 rounded-full bg-[#42732E] text-white flex items-center justify-center font-bold text-xs mb-4">
                 3
               </span>
-              <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Choose Option</h4>
+              <h4 className="font-heading text-lg font-bold text-[#134630] mb-2">Choose Option</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
                 Select your desired land share count (e.g. 1 shotok+), luxury cottage/villa, or golf club membership.
               </p>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <span className="size-8 rounded-full bg-[#66b447] text-[#06210f] flex items-center justify-center font-bold text-xs mb-4">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
+              <span className="size-8 rounded-full bg-[#42732E] text-white flex items-center justify-center font-bold text-xs mb-4">
                 4
               </span>
-              <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Sign &amp; Register</h4>
+              <h4 className="font-heading text-lg font-bold text-[#134630] mb-2">Sign &amp; Register</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
                 Complete purchase agreement, settle milestone payments, and receive your 100% Sub-Kabula deed and VIP loyalty card.
               </p>
@@ -483,79 +483,79 @@ export default function InvestSection() {
         </div>
 
         {/* Benefits of Ownership Cards */}
-        <div className="reveal-slow rounded-3xl border border-stone-200 bg-[#fbfcf9] p-8 sm:p-12">
+        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 sm:p-12">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full border border-[#708564]/30">
               Privileges
             </span>
-            <h3 className="font-heading text-3xl font-bold text-[#14261c] mt-2">
+            <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
               Exclusive benefits of ownership
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm space-y-3">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#EEF1DE] p-6 shadow-sm space-y-3">
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="size-3.5 text-[#66b447]" />
+                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-[#14261c] text-sm sm:text-base">100% Sub-Kabula Land Deed</h5>
+                  <h5 className="font-bold text-[#134630] text-sm sm:text-base">100% Sub-Kabula Land Deed</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Permanent registered ownership recorded with the sub-registry office.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="size-3.5 text-[#66b447]" />
+                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-[#14261c] text-sm sm:text-base">10% to 50% Off Stays</h5>
+                  <h5 className="font-bold text-[#134630] text-sm sm:text-base">10% to 50% Off Stays</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Substantial discounts across all Sampan Group hotels, motels, and lounges via VIP loyalty card.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="size-3.5 text-[#66b447]" />
+                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-[#14261c] text-sm sm:text-base">Complimentary Resort Stay</h5>
+                  <h5 className="font-bold text-[#134630] text-sm sm:text-base">Complimentary Resort Stay</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Free 2-night, 3-day holiday package at Sampan Eco &amp; Agro Resort, Kashiani.</p>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm space-y-3">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#EEF1DE] p-6 shadow-sm space-y-3">
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="size-3.5 text-[#66b447]" />
+                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-[#14261c] text-sm sm:text-base">Express Highway Club &amp; Lounge</h5>
+                  <h5 className="font-bold text-[#134630] text-sm sm:text-base">Express Highway Club &amp; Lounge</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Exclusive loyalty card granting VIP privileges across national highway rest stops.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="size-3.5 text-[#66b447]" />
+                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-[#14261c] text-sm sm:text-base">10% to 30% Off Arunima Resort</h5>
+                  <h5 className="font-bold text-[#134630] text-sm sm:text-base">10% to 30% Off Arunima Resort</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Reciprocal discount privileges at Arunima Resort Golf Club.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="size-3.5 text-[#66b447]" />
+                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                  <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-[#14261c] text-sm sm:text-base">Shooters Shooting Club Affiliation</h5>
+                  <h5 className="font-bold text-[#134630] text-sm sm:text-base">Shooters Shooting Club Affiliation</h5>
                   <p className="text-stone-600 text-xs sm:text-sm">Affiliated sporting privileges at Shooters Shooting Club.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <p className="text-stone-400 text-xs mt-6 text-center">
+          <p className="text-stone-500 text-xs mt-6 text-center">
             *Returns depend on real agricultural yield and hospitality occupancy. Confirm official deed documents, agreements, and installment schedules with the sales desk prior to execution.
           </p>
         </div>
@@ -568,15 +568,15 @@ export default function InvestSection() {
           onClick={() => setSelectedDoc(null)}
         >
           <div
-            className="relative max-w-3xl w-full bg-[#07291c] rounded-3xl overflow-hidden border border-emerald-600/40 shadow-2xl flex flex-col max-h-[92vh] text-white"
+            className="relative max-w-3xl w-full bg-[#134630] rounded-3xl overflow-hidden border border-[#708564]/40 shadow-2xl flex flex-col max-h-[92vh] text-white"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between px-6 py-4 border-b border-emerald-900/60 bg-[#051f15]">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#708564]/30 bg-[#134630]">
               <div className="flex items-center gap-3">
-                <span className="text-xs uppercase font-extrabold tracking-widest text-[#b6e59c] bg-white/10 px-3 py-1 rounded-full">
+                <span className="text-xs uppercase font-extrabold tracking-widest text-[#EEF1DE] bg-white/10 px-3 py-1 rounded-full border border-white/10">
                   {selectedDoc.badge}
                 </span>
-                <span className="text-xs text-emerald-200/80 font-semibold hidden sm:inline">
+                <span className="text-xs text-[#EEF1DE]/80 font-semibold hidden sm:inline">
                   Verified Physical Credential
                 </span>
               </div>
@@ -601,20 +601,20 @@ export default function InvestSection() {
               />
             </div>
 
-            <div className="p-6 bg-gradient-to-t from-[#051f15] to-[#07291c] border-t border-emerald-900/60 space-y-3">
+            <div className="p-6 bg-[#134630] border-t border-[#708564]/30 space-y-3">
               <div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold text-white">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FBFAF6]">
                   {selectedDoc.title}
                 </h3>
-                <p className="text-emerald-100/90 text-xs sm:text-sm mt-1 leading-relaxed">
+                <p className="text-stone-300 text-xs sm:text-sm mt-1 leading-relaxed">
                   {selectedDoc.desc}
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-emerald-900/40">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-[#708564]/20">
                 {selectedDoc.highlights.map((h, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-emerald-200">
-                    <Check className="size-3.5 text-[#66b447] shrink-0" />
+                  <div key={i} className="flex items-center gap-2 text-xs text-[#EEF1DE]">
+                    <Check className="size-3.5 text-[#42732E] shrink-0" />
                     <span>{h}</span>
                   </div>
                 ))}

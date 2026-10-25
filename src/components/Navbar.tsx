@@ -36,8 +36,8 @@ export default function Navbar() {
       {/* Top-Sticking, Edge-to-Edge Luxury Header */}
       <header
         className={`sticky top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${isScrolled
-          ? "bg-[#0b3a28]/95 backdrop-blur-md border-b border-emerald-900/40 shadow-sm py-2.5 sm:py-3"
-          : "bg-[#07291c]/85 backdrop-blur-md border-b border-white/10 py-3 sm:py-3.5"
+          ? "bg-[#FBFAF6]/95 backdrop-blur-md border-b border-[#708564]/20 shadow-xs py-2.5 sm:py-3"
+          : "bg-[#FBFAF6]/90 backdrop-blur-md border-b border-[#708564]/15 py-3 sm:py-3.5"
           }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -46,7 +46,7 @@ export default function Navbar() {
             href="/"
             className="group flex items-center gap-3 transition-transform duration-300 hover:opacity-95"
           >
-            <div className="relative flex size-10 sm:size-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white p-0.5 shadow-sm ring-2 ring-lime-400/40 transition-all duration-300 group-hover:scale-105 group-hover:ring-lime-400">
+            <div className="relative flex size-10 sm:size-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white p-0.5 shadow-xs ring-2 ring-[#708564]/30 transition-all duration-300 group-hover:scale-105 group-hover:ring-[#42732E]">
               <Image
                 src="/images/agroandgolf.webp"
                 alt="Sampan Agro & Golf Resort Logo"
@@ -57,10 +57,10 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-heading text-base sm:text-lg font-bold tracking-tight text-white leading-none">
+              <span className="font-heading text-base sm:text-lg font-bold tracking-tight text-[#134630] leading-none">
                 Sampan
               </span>
-              <span className="text-[10px] uppercase tracking-[0.18em] text-[#66b447] font-semibold mt-0.5">
+              <span className="text-[10px] uppercase tracking-[0.18em] text-[#42732E] font-semibold mt-0.5">
                 Agro &amp; Golf Resort
               </span>
             </div>
@@ -74,9 +74,9 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`relative rounded-full px-3 py-1.5 text-xs font-semibold tracking-wide transition-all duration-200 ${isActive
-                    ? "bg-[#66b447] text-[#06210f] shadow-sm font-bold"
-                    : "text-emerald-100/90 hover:text-white hover:bg-white/10"
+                  className={`relative rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition-all duration-200 ${isActive
+                    ? "bg-[#42732E] text-white shadow-xs font-bold"
+                    : "text-[#134630]/80 hover:text-[#134630] hover:bg-[#EEF1DE]"
                     }`}
                 >
                   {link.label}
@@ -85,51 +85,13 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Desktop Right CTA Area - Commented out for now */}
-          {/*
-          <div className="hidden items-center gap-2.5 sm:flex">
-            <a
-              href="/brochure.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex text-xs uppercase tracking-wider font-semibold text-emerald-100 hover:text-white px-2.5 py-1.5 rounded-full hover:bg-white/10 transition-colors"
-            >
-              Brochure ↗
-            </a>
-            <Link
-              href="/invest"
-              className="inline-flex text-xs uppercase tracking-wider font-bold text-[#b6e59c] hover:text-white px-2.5 py-1.5 rounded-full hover:bg-white/10 transition-colors"
-            >
-              From ৳2.50L
-            </Link>
-            <Link
-              href="/contact"
-              className="group relative inline-flex items-center gap-1.5 overflow-hidden rounded-full bg-[#66b447] px-4 sm:px-5 py-2 text-xs uppercase tracking-wider font-bold text-[#06210f] shadow-sm transition-all duration-300 hover:bg-[#78c757] active:scale-95"
-            >
-              <span>Book Site Visit</span>
-              <svg
-                className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-          */}
-
           {/* Mobile Hamburger Button */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
-            className="inline-flex size-10 items-center justify-center rounded-full border border-stone-300/40 bg-white/10 text-white backdrop-blur-md transition-all duration-300 hover:bg-white/20 lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-full border border-[#708564]/30 bg-[#FBFAF6] text-[#134630] shadow-xs transition-all duration-300 hover:bg-[#EEF1DE] lg:hidden"
           >
             {mobileMenuOpen ? (
               <svg
@@ -164,7 +126,7 @@ export default function Navbar() {
 
       {/* Sleek Mobile Drawer / Overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${mobileMenuOpen
+        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-xs transition-opacity duration-300 lg:hidden ${mobileMenuOpen
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
           }`}
@@ -172,7 +134,7 @@ export default function Navbar() {
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`absolute top-20 left-4 right-4 rounded-3xl border border-white/20 bg-[#07291c]/95 p-6 shadow-xl backdrop-blur-2xl transition-all duration-300 text-white ${mobileMenuOpen
+          className={`absolute top-20 left-4 right-4 rounded-3xl border border-[#708564]/30 bg-[#FBFAF6] p-6 shadow-2xl transition-all duration-300 text-[#134630] ${mobileMenuOpen
             ? "translate-y-0 opacity-100 scale-100"
             : "-translate-y-6 opacity-0 scale-95"
             }`}
@@ -186,8 +148,8 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between rounded-xl px-4 py-3 text-sm uppercase tracking-wider font-semibold transition-colors ${isActive
-                    ? "bg-[#66b447] text-[#06210f]"
-                    : "text-emerald-100 hover:bg-white/10 hover:text-white"
+                    ? "bg-[#42732E] text-white font-bold shadow-xs"
+                    : "text-[#134630] hover:bg-[#EEF1DE]"
                     }`}
                 >
                   <span>{link.label}</span>
@@ -202,7 +164,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#66b447] py-3 text-center text-xs uppercase tracking-wider font-bold text-[#06210f] shadow-sm active:scale-98"
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#42732E] py-3 text-center text-xs uppercase tracking-wider font-bold text-white hover:bg-[#134630] shadow-sm active:scale-98"
               >
                 <span>Book Site Visit</span>
               </Link>
@@ -218,7 +180,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-full border border-lime-400/40 bg-emerald-950 py-2.5 text-center text-xs uppercase tracking-wider font-bold text-[#b6e59c]"
+                className="flex w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 py-2.5 text-center text-xs uppercase tracking-wider font-bold text-white"
               >
                 <span>View Master Brochure ↗</span>
               </a>
