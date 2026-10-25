@@ -10,6 +10,7 @@ import {
   Waves,
   Sprout,
   FileCheck,
+  Map,
   Check,
   Eye,
   X,
@@ -144,6 +145,22 @@ const allGalleryPhotos: GalleryPhotoItem[] = [
     tag: "Club Games",
     desc: "Indoor billiards, snooker, table games, and executive cards room.",
   },
+  {
+    id: "g-sp-15",
+    title: "Regulation Volleyball Arena",
+    category: "sports",
+    src: "/images/Volleyball.webp",
+    tag: "Volleyball Court",
+    desc: "Championship regulation court with shock-absorbing outdoor flooring and tournament floodlighting.",
+  },
+  {
+    id: "g-sp-16",
+    title: "Modern Fitness Studio & Cardio Suite",
+    category: "sports",
+    src: "/images/modern-luxury-gym-training-room (1).webp",
+    tag: "Fitness Studio",
+    desc: "State-of-the-art cardiovascular studio, selectorized resistance machines, and certified athletic coaching.",
+  },
 
   // 2. Stay — Cottages & Villas
   {
@@ -159,7 +176,7 @@ const allGalleryPhotos: GalleryPhotoItem[] = [
     id: "g-st-2",
     title: "Authentic Shan Thatched Eco-Cottages",
     category: "stay",
-    src: "/images/Sampan-Agro-%26-Golf-Resort%201.webp",
+    src: "/images/Sampan-Agro-&-Golf-Resort 1.webp",
     tag: "Shan Cottages",
     desc: "Authentic thatched eco-cottages blending rustic heritage with 5-star climate-controlled luxury.",
     featured: true,
@@ -168,7 +185,7 @@ const allGalleryPhotos: GalleryPhotoItem[] = [
     id: "g-st-3",
     title: "Fairway Overlook Luxury Villas",
     category: "stay",
-    src: "/images/scenic-villa-overlooking-golf-course (1).webp",
+    src: "/images/scenic-villa-overlooking-golf-course.webp",
     tag: "Golf Villas",
     desc: "Exclusive villas situated along fairway edges offering private balcony views of the greens.",
   },
@@ -211,6 +228,104 @@ const allGalleryPhotos: GalleryPhotoItem[] = [
     src: "/images/small-juvenile-bedroom-arrangement.webp",
     tag: "Family Suites",
     desc: "Thoughtfully configured multi-bed arrangements suited for family vacations.",
+  },
+  {
+    id: "g-st-9",
+    title: "Traditional Thatched Shan Cottages & Veranda",
+    category: "stay",
+    src: "/images/Sampan-Agro-&-Golf-Resort-2.webp",
+    tag: "Shan Eco-Cottages",
+    desc: "Authentic handcrafted thatched Bengali eco-cottages engineered with natural ventilation for cool summers, private tea veranda, and garden views.",
+    featured: true,
+  },
+  {
+    id: "g-st-10",
+    title: "Lakeside Thatched Eco-Villas",
+    category: "stay",
+    src: "/images/Sampan-Agro-&-Golf-Resort-3.webp",
+    tag: "Waterfront Cottages",
+    desc: "Thatched eco-villas perched right along natural water contours with timber viewing decks and garden walking trails.",
+    featured: true,
+  },
+  {
+    id: "g-st-11",
+    title: "Estate Garden Walkways & Thatched Cottages",
+    category: "stay",
+    src: "/images/Sampan-Agro-&-Golf-Resort-4.webp",
+    tag: "Garden Cottages",
+    desc: "Manicured stone pathways weaving through lush greenery, connecting private cottages under swaying tropical palms.",
+  },
+  {
+    id: "g-st-12",
+    title: "Executive Thatched Resort Living Quarters",
+    category: "stay",
+    src: "/images/Sampan-Agro-&-Golf-Resort-5.webp",
+    tag: "Executive Cottages",
+    desc: "Spacious private cottage enclaves blending rustic Bengali heritage architecture with 5-star climate-controlled luxury.",
+  },
+  {
+    id: "g-st-13",
+    title: "Tranquil Thatched Cottage Courtyard",
+    category: "stay",
+    src: "/images/Sampan-Agro-&-Golf-Resort-6.webp",
+    tag: "Eco Retreat",
+    desc: "Secluded open-air courtyard offering serene estate vistas, native birdsong, and tranquil morning tea relaxation.",
+  },
+  {
+    id: "g-st-14",
+    title: "Deluxe Thatched Cottage King Bedroom",
+    category: "stay",
+    src: "/images/Room-Web-image1.webp",
+    tag: "King Bedroom",
+    desc: "Warm ambient wood finishes, king-size bed, luxury organic linens, and panoramic garden windows.",
+  },
+  {
+    id: "g-st-15",
+    title: "Modern Cottage En-Suite Bathroom & Quarters",
+    category: "stay",
+    src: "/images/Room-Web-image4.webp",
+    tag: "Cottage Suite",
+    desc: "Contemporary designer fixtures, natural ventilation, and spa amenities in private guest suites.",
+  },
+  {
+    id: "g-st-16",
+    title: "Artisanal Wooden Guest Bedroom Suite",
+    category: "stay",
+    src: "/images/Room-Web-image5.webp",
+    tag: "Guest Quarters",
+    desc: "Artisanal handcrafted furnishings, quiet climate control, and peaceful views across resort fairways.",
+  },
+  {
+    id: "g-st-17",
+    title: "Luxury Resort Twin Bedroom Suite",
+    category: "stay",
+    src: "/images/Room-Web-image6.webp",
+    tag: "Twin Suite",
+    desc: "Thoughtfully appointed twin bed arrangements ideal for family vacations, corporate retreats, and sports teams.",
+  },
+  {
+    id: "g-st-18",
+    title: "Minimalist Resort Master Bedroom & Private Terrace",
+    category: "stay",
+    src: "/images/Room-Web-image8.webp",
+    tag: "Master Bedroom",
+    desc: "Expansive modern master bedroom with direct private terrace access facing the morning sunrise.",
+  },
+  {
+    id: "g-st-19",
+    title: "Panoramic Balcony Villa Guest Bedroom",
+    category: "stay",
+    src: "/images/Room-Web-image9.webp",
+    tag: "Balcony Bedroom",
+    desc: "Floor-to-ceiling glass sliding doors opening onto private balcony overlooking landscaped estate fairways.",
+  },
+  {
+    id: "g-st-20",
+    title: "Contemporary Wood-Paneled Villa Interior",
+    category: "stay",
+    src: "/images/white-wall-wooden-bedroom-interior-3d-rendering (1).webp",
+    tag: "Contemporary Suite",
+    desc: "Scandinavian-inspired minimalist retreat with natural oak paneling, integrated storage, and plush bedding.",
   },
 
   // 3. Agro Farmlands & Nature
@@ -320,6 +435,30 @@ const allGalleryPhotos: GalleryPhotoItem[] = [
     tag: "Lake Angling",
     desc: "Stocked natural freshwater ponds offering tranquil catch-and-release sport angling.",
   },
+  {
+    id: "g-ag-14",
+    title: "Smart Agro Machinery & Sunset Cultivation",
+    category: "agro",
+    src: "/images/smart-tractor-soybean-corn-field-sunset-3d-render.webp",
+    tag: "Smart Farming",
+    desc: "High-tech smart agricultural machinery cultivating commercial farmland acreage during picturesque sunsets.",
+  },
+  {
+    id: "g-ag-15",
+    title: "Precision Crop Care & Scientific Cultivation",
+    category: "agro",
+    src: "/images/tractor-spraying-pesticides-soybean-field-with-sprayer-sunsets.webp",
+    tag: "Precision Agro",
+    desc: "Modern precision agricultural care ensuring bountiful, sustainable, chemical-free harvests across the 100+ acre estate.",
+  },
+  {
+    id: "g-ag-16",
+    title: "Fresh Organic Harvest & Table Produce",
+    category: "agro",
+    src: "/images/vegetables-table-garden-sunlight.webp",
+    tag: "Fresh Harvest",
+    desc: "Pesticide-free vegetables, herbs, and seasonal fruits picked daily from our agricultural plots for resort dining.",
+  },
 
   // 4. Aquatic Leisure, Dining & Wellness
   {
@@ -421,48 +560,121 @@ const allGalleryPhotos: GalleryPhotoItem[] = [
     desc: "Open-air sunset terrace with plush sofa seating facing the golf fairways.",
   },
   {
-    id: "g-le-13",
+    id: "g-le-14",
     title: "Executive Library & Reading Sanctuary",
     category: "leisure",
     src: "/images/reading-lounge.webp",
     tag: "Reading Lounge",
     desc: "Quiet reading sanctuary with curated books, private workspaces, and garden vistas.",
   },
+  {
+    id: "g-le-15",
+    title: "Lakeside Infinity Pool & Sunset Loungers",
+    category: "leisure",
+    src: "/images/umbrella-chair-around-swimming-pool-resort-hotel-leisure-travel-vacation-neary-sea-ocean-beach-sunset-sunrise-time.webp",
+    tag: "Poolside Sunset",
+    desc: "Plush poolside sun loungers under parasols overlooking shimmering waters during serene golden hour sunsets.",
+    featured: true,
+  },
+  {
+    id: "g-le-16",
+    title: "Family Theme Park & Roller Coaster",
+    category: "leisure",
+    src: "/images/Amusement-Park-1.webp",
+    tag: "Amusement Rides",
+    desc: "Family amusement park attractions, roller coaster, and open-air thrill zones for children and adults.",
+  },
+  {
+    id: "g-le-17",
+    title: "Children's Adventure Wonderland & Rides",
+    category: "leisure",
+    src: "/images/Amusement-Park-2.webp",
+    tag: "Theme Park",
+    desc: "Engaging and safe amusement park rides, carousel, and whimsical play areas for visiting families.",
+  },
+  {
+    id: "g-le-18",
+    title: "Executive Corporate Boardroom & Conference Hall",
+    category: "leisure",
+    src: "/images/Conference-Room.webp",
+    tag: "Conference Hall",
+    desc: "State-of-the-art audiovisual presentation technology, ergonomic seating, and high-speed fiber connectivity for corporate summits.",
+  },
+  {
+    id: "g-le-19",
+    title: "VIP Secure Parking Plaza & Valet Services",
+    category: "leisure",
+    src: "/images/Car-Parking-Facilities.webp",
+    tag: "Parking Plaza",
+    desc: "Expansive well-lit vehicle parking infrastructure with 24/7 security surveillance and dedicated valet service desk.",
+  },
+  {
+    id: "g-le-20",
+    title: "Shaded Vehicle Parking Bays & EV Facilities",
+    category: "leisure",
+    src: "/images/Car-Parking-Facilities-1.webp",
+    tag: "EV & Parking",
+    desc: "Eco-friendly shaded parking bays surrounded by manicured green hedges, with EV vehicle charging stations.",
+  },
+  {
+    id: "g-le-21",
+    title: "Scenic Central Lake Promenade & Water Bodies",
+    category: "leisure",
+    src: "/images/lake-surrounded-by-greenery-blue-sky-sunlight-daytime.webp",
+    tag: "Central Lake",
+    desc: "One of 10 preserved natural freshwater lakes reflecting clear blue skies, bordered by lush tropical foliage and walking trails.",
+  },
+  {
+    id: "g-le-22",
+    title: "Waterfront Resort Architectural Facade",
+    category: "leisure",
+    src: "/images/Web-1.webp",
+    tag: "Waterfront View",
+    desc: "Architectural elevation of the primary resort hospitality complex overlooking water reflection pools.",
+  },
+  {
+    id: "g-le-23",
+    title: "Lakeside Resort Grounds & Walking Corridors",
+    category: "leisure",
+    src: "/images/Web-2.webp",
+    tag: "Resort Grounds",
+    desc: "Masterfully contoured landscaping uniting recreational waterfronts with natural greenery and shaded promenades.",
+  },
 
-  // 5. Official Documents & Member Cards
+  // 5. Masterplan & Architectural Blueprints
   {
     id: "g-dc-1",
-    title: "Official Member Loyalty Card",
-    category: "docs",
-    src: "/images/loyalty-card-permanent-member.webp",
-    tag: "Loyalty Card",
-    desc: "Exclusive numbered loyalty card granting 10%–50% privileges across Sampan Group hotels.",
-    featured: true,
-  },
-  {
-    id: "g-dc-2",
-    title: "Certificate of Member (Club Access)",
-    category: "docs",
-    src: "/images/certificate-of-member.webp",
-    tag: "Club Certificate",
-    desc: "Formal certificate recognizing full privileges and exclusive tournament entry.",
-  },
-  {
-    id: "g-dc-3",
-    title: "Certificate of Share (100% Sub-Kabula)",
-    category: "docs",
-    src: "/images/certificate-of-share.webp",
-    tag: "Sub-Kabula Deed",
-    desc: "Land ownership certificate backing physical sub-kabula deed registration for your estate share.",
-    featured: true,
-  },
-  {
-    id: "g-dc-4",
     title: "Official 100+ Acre Masterplan Blueprint",
     category: "docs",
     src: "/images/2.webp",
     tag: "Masterplan Blueprint",
     desc: "Architectural top-down masterplan layout showing signature 'S' curve resort, ponds, amphitheatre, and fairways.",
+    featured: true,
+  },
+  {
+    id: "g-dc-2",
+    title: "Official 3D Master Aerial View & Waterpark",
+    category: "docs",
+    src: "/images/1.webp",
+    tag: "3D Master View",
+    desc: "Aerial rendering showing signature resort hotel, water park, central lake, and championship golf fairways.",
+    featured: true,
+  },
+  {
+    id: "g-dc-3",
+    title: "Waterfront Resort Architectural Elevation",
+    category: "docs",
+    src: "/images/Web-1.webp",
+    tag: "Architectural Elevation",
+    desc: "Architectural schematic showing multi-tier hospitality wings, glass facades, and waterfront promenade.",
+  },
+  {
+    id: "g-dc-4",
+    title: "Landscape Topography & Zonal Contours",
+    category: "docs",
+    src: "/images/Web-2.webp",
+    tag: "Topography Layout",
+    desc: "Detailed topographical survey layout mapping natural tea mounds, water bodies, and sports turfs.",
   },
 ];
 
@@ -495,16 +707,16 @@ const galleryChapters = [
     id: "leisure",
     num: "04",
     title: "Aquatic Leisure, 5-Star Dining & Wellness",
-    tag: "4 Pools · 10 Ponds · Farm-to-Table · Spa · MP Centre",
+    tag: "4 Pools · 10 Ponds · Farm-to-Table · Spa · Theme Park",
     Icon: Waves,
     accent: "#0284c7",
   },
   {
     id: "docs",
     num: "05",
-    title: "Deeded Ownership, Certificates & VIP Cards",
-    tag: "100% Sub-Kabula Deed · Member Card · Masterplan Blueprint",
-    Icon: FileCheck,
+    title: "Masterplan, Architecture & Blueprints",
+    tag: "100+ Acre Blueprint · 3D Master Aerial · Topography Layout",
+    Icon: Map,
     accent: "#d9aa4a",
   },
 ];
@@ -588,11 +800,10 @@ export default function GallerySection() {
               <button
                 type="button"
                 onClick={() => setActiveTab("all")}
-                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-bold transition-all duration-200 ${
-                  activeTab === "all"
+                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-bold transition-all duration-200 ${activeTab === "all"
                     ? "bg-[#0b4a32] text-white shadow-md scale-105"
                     : "bg-white border border-stone-200 text-stone-700 hover:bg-stone-100"
-                }`}
+                  }`}
               >
                 <Sparkles className="size-4" />
                 <span>All Chapters</span>
@@ -609,11 +820,10 @@ export default function GallerySection() {
                     key={ch.id}
                     type="button"
                     onClick={() => setActiveTab(ch.id)}
-                    className={`inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 ${
-                      isActive
+                    className={`inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 ${isActive
                         ? "bg-[#0b4a32] text-white shadow-md scale-105 font-bold"
                         : "bg-white border border-stone-200 text-stone-700 hover:bg-stone-100"
-                    }`}
+                      }`}
                   >
                     <ChapterIcon className="size-3.5 shrink-0" />
                     <span>{ch.num}. {ch.title.split("—")[0].split("&")[0].trim()}</span>

@@ -1,6 +1,67 @@
 "use client";
 
-import { CreditCard, Award, Landmark } from "lucide-react";
+import { useState } from "react";
+import Image from "next/image";
+import { CreditCard, Award, Landmark, Eye, X, ZoomIn, ShieldCheck, Sparkles, Check } from "lucide-react";
+
+interface CredentialPreview {
+  title: string;
+  badge: string;
+  src: string;
+  desc: string;
+  highlights: string[];
+}
+
+const credentialsData: CredentialPreview[] = [
+  {
+    title: "Official Member Loyalty Card",
+    badge: "VIP Permanent Member Card",
+    src: "/images/loyalty-card-permanent-member.webp",
+    desc: "Encoded physical loyalty card with dedicated member number, granting 10% to 50% exclusive discounts across Sampan Group hotels, motels, and nationwide partner clubs.",
+    highlights: [
+      "10%–50% Room & Dining Discounts across Sampan Hotels",
+      "QR-code verification & member tracking",
+      "Priority tee-times at Sampan 9-Hole Golf Course",
+      "Complimentary Express Highway Club & Lounge access",
+    ],
+  },
+  {
+    title: "Official Member Card (Club Access)",
+    badge: "Sports & Club Access Card",
+    src: "/images/Member Card.jpg.webp",
+    desc: "Personalized membership card recognizing full club privileges across all athletic grounds, sports tournaments, fitness suites, and dining lounges.",
+    highlights: [
+      "Full access to 9-hole golf course and driving ranges",
+      "Priority booking for 4 FIFA football turfs and courts",
+      "Exclusive invitations to private tournaments and galas",
+      "Family access to swimming pools and amusement amenities",
+    ],
+  },
+  {
+    title: "Official Certificate of Member",
+    badge: "Club Accreditation Certificate",
+    src: "/images/Certificate of Member.jpg.webp",
+    desc: "Official laminated club certificate issued by Sampan Agro & Golf Resort, confirming accredited lifetime membership standing and recognized club rights.",
+    highlights: [
+      "Issued by Sampan Group executive board",
+      "Unique registered membership registration number",
+      "Valid for reciprocal partner golf and shooting clubs",
+      "Formal documentation for corporate and personal records",
+    ],
+  },
+  {
+    title: "Official Certificate of Share",
+    badge: "Deeded 100% Sub-Kabula Proof",
+    src: "/images/Certificate.jpg.webp",
+    desc: "Permanent title proof issued alongside registered 100% Sub-Kabula deed, verifying your exact fractional shotok (decimal) ownership in the 100+ acre estate.",
+    highlights: [
+      "Backed by government Land Sub-Registry Sub-Kabula deed",
+      "Authentic security seal and board signatures",
+      "Guarantees dual annual dividend payouts (agro + hospitality)",
+      "Transferable and inheritable freehold property title",
+    ],
+  },
+];
 
 const partnersData = [
   {
@@ -41,129 +102,295 @@ const partnersData = [
 ];
 
 export default function MembershipSection() {
+  const [selectedCredential, setSelectedCredential] = useState<CredentialPreview | null>(null);
+  const [activeCardTab, setActiveCardTab] = useState<"permanent" | "member">("permanent");
+
   return (
     <section id="membership" className="py-24 bg-[#f6f8f2] text-[#14261c] border-t border-stone-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="hero-reveal max-w-3xl mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
-            Elite Privileges
+            Elite Privileges &amp; Physical Cards
           </span>
           <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#14261c] mt-3">
-            Membership and partner privileges
+            Membership and loyalty credentials
           </h2>
           <p className="text-stone-600 text-base sm:text-lg mt-3 leading-relaxed">
-            Members and owners receive personalized physical credentials: an encoded loyalty card, a formal membership certificate, and for land owners, an official certificate of share.
+            Members and deeded land owners receive physical, encoded credentials: the official VIP loyalty card, membership card, certified membership certificate, and the registered Certificate of Share.
           </p>
         </div>
 
-        {/* 3 Physical Credential Cards */}
-        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-emerald-100 text-[#0b4a32] flex items-center justify-center mb-4">
-              <CreditCard className="size-6" />
+        {/* ========================================================
+            PHYSICAL CREDENTIALS GRID (FEATURING REAL CARD IMAGES)
+           ======================================================== */}
+        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          {/* Card 1: Official Numbered Loyalty Card */}
+          <div className="rounded-3xl border border-stone-200 bg-white p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+            <div>
+              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-stone-200/80 shadow-md">
+                <Image
+                  src="/images/loyalty-card-permanent-member.webp"
+                  alt="Official Member Loyalty Card"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                  <span className="inline-flex items-center gap-1.5 text-xs text-white font-bold bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20">
+                    <ZoomIn className="size-3.5" />
+                    <span>Click to Enlarge</span>
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedCredential(credentialsData[0])}
+                  className="absolute inset-0 cursor-pointer"
+                  aria-label="Enlarge Official Member Loyalty Card"
+                />
+              </div>
+
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs uppercase font-extrabold text-[#0b4a32] tracking-wider bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                  Physical Loyalty Card
+                </span>
+                <span className="text-[11px] font-mono font-bold text-[#b8892b]">10%–50% Off</span>
+              </div>
+              <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
+                Official VIP Loyalty Card
+              </h3>
+              <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4">
+                Encoded permanent member loyalty card unlocking 10% to 50% discount privileges across all Sampan Group hotels, motels, and nationwide partner resorts.
+              </p>
             </div>
-            <span className="text-xs uppercase font-bold text-[#66b447] tracking-wider">
-              Physical Credential
-            </span>
-            <h3 className="font-heading text-xl font-bold text-[#14261c] mt-1 mb-2">
-              Numbered Loyalty Card
-            </h3>
-            <p className="text-stone-600 text-sm leading-relaxed">
-              Durable chip &amp; QR-encoded card unlocking priority bookings, golf tee reservations, and group partner discounts across Bangladesh.
-            </p>
+
+            <button
+              type="button"
+              onClick={() => setSelectedCredential(credentialsData[0])}
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 hover:bg-[#0b4a32] hover:text-white px-4 py-2.5 text-xs font-bold text-stone-800 transition-all shadow-xs"
+            >
+              <Eye className="size-3.5" />
+              <span>Inspect Loyalty Card Details</span>
+            </button>
           </div>
 
-          <div className="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-amber-100 text-[#b8892b] flex items-center justify-center mb-4">
-              <Award className="size-6" />
+          {/* Card 2: Certificate of Member */}
+          <div className="rounded-3xl border border-stone-200 bg-white p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+            <div>
+              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-stone-200/80 shadow-md">
+                <Image
+                  src="/images/Certificate of Member.jpg.webp"
+                  alt="Certificate of Member"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                  <span className="inline-flex items-center gap-1.5 text-xs text-white font-bold bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20">
+                    <ZoomIn className="size-3.5" />
+                    <span>Click to Enlarge</span>
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedCredential(credentialsData[2])}
+                  className="absolute inset-0 cursor-pointer"
+                  aria-label="Enlarge Certificate of Member"
+                />
+              </div>
+
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs uppercase font-extrabold text-[#b8892b] tracking-wider bg-amber-100 px-2.5 py-0.5 rounded-full">
+                  Club Accreditation
+                </span>
+                <span className="text-[11px] font-mono font-bold text-[#0b4a32]">Accredited</span>
+              </div>
+              <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
+                Certificate of Member
+              </h3>
+              <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4">
+                Formal laminated accreditation certificate recognizing full sporting rights, priority golf tee bookings, and VIP tournament invitations.
+              </p>
             </div>
-            <span className="text-xs uppercase font-bold text-[#b8892b] tracking-wider">
-              Club Accreditation
-            </span>
-            <h3 className="font-heading text-xl font-bold text-[#14261c] mt-1 mb-2">
-              Certificate of Member
-            </h3>
-            <p className="text-stone-600 text-sm leading-relaxed">
-              Confirms full privileges at resort sports facilities, guided seasonal events, and invitations to private golf invitationals.
-            </p>
+
+            <button
+              type="button"
+              onClick={() => setSelectedCredential(credentialsData[2])}
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 hover:bg-[#0b4a32] hover:text-white px-4 py-2.5 text-xs font-bold text-stone-800 transition-all shadow-xs"
+            >
+              <Eye className="size-3.5" />
+              <span>Inspect Certificate Details</span>
+            </button>
           </div>
 
-          <div className="rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-blue-100 text-[#0b4a32] flex items-center justify-center mb-4">
-              <Landmark className="size-6" />
+          {/* Card 3: Certificate of Share (Sub-Kabula) */}
+          <div className="rounded-3xl border border-stone-200 bg-white p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+            <div>
+              <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-stone-200/80 shadow-md">
+                <Image
+                  src="/images/Certificate.jpg.webp"
+                  alt="Certificate of Share (Sub-Kabula)"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                  <span className="inline-flex items-center gap-1.5 text-xs text-white font-bold bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20">
+                    <ZoomIn className="size-3.5" />
+                    <span>Click to Enlarge</span>
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedCredential(credentialsData[3])}
+                  className="absolute inset-0 cursor-pointer"
+                  aria-label="Enlarge Certificate of Share"
+                />
+              </div>
+
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs uppercase font-extrabold text-[#0b4a32] tracking-wider bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                  100% Sub-Kabula Title
+                </span>
+                <span className="text-[11px] font-mono font-bold text-[#b8892b]">Deeded Share</span>
+              </div>
+              <h3 className="font-heading text-xl font-bold text-[#14261c] mb-2">
+                Certificate of Share
+              </h3>
+              <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4">
+                Issued alongside the registered 100% Sub-Kabula deed, verifying your exact shotok (decimal) land share in the 100+ acre resort estate.
+              </p>
             </div>
-            <span className="text-xs uppercase font-bold text-[#0b4a32] tracking-wider">
-              Title Proof
-            </span>
-            <h3 className="font-heading text-xl font-bold text-[#14261c] mt-1 mb-2">
-              Certificate of Share
-            </h3>
-            <p className="text-stone-600 text-sm leading-relaxed">
-              Issued alongside the registered 100% Sub-Kabula deed, verifying your exact shotok allocation in the 100+ acre estate.
-            </p>
+
+            <button
+              type="button"
+              onClick={() => setSelectedCredential(credentialsData[3])}
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 hover:bg-[#0b4a32] hover:text-white px-4 py-2.5 text-xs font-bold text-stone-800 transition-all shadow-xs"
+            >
+              <Eye className="size-3.5" />
+              <span>Inspect Share Deed Details</span>
+            </button>
           </div>
         </div>
 
-        {/* Visual Card Showcase Banner */}
+        {/* ========================================================
+            PREMIUM CARD SHOWCASE BANNER WITH AUTHENTIC CARD IMAGES
+           ======================================================== */}
         <div className="reveal-slow rounded-3xl bg-gradient-to-br from-[#07291c] via-[#0b3a28] to-[#07291c] text-white p-8 sm:p-12 mb-20 shadow-xl border border-emerald-900/40 relative overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             <div className="lg:col-span-7">
               <span className="text-xs uppercase tracking-widest text-[#b6e59c] font-bold">
-                Exclusive Access
+                Physical Card Accreditation
               </span>
               <h3 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">
                 Two tiers of membership designed for flexibility
               </h3>
+              <p className="text-emerald-100/90 text-sm sm:text-base leading-relaxed mb-6">
+                Whether you join as an active golf member or acquire deeded land shares, your physical card credentials unlock unprecedented hospitality and leisure privileges across Bangladesh.
+              </p>
+
               <div className="space-y-4 text-emerald-100 text-sm">
-                <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
-                  <h4 className="font-heading text-base font-bold text-white mb-1">
-                    1. Golf &amp; Wellness Club Membership
-                  </h4>
+                <div className="rounded-2xl bg-white/5 border border-white/10 p-4 transition-all hover:bg-white/10">
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-heading text-base font-bold text-white">
+                      1. Golf &amp; Wellness Club Membership Card
+                    </h4>
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#b6e59c] bg-white/10 px-2.5 py-0.5 rounded-full">
+                      Club Tier
+                    </span>
+                  </div>
                   <p className="text-xs sm:text-sm text-emerald-200/90 leading-relaxed">
-                    Designed for avid golfers and wellness seekers wanting full access to championship fairways, ranges, pools, and spa without purchasing real land.
+                    Designed for avid golfers and wellness seekers wanting full access to championship fairways, covered driving ranges, swimming pools, gym, and spa without purchasing real land.
                   </p>
                 </div>
-                <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
-                  <h4 className="font-heading text-base font-bold text-white mb-1">
-                    2. Express Highway Club &amp; Lounge Membership
-                  </h4>
+
+                <div className="rounded-2xl bg-white/5 border border-white/10 p-4 transition-all hover:bg-white/10">
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="font-heading text-base font-bold text-white">
+                      2. Express Highway Club VIP Loyalty Card
+                    </h4>
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-amber-300 bg-amber-400/20 px-2.5 py-0.5 rounded-full">
+                      VIP Elite Tier
+                    </span>
+                  </div>
                   <p className="text-xs sm:text-sm text-emerald-200/90 leading-relaxed">
-                    Automatically bundled complimentary with land share and villa acquisitions, unlocking the entire nationwide Sampan roadside amenity network.
+                    Automatically bundled complimentary with all land share and villa acquisitions, unlocking 10%–50% discounts across Sampan Group hotels, motels, and roadside VIP lounges nationwide.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Stylized Physical Card Render */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-sm aspect-[1.58/1] rounded-2xl bg-gradient-to-tr from-[#051c13] via-[#0d3b2a] to-[#1a5e42] p-6 text-white shadow-2xl border border-emerald-400/30 flex flex-col justify-between relative overflow-hidden">
-                <div className="absolute right-0 top-0 size-32 bg-amber-400/10 rounded-full blur-xl pointer-events-none" />
-                <div className="flex items-center justify-between">
+            {/* Interactive Real Card Showcase */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              {/* Card Switcher Pills */}
+              <div className="flex items-center gap-2 bg-black/40 backdrop-blur-md p-1.5 rounded-2xl border border-white/10 mb-6 shadow-md">
+                <button
+                  type="button"
+                  onClick={() => setActiveCardTab("permanent")}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                    activeCardTab === "permanent"
+                      ? "bg-[#66b447] text-[#06210f] shadow-md"
+                      : "text-emerald-100 hover:text-white"
+                  }`}
+                >
+                  VIP Loyalty Card
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveCardTab("member")}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                    activeCardTab === "member"
+                      ? "bg-[#66b447] text-[#06210f] shadow-md"
+                      : "text-emerald-100 hover:text-white"
+                  }`}
+                >
+                  Club Member Card
+                </button>
+              </div>
+
+              {/* Realistic Physical Card Render with Glow */}
+              <div
+                onClick={() =>
+                  setSelectedCredential(
+                    activeCardTab === "permanent" ? credentialsData[0] : credentialsData[1]
+                  )
+                }
+                className="w-full max-w-md aspect-[1.58/1] rounded-2xl overflow-hidden relative shadow-2xl border-2 border-emerald-400/40 group cursor-pointer transition-transform duration-500 hover:scale-105"
+              >
+                <Image
+                  src={
+                    activeCardTab === "permanent"
+                      ? "/images/loyalty-card-permanent-member.webp"
+                      : "/images/Member Card.jpg.webp"
+                  }
+                  alt={
+                    activeCardTab === "permanent"
+                      ? "Official VIP Member Loyalty Card"
+                      : "Official Club Member Card"
+                  }
+                  fill
+                  className="object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity flex items-end justify-between p-5">
                   <div>
-                    <span className="font-heading text-sm font-bold tracking-tight">SAMPAN</span>
-                    <span className="block text-[8px] uppercase tracking-widest text-[#66b447]">Agro &amp; Golf Resort</span>
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#b6e59c] block">
+                      {activeCardTab === "permanent" ? "VIP ELITE CARD" : "MEMBER STANDING"}
+                    </span>
+                    <span className="font-heading text-sm font-bold text-white">
+                      {activeCardTab === "permanent"
+                        ? "Sampan Agro & Golf Resort Loyalty Card"
+                        : "Official Club Member Card"}
+                    </span>
                   </div>
-                  <span className="text-[10px] font-mono tracking-widest text-amber-300 border border-amber-300/40 px-2 py-0.5 rounded">
-                    VIP ELITE
+
+                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-stone-900 bg-white/95 px-3 py-1.5 rounded-xl shadow-md">
+                    <ZoomIn className="size-3.5" />
+                    <span>Zoom</span>
                   </span>
                 </div>
-
-                <div className="my-2">
-                  <div className="text-[9px] uppercase tracking-wider text-emerald-200/70">Membership No</div>
-                  <div className="font-mono text-sm tracking-widest text-white">SAGR • 8920 • 2026</div>
-                </div>
-
-                <div className="flex items-end justify-between">
-                  <div>
-                    <div className="text-[9px] uppercase tracking-wider text-emerald-200/70">Cardholder</div>
-                    <div className="text-xs font-semibold text-white">HONORED MEMBER</div>
-                  </div>
-                  <div className="size-8 rounded bg-white/90 p-1 flex items-center justify-center text-[10px] text-stone-900 font-bold">
-                    QR
-                  </div>
-                </div>
               </div>
+
+              <p className="text-[11px] text-emerald-200/70 text-center mt-3">
+                *Click the card to inspect full high-resolution credentials, security seal, and perks.
+              </p>
             </div>
           </div>
         </div>
@@ -212,6 +439,74 @@ export default function MembershipSection() {
           </div>
         </div>
       </div>
+
+      {/* ========================================================
+          HIGH-RESOLUTION CREDENTIAL LIGHTBOX MODAL
+         ======================================================== */}
+      {selectedCredential && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-10"
+          onClick={() => setSelectedCredential(null)}
+        >
+          <div
+            className="relative max-w-3xl w-full bg-[#07291c] rounded-3xl overflow-hidden border border-emerald-600/40 shadow-2xl flex flex-col max-h-[92vh] text-white"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-emerald-900/60 bg-[#051f15]">
+              <div className="flex items-center gap-3">
+                <span className="text-xs uppercase font-extrabold tracking-widest text-[#b6e59c] bg-white/10 px-3 py-1 rounded-full">
+                  {selectedCredential.badge}
+                </span>
+                <span className="text-xs text-emerald-200/80 font-semibold hidden sm:inline">
+                  Verified Physical Credential
+                </span>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setSelectedCredential(null)}
+                className="size-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors"
+                aria-label="Close"
+              >
+                <X className="size-5" />
+              </button>
+            </div>
+
+            {/* Modal Image View */}
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full bg-stone-950 flex items-center justify-center p-2">
+              <Image
+                src={selectedCredential.src}
+                alt={selectedCredential.title}
+                fill
+                priority
+                className="object-contain"
+              />
+            </div>
+
+            {/* Modal Footer Description */}
+            <div className="p-6 bg-gradient-to-t from-[#051f15] to-[#07291c] border-t border-emerald-900/60 space-y-3">
+              <div>
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-white">
+                  {selectedCredential.title}
+                </h3>
+                <p className="text-emerald-100/90 text-xs sm:text-sm mt-1 leading-relaxed">
+                  {selectedCredential.desc}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-emerald-900/40">
+                {selectedCredential.highlights.map((h, i) => (
+                  <div key={i} className="flex items-center gap-2 text-xs text-emerald-200">
+                    <Check className="size-3.5 text-[#66b447] shrink-0" />
+                    <span>{h}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

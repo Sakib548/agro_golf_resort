@@ -1,10 +1,59 @@
 "use client";
 
 import { useState } from "react";
-import { Sprout, Building, Check } from "lucide-react";
+import Image from "next/image";
+import { Sprout, Building, Check, ZoomIn, Eye, X, ShieldCheck, CreditCard } from "lucide-react";
+
+interface CredentialItem {
+  title: string;
+  badge: string;
+  src: string;
+  desc: string;
+  highlights: string[];
+}
+
+const investCredentials: CredentialItem[] = [
+  {
+    title: "Official Member Loyalty Card",
+    badge: "Permanent VIP Member Card",
+    src: "/images/loyalty-card-permanent-member.webp",
+    desc: "Every fractional land shareholder automatically receives this physical, chip & QR-encoded loyalty card unlocking 10% to 50% discount privileges across all Sampan Group hotels, motels, and nationwide partner resorts.",
+    highlights: [
+      "10% to 50% discount on all Sampan room stays and restaurant dining",
+      "Complimentary Express Highway Club VIP Lounge access",
+      "Reciprocal discount privileges at Arunima Resort Golf Club",
+      "Priority tee reservation rights at Sampan 9-Hole Golf Course",
+    ],
+  },
+  {
+    title: "Registered Certificate of Share",
+    badge: "100% Sub-Kabula Title Proof",
+    src: "/images/Certificate.jpg.webp",
+    desc: "Permanent registered share title certificate issued alongside the official 100% Sub-Kabula deed recorded with the local Land Sub-Registry Office in your name.",
+    highlights: [
+      "100% Sub-Kabula registered freehold land ownership",
+      "Guarantees dual annual dividend payouts (agro harvests + resort bookings)",
+      "Official security seal & board of directors authentication",
+      "Transferable, inheritable, and legally protected tangible real asset",
+    ],
+  },
+  {
+    title: "Official Certificate of Member",
+    badge: "Club Standing Accreditation",
+    src: "/images/Certificate of Member.jpg.webp",
+    desc: "Accredited membership certification verifying full access to the 9-hole golf course, driving ranges, sports arenas, private VIP dining, and event invitations.",
+    highlights: [
+      "Lifetime golf and recreational sporting facilities access",
+      "Exclusive invitations to seasonal golf tournaments and investor meets",
+      "Access to 4 swimming pools, fitness gymnasium, and wellness spa",
+      "Recognized corporate affiliation standing across partner clubs",
+    ],
+  },
+];
 
 export default function InvestSection() {
   const [sharesCount, setSharesCount] = useState<number>(1);
+  const [selectedDoc, setSelectedDoc] = useState<CredentialItem | null>(null);
   const pricePerShare = 250000; // ৳2.50 Lakh
 
   const totalInvestment = sharesCount * pricePerShare;
@@ -210,7 +259,7 @@ export default function InvestSection() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="size-4 text-[#66b447] shrink-0" />
-                  <span>Express Highway Club loyalty card with 10%–50% group discounts</span>
+                  <span>Official Member Loyalty Card unlocking 10%–50% group discounts</span>
                 </div>
               </div>
 
@@ -221,6 +270,83 @@ export default function InvestSection() {
                 <span>Reserve {sharesCount} Share(s) Now</span>
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* ========================================================
+            OFFICIAL CREDENTIALS & LOYALTY CARDS SHOWCASE
+           ======================================================== */}
+        <div className="reveal-slow rounded-3xl border border-stone-200/90 bg-white p-8 sm:p-12 shadow-sm mb-20">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-[#0b4a32] bg-emerald-100 px-3.5 py-1 rounded-full">
+                Physical Credentials
+              </span>
+              <h3 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#14261c] mt-3">
+                Cards and certificates you receive
+              </h3>
+              <p className="text-stone-600 text-sm sm:text-base mt-2 max-w-2xl">
+                Every land investor and registered club member receives authentic physical documentation backed by lawful sub-kabula deed registration and the VIP member loyalty card.
+              </p>
+            </div>
+
+            <div className="shrink-0">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0b4a32] bg-emerald-50 border border-emerald-200 px-3.5 py-2 rounded-xl">
+                <ShieldCheck className="size-4 text-[#66b447]" />
+                <span>100% Deeded Ownership</span>
+              </span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {investCredentials.map((cred, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl border border-stone-200 bg-[#fbfcf9] p-5 shadow-xs flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
+              >
+                <div>
+                  <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-stone-900 mb-4 border border-stone-200">
+                    <Image
+                      src={cred.src}
+                      alt={cred.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                      <span className="inline-flex items-center gap-1 text-[11px] text-white font-bold bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg">
+                        <ZoomIn className="size-3" />
+                        <span>Enlarge Credential</span>
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedDoc(cred)}
+                      className="absolute inset-0 cursor-pointer"
+                      aria-label={`Enlarge ${cred.title}`}
+                    />
+                  </div>
+
+                  <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-[#0b4a32] bg-emerald-100 px-2.5 py-0.5 rounded-full mb-2">
+                    {cred.badge}
+                  </span>
+                  <h4 className="font-heading text-lg font-bold text-[#14261c] mb-1.5">
+                    {cred.title}
+                  </h4>
+                  <p className="text-stone-600 text-xs leading-relaxed mb-4">
+                    {cred.desc}
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setSelectedDoc(cred)}
+                  className="w-full inline-flex items-center justify-center gap-1.5 rounded-xl bg-white border border-stone-300 hover:bg-[#0b4a32] hover:text-white px-3 py-2 text-xs font-bold text-stone-800 transition-all shadow-xs"
+                >
+                  <Eye className="size-3.5" />
+                  <span>Inspect Physical Document</span>
+                </button>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -266,9 +392,15 @@ export default function InvestSection() {
                   </td>
                   <td className="p-4 sm:p-5">
                     <span className="inline-block bg-stone-100 text-stone-700 text-xs font-bold px-2.5 py-1 rounded-full">
-                      Card &amp; Certificate
+                      Loyalty Card &amp; Certificate
                     </span>
                   </td>
+                </tr>
+                <tr>
+                  <td className="p-4 sm:p-5 font-semibold text-stone-900">Physical Cards</td>
+                  <td className="p-4 sm:p-5 font-medium text-[#0b4a32]">Share Deed + VIP Loyalty Card</td>
+                  <td className="p-4 sm:p-5 font-medium text-[#0b4a32]">Villa Deed + VIP Loyalty Card</td>
+                  <td className="p-4 sm:p-5 font-medium text-stone-700">Club Member Card</td>
                 </tr>
                 <tr>
                   <td className="p-4 sm:p-5 font-semibold text-stone-900">Managed by</td>
@@ -344,7 +476,7 @@ export default function InvestSection() {
               </span>
               <h4 className="font-heading text-lg font-bold text-[#14261c] mb-2">Sign &amp; Register</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
-                Complete purchase agreement, settle milestone payments, and finalize 100% Sub-Kabula deed registration.
+                Complete purchase agreement, settle milestone payments, and receive your 100% Sub-Kabula deed and VIP loyalty card.
               </p>
             </div>
           </div>
@@ -378,7 +510,7 @@ export default function InvestSection() {
                 </div>
                 <div>
                   <h5 className="font-bold text-[#14261c] text-sm sm:text-base">10% to 50% Off Stays</h5>
-                  <p className="text-stone-600 text-xs sm:text-sm">Substantial discounts across all Sampan Group hotels, motels, and lounges.</p>
+                  <p className="text-stone-600 text-xs sm:text-sm">Substantial discounts across all Sampan Group hotels, motels, and lounges via VIP loyalty card.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -428,6 +560,69 @@ export default function InvestSection() {
           </p>
         </div>
       </div>
+
+      {/* High-Resolution Document Modal */}
+      {selectedDoc && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 lg:p-10"
+          onClick={() => setSelectedDoc(null)}
+        >
+          <div
+            className="relative max-w-3xl w-full bg-[#07291c] rounded-3xl overflow-hidden border border-emerald-600/40 shadow-2xl flex flex-col max-h-[92vh] text-white"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-6 py-4 border-b border-emerald-900/60 bg-[#051f15]">
+              <div className="flex items-center gap-3">
+                <span className="text-xs uppercase font-extrabold tracking-widest text-[#b6e59c] bg-white/10 px-3 py-1 rounded-full">
+                  {selectedDoc.badge}
+                </span>
+                <span className="text-xs text-emerald-200/80 font-semibold hidden sm:inline">
+                  Verified Physical Credential
+                </span>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setSelectedDoc(null)}
+                className="size-9 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition-colors"
+                aria-label="Close"
+              >
+                <X className="size-5" />
+              </button>
+            </div>
+
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full bg-stone-950 flex items-center justify-center p-2">
+              <Image
+                src={selectedDoc.src}
+                alt={selectedDoc.title}
+                fill
+                priority
+                className="object-contain"
+              />
+            </div>
+
+            <div className="p-6 bg-gradient-to-t from-[#051f15] to-[#07291c] border-t border-emerald-900/60 space-y-3">
+              <div>
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-white">
+                  {selectedDoc.title}
+                </h3>
+                <p className="text-emerald-100/90 text-xs sm:text-sm mt-1 leading-relaxed">
+                  {selectedDoc.desc}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-emerald-900/40">
+                {selectedDoc.highlights.map((h, i) => (
+                  <div key={i} className="flex items-center gap-2 text-xs text-emerald-200">
+                    <Check className="size-3.5 text-[#66b447] shrink-0" />
+                    <span>{h}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

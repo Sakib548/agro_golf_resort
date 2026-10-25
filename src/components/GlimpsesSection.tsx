@@ -270,6 +270,76 @@ export default function GlimpsesSection() {
               </p>
             </div>
           </Link>
+
+          {/* TILE 8: Authentic Shan Thatched Cottages Bento (Spans 2 cols, 1 row) */}
+          <Link
+            href="/resort#chapter-stay"
+            className="bento-card group md:col-span-2 overflow-hidden flex flex-col justify-between"
+          >
+            <div className="absolute inset-0 bg-stone-900">
+              <Image
+                src="/images/Sampan-Agro-&-Golf-Resort-2.webp"
+                alt="Traditional Thatched Shan Cottages"
+                fill
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-90 group-hover:opacity-95 transition-opacity" />
+            </div>
+
+            <div className="relative z-10 p-5 flex items-center justify-between">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#b6e59c] border border-white/15">
+                <Home className="size-3.5" />
+                <span>Shan Eco-Cottages</span>
+              </span>
+              <div className="size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <ArrowUpRight className="size-3.5" />
+              </div>
+            </div>
+
+            <div className="relative z-10 p-5 text-white">
+              <h3 className="font-heading text-xl font-bold leading-tight">
+                Traditional Thatched Shan Cottages &amp; Veranda
+              </h3>
+              <p className="text-emerald-100/80 text-xs mt-1">
+                Handcrafted eco-cottages engineered for natural cooling, with private verandas and scenic tropical garden vistas.
+              </p>
+            </div>
+          </Link>
+
+          {/* TILE 9: Sunset Infinity Pool & Loungers Bento (Spans 2 cols, 1 row) */}
+          <Link
+            href="/resort#chapter-leisure"
+            className="bento-card group md:col-span-2 overflow-hidden flex flex-col justify-between"
+          >
+            <div className="absolute inset-0 bg-stone-900">
+              <Image
+                src="/images/umbrella-chair-around-swimming-pool-resort-hotel-leisure-travel-vacation-neary-sea-ocean-beach-sunset-sunrise-time.webp"
+                alt="Sunset Infinity Pool and Deck Loungers"
+                fill
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-90 group-hover:opacity-95 transition-opacity" />
+            </div>
+
+            <div className="relative z-10 p-5 flex items-center justify-between">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#b6e59c] border border-white/15">
+                <Waves className="size-3.5" />
+                <span>Sunset Deck</span>
+              </span>
+              <div className="size-8 rounded-full bg-black/50 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <ArrowUpRight className="size-3.5" />
+              </div>
+            </div>
+
+            <div className="relative z-10 p-5 text-white">
+              <h3 className="font-heading text-xl font-bold leading-tight">
+                Lakeside Infinity Pool &amp; Sunset Deck
+              </h3>
+              <p className="text-emerald-100/80 text-xs mt-1">
+                Temperature-controlled waters, parasol sun loungers, and evening golden reflections across the estate.
+              </p>
+            </div>
+          </Link>
         </div>
 
         {/* ========================================================
