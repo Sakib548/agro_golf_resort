@@ -59,18 +59,18 @@ export default function InvestSection() {
   const totalInvestment = sharesCount * pricePerShare;
 
   return (
-    <section id="invest" className="bg-[#EEF1DE] text-[#134630] pb-24">
+    <section id="invest" className="bg-[#F7F5EE] text-[#134630] pb-24">
       {/* Top Gold Banner Highlight */}
       <div className="bg-[#134630] text-white py-16 px-4 sm:px-6 lg:px-8 shadow-inner border-b border-[#708564]/30">
         <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#EEF1DE] bg-white/10 px-3.5 py-1 rounded-full mb-3 border border-white/15">
+            <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#F7F5EE] bg-white/10 px-3.5 py-1 rounded-full mb-3 border border-white/15">
               Fractional Land Ownership
             </span>
             <p className="text-stone-300 text-sm sm:text-base">
               Share ownership starts from
             </p>
-            <div className="font-heading text-4xl sm:text-6xl font-extrabold text-[#FBFAF6] mt-1 mb-2">
+            <div className="font-heading text-4xl sm:text-6xl font-extrabold text-[#FFFFFF] mt-1 mb-2">
               ৳2.50 Lakh
             </div>
             <p className="text-stone-300 text-xs sm:text-sm max-w-xl">
@@ -87,7 +87,7 @@ export default function InvestSection() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-xl border border-[#EEF1DE]/40 bg-[#FBFAF6]/10 px-6 py-3 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] hover:bg-[#FBFAF6]/20 transition-all"
+              className="inline-flex items-center justify-center rounded-xl border border-[#F7F5EE]/40 bg-[#FFFFFF]/10 px-6 py-3 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] hover:bg-[#FFFFFF]/20 transition-all"
             >
               Ask For Share Plan
             </a>
@@ -98,7 +98,7 @@ export default function InvestSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16">
         {/* Section Intro */}
         <div className="reveal-slow max-w-3xl mb-14">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3.5 py-1 rounded-full border border-[#708564]/30">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] px-3.5 py-1 rounded-full border border-[#708564]/30">
             Wealth Generation
           </span>
           <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#134630] mt-3">
@@ -111,47 +111,47 @@ export default function InvestSection() {
 
         {/* 2 Revenue Streams Breakdown */}
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 text-[#42732E] flex items-center justify-center mb-4">
-              <Sprout className="size-6 text-[#42732E]" />
+          <div className="card-glass p-8 sm:p-10 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <Sprout className="size-7 text-[#2B5738]" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#42732E]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2B5738]">
               Income Stream 1
             </span>
-            <h3 className="font-heading text-2xl font-bold text-[#134630] mt-1 mb-3">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#143224] mt-1 mb-3">
               Commercial Agro-Yield
             </h3>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">
+            <p className="text-stone-700 text-sm leading-relaxed mb-4">
               Continuous agricultural revenue derived from high-value commercial orchards (sweet mango, dragon fruit, and malta), organic vegetables, freshwater fish farming, and dairy operations.
             </p>
-            <div className="bg-[#EEF1DE] rounded-xl p-3 text-xs text-stone-700 font-medium">
+            <div className="bg-[#FFFFFF]/70 backdrop-blur-md rounded-xl p-3.5 text-xs text-stone-800 font-medium border border-white/60">
               Harvested and commercialized annually by Sampan Agro division.
             </div>
           </div>
 
-          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 shadow-sm">
-            <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 text-[#708564] flex items-center justify-center mb-4">
-              <Building className="size-6 text-[#708564]" />
+          <div className="card-glass p-8 sm:p-10 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <Building className="size-7 text-[#7B8F7D]" />
             </div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#708564]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#7B8F7D]">
               Income Stream 2
             </span>
-            <h3 className="font-heading text-2xl font-bold text-[#134630] mt-1 mb-3">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#143224] mt-1 mb-3">
               Hospitality &amp; Sports Revenue
             </h3>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">
+            <p className="text-stone-700 text-sm leading-relaxed mb-4">
               Cashflow generated from luxury villa and cottage bookings, presidential suite stays, 9-hole golf green fees, sports tournament registrations, corporate retreats, and restaurant dining.
             </p>
-            <div className="bg-[#EEF1DE] rounded-xl p-3 text-xs text-stone-700 font-medium">
+            <div className="bg-[#FFFFFF]/70 backdrop-blur-md rounded-xl p-3.5 text-xs text-stone-800 font-medium border border-white/60">
               Managed under Sampan Hospitality&apos;s proven operational infrastructure.
             </div>
           </div>
         </div>
 
         {/* Interactive Share Calculator Widget */}
-        <div id="calculator" className="reveal-slow rounded-3xl border border-[#708564]/25 bg-[#FBFAF6] p-8 sm:p-12 shadow-md mb-20">
+        <div id="calculator" className="reveal-slow card-glass p-8 sm:p-12 mb-20">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full border border-[#708564]/30">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#F7F5EE] px-3 py-1 rounded-full border border-[#708564]/30">
               Interactive Estimator
             </span>
             <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
@@ -214,7 +214,7 @@ export default function InvestSection() {
                 ))}
               </div>
 
-              <div className="rounded-2xl border border-[#708564]/20 bg-[#EEF1DE] p-5 space-y-2 text-xs sm:text-sm text-stone-700">
+              <div className="rounded-2xl border border-[#708564]/20 bg-[#F7F5EE] p-5 space-y-2 text-xs sm:text-sm text-stone-700">
                 <div className="flex justify-between pb-2 border-b border-stone-200">
                   <span className="text-stone-500">Rate per Shotok (Decimal):</span>
                   <span className="font-bold text-[#134630]">৳2,50,000</span>
@@ -234,10 +234,10 @@ export default function InvestSection() {
             <div className="lg:col-span-6 rounded-3xl bg-[#134630] text-white p-8 shadow-xl border border-[#708564]/30 relative overflow-hidden">
               <div className="absolute right-0 top-0 size-48 bg-[#42732E]/20 rounded-full blur-2xl pointer-events-none" />
               
-              <span className="text-xs uppercase tracking-widest text-[#EEF1DE] font-bold">
+              <span className="text-xs uppercase tracking-widest text-[#F7F5EE] font-bold">
                 Estimated Investment
               </span>
-              <div className="font-heading text-4xl sm:text-5xl font-extrabold text-[#FBFAF6] mt-1 mb-4">
+              <div className="font-heading text-4xl sm:text-5xl font-extrabold text-[#FFFFFF] mt-1 mb-4">
                 ৳{(totalInvestment / 100000).toFixed(2)} Lakh
               </div>
               <p className="text-xs text-stone-300 mb-6">
@@ -276,10 +276,10 @@ export default function InvestSection() {
         {/* ========================================================
             OFFICIAL CREDENTIALS & LOYALTY CARDS SHOWCASE
            ======================================================== */}
-        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 sm:p-12 shadow-sm mb-20">
+        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FFFFFF] p-8 sm:p-12 shadow-sm mb-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3.5 py-1 rounded-full border border-[#708564]/30">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#F7F5EE] px-3.5 py-1 rounded-full border border-[#708564]/30">
                 Physical Credentials
               </span>
               <h3 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#134630] mt-3">
@@ -291,7 +291,7 @@ export default function InvestSection() {
             </div>
 
             <div className="shrink-0">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#134630] bg-[#EEF1DE] border border-[#708564]/30 px-3.5 py-2 rounded-xl">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#134630] bg-[#F7F5EE] border border-[#708564]/30 px-3.5 py-2 rounded-xl">
                 <ShieldCheck className="size-4 text-[#42732E]" />
                 <span>100% Deeded Ownership</span>
               </span>
@@ -302,7 +302,7 @@ export default function InvestSection() {
             {investCredentials.map((cred, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-[#708564]/20 bg-[#EEF1DE] p-5 shadow-xs flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
+                className="rounded-2xl border border-[#708564]/20 bg-[#F7F5EE] p-5 shadow-xs flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
               >
                 <div>
                   <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-stone-900 mb-4 border border-[#708564]/30">
@@ -326,7 +326,7 @@ export default function InvestSection() {
                     />
                   </div>
 
-                  <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-[#134630] bg-[#FBFAF6] px-2.5 py-0.5 rounded-full mb-2 border border-[#708564]/20">
+                  <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-[#134630] bg-[#FFFFFF] px-2.5 py-0.5 rounded-full mb-2 border border-[#708564]/20">
                     {cred.badge}
                   </span>
                   <h4 className="font-heading text-lg font-bold text-[#134630] mb-1.5">
@@ -340,7 +340,7 @@ export default function InvestSection() {
                 <button
                   type="button"
                   onClick={() => setSelectedDoc(cred)}
-                  className="w-full inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#FBFAF6] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-3 py-2 text-xs font-bold text-[#134630] transition-all shadow-xs"
+                  className="w-full inline-flex items-center justify-center gap-1.5 rounded-xl bg-[#FFFFFF] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-3 py-2 text-xs font-bold text-[#134630] transition-all shadow-xs"
                 >
                   <Eye className="size-3.5" />
                   <span>Inspect Physical Document</span>
@@ -353,7 +353,7 @@ export default function InvestSection() {
         {/* Compare Your Options Table */}
         <div className="mb-20">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3 py-1 rounded-full border border-[#708564]/30">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] px-3 py-1 rounded-full border border-[#708564]/30">
               Transparent Framework
             </span>
             <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
@@ -361,10 +361,10 @@ export default function InvestSection() {
             </h3>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] shadow-sm">
+          <div className="overflow-x-auto rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] shadow-sm">
             <table className="w-full min-w-[620px] text-left border-collapse text-sm">
               <thead>
-                <tr className="bg-[#EEF1DE] border-b border-[#708564]/20 text-[#134630] font-heading text-xs uppercase tracking-wider">
+                <tr className="bg-[#F7F5EE] border-b border-[#708564]/20 text-[#134630] font-heading text-xs uppercase tracking-wider">
                   <th className="p-4 sm:p-5">Feature</th>
                   <th className="p-4 sm:p-5 text-[#42732E] font-bold">Land Share</th>
                   <th className="p-4 sm:p-5 text-[#708564] font-bold">Cottage or Villa</th>
@@ -381,17 +381,17 @@ export default function InvestSection() {
                 <tr>
                   <td className="p-4 sm:p-5 font-semibold text-[#134630]">Registration</td>
                   <td className="p-4 sm:p-5">
-                    <span className="inline-block bg-[#EEF1DE] text-[#42732E] border border-[#708564]/30 text-xs font-bold px-2.5 py-1 rounded-full">
+                    <span className="inline-block bg-[#F7F5EE] text-[#42732E] border border-[#708564]/30 text-xs font-bold px-2.5 py-1 rounded-full">
                       100% Sub-Kabula
                     </span>
                   </td>
                   <td className="p-4 sm:p-5">
-                    <span className="inline-block bg-[#EEF1DE] text-[#42732E] border border-[#708564]/30 text-xs font-bold px-2.5 py-1 rounded-full">
+                    <span className="inline-block bg-[#F7F5EE] text-[#42732E] border border-[#708564]/30 text-xs font-bold px-2.5 py-1 rounded-full">
                       100% Sub-Kabula
                     </span>
                   </td>
                   <td className="p-4 sm:p-5">
-                    <span className="inline-block bg-[#EEF1DE] text-[#134630] border border-[#708564]/30 text-xs font-bold px-2.5 py-1 rounded-full">
+                    <span className="inline-block bg-[#F7F5EE] text-[#134630] border border-[#708564]/30 text-xs font-bold px-2.5 py-1 rounded-full">
                       Loyalty Card &amp; Certificate
                     </span>
                   </td>
@@ -428,7 +428,7 @@ export default function InvestSection() {
         {/* How Buying Works (4-step Roadmap) */}
         <div className="reveal-slow mb-20">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3 py-1 rounded-full border border-[#708564]/30">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] px-3 py-1 rounded-full border border-[#708564]/30">
               Acquisition Process
             </span>
             <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
@@ -440,7 +440,7 @@ export default function InvestSection() {
           </div>
 
           <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] p-6 shadow-sm">
               <span className="size-8 rounded-full bg-[#42732E] text-white flex items-center justify-center font-bold text-xs mb-4">
                 1
               </span>
@@ -450,7 +450,7 @@ export default function InvestSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] p-6 shadow-sm">
               <span className="size-8 rounded-full bg-[#42732E] text-white flex items-center justify-center font-bold text-xs mb-4">
                 2
               </span>
@@ -460,7 +460,7 @@ export default function InvestSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] p-6 shadow-sm">
               <span className="size-8 rounded-full bg-[#42732E] text-white flex items-center justify-center font-bold text-xs mb-4">
                 3
               </span>
@@ -470,7 +470,7 @@ export default function InvestSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] p-6 shadow-sm">
               <span className="size-8 rounded-full bg-[#42732E] text-white flex items-center justify-center font-bold text-xs mb-4">
                 4
               </span>
@@ -483,9 +483,9 @@ export default function InvestSection() {
         </div>
 
         {/* Benefits of Ownership Cards */}
-        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 sm:p-12">
+        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FFFFFF] p-8 sm:p-12">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full border border-[#708564]/30">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#F7F5EE] px-3 py-1 rounded-full border border-[#708564]/30">
               Privileges
             </span>
             <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
@@ -494,9 +494,9 @@ export default function InvestSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-[#708564]/20 bg-[#EEF1DE] p-6 shadow-sm space-y-3">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#F7F5EE] p-6 shadow-sm space-y-3">
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                <div className="size-6 rounded-md bg-[#FFFFFF] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
@@ -505,7 +505,7 @@ export default function InvestSection() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                <div className="size-6 rounded-md bg-[#FFFFFF] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
@@ -514,7 +514,7 @@ export default function InvestSection() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                <div className="size-6 rounded-md bg-[#FFFFFF] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
@@ -524,9 +524,9 @@ export default function InvestSection() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-[#708564]/20 bg-[#EEF1DE] p-6 shadow-sm space-y-3">
+            <div className="rounded-2xl border border-[#708564]/20 bg-[#F7F5EE] p-6 shadow-sm space-y-3">
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                <div className="size-6 rounded-md bg-[#FFFFFF] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
@@ -535,7 +535,7 @@ export default function InvestSection() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                <div className="size-6 rounded-md bg-[#FFFFFF] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
@@ -544,7 +544,7 @@ export default function InvestSection() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="size-6 rounded-md bg-[#FBFAF6] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
+                <div className="size-6 rounded-md bg-[#FFFFFF] border border-[#708564]/30 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="size-3.5 text-[#42732E]" />
                 </div>
                 <div>
@@ -573,10 +573,10 @@ export default function InvestSection() {
           >
             <div className="flex items-center justify-between px-6 py-4 border-b border-[#708564]/30 bg-[#134630]">
               <div className="flex items-center gap-3">
-                <span className="text-xs uppercase font-extrabold tracking-widest text-[#EEF1DE] bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                <span className="text-xs uppercase font-extrabold tracking-widest text-[#F7F5EE] bg-white/10 px-3 py-1 rounded-full border border-white/10">
                   {selectedDoc.badge}
                 </span>
-                <span className="text-xs text-[#EEF1DE]/80 font-semibold hidden sm:inline">
+                <span className="text-xs text-[#F7F5EE]/80 font-semibold hidden sm:inline">
                   Verified Physical Credential
                 </span>
               </div>
@@ -603,7 +603,7 @@ export default function InvestSection() {
 
             <div className="p-6 bg-[#134630] border-t border-[#708564]/30 space-y-3">
               <div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FBFAF6]">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FFFFFF]">
                   {selectedDoc.title}
                 </h3>
                 <p className="text-stone-300 text-xs sm:text-sm mt-1 leading-relaxed">
@@ -613,7 +613,7 @@ export default function InvestSection() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-[#708564]/20">
                 {selectedDoc.highlights.map((h, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-[#EEF1DE]">
+                  <div key={i} className="flex items-center gap-2 text-xs text-[#F7F5EE]">
                     <Check className="size-3.5 text-[#42732E] shrink-0" />
                     <span>{h}</span>
                   </div>

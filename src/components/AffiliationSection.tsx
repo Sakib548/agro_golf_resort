@@ -81,7 +81,7 @@ export default function AffiliationSection({ className = "" }: { className?: str
     <section
       id="affiliations"
       ref={containerRef}
-      className={`relative w-full bg-[#EEF1DE] pt-20 pb-16 md:pt-28 md:pb-20 border-t border-[#708564]/20 overflow-hidden text-[#134630] ${className}`}
+      className={`relative w-full bg-[#F7F5EE] pt-20 pb-16 md:pt-28 md:pb-20 border-t border-[#708564]/20 overflow-hidden text-[#134630] ${className}`}
     >
       {/* Resort Ambient Glows */}
       <div 
@@ -98,7 +98,7 @@ export default function AffiliationSection({ className = "" }: { className?: str
         <div className="affil-header flex flex-col md:flex-row md:items-end md:justify-between gap-8 md:gap-12 mb-16 md:mb-20">
           <div className="max-w-2xl">
             {/* Signature Resort Tri-Dot Badge */}
-            <div className="affil-header-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#708564]/30 bg-[#FBFAF6] shadow-2xs text-[10px] font-mono uppercase text-[#134630] mb-6">
+            <div className="affil-header-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#708564]/30 bg-[#FFFFFF] shadow-2xs text-[10px] font-mono uppercase text-[#134630] mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#42732E]" />
               <span className="w-1.5 h-1.5 rounded-full bg-[#708564]" />
               <span className="w-1.5 h-1.5 rounded-full bg-[#134630]" />
@@ -122,7 +122,7 @@ export default function AffiliationSection({ className = "" }: { className?: str
           {affiliations.map((item, i) => (
             <div
               key={`${item.num}-${i}`}
-              className="affil-card group relative bg-[#FBFAF6] hover:bg-white rounded-2xl border border-[#708564]/20 shadow-2xs hover:shadow-xl hover:border-[#42732E]/35 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 w-[calc(50%-0.4rem)] sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] aspect-[5/4] sm:aspect-[4/3] overflow-hidden flex flex-col items-center justify-center p-5 sm:p-6 md:p-7 transform-gpu"
+              className="affil-card group relative bg-[#FFFFFF] hover:bg-white rounded-2xl border border-[#708564]/20 shadow-2xs hover:shadow-xl hover:border-[#42732E]/35 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 w-[calc(50%-0.4rem)] sm:w-[calc(50%-0.5rem)] md:w-[calc(33.333%-0.75rem)] lg:w-[calc(25%-1rem)] aspect-[5/4] sm:aspect-[4/3] overflow-hidden flex flex-col items-center justify-center p-5 sm:p-6 md:p-7 transform-gpu"
             >
               {/* Top Accent Gradient Line on Hover */}
               <span className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-[#42732E] via-[#708564] to-[#42732E] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-center" />

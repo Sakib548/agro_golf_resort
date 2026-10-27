@@ -81,7 +81,7 @@ const portalCards: PortalCardItem[] = [
 
 export default function Home() {
   return (
-    <div className="relative bg-[#EEF1DE] text-[#134630] selection:bg-[#708564]/30 selection:text-[#134630]">
+    <div className="relative bg-[#F7F5EE] text-[#134630] selection:bg-[#708564]/30 selection:text-[#134630]">
       {/* 1. Hero & Key Metrics */}
       <HeroSection />
 
@@ -92,11 +92,11 @@ export default function Home() {
       <GlimpsesSection />
 
       {/* 5. Sleek Hub: Explore Dedicated Sections */}
-      <section className="py-20 bg-[#FBFAF6] border-t border-[#708564]/20">
+      <section className="py-20 bg-[#FFFFFF] border-t border-[#708564]/20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="reveal-slow flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3.5 py-1 rounded-full border border-[#708564]/20">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#F7F5EE] px-3.5 py-1 rounded-full border border-[#708564]/20">
                 Estate &amp; Developments Directory
               </span>
               <h2 className="font-heading text-3xl sm:text-5xl font-extrabold text-[#134630] mt-3">
@@ -112,7 +112,7 @@ export default function Home() {
                 href="/brochure.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-[#708564]/30 bg-[#FBFAF6] px-5 py-3 text-xs uppercase tracking-wider font-bold text-[#134630] hover:bg-[#EEF1DE] transition-colors shadow-xs"
+                className="inline-flex items-center gap-2 rounded-xl border border-[#708564]/30 bg-[#FFFFFF] px-5 py-3 text-xs uppercase tracking-wider font-bold text-[#134630] hover:bg-[#F7F5EE] transition-colors shadow-xs"
               >
                 <FileText className="size-4" />
                 <span>View Master Brochure</span>
@@ -149,13 +149,13 @@ export default function Home() {
                         </div>
                       ))}
                       <div className="absolute top-2.5 left-2.5 z-10 pointer-events-none">
-                        <span className="inline-block rounded-full bg-black/70 backdrop-blur-md px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#EEF1DE] border border-white/10 shadow-xs">
+                        <span className="inline-block rounded-full bg-black/70 backdrop-blur-md px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#F7F5EE] border border-white/10 shadow-xs">
                           {card.badge}
                         </span>
                       </div>
                     </div>
                   ) : (
-                    <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden mb-6 shadow-xs border border-[#708564]/20 bg-[#EEF1DE]">
+                    <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden mb-6 shadow-xs border border-[#708564]/20 bg-[#F7F5EE]">
                       <Image
                         src={card.image!}
                         alt={card.title}
@@ -165,7 +165,7 @@ export default function Home() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                       <div className="absolute top-4 left-4">
-                        <span className="inline-block rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#EEF1DE]">
+                        <span className="inline-block rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#F7F5EE]">
                           {card.badge}
                         </span>
                       </div>
@@ -195,13 +195,13 @@ export default function Home() {
           {/* <div className="reveal-slow rounded-3xl bg-[#134630] text-white p-8 sm:p-12 shadow-xl border border-[#708564]/30">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="max-w-2xl">
-                <span className="inline-block text-xs uppercase tracking-widest text-[#134630] font-bold bg-[#EEF1DE] px-3.5 py-1 rounded-full mb-3">
+                <span className="inline-block text-xs uppercase tracking-widest text-[#134630] font-bold bg-[#F7F5EE] px-3.5 py-1 rounded-full mb-3">
                   Schedule Your Inspection
                 </span>
                 <h3 className="font-heading text-2xl sm:text-4xl font-extrabold text-white mb-2">
                   Plan your visit to Podunapur, Moulvibazar
                 </h3>
-                <p className="text-[#EEF1DE]/90 text-sm sm:text-base leading-relaxed">
+                <p className="text-[#F7F5EE]/90 text-sm sm:text-base leading-relaxed">
                   Walk the 100+ acre grounds in person. Inspect our natural ponds, championship golf contours, and thriving mango orchards with our senior advisory team.
                 </p>
               </div>

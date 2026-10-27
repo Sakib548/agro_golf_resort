@@ -36,8 +36,8 @@ export default function Navbar() {
       {/* Top-Sticking, Edge-to-Edge Luxury Header */}
       <header
         className={`sticky top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${isScrolled
-          ? "bg-[#FBFAF6]/95 backdrop-blur-md border-b border-[#708564]/20 shadow-xs py-2.5 sm:py-3"
-          : "bg-[#FBFAF6]/90 backdrop-blur-md border-b border-[#708564]/15 py-3 sm:py-3.5"
+          ? "bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#708564]/20 shadow-xs py-2.5 sm:py-3"
+          : "bg-[#FFFFFF]/90 backdrop-blur-md border-b border-[#708564]/15 py-3 sm:py-3.5"
           }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -76,7 +76,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative rounded-full px-3.5 py-1.5 text-xs font-semibold tracking-wide transition-all duration-200 ${isActive
                     ? "bg-[#42732E] text-white shadow-xs font-bold"
-                    : "text-[#134630]/80 hover:text-[#134630] hover:bg-[#EEF1DE]"
+                    : "text-[#134630]/80 hover:text-[#134630] hover:bg-[#F7F5EE]"
                     }`}
                 >
                   {link.label}
@@ -91,7 +91,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
-            className="inline-flex size-10 items-center justify-center rounded-full border border-[#708564]/30 bg-[#FBFAF6] text-[#134630] shadow-xs transition-all duration-300 hover:bg-[#EEF1DE] lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-full border border-[#708564]/30 bg-[#FFFFFF] text-[#134630] shadow-xs transition-all duration-300 hover:bg-[#F7F5EE] lg:hidden"
           >
             {mobileMenuOpen ? (
               <svg
@@ -134,7 +134,7 @@ export default function Navbar() {
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`absolute top-20 left-4 right-4 rounded-3xl border border-[#708564]/30 bg-[#FBFAF6] p-6 shadow-2xl transition-all duration-300 text-[#134630] ${mobileMenuOpen
+          className={`absolute top-20 left-4 right-4 rounded-3xl border border-[#708564]/30 bg-[#FFFFFF] p-6 shadow-2xl transition-all duration-300 text-[#134630] ${mobileMenuOpen
             ? "translate-y-0 opacity-100 scale-100"
             : "-translate-y-6 opacity-0 scale-95"
             }`}
@@ -149,7 +149,7 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex items-center justify-between rounded-xl px-4 py-3 text-sm uppercase tracking-wider font-semibold transition-colors ${isActive
                     ? "bg-[#42732E] text-white font-bold shadow-xs"
-                    : "text-[#134630] hover:bg-[#EEF1DE]"
+                    : "text-[#134630] hover:bg-[#F7F5EE]"
                     }`}
                 >
                   <span>{link.label}</span>

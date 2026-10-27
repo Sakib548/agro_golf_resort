@@ -6,16 +6,16 @@ import { Flag, Waves, Home, Sprout, ArrowUpRight, Sparkles, Map, ShieldCheck, Tr
 
 export default function GlimpsesSection() {
   return (
-    <section className="py-24 bg-[#FBFAF6] text-[#134630] border-t border-[#708564]/20 relative overflow-hidden">
+    <section className="py-24 bg-[#FFFFFF] text-[#134630] border-t border-[#708564]/20 relative overflow-hidden">
       {/* Background ambient lighting glows */}
-      <div className="absolute top-1/3 -left-36 size-[500px] rounded-full bg-[#EEF1DE]/50 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 -left-36 size-[500px] rounded-full bg-[#F7F5EE]/50 blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 -right-36 size-[500px] rounded-full bg-[#708564]/10 blur-3xl pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#EEF1DE] px-3.5 py-1 text-xs uppercase tracking-widest font-extrabold text-[#134630] border border-[#708564]/30">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#F7F5EE] px-3.5 py-1 text-xs uppercase tracking-widest font-extrabold text-[#134630] border border-[#708564]/30">
               <Sparkles className="size-3.5 text-[#42732E]" />
               <span>Our Architecture Showcase</span>
             </div>
@@ -60,7 +60,7 @@ export default function GlimpsesSection() {
 
             {/* Top Bar with Pulsing Badge */}
             <div className="relative z-10 p-6 sm:p-8 flex items-center justify-between">
-              <span className="inline-flex items-center gap-2 rounded-full bg-black/60 backdrop-blur-md px-3.5 py-1.5 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] border border-white/20 shadow-md">
+              <span className="inline-flex items-center gap-2 rounded-full bg-black/60 backdrop-blur-md px-3.5 py-1.5 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] border border-white/20 shadow-md">
                 <span className="size-2 rounded-full bg-[#42732E] animate-pulse" />
                 <span>Featured &bull; 9-Hole Championship Golf</span>
               </span>
@@ -71,7 +71,7 @@ export default function GlimpsesSection() {
 
             {/* Bottom Content Area */}
             <div className="relative z-10 p-6 sm:p-8 text-white">
-              <span className="text-xs font-mono uppercase tracking-widest text-[#EEF1DE] block mb-1.5 font-semibold">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#F7F5EE] block mb-1.5 font-semibold">
                 Elite Sports Enclave &bull; 100+ Acres
               </span>
               <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight text-white mb-2.5">
@@ -99,7 +99,7 @@ export default function GlimpsesSection() {
             </div>
 
             <div className="relative z-10 p-6 flex items-center justify-between">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] border border-white/15">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] border border-white/15">
                 <Home className="size-3.5 text-[#42732E]" />
                 <span>Lakeside Villas</span>
               </span>
@@ -109,7 +109,7 @@ export default function GlimpsesSection() {
             </div>
 
             <div className="relative z-10 p-6 text-white">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-[#EEF1DE] block mb-1">
+              <span className="text-[11px] font-mono uppercase tracking-wider text-[#F7F5EE] block mb-1">
                 100% Sub-Kabula Deeded
               </span>
               <h3 className="font-heading text-xl font-bold leading-tight mb-2">
@@ -122,7 +122,7 @@ export default function GlimpsesSection() {
           </Link>
 
           {/* TILE 3: Editorial Card for Supporting Information — Sub-Kabula Deed */}
-          <div className="bento-card p-6 flex flex-col justify-between bg-[#FBFAF6] border border-[#708564]/25 border-t-4 border-t-[#42732E] shadow-sm">
+          <div className="bento-card p-6 flex flex-col justify-between bg-[#FFFFFF] border border-[#708564]/25 border-t-4 border-t-[#42732E] shadow-sm">
             <div>
               <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#708564]/20">
                 <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#42732E]">
@@ -145,7 +145,7 @@ export default function GlimpsesSection() {
           </div>
 
           {/* TILE 4: Editorial Card for Supporting Information — Dual Revenue Yields */}
-          <div className="bento-card p-6 flex flex-col justify-between bg-[#FBFAF6] border border-[#708564]/25 border-t-4 border-t-[#708564] shadow-sm">
+          <div className="bento-card p-6 flex flex-col justify-between bg-[#FFFFFF] border border-[#708564]/25 border-t-4 border-t-[#708564] shadow-sm">
             <div>
               <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-[#708564]/20">
                 <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#708564]">
@@ -183,7 +183,7 @@ export default function GlimpsesSection() {
             </div>
 
             <div className="relative z-10 p-5 flex items-center justify-between">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] border border-white/15">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] border border-white/15">
                 <Map className="size-3.5" />
                 <span>100+ Acre Masterplan Drawing</span>
               </span>
@@ -218,7 +218,7 @@ export default function GlimpsesSection() {
             </div>
 
             <div className="relative z-10 p-5 flex items-center justify-between">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] border border-white/15">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] border border-white/15">
                 <Waves className="size-3.5" />
                 <span>4 Pools</span>
               </span>
@@ -253,7 +253,7 @@ export default function GlimpsesSection() {
             </div>
 
             <div className="relative z-10 p-5 flex items-center justify-between">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] border border-white/15">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] border border-white/15">
                 <Sparkles className="size-3.5" />
                 <span>Night Ambiance</span>
               </span>
@@ -288,7 +288,7 @@ export default function GlimpsesSection() {
             </div>
 
             <div className="relative z-10 p-5 flex items-center justify-between">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] border border-white/15">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] border border-white/15">
                 <Home className="size-3.5" />
                 <span>Shan Eco-Cottages</span>
               </span>
@@ -323,7 +323,7 @@ export default function GlimpsesSection() {
             </div>
 
             <div className="relative z-10 p-5 flex items-center justify-between">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] border border-white/15">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] border border-white/15">
                 <Waves className="size-3.5" />
                 <span>Sunset Deck</span>
               </span>
@@ -346,10 +346,10 @@ export default function GlimpsesSection() {
         {/* ========================================================
             EVENTS & TOURNAMENTS (BENTO TREATMENT)
            ======================================================== */}
-        {/* <div className="bento-card p-8 sm:p-12 mb-20 bg-gradient-to-br from-white via-[#FBFAF6] to-[#EEF1DE]/40">
+        {/* <div className="bento-card p-8 sm:p-12 mb-20 bg-gradient-to-br from-white via-[#FFFFFF] to-[#F7F5EE]/40">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#EEF1DE] px-3.5 py-1 text-xs uppercase tracking-widest font-extrabold text-[#134630] border border-[#708564]/30 mb-3">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#F7F5EE] px-3.5 py-1 text-xs uppercase tracking-widest font-extrabold text-[#134630] border border-[#708564]/30 mb-3">
                 <Trophy className="size-3.5 text-[#42732E]" />
                 <span>Host Your Occasions</span>
               </div>
@@ -380,7 +380,7 @@ export default function GlimpsesSection() {
               />
               <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md rounded-xl p-3.5 text-white text-xs sm:text-sm font-semibold flex items-center justify-between border border-white/10">
                 <span>Championship Arena</span>
-                <span className="text-[#EEF1DE]">Corporate &amp; Club</span>
+                <span className="text-[#F7F5EE]">Corporate &amp; Club</span>
               </div>
             </div>
           </div>

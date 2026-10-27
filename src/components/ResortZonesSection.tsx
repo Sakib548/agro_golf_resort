@@ -104,11 +104,11 @@ export default function ResortZonesSection() {
   const currentZone = resortZones.find((z) => z.id === activeZone) || resortZones[0];
 
   return (
-    <section id="resort" className="py-24 bg-[#EEF1DE] text-[#134630]">
+    <section id="resort" className="py-24 bg-[#F7F5EE] text-[#134630]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="reveal-slow max-w-3xl mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] border border-[#708564]/30 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] border border-[#708564]/30 px-3.5 py-1 rounded-full">
             Masterplan Zones
           </span>
           <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#134630] mt-3">
@@ -121,49 +121,49 @@ export default function ResortZonesSection() {
 
         {/* 4 Signature Experiences Cards */}
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <div className="rounded-2xl border-l-4 border-l-[#42732E] border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-[#EEF1DE] flex items-center justify-center mb-3 text-[#42732E]">
-              <Flag className="size-5" />
+          <div className="card-glass p-7 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <Flag className="size-6 text-[#2B5738]" />
             </div>
-            <h3 className="font-heading text-lg font-bold text-[#134630] mb-1">Golf on the Water</h3>
-            <p className="text-[#134630]/80 text-xs sm:text-sm leading-relaxed">
+            <h3 className="font-heading text-lg font-bold text-[#143224] mb-1.5">Golf on the Water</h3>
+            <p className="text-[#143224]/80 text-xs sm:text-sm leading-relaxed">
               9 holes weaving across sparkling ponds, short &amp; long driving ranges, and professional trainers.
             </p>
           </div>
 
-          <div className="rounded-2xl border-l-4 border-l-[#708564] border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-[#EEF1DE] flex items-center justify-center mb-3 text-[#708564]">
-              <UtensilsCrossed className="size-5" />
+          <div className="card-glass p-7 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <UtensilsCrossed className="size-6 text-[#7B8F7D]" />
             </div>
-            <h3 className="font-heading text-lg font-bold text-[#134630] mb-1">Farm to Table</h3>
-            <p className="text-[#134630]/80 text-xs sm:text-sm leading-relaxed">
+            <h3 className="font-heading text-lg font-bold text-[#143224] mb-1.5">Farm to Table</h3>
+            <p className="text-[#143224]/80 text-xs sm:text-sm leading-relaxed">
               Mango, dragon fruit, and malta freshly plucked, plus dairy and organic produce served in the restaurant.
             </p>
           </div>
 
-          <div className="rounded-2xl border-l-4 border-l-[#134630] border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-[#EEF1DE] flex items-center justify-center mb-3 text-[#134630]">
-              <Music className="size-5" />
+          <div className="card-glass p-7 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <Music className="size-6 text-[#143224]" />
             </div>
-            <h3 className="font-heading text-lg font-bold text-[#134630] mb-1">Lakeside Evenings</h3>
-            <p className="text-[#134630]/80 text-xs sm:text-sm leading-relaxed">
+            <h3 className="font-heading text-lg font-bold text-[#143224] mb-1.5">Lakeside Evenings</h3>
+            <p className="text-[#143224]/80 text-xs sm:text-sm leading-relaxed">
               Live concerts at the MP Centre, evening bonfires, sizzling barbecue zones, and a private movie theatre.
             </p>
           </div>
 
-          <div className="rounded-2xl border-l-4 border-l-[#42732E] border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-[#EEF1DE] flex items-center justify-center mb-3 text-[#42732E]">
-              <Sparkles className="size-5" />
+          <div className="card-glass p-7 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <Sparkles className="size-6 text-[#2B5738]" />
             </div>
-            <h3 className="font-heading text-lg font-bold text-[#134630] mb-1">Holistic Wellness</h3>
-            <p className="text-[#134630]/80 text-xs sm:text-sm leading-relaxed">
+            <h3 className="font-heading text-lg font-bold text-[#143224] mb-1.5">Holistic Wellness</h3>
+            <p className="text-[#143224]/80 text-xs sm:text-sm leading-relaxed">
               Premium spa and salon, 4 swimming pools, high-standard gym, and quiet nature trails through greenery.
             </p>
           </div>
         </div>
 
         {/* Interactive Zone Explorer Tabs */}
-        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-10 shadow-sm mb-20">
+        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FFFFFF] p-6 sm:p-10 shadow-sm mb-20">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#708564]/20 pb-6 mb-8">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#42732E]">
@@ -185,7 +185,7 @@ export default function ResortZonesSection() {
                     onClick={() => setActiveZone(z.id)}
                     className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 ${isActive
                       ? "bg-[#42732E] text-white shadow-md scale-105"
-                      : "bg-[#EEF1DE] text-[#134630] hover:bg-[#708564]/20"
+                      : "bg-[#F7F5EE] text-[#134630] hover:bg-[#708564]/20"
                       }`}
                   >
                     <ZoneIcon className="size-4" />
@@ -208,7 +208,7 @@ export default function ResortZonesSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 text-white">
-                <span className="inline-block text-xs uppercase font-bold tracking-wider text-[#EEF1DE] bg-black/40 backdrop-blur-md px-3 py-1 rounded-full mb-1">
+                <span className="inline-block text-xs uppercase font-bold tracking-wider text-[#F7F5EE] bg-black/40 backdrop-blur-md px-3 py-1 rounded-full mb-1">
                   {currentZone.tagline}
                 </span>
                 <h4 className="font-heading text-2xl font-bold">{currentZone.name}</h4>
@@ -217,7 +217,7 @@ export default function ResortZonesSection() {
 
             {/* Zone Content & Amenities */}
             <div className="lg:col-span-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#42732E] bg-[#EEF1DE] px-3 py-1 rounded-full font-semibold">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#42732E] bg-[#F7F5EE] px-3 py-1 rounded-full font-semibold">
                 Zone Highlights
               </span>
               <h4 className="font-heading text-2xl sm:text-3xl font-bold text-[#134630] mt-2 mb-3">
@@ -253,10 +253,10 @@ export default function ResortZonesSection() {
         </div>
 
         {/* Stay & Villas Showcase */}
-        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 sm:p-12 mb-20">
+        <div className="reveal-slow rounded-3xl border border-[#708564]/20 bg-[#FFFFFF] p-8 sm:p-12 mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#F7F5EE] px-3 py-1 rounded-full">
                 Accommodations
               </span>
               <h3 className="font-heading text-3xl sm:text-4xl font-bold text-[#134630] mt-3 mb-4">
@@ -290,7 +290,7 @@ export default function ResortZonesSection() {
               />
               <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md rounded-xl p-3 text-white text-xs sm:text-sm font-semibold flex items-center justify-between">
                 <span>Lakeside Villa Living &bull; Podunapur</span>
-                <span className="text-[#EEF1DE]">100% Registered</span>
+                <span className="text-[#F7F5EE]">100% Registered</span>
               </div>
             </div>
           </div>
@@ -298,13 +298,13 @@ export default function ResortZonesSection() {
 
         {/* Masterplan Map Callout */}
         <div className="reveal-slow rounded-3xl border border-[#708564]/30 bg-[#134630] p-8 sm:p-12 text-center text-white">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3.5 py-1 rounded-full font-semibold">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#F7F5EE] px-3.5 py-1 rounded-full font-semibold">
             Engineering Layout
           </span>
           <h3 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-3 mb-3">
             Masterplan of the 100+ Acre Estate
           </h3>
-          <p className="text-[#EEF1DE]/80 text-base max-w-2xl mx-auto mb-8">
+          <p className="text-[#F7F5EE]/80 text-base max-w-2xl mx-auto mb-8">
             Engineered around 10 natural water ponds, tea plantation contours, championship golf holes, and sustainable organic farmlands.
           </p>
 
@@ -320,7 +320,7 @@ export default function ResortZonesSection() {
                 <Map className="size-7 text-white" />
               </div>
               <h4 className="font-heading text-2xl sm:text-3xl font-bold">100+ Acre Masterplan Drawing</h4>
-              <p className="text-[#EEF1DE]/90 text-xs sm:text-sm max-w-lg mt-1 mb-5">
+              <p className="text-[#F7F5EE]/90 text-xs sm:text-sm max-w-lg mt-1 mb-5">
                 Official layout maps and architectural floorplans available for review at our Bashundhara Head Office or on-site in Moulvibazar.
               </p>
               <a

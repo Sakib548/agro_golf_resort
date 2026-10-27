@@ -659,6 +659,7 @@ const galleryChapters = [
     id: "sports",
     num: "01",
     title: "Elite Sports & Athletics Arena",
+    shortTitle: "Elite Sports",
     tag: "9-Hole Golf · 4 Football Turfs · Professional Standard",
     Icon: Flag,
     accent: "#42732E",
@@ -667,6 +668,7 @@ const galleryChapters = [
     id: "stay",
     num: "02",
     title: "Living & Stays — Shan Cottages & Waterfront Villas",
+    shortTitle: "Living",
     tag: "Shan Cottages · Waterfront Villas · Presidential Suites",
     Icon: Home,
     accent: "#708564",
@@ -675,6 +677,7 @@ const galleryChapters = [
     id: "agro",
     num: "03",
     title: "Nature, Farmlands & Working Agro Sanctuary",
+    shortTitle: "Nature & Farms",
     tag: "Paddy & Wheat Fields · Tea Garden · Tropical Orchards",
     Icon: Sprout,
     accent: "#42732E",
@@ -683,6 +686,7 @@ const galleryChapters = [
     id: "leisure",
     num: "04",
     title: "Aquatic Leisure, 5-Star Dining & Wellness",
+    shortTitle: "Aquatic & Dining",
     tag: "4 Pools · 10 Ponds · Farm-to-Table · Spa · Theme Park",
     Icon: Waves,
     accent: "#708564",
@@ -691,6 +695,7 @@ const galleryChapters = [
     id: "docs",
     num: "05",
     title: "Masterplan, Architecture & Blueprints",
+    shortTitle: "Masterplan",
     tag: "100+ Acre Blueprint · 3D Master Aerial · Topography Layout",
     Icon: Map,
     accent: "#134630",
@@ -740,12 +745,12 @@ export default function GallerySection() {
   }, [selectedPhoto, handlePrev, handleNext]);
 
   return (
-    <section id="gallery" className="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-[#FBFAF6] text-[#134630]">
+    <section id="gallery" className="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-[#FFFFFF] text-[#134630]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] border border-[#708564]/30 px-3.5 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#F7F5EE] border border-[#708564]/30 px-3.5 py-1 rounded-full">
               Divided Photo Showcase
             </span>
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#134630] mt-3">
@@ -769,21 +774,24 @@ export default function GallerySection() {
           </div>
         </div>
 
-        {/* Quick Filter Pill Dock */}
-        <div className="sticky top-20 z-20 bg-[#FBFAF6]/95 backdrop-blur-md py-4 mb-12 border-y border-[#708564]/20">
-          <div className="flex items-center justify-between gap-4 overflow-x-auto pb-1 scrollbar-none">
-            <div className="flex flex-wrap items-center gap-2">
+        {/* Quick Filter Pill Dock - Edge-to-Edge Opaque Cream Navigation */}
+        <div id="gallery-nav" className="sticky top-[64px] sm:top-[68px] z-30 bg-[#F7F5EE] py-3 mb-10 border-b border-[#708564]/20 shadow-xs -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-3 overflow-x-auto pb-1 scrollbar-none">
+            <div className="flex items-center gap-2 flex-nowrap shrink-0">
               <button
                 type="button"
                 onClick={() => setActiveTab("all")}
-                className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-bold transition-all duration-200 ${activeTab === "all"
-                    ? "bg-[#42732E] text-white shadow-md scale-105"
-                    : "bg-[#FBFAF6] border border-[#708564]/25 text-[#134630] hover:bg-[#EEF1DE]"
-                  }`}
+                className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-200 ${
+                  activeTab === "all"
+                    ? "bg-[#42732E] text-white font-semibold border border-[#42732E] shadow-sm"
+                    : "bg-[#FFFFFF] border border-[#708564]/30 text-[#134630] font-medium hover:bg-[#F7F5EE] hover:border-[#708564]/50"
+                }`}
               >
-                <Sparkles className="size-4" />
+                <Sparkles className={`size-3.5 shrink-0 ${activeTab === "all" ? "text-white" : "text-[#42732E]"}`} />
                 <span>All Chapters</span>
-                <span className="opacity-70 text-[11px]">({allGalleryPhotos.length})</span>
+                <span className={`text-[11px] font-mono ${activeTab === "all" ? "text-white/80" : "text-[#708564]"}`}>
+                  ({allGalleryPhotos.length})
+                </span>
               </button>
 
               {galleryChapters.map((ch) => {
@@ -796,14 +804,17 @@ export default function GallerySection() {
                     key={ch.id}
                     type="button"
                     onClick={() => setActiveTab(ch.id)}
-                    className={`inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 ${isActive
-                        ? "bg-[#42732E] text-white shadow-md scale-105 font-bold"
-                        : "bg-[#FBFAF6] border border-[#708564]/25 text-[#134630] hover:bg-[#EEF1DE]"
-                      }`}
+                    className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-200 ${
+                      isActive
+                        ? "bg-[#42732E] text-white font-semibold border border-[#42732E] shadow-sm"
+                        : "bg-[#FFFFFF] border border-[#708564]/30 text-[#134630] font-medium hover:bg-[#F7F5EE] hover:border-[#708564]/50"
+                    }`}
                   >
-                    <ChapterIcon className="size-3.5 shrink-0" />
-                    <span>{ch.num}. {ch.title.split("—")[0].split("&")[0].trim()}</span>
-                    <span className="opacity-60 text-[11px]">({count})</span>
+                    <ChapterIcon className={`size-3.5 shrink-0 ${isActive ? "text-white" : "text-[#42732E]"}`} />
+                    <span>{ch.num}. {ch.shortTitle}</span>
+                    <span className={`text-[11px] font-mono ${isActive ? "text-white/80" : "text-[#708564]"}`}>
+                      ({count})
+                    </span>
                   </button>
                 );
               })}
@@ -813,7 +824,7 @@ export default function GallerySection() {
               <button
                 type="button"
                 onClick={() => setActiveTab("all")}
-                className="shrink-0 text-xs font-bold text-[#42732E] hover:text-[#134630] underline ml-auto"
+                className="shrink-0 text-xs font-bold text-[#42732E] hover:text-[#134630] underline underline-offset-4 ml-auto whitespace-nowrap"
               >
                 Show All
               </button>
@@ -834,12 +845,12 @@ export default function GallerySection() {
               const standardPhotos = photos.filter((p) => !p.featured);
 
               return (
-                <div key={ch.id} className="pt-2 border-t border-stone-200/90 first:border-t-0">
+                <div key={ch.id} id={`gallery-ch-${ch.id}`} className="scroll-mt-44 pt-2 border-t border-[#708564]/20 first:border-t-0">
                   {/* Chapter Header */}
                   <div className="glassmorphism rounded-3xl p-6 sm:p-8 mb-8 border border-[#708564]/20 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-2.5 mb-1.5">
-                        <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full border border-[#708564]/30">
+                        <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#F7F5EE] px-3 py-1 rounded-full border border-[#708564]/30">
                           Chapter {ch.num}
                         </span>
                         <span className="text-xs uppercase font-bold text-[#708564]">
@@ -889,7 +900,7 @@ export default function GallerySection() {
                         {/* Text Content Layer */}
                         <div className="relative z-10 p-4 sm:p-5 text-white flex flex-col">
                           {/* Title (Full width, bold, radiant) */}
-                          <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#EEF1DE] transition-colors">
+                          <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#F7F5EE] transition-colors">
                             {photo.title}
                           </h4>
 
@@ -939,7 +950,7 @@ export default function GallerySection() {
                 {/* Text Content Layer */}
                 <div className="relative z-10 p-4 sm:p-5 text-white flex flex-col">
                   {/* Title (Full width, bold, radiant) */}
-                  <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#EEF1DE] transition-colors">
+                  <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#F7F5EE] transition-colors">
                     {photo.title}
                   </h4>
 
@@ -963,24 +974,24 @@ export default function GallerySection() {
         <div className="mt-20 rounded-3xl bg-[#134630] text-white p-8 sm:p-12 shadow-2xl border border-[#708564]/30">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="max-w-2xl">
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#EEF1DE] bg-white/10 px-3.5 py-1 rounded-full mb-3">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#F7F5EE] bg-white/10 px-3.5 py-1 rounded-full mb-3">
                 Official Documentation
               </span>
               <h3 className="font-heading text-2xl sm:text-4xl font-extrabold text-white mb-3">
                 View the Complete Master Project Brochure
               </h3>
-              <p className="text-[#EEF1DE]/90 text-sm sm:text-base leading-relaxed mb-4">
+              <p className="text-[#F7F5EE]/90 text-sm sm:text-base leading-relaxed mb-4">
                 Access official masterplan blueprints, deed schedules, and project architectural drawings online.
               </p>
-              <div className="flex flex-wrap gap-2 text-xs text-[#EEF1DE]/80">
+              <div className="flex flex-wrap gap-2 text-xs text-[#F7F5EE]/80">
                 <span className="bg-white/10 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
-                  <Check className="size-3 text-[#EEF1DE]" /> 38MB High-Res Brochure
+                  <Check className="size-3 text-[#F7F5EE]" /> 38MB High-Res Brochure
                 </span>
                 <span className="bg-white/10 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
-                  <Check className="size-3 text-[#EEF1DE]" /> Complete Masterplan Drawings
+                  <Check className="size-3 text-[#F7F5EE]" /> Complete Masterplan Drawings
                 </span>
                 <span className="bg-white/10 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
-                  <Check className="size-3 text-[#EEF1DE]" /> Free Online Preview
+                  <Check className="size-3 text-[#F7F5EE]" /> Free Online Preview
                 </span>
               </div>
             </div>
@@ -1019,10 +1030,10 @@ export default function GallerySection() {
             >
               <div className="flex items-center justify-between px-6 py-4 border-b border-[#708564]/30 bg-[#134630] text-white">
                 <div className="flex items-center gap-3">
-                  <span className="text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full">
+                  <span className="text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#F7F5EE] px-3 py-1 rounded-full">
                     {selectedPhoto.tag}
                   </span>
-                  <span className="text-xs text-[#EEF1DE]/70 font-mono">
+                  <span className="text-xs text-[#F7F5EE]/70 font-mono">
                     {selectedIndex + 1} of {currentList.length}
                   </span>
                 </div>
@@ -1078,7 +1089,7 @@ export default function GallerySection() {
                       {selectedPhoto.title}
                     </h3>
                     {selectedPhoto.desc && (
-                      <p className="text-[#EEF1DE]/80 text-xs sm:text-sm leading-relaxed max-w-3xl">
+                      <p className="text-[#F7F5EE]/80 text-xs sm:text-sm leading-relaxed max-w-3xl">
                         {selectedPhoto.desc}
                       </p>
                     )}

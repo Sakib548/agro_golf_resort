@@ -55,7 +55,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="min-h-screen flex flex-col bg-[#EEF1DE] text-[#134630] antialiased" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-[#F7F5EE] text-[#143224] antialiased" suppressHydrationWarning>
         <SmoothScroll>
           <Navbar />
           <div className="flex-1 min-h-screen flex flex-col">{children}</div>

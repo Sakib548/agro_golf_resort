@@ -56,11 +56,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-[#EEF1DE] text-[#134630]">
+    <section id="contact" className="pt-10 sm:pt-14 pb-20 sm:pb-24 bg-[#F7F5EE] text-[#134630]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="hero-reveal max-w-3xl mb-14">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] border border-[#708564]/30 px-3.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] border border-[#708564]/30 px-3.5 py-1 rounded-full">
             Connect &bull; Visit &bull; Invest
           </span>
           <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#134630] mt-3">
@@ -73,45 +73,45 @@ export default function ContactSection() {
 
         {/* 4 Contact Channels Cards */}
         <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-[#EEF1DE] text-[#42732E] flex items-center justify-center mb-3">
-              <Phone className="size-5" />
+          <div className="card-glass p-7 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <Phone className="size-6 text-[#2B5738]" />
             </div>
-            <h4 className="font-heading text-lg font-bold text-[#134630] mb-2">Direct Hotline</h4>
-            <div className="space-y-1 text-sm font-medium text-[#134630]/85">
-              <p><a href="tel:+8801906896327" className="hover:text-[#42732E] transition-colors">+88 01906-896327</a></p>
-              <p><a href="tel:+8801329669701" className="hover:text-[#42732E] transition-colors">+88 013 2966 9701</a></p>
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-[#EEF1DE] text-[#708564] flex items-center justify-center mb-3">
-              <Mail className="size-5" />
-            </div>
-            <h4 className="font-heading text-lg font-bold text-[#134630] mb-2">Email &amp; Web</h4>
-            <div className="space-y-1 text-sm font-medium text-[#134630]/85">
-              <p><a href="mailto:contact@sampangolfresort.com" className="hover:text-[#42732E] transition-colors">contact@sampangolfresort.com</a></p>
-              <p className="text-[#134630]/60 text-xs">www.sampangolfresort.com</p>
-              <p className="text-[#134630]/60 text-xs">facebook.com/sampangolfresort</p>
+            <h4 className="font-heading text-lg font-bold text-[#143224] mb-2">Direct Hotline</h4>
+            <div className="space-y-1 text-sm font-medium text-[#143224]/85">
+              <p><a href="tel:+8801906896327" className="hover:text-[#2B5738] transition-colors">+88 01906-896327</a></p>
+              <p><a href="tel:+8801329669701" className="hover:text-[#2B5738] transition-colors">+88 013 2966 9701</a></p>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-[#EEF1DE] text-[#42732E] flex items-center justify-center mb-3">
-              <Flag className="size-5" />
+          <div className="card-glass p-7 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <Mail className="size-6 text-[#2B5738]" />
             </div>
-            <h4 className="font-heading text-lg font-bold text-[#134630] mb-2">Resort Site</h4>
-            <p className="text-[#134630]/80 text-sm leading-relaxed">
+            <h4 className="font-heading text-lg font-bold text-[#143224] mb-2">Email &amp; Web</h4>
+            <div className="space-y-1 text-sm font-medium text-[#143224]/85">
+              <p><a href="mailto:contact@sampangolfresort.com" className="hover:text-[#2B5738] transition-colors">contact@sampangolfresort.com</a></p>
+              <p className="text-[#143224]/60 text-xs">www.sampangolfresort.com</p>
+              <p className="text-[#143224]/60 text-xs">facebook.com/sampangolfresort</p>
+            </div>
+          </div>
+
+          <div className="card-glass p-7 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <Flag className="size-6 text-[#2B5738]" />
+            </div>
+            <h4 className="font-heading text-lg font-bold text-[#143224] mb-2">Resort Site</h4>
+            <p className="text-[#143224]/80 text-sm leading-relaxed">
               Dhaka-Sylhet Highway, Sylhet Division, Bangladesh.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-6 shadow-sm">
-            <div className="size-10 rounded-xl bg-[#EEF1DE] text-[#134630] flex items-center justify-center mb-3">
-              <Building2 className="size-5" />
+          <div className="card-glass p-7 transition-all duration-300">
+            <div className="icon-glass size-14 mb-5">
+              <Building2 className="size-6 text-[#2B5738]" />
             </div>
-            <h4 className="font-heading text-lg font-bold text-[#134630] mb-2">Head Office</h4>
-            <p className="text-[#134630]/80 text-sm leading-relaxed">
+            <h4 className="font-heading text-lg font-bold text-[#143224] mb-2">Head Office</h4>
+            <p className="text-[#143224]/80 text-sm leading-relaxed">
               Sampan 21st Century, House-284, Block-B, Road-1/A, Bashundhara R/A, Dhaka.
             </p>
           </div>
@@ -120,14 +120,14 @@ export default function ContactSection() {
         {/* Main Grid: Enquiry Form & Interactive FAQ Accordion */}
         <div className="reveal-slow grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
           {/* Interactive Form */}
-          <div className="lg:col-span-6 rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-8 sm:p-10 shadow-sm">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#42732E] bg-[#EEF1DE] px-3 py-1 rounded-full font-semibold">
+          <div className="lg:col-span-6 card-glass p-8 sm:p-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#2B5738] bg-[#FFFFFF]/80 backdrop-blur-md px-3.5 py-1 rounded-full font-semibold border border-white/60">
               Fast Response
             </span>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#134630] mt-2 mb-2">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#143224] mt-2 mb-2">
               Send an enquiry
             </h3>
-            <p className="text-[#134630]/80 text-sm mb-6">
+            <p className="text-[#143224]/80 text-sm mb-6">
               Fill in your details below to request the share prospectus, price breakdown, or book a guided resort visit.
             </p>
 
@@ -200,7 +200,7 @@ export default function ContactSection() {
               </button>
 
               {submitted && (
-                <div className="rounded-xl bg-[#EEF1DE] border border-[#42732E]/40 p-3 text-xs text-[#134630] font-medium text-center">
+                <div className="rounded-xl bg-[#F7F5EE] border border-[#42732E]/40 p-3 text-xs text-[#134630] font-medium text-center">
                   Thank you! Opening your email client to dispatch the enquiry directly to our management desk.
                 </div>
               )}
@@ -209,7 +209,7 @@ export default function ContactSection() {
 
           {/* Interactive FAQs Accordion */}
           <div className="lg:col-span-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#42732E] bg-[#EEF1DE] px-3 py-1 rounded-full font-semibold">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#42732E] bg-[#F7F5EE] px-3 py-1 rounded-full font-semibold">
               Quick Answers
             </span>
             <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#134630] mt-2 mb-2">
@@ -225,12 +225,12 @@ export default function ContactSection() {
                 return (
                   <div
                     key={idx}
-                    className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] overflow-hidden shadow-sm transition-all"
+                    className="rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] overflow-hidden shadow-sm transition-all"
                   >
                     <button
                       type="button"
                       onClick={() => setOpenFaq(isOpen ? null : idx)}
-                      className="w-full flex items-center justify-between p-5 text-left font-heading text-base font-bold text-[#134630] hover:bg-[#EEF1DE]/40 transition-colors"
+                      className="w-full flex items-center justify-between p-5 text-left font-heading text-base font-bold text-[#134630] hover:bg-[#F7F5EE]/40 transition-colors"
                     >
                       <span>{item.question}</span>
                       <span className="ml-4 text-xs font-mono font-bold text-[#42732E]">

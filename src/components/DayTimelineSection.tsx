@@ -64,13 +64,13 @@ const galleryHighlights = [
 
 export default function DayTimelineSection() {
   return (
-    <section className="py-20 bg-[#EEF1DE] text-[#134630]">
+    <section className="py-20 bg-[#F7F5EE] text-[#134630]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Why Owners Choose It */}
         <div className="mb-20">
           <div className="reveal-slow max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#42732E] bg-[#FBFAF6] px-3 py-1 rounded-full border border-[#708564]/30">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#42732E] bg-[#FFFFFF] px-3 py-1 rounded-full border border-[#708564]/30">
               Tangible Value
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#134630] mt-2">
@@ -79,7 +79,7 @@ export default function DayTimelineSection() {
           </div>
 
           <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-2xl border-l-4 border-l-[#42732E] border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-8 shadow-sm">
+            <div className="rounded-2xl border-l-4 border-l-[#42732E] border border-[#708564]/20 bg-[#FFFFFF] p-6 sm:p-8 shadow-sm">
               <span className="text-xs font-bold text-[#42732E] uppercase tracking-wider">Sub-Kabula Security</span>
               <h3 className="font-heading text-2xl font-bold text-[#134630] mt-2 mb-3">Land you hold</h3>
               <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
@@ -87,7 +87,7 @@ export default function DayTimelineSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-l-4 border-l-[#708564] border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-8 shadow-sm">
+            <div className="rounded-2xl border-l-4 border-l-[#708564] border border-[#708564]/20 bg-[#FFFFFF] p-6 sm:p-8 shadow-sm">
               <span className="text-xs font-bold text-[#708564] uppercase tracking-wider">Compounded Cashflow</span>
               <h3 className="font-heading text-2xl font-bold text-[#134630] mt-2 mb-3">Two income streams</h3>
               <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
@@ -95,7 +95,7 @@ export default function DayTimelineSection() {
               </p>
             </div>
 
-            <div className="rounded-2xl border-l-4 border-l-[#134630] border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-8 shadow-sm">
+            <div className="rounded-2xl border-l-4 border-l-[#134630] border border-[#708564]/20 bg-[#FFFFFF] p-6 sm:p-8 shadow-sm">
               <span className="text-xs font-bold text-[#134630] uppercase tracking-wider">Established Group</span>
               <h3 className="font-heading text-2xl font-bold text-[#134630] mt-2 mb-3">Proven track record</h3>
               <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
@@ -109,7 +109,7 @@ export default function DayTimelineSection() {
         <div className="mb-20">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#134630] bg-[#FBFAF6] px-3 py-1 rounded-full border border-[#708564]/30">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#134630] bg-[#FFFFFF] px-3 py-1 rounded-full border border-[#708564]/30">
                 Resort Gallery
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-[#134630] mt-2">
@@ -129,7 +129,7 @@ export default function DayTimelineSection() {
             {galleryHighlights.map((img) => (
               <div
                 key={img.title}
-                className="group relative overflow-hidden rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
                   <Image
@@ -141,7 +141,7 @@ export default function DayTimelineSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#EEF1DE]">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#F7F5EE]">
                     {img.tag}
                   </span>
                   <h4 className="font-heading text-base font-bold leading-tight mt-0.5">
@@ -159,7 +159,7 @@ export default function DayTimelineSection() {
             Facilities at a glance
           </h3>
           <div className="reveal-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="rounded-xl border border-[#708564]/20 bg-[#FBFAF6] p-5 shadow-xs">
+            <div className="rounded-xl border border-[#708564]/20 bg-[#FFFFFF] p-5 shadow-xs">
               <span className="font-bold text-[#42732E] text-sm flex items-center gap-1.5 mb-2">
                 <Flag className="size-4" />
                 <span>Sports &amp; Golf</span>
@@ -172,7 +172,7 @@ export default function DayTimelineSection() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-[#708564]/20 bg-[#FBFAF6] p-5 shadow-xs">
+            <div className="rounded-xl border border-[#708564]/20 bg-[#FFFFFF] p-5 shadow-xs">
               <span className="font-bold text-[#42732E] text-sm flex items-center gap-1.5 mb-2">
                 <Waves className="size-4" />
                 <span>Aquatics &amp; Wellness</span>
@@ -185,7 +185,7 @@ export default function DayTimelineSection() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-[#708564]/20 bg-[#FBFAF6] p-5 shadow-xs">
+            <div className="rounded-xl border border-[#708564]/20 bg-[#FFFFFF] p-5 shadow-xs">
               <span className="font-bold text-[#42732E] text-sm flex items-center gap-1.5 mb-2">
                 <Home className="size-4" />
                 <span>Stay &amp; Living</span>
@@ -198,7 +198,7 @@ export default function DayTimelineSection() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-[#708564]/20 bg-[#FBFAF6] p-5 shadow-xs">
+            <div className="rounded-xl border border-[#708564]/20 bg-[#FFFFFF] p-5 shadow-xs">
               <span className="font-bold text-[#42732E] text-sm flex items-center gap-1.5 mb-2">
                 <Sprout className="size-4" />
                 <span>Eco &amp; Agri</span>
@@ -215,11 +215,11 @@ export default function DayTimelineSection() {
       </div>
 
       {/* "The Village Will Be the City" Band - Slow Reveal */}
-      <div className="reveal-slow bg-[#134630] text-[#FBFAF6] py-16 px-4 sm:px-6 lg:px-8 mt-12 relative overflow-hidden border-t border-[#708564]/30">
+      <div className="reveal-slow bg-[#134630] text-[#FFFFFF] py-16 px-4 sm:px-6 lg:px-8 mt-12 relative overflow-hidden border-t border-[#708564]/30">
         <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial from-[#42732E]/20 to-transparent pointer-events-none" />
         <div className="mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
           <div className="max-w-xl">
-            <span className="text-xs uppercase tracking-widest text-[#EEF1DE] font-bold">
+            <span className="text-xs uppercase tracking-widest text-[#F7F5EE] font-bold">
               Sampan Group Philosophy
             </span>
             <blockquote className="font-heading text-3xl sm:text-5xl font-extrabold text-white leading-tight mt-2 mb-4">
@@ -239,7 +239,7 @@ export default function DayTimelineSection() {
             </Link>
             <Link
               href="/portfolio"
-              className="inline-flex items-center justify-center rounded-xl border border-[#EEF1DE]/40 bg-[#FBFAF6]/10 px-8 py-3.5 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] hover:bg-[#FBFAF6]/20 transition-all"
+              className="inline-flex items-center justify-center rounded-xl border border-[#F7F5EE]/40 bg-[#FFFFFF]/10 px-8 py-3.5 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] hover:bg-[#FFFFFF]/20 transition-all"
             >
               See Operating Track Record
             </Link>

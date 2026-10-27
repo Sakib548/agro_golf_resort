@@ -61,6 +61,7 @@ export default function SmoothScroll({
             stagger: 0.08,
             ease: "power2.out",
             delay: 0.05,
+            clearProps: "transform",
           }
         );
       }
@@ -76,6 +77,7 @@ export default function SmoothScroll({
             y: 0,
             duration: 0.75,
             ease: "power2.out",
+            clearProps: "transform",
             scrollTrigger: {
               trigger: el,
               start: "top 90%",
@@ -99,6 +101,7 @@ export default function SmoothScroll({
               duration: 0.65,
               stagger: 0.07,
               ease: "power2.out",
+              clearProps: "transform",
               scrollTrigger: {
                 trigger: container,
                 start: "top 88%",

@@ -40,7 +40,7 @@ export default function EndorsementBar() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full bg-[#FBFAF6] pt-16 pb-24 md:pt-20 md:pb-28 border-t border-[#708564]/20 border-b border-[#708564]/20 overflow-hidden text-[#134630]"
+      className="relative w-full bg-[#FFFFFF] pt-16 pb-24 md:pt-20 md:pb-28 border-t border-[#708564]/20 border-b border-[#708564]/20 overflow-hidden text-[#134630]"
     >
       {/* Brand Ambient Lighting */}
       <div className="pointer-events-none absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-[#708564]/10 blur-[150px] rounded-full" />
@@ -50,7 +50,7 @@ export default function EndorsementBar() {
 
         {/* ─── Brand Statement ─── */}
         <div className="flex flex-col items-center text-center mb-14 md:mb-16">
-          <div className="endorsement-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#708564]/30 bg-[#EEF1DE] shadow-2xs text-[10px] font-mono tracking-wider uppercase text-[#134630] mb-6">
+          <div className="endorsement-anim inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#708564]/30 bg-[#F7F5EE] shadow-2xs text-[10px] font-mono tracking-wider uppercase text-[#134630] mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#42732E]" />
             <span className="w-1.5 h-1.5 rounded-full bg-[#708564]" />
             <span className="w-1.5 h-1.5 rounded-full bg-[#134630]" />
@@ -62,7 +62,7 @@ export default function EndorsementBar() {
         </div>
 
         {/* ─── Architectural Logo Grid ─── */}
-        <div className="endorsement-anim border border-[#708564]/20 rounded-2xl grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#708564]/20 bg-[#FBFAF6] shadow-xl overflow-hidden">
+        <div className="endorsement-anim border border-[#708564]/20 rounded-2xl grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#708564]/20 bg-[#FFFFFF] shadow-xl overflow-hidden">
           {SISTER_CONCERNS.map((concern, idx) => {
             const hoverBorder =
               idx === 0
@@ -77,7 +77,7 @@ export default function EndorsementBar() {
                 href={concern.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex flex-col items-center justify-center p-10 sm:p-14 md:p-16 transition-all duration-500 hover:bg-[#EEF1DE]/40"
+                className="group relative flex flex-col items-center justify-center p-10 sm:p-14 md:p-16 transition-all duration-500 hover:bg-[#F7F5EE]/40"
               >
                 {/* Hover Accent Line (Top) matching brand color */}
                 <span className={`absolute top-0 left-0 right-0 h-[2.5px] ${hoverBorder} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left`} />

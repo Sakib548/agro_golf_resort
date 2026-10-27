@@ -106,11 +106,11 @@ export default function MembershipSection() {
   const [activeCardTab, setActiveCardTab] = useState<"permanent" | "member">("permanent");
 
   return (
-    <section id="membership" className="py-24 bg-[#EEF1DE] text-[#134630] border-t border-[#708564]/20">
+    <section id="membership" className="py-24 bg-[#F7F5EE] text-[#134630] border-t border-[#708564]/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="hero-reveal max-w-3xl mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3.5 py-1 rounded-full border border-[#708564]/30">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] px-3.5 py-1 rounded-full border border-[#708564]/30">
             Elite Privileges &amp; Physical Cards
           </span>
           <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#134630] mt-3">
@@ -126,7 +126,7 @@ export default function MembershipSection() {
            ======================================================== */}
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {/* Card 1: Official Numbered Loyalty Card */}
-          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+          <div className="rounded-3xl border border-[#708564]/20 bg-[#FFFFFF] p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
             <div>
               <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-[#708564]/30 shadow-md">
                 <Image
@@ -150,7 +150,7 @@ export default function MembershipSection() {
               </div>
 
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs uppercase font-extrabold text-[#42732E] tracking-wider bg-[#EEF1DE] px-2.5 py-0.5 rounded-full border border-[#708564]/20">
+                <span className="text-xs uppercase font-extrabold text-[#42732E] tracking-wider bg-[#F7F5EE] px-2.5 py-0.5 rounded-full border border-[#708564]/20">
                   Physical Loyalty Card
                 </span>
                 <span className="text-[11px] font-mono font-bold text-[#42732E]">10%–50% Off</span>
@@ -166,7 +166,7 @@ export default function MembershipSection() {
             <button
               type="button"
               onClick={() => setSelectedCredential(credentialsData[0])}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-4 py-2.5 text-xs font-bold text-[#134630] transition-all shadow-xs"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-4 py-2.5 text-xs font-bold text-[#134630] transition-all shadow-xs"
             >
               <Eye className="size-3.5" />
               <span>Inspect Loyalty Card Details</span>
@@ -174,7 +174,7 @@ export default function MembershipSection() {
           </div>
 
           {/* Card 2: Certificate of Member */}
-          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+          <div className="rounded-3xl border border-[#708564]/20 bg-[#FFFFFF] p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
             <div>
               <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-[#708564]/30 shadow-md">
                 <Image
@@ -198,7 +198,7 @@ export default function MembershipSection() {
               </div>
 
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs uppercase font-extrabold text-[#708564] tracking-wider bg-[#EEF1DE] px-2.5 py-0.5 rounded-full border border-[#708564]/20">
+                <span className="text-xs uppercase font-extrabold text-[#708564] tracking-wider bg-[#F7F5EE] px-2.5 py-0.5 rounded-full border border-[#708564]/20">
                   Club Accreditation
                 </span>
                 <span className="text-[11px] font-mono font-bold text-[#134630]">Accredited</span>
@@ -214,7 +214,7 @@ export default function MembershipSection() {
             <button
               type="button"
               onClick={() => setSelectedCredential(credentialsData[2])}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-4 py-2.5 text-xs font-bold text-[#134630] transition-all shadow-xs"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-4 py-2.5 text-xs font-bold text-[#134630] transition-all shadow-xs"
             >
               <Eye className="size-3.5" />
               <span>Inspect Certificate Details</span>
@@ -222,7 +222,7 @@ export default function MembershipSection() {
           </div>
 
           {/* Card 3: Certificate of Share (Sub-Kabula) */}
-          <div className="rounded-3xl border border-[#708564]/20 bg-[#FBFAF6] p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
+          <div className="rounded-3xl border border-[#708564]/20 bg-[#FFFFFF] p-6 sm:p-7 shadow-sm flex flex-col justify-between group hover:shadow-xl transition-all duration-300">
             <div>
               <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-900 mb-5 border border-[#708564]/30 shadow-md">
                 <Image
@@ -246,7 +246,7 @@ export default function MembershipSection() {
               </div>
 
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs uppercase font-extrabold text-[#42732E] tracking-wider bg-[#EEF1DE] px-2.5 py-0.5 rounded-full border border-[#708564]/20">
+                <span className="text-xs uppercase font-extrabold text-[#42732E] tracking-wider bg-[#F7F5EE] px-2.5 py-0.5 rounded-full border border-[#708564]/20">
                   100% Sub-Kabula Title
                 </span>
                 <span className="text-[11px] font-mono font-bold text-[#708564]">Deeded Share</span>
@@ -262,7 +262,7 @@ export default function MembershipSection() {
             <button
               type="button"
               onClick={() => setSelectedCredential(credentialsData[3])}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-4 py-2.5 text-xs font-bold text-[#134630] transition-all shadow-xs"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 hover:bg-[#42732E] hover:text-white px-4 py-2.5 text-xs font-bold text-[#134630] transition-all shadow-xs"
             >
               <Eye className="size-3.5" />
               <span>Inspect Share Deed Details</span>
@@ -276,7 +276,7 @@ export default function MembershipSection() {
         <div className="reveal-slow rounded-3xl bg-[#134630] text-white p-8 sm:p-12 mb-20 shadow-xl border border-[#708564]/40 relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
             <div className="lg:col-span-7">
-              <span className="text-xs uppercase tracking-widest text-[#EEF1DE] font-bold">
+              <span className="text-xs uppercase tracking-widest text-[#F7F5EE] font-bold">
                 Physical Card Accreditation
               </span>
               <h3 className="font-heading text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">
@@ -292,7 +292,7 @@ export default function MembershipSection() {
                     <h4 className="font-heading text-base font-bold text-white">
                       1. Golf &amp; Wellness Club Membership Card
                     </h4>
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#EEF1DE] bg-white/10 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#F7F5EE] bg-white/10 px-2.5 py-0.5 rounded-full">
                       Club Tier
                     </span>
                   </div>
@@ -306,7 +306,7 @@ export default function MembershipSection() {
                     <h4 className="font-heading text-base font-bold text-white">
                       2. Express Highway Club VIP Loyalty Card
                     </h4>
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#EEF1DE] bg-white/10 px-2.5 py-0.5 rounded-full">
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#F7F5EE] bg-white/10 px-2.5 py-0.5 rounded-full">
                       VIP Elite Tier
                     </span>
                   </div>
@@ -371,7 +371,7 @@ export default function MembershipSection() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-95 transition-opacity flex items-end justify-between p-5">
                   <div>
-                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#EEF1DE] block">
+                    <span className="text-[10px] uppercase font-bold tracking-wider text-[#F7F5EE] block">
                       {activeCardTab === "permanent" ? "VIP ELITE CARD" : "MEMBER STANDING"}
                     </span>
                     <span className="font-heading text-sm font-bold text-white">
@@ -398,7 +398,7 @@ export default function MembershipSection() {
         {/* Partners Privileges Table */}
         <div className="reveal-slow mb-14">
           <div className="max-w-2xl mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3.5 py-1 rounded-full border border-[#708564]/30">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] px-3.5 py-1 rounded-full border border-[#708564]/30">
               Reciprocal Privileges
             </span>
             <h3 className="font-heading text-3xl font-bold text-[#134630] mt-2">
@@ -409,10 +409,10 @@ export default function MembershipSection() {
             </p>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] shadow-sm">
+          <div className="overflow-x-auto rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] shadow-sm">
             <table className="w-full min-w-[580px] text-left border-collapse text-sm">
               <thead>
-                <tr className="bg-[#EEF1DE] border-b border-[#708564]/20 text-[#134630] font-heading text-xs uppercase tracking-wider">
+                <tr className="bg-[#F7F5EE] border-b border-[#708564]/20 text-[#134630] font-heading text-xs uppercase tracking-wider">
                   <th className="p-4 sm:p-5">Partner &amp; Affiliate</th>
                   <th className="p-4 sm:p-5">Exclusive Benefit</th>
                   <th className="p-4 sm:p-5 text-right">Network Category</th>
@@ -420,7 +420,7 @@ export default function MembershipSection() {
               </thead>
               <tbody className="divide-y divide-[#708564]/10 text-stone-700">
                 {partnersData.map((row) => (
-                  <tr key={row.partner} className="hover:bg-[#EEF1DE]/40 transition-colors">
+                  <tr key={row.partner} className="hover:bg-[#F7F5EE]/40 transition-colors">
                     <td className="p-4 sm:p-5 font-bold text-[#134630]">
                       {row.partner}
                     </td>
@@ -428,7 +428,7 @@ export default function MembershipSection() {
                       {row.benefit}
                     </td>
                     <td className="p-4 sm:p-5 text-right">
-                      <span className="inline-block bg-[#EEF1DE] text-[#42732E] border border-[#708564]/20 text-xs font-semibold px-2.5 py-1 rounded-full">
+                      <span className="inline-block bg-[#F7F5EE] text-[#42732E] border border-[#708564]/20 text-xs font-semibold px-2.5 py-1 rounded-full">
                         {row.badge}
                       </span>
                     </td>
@@ -455,10 +455,10 @@ export default function MembershipSection() {
             {/* Modal Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-[#708564]/30 bg-[#134630]">
               <div className="flex items-center gap-3">
-                <span className="text-xs uppercase font-extrabold tracking-widest text-[#EEF1DE] bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                <span className="text-xs uppercase font-extrabold tracking-widest text-[#F7F5EE] bg-white/10 px-3 py-1 rounded-full border border-white/10">
                   {selectedCredential.badge}
                 </span>
-                <span className="text-xs text-[#EEF1DE]/80 font-semibold hidden sm:inline">
+                <span className="text-xs text-[#F7F5EE]/80 font-semibold hidden sm:inline">
                   Verified Physical Credential
                 </span>
               </div>
@@ -487,7 +487,7 @@ export default function MembershipSection() {
             {/* Modal Footer Description */}
             <div className="p-6 bg-[#134630] border-t border-[#708564]/30 space-y-3">
               <div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FBFAF6]">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FFFFFF]">
                   {selectedCredential.title}
                 </h3>
                 <p className="text-stone-300 text-xs sm:text-sm mt-1 leading-relaxed">
@@ -497,7 +497,7 @@ export default function MembershipSection() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 border-t border-[#708564]/20">
                 {selectedCredential.highlights.map((h, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs text-[#EEF1DE]">
+                  <div key={i} className="flex items-center gap-2 text-xs text-[#F7F5EE]">
                     <Check className="size-3.5 text-[#42732E] shrink-0" />
                     <span>{h}</span>
                   </div>

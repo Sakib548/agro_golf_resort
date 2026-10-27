@@ -680,6 +680,7 @@ interface ChapterMeta {
   id: "sports" | "stay" | "agro" | "leisure" | "docs";
   chapterNum: string;
   titleEn: string;
+  navLabel: string;
   tagline: string;
   accentColor: string;
   badgeBg: string;
@@ -693,9 +694,10 @@ const chapters: ChapterMeta[] = [
     id: "sports",
     chapterNum: "01",
     titleEn: "Elite Sports & Athletics Arena",
+    navLabel: "Elite Sports",
     tagline: "International Standard Championship Facilities",
     accentColor: "#42732E",
-    badgeBg: "bg-[#EEF1DE] text-[#134630] border-[#708564]/30",
+    badgeBg: "bg-[#F7F5EE] text-[#134630] border-[#708564]/30",
     badgeText: "9-Hole Golf · 4 Football Turfs · Professional Standard",
     Icon: Flag,
     highlights: [
@@ -710,9 +712,10 @@ const chapters: ChapterMeta[] = [
     id: "stay",
     chapterNum: "02",
     titleEn: "Living & Stays — Shan Cottages & Luxury Villas",
+    navLabel: "Living",
     tagline: "Authentic Handcrafted Cottages & Waterfront Living",
     accentColor: "#708564",
-    badgeBg: "bg-[#EEF1DE] text-[#134630] border-[#708564]/30",
+    badgeBg: "bg-[#F7F5EE] text-[#134630] border-[#708564]/30",
     badgeText: "Shan Cottages · Waterfront Villas · Presidential Suites",
     Icon: Home,
     highlights: [
@@ -727,9 +730,10 @@ const chapters: ChapterMeta[] = [
     id: "agro",
     chapterNum: "03",
     titleEn: "Nature, Farmlands & Working Agro Sanctuary",
+    navLabel: "Nature & Farms",
     tagline: "100+ Acres of Commercial Farmland & Tea Gardens",
     accentColor: "#42732E",
-    badgeBg: "bg-[#EEF1DE] text-[#134630] border-[#708564]/30",
+    badgeBg: "bg-[#F7F5EE] text-[#134630] border-[#708564]/30",
     badgeText: "Paddy & Wheat Fields · Tea Garden · Tropical Orchards",
     Icon: Sprout,
     highlights: [
@@ -744,9 +748,10 @@ const chapters: ChapterMeta[] = [
     id: "leisure",
     chapterNum: "04",
     titleEn: "Aquatic Leisure, 5-Star Dining & Wellness",
+    navLabel: "Aquatic & Dining",
     tagline: "10 Natural Ponds, 4 Pools, Theme Park & Spa",
     accentColor: "#134630",
-    badgeBg: "bg-[#EEF1DE] text-[#134630] border-[#708564]/30",
+    badgeBg: "bg-[#F7F5EE] text-[#134630] border-[#708564]/30",
     badgeText: "4 Pools · 10 Ponds · Farm-to-Table · Spa · Theme Park",
     Icon: Waves,
     highlights: [
@@ -761,9 +766,10 @@ const chapters: ChapterMeta[] = [
     id: "docs",
     chapterNum: "05",
     titleEn: "Masterplan, Architecture & Blueprints",
+    navLabel: "Masterplan",
     tagline: "Official 100+ Acre Engineering Layout & 3D Master Visuals",
     accentColor: "#134630",
-    badgeBg: "bg-[#EEF1DE] text-[#134630] border-[#708564]/30",
+    badgeBg: "bg-[#F7F5EE] text-[#134630] border-[#708564]/30",
     badgeText: "100+ Acre Blueprint · 3D Master Aerial · Topography Layout",
     Icon: Map,
     highlights: [
@@ -820,6 +826,27 @@ export default function ResortPageContent() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [selectedPhoto, handlePrev, handleNext]);
 
+  const handleCategorySelect = (tabId: string) => {
+    setActiveTab(tabId);
+    if (tabId === "all") {
+      const el = document.getElementById("gallery");
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 75;
+        if (window.pageYOffset > top + 150) {
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      }
+    } else {
+      const el = document.getElementById("gallery-content");
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 130;
+        if (window.pageYOffset > top + 100) {
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      }
+    }
+  };
+
   const scrollToChapter = (chapterId: string) => {
     setActiveTab("all");
     setTimeout(() => {
@@ -831,7 +858,7 @@ export default function ResortPageContent() {
   };
 
   return (
-    <div className="bg-[#EEF1DE] text-[#134630] relative selection:bg-[#708564]/30 selection:text-[#134630]">
+    <div className="bg-[#F7F5EE] text-[#134630] relative selection:bg-[#708564]/30 selection:text-[#134630]">
       {/* Background ambient lighting glows for luxurious glass refraction */}
       <div className="absolute top-20 right-0 size-[600px] rounded-full bg-[#708564]/15 blur-3xl pointer-events-none" />
       <div className="absolute top-[45%] left-0 size-[650px] rounded-full bg-[#42732E]/10 blur-3xl pointer-events-none" />
@@ -843,7 +870,7 @@ export default function ResortPageContent() {
       <section className="relative bg-[#134630] text-white pt-12 pb-20 overflow-hidden border-b border-[#708564]/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-widest font-bold text-[#EEF1DE] border border-white/15 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-widest font-bold text-[#F7F5EE] border border-white/15 mb-4">
               <span className="size-2 rounded-full bg-[#42732E] animate-pulse" />
               <span>Podunapur, Moulvibazar Sadar &bull; 100+ Acres</span>
             </div>
@@ -869,7 +896,7 @@ export default function ResortPageContent() {
             {/* Floating Glass Banner */}
             <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 glassmorphism-dark rounded-2xl p-5 sm:p-7 shadow-2xl flex flex-col sm:flex-row sm:items-end justify-between gap-5 text-white border border-white/20">
               <div className="max-w-2xl">
-                <span className="inline-block text-[11px] uppercase font-extrabold tracking-wider text-[#EEF1DE] bg-white/15 backdrop-blur-md px-3 py-1 rounded-full mb-2">
+                <span className="inline-block text-[11px] uppercase font-extrabold tracking-wider text-[#F7F5EE] bg-white/15 backdrop-blur-md px-3 py-1 rounded-full mb-2">
                   Official 3D Master Aerial Overview
                 </span>
                 <h2 className="font-heading text-xl sm:text-2xl lg:text-3xl font-extrabold text-white leading-tight">
@@ -905,7 +932,7 @@ export default function ResortPageContent() {
       <section className="py-20 border-b border-stone-200/90">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] px-3.5 py-1 rounded-full border border-[#708564]/20">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#F7F5EE] px-3.5 py-1 rounded-full border border-[#708564]/20">
               Core Lifestyle Pillars
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#134630] mt-3">
@@ -918,7 +945,7 @@ export default function ResortPageContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#42732E] p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-              <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 flex items-center justify-center mb-4 text-[#42732E]">
+              <div className="size-12 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 flex items-center justify-center mb-4 text-[#42732E]">
                 <Flag className="size-6" />
               </div>
               <h3 className="font-heading text-xl font-bold text-[#134630] mb-2">
@@ -930,7 +957,7 @@ export default function ResortPageContent() {
             </div>
 
             <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#708564] p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-              <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 flex items-center justify-center mb-4 text-[#708564]">
+              <div className="size-12 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 flex items-center justify-center mb-4 text-[#708564]">
                 <UtensilsCrossed className="size-6" />
               </div>
               <h3 className="font-heading text-xl font-bold text-[#134630] mb-2">
@@ -942,7 +969,7 @@ export default function ResortPageContent() {
             </div>
 
             <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#708564] p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-              <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 flex items-center justify-center mb-4 text-[#42732E]">
+              <div className="size-12 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 flex items-center justify-center mb-4 text-[#42732E]">
                 <Music className="size-6" />
               </div>
               <h3 className="font-heading text-xl font-bold text-[#134630] mb-2">
@@ -954,7 +981,7 @@ export default function ResortPageContent() {
             </div>
 
             <div className="glassmorphism rounded-2xl border-l-4 !border-l-[#708564] p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
-              <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 flex items-center justify-center mb-4 text-[#42732E]">
+              <div className="size-12 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 flex items-center justify-center mb-4 text-[#42732E]">
                 <Waves className="size-6" />
               </div>
               <h3 className="font-heading text-xl font-bold text-[#134630] mb-2">
@@ -976,7 +1003,7 @@ export default function ResortPageContent() {
           <div className="glassmorphism rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-200/80">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-6">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#EEF1DE] border border-[#708564]/30 px-3.5 py-1 rounded-full">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#F7F5EE] border border-[#708564]/30 px-3.5 py-1 rounded-full">
                   Heritage Living
                 </span>
                 <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#134630] mt-3 mb-4">
@@ -990,13 +1017,13 @@ export default function ResortPageContent() {
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 text-center mb-8">
-                  <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-4 shadow-sm">
+                  <div className="rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] p-4 shadow-sm">
                     <span className="block font-heading text-xl sm:text-2xl font-bold text-[#42732E]">
                       100% Sub-Kabula
                     </span>
                     <span className="text-xs text-[#708564] font-medium">Deeded Villa Ownership</span>
                   </div>
-                  <div className="rounded-2xl border border-[#708564]/20 bg-[#FBFAF6] p-4 shadow-sm">
+                  <div className="rounded-2xl border border-[#708564]/20 bg-[#FFFFFF] p-4 shadow-sm">
                     <span className="block font-heading text-xl sm:text-2xl font-bold text-[#708564]">
                       Managed 24/7
                     </span>
@@ -1014,7 +1041,7 @@ export default function ResortPageContent() {
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-xl border border-[#708564]/30 bg-[#FBFAF6] px-5 py-3.5 text-xs uppercase tracking-wider font-bold text-[#134630] hover:bg-[#EEF1DE] transition-colors shadow-sm"
+                    className="inline-flex items-center gap-2 rounded-xl border border-[#708564]/30 bg-[#FFFFFF] px-5 py-3.5 text-xs uppercase tracking-wider font-bold text-[#134630] hover:bg-[#F7F5EE] transition-colors shadow-sm"
                   >
                     <span>Book a Site Inspection</span>
                   </Link>
@@ -1039,7 +1066,7 @@ export default function ResortPageContent() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
                   <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <span className="text-[10px] uppercase font-bold text-[#EEF1DE] block">
+                    <span className="text-[10px] uppercase font-bold text-[#F7F5EE] block">
                       Waterfront
                     </span>
                     <span className="font-heading text-sm font-bold">Lakeside Luxury Villas</span>
@@ -1064,7 +1091,7 @@ export default function ResortPageContent() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
                   <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <span className="text-[10px] uppercase font-bold text-[#EEF1DE] block">
+                    <span className="text-[10px] uppercase font-bold text-[#F7F5EE] block">
                       Authentic Heritage
                     </span>
                     <span className="font-heading text-sm font-bold">Shan Thatched Cottages</span>
@@ -1087,7 +1114,7 @@ export default function ResortPageContent() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
                   <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <span className="text-[10px] uppercase font-bold text-[#EEF1DE] block">
+                    <span className="text-[10px] uppercase font-bold text-[#F7F5EE] block">
                       5-Star Comfort
                     </span>
                     <span className="font-heading text-sm font-bold">Presidential Suite</span>
@@ -1113,7 +1140,7 @@ export default function ResortPageContent() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
                   <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <span className="text-[10px] uppercase font-bold text-[#EEF1DE] block">
+                    <span className="text-[10px] uppercase font-bold text-[#F7F5EE] block">
                       Fairway View
                     </span>
                     <span className="font-heading text-sm font-bold">Sunset Terrace Lounge</span>
@@ -1130,7 +1157,7 @@ export default function ResortPageContent() {
          ======================================================== */}
       <section className="py-20 border-b border-[#708564]/20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3.5 py-1 rounded-full border border-[#708564]/30">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] px-3.5 py-1 rounded-full border border-[#708564]/30">
             Engineering Layout
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#134630] mt-3 mb-3">
@@ -1149,11 +1176,11 @@ export default function ResortPageContent() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent flex flex-col justify-end p-5 sm:p-10 text-white">
               <div className="rounded-2xl p-6 sm:p-8 max-w-2xl text-left shadow-2xl bg-[#134630]/90 backdrop-blur-md border border-[#708564]/40">
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-3.5 py-1 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] mb-2.5">
+                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-3.5 py-1 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] mb-2.5">
                   <Map className="size-4 text-[#42732E]" />
                   <span>Official Masterplan Blueprint Drawing</span>
                 </div>
-                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#FBFAF6]">
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#FFFFFF]">
                   100+ Acre Architectural Drawing
                 </h3>
                 <p className="text-stone-300 text-xs sm:text-sm mt-1.5 mb-5 leading-relaxed">
@@ -1176,14 +1203,14 @@ export default function ResortPageContent() {
                     href="/brochure.html"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl border border-[#EEF1DE]/40 bg-[#FBFAF6]/10 backdrop-blur-md px-5 py-3 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] hover:bg-[#FBFAF6]/20 transition-all"
+                    className="inline-flex items-center gap-2 rounded-xl border border-[#F7F5EE]/40 bg-[#FFFFFF]/10 backdrop-blur-md px-5 py-3 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] hover:bg-[#FFFFFF]/20 transition-all"
                   >
                     <FileText className="size-4" />
                     <span>View Brochure ↗</span>
                   </a>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 rounded-xl border border-[#EEF1DE]/40 bg-[#FBFAF6]/10 backdrop-blur-md px-5 py-3 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] hover:bg-[#FBFAF6]/20 transition-all"
+                    className="inline-flex items-center gap-2 rounded-xl border border-[#F7F5EE]/40 bg-[#FFFFFF]/10 backdrop-blur-md px-5 py-3 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] hover:bg-[#FFFFFF]/20 transition-all"
                   >
                     <span>Request Blueprint PDF</span>
                   </Link>
@@ -1202,7 +1229,7 @@ export default function ResortPageContent() {
           {/* Main Gallery Headline */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3.5 py-1 rounded-full border border-[#708564]/30">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] px-3.5 py-1 rounded-full border border-[#708564]/30">
                 Divided Photo Gallery
               </span>
               <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#134630] mt-3">
@@ -1214,27 +1241,32 @@ export default function ResortPageContent() {
             </div>
 
             <div className="shrink-0 flex items-center gap-3">
-              <span className="text-xs font-bold text-[#134630] bg-[#FBFAF6] border border-[#708564]/20 px-4 py-2 rounded-full shadow-sm">
+              <span className="text-xs font-bold text-[#134630] bg-[#FFFFFF] border border-[#708564]/20 px-4 py-2 rounded-full shadow-sm">
                 Showing {currentPhotoList.length} Curated Photos
               </span>
             </div>
           </div>
+        </div>
 
-          {/* Quick-Jump / Filter Pill Dock */}
-          <div className="sticky top-20 z-30 bg-[#EEF1DE]/95 backdrop-blur-md py-4 mb-14 border-y border-[#708564]/20 shadow-xs">
-            <div className="flex items-center justify-between gap-4 overflow-x-auto pb-1 scrollbar-none">
-              <div className="flex flex-wrap items-center gap-2">
+        {/* Quick-Jump / Filter Pill Dock - Edge-to-Edge Opaque Cream Navigation */}
+        <div id="gallery-nav" className="sticky top-[64px] sm:top-[68px] z-30 bg-[#F7F5EE] py-3 mb-10 border-b border-[#708564]/20 shadow-xs">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between gap-3 overflow-x-auto pb-1 scrollbar-none">
+              <div className="flex items-center gap-2 flex-nowrap shrink-0">
                 <button
                   type="button"
-                  onClick={() => setActiveTab("all")}
-                  className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs sm:text-sm font-bold transition-all duration-200 ${activeTab === "all"
-                      ? "bg-[#42732E] text-white shadow-md scale-105"
-                      : "bg-[#FBFAF6] border border-[#708564]/30 text-[#134630] hover:bg-[#EEF1DE]"
-                    }`}
+                  onClick={() => handleCategorySelect("all")}
+                  className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-200 ${
+                    activeTab === "all"
+                      ? "bg-[#42732E] text-white font-semibold border border-[#42732E] shadow-sm"
+                      : "bg-[#FFFFFF] border border-[#708564]/30 text-[#134630] font-medium hover:bg-[#F7F5EE] hover:border-[#708564]/50"
+                  }`}
                 >
-                  <Sparkles className="size-4" />
+                  <Sparkles className={`size-3.5 shrink-0 ${activeTab === "all" ? "text-white" : "text-[#42732E]"}`} />
                   <span>All Chapters</span>
-                  <span className="opacity-70 text-[11px]">({galleryPhotos.length})</span>
+                  <span className={`text-[11px] font-mono ${activeTab === "all" ? "text-white/80" : "text-[#708564]"}`}>
+                    ({galleryPhotos.length})
+                  </span>
                 </button>
 
                 {chapters.map((ch) => {
@@ -1246,21 +1278,18 @@ export default function ResortPageContent() {
                     <button
                       key={ch.id}
                       type="button"
-                      onClick={() => {
-                        if (activeTab === "all") {
-                          scrollToChapter(ch.id);
-                        } else {
-                          setActiveTab(ch.id);
-                        }
-                      }}
-                      className={`inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-xs sm:text-sm font-semibold transition-all duration-200 ${isActive
-                          ? "bg-[#42732E] text-white shadow-md scale-105 font-bold"
-                          : "bg-[#FBFAF6] border border-[#708564]/30 text-[#134630] hover:bg-[#EEF1DE]"
-                        }`}
+                      onClick={() => handleCategorySelect(ch.id)}
+                      className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-200 ${
+                        isActive
+                          ? "bg-[#42732E] text-white font-semibold border border-[#42732E] shadow-sm"
+                          : "bg-[#FFFFFF] border border-[#708564]/30 text-[#134630] font-medium hover:bg-[#F7F5EE] hover:border-[#708564]/50"
+                      }`}
                     >
-                      <ChapterIcon className="size-3.5 shrink-0" />
-                      <span>{ch.chapterNum}. {ch.titleEn.split("—")[0].split("&")[0].trim()}</span>
-                      <span className="opacity-60 text-[11px]">({count})</span>
+                      <ChapterIcon className={`size-3.5 shrink-0 ${isActive ? "text-white" : "text-[#42732E]"}`} />
+                      <span>{ch.chapterNum}. {ch.navLabel}</span>
+                      <span className={`text-[11px] font-mono ${isActive ? "text-white/80" : "text-[#708564]"}`}>
+                        ({count})
+                      </span>
                     </button>
                   );
                 })}
@@ -1269,15 +1298,17 @@ export default function ResortPageContent() {
               {activeTab !== "all" && (
                 <button
                   type="button"
-                  onClick={() => setActiveTab("all")}
-                  className="shrink-0 text-xs font-bold text-[#42732E] hover:text-[#365e25] underline underline-offset-4 ml-auto"
+                  onClick={() => handleCategorySelect("all")}
+                  className="shrink-0 text-xs font-bold text-[#42732E] hover:text-[#365e25] underline underline-offset-4 ml-auto whitespace-nowrap"
                 >
                   Show All Chapters
                 </button>
               )}
             </div>
           </div>
+        </div>
 
+        <div id="gallery-content" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* ========================================================
               DIVIDED CHAPTERS RENDERING (In All Mode or Filtered Mode)
              ======================================================== */}
@@ -1291,14 +1322,14 @@ export default function ResortPageContent() {
                   <div
                     key={ch.id}
                     id={`chapter-${ch.id}`}
-                    className="scroll-mt-36 pt-4 border-t border-[#708564]/20 first:border-t-0"
+                    className="scroll-mt-44 pt-4 border-t border-[#708564]/20 first:border-t-0"
                   >
                     {/* Chapter Header Banner */}
                     <div className="glassmorphism rounded-3xl p-6 sm:p-8 mb-8 border border-[#708564]/20 shadow-xs">
                       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                         <div className="max-w-3xl">
                           <div className="flex items-center gap-3 mb-2">
-                            <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full border border-[#708564]/30">
+                            <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#F7F5EE] px-3 py-1 rounded-full border border-[#708564]/30">
                               Chapter {ch.chapterNum}
                             </span>
                             <span className="text-xs uppercase font-bold tracking-wider text-[#708564] font-sans">
@@ -1314,7 +1345,7 @@ export default function ResortPageContent() {
                             {ch.highlights.slice(0, 3).map((hl, i) => (
                               <span
                                 key={i}
-                                className="inline-flex items-center gap-1.5 text-xs text-[#134630] bg-[#FBFAF6] border border-[#708564]/20 px-3 py-1 rounded-full shadow-2xs"
+                                className="inline-flex items-center gap-1.5 text-xs text-[#134630] bg-[#FFFFFF] border border-[#708564]/20 px-3 py-1 rounded-full shadow-2xs"
                               >
                                 <Check className="size-3 text-[#42732E]" />
                                 <span>{hl}</span>
@@ -1364,7 +1395,7 @@ export default function ResortPageContent() {
                           {/* Text Content Layer */}
                           <div className="relative z-10 p-4 sm:p-5 text-white flex flex-col">
                             {/* Title (Full width, bold, radiant) */}
-                            <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#EEF1DE] transition-colors">
+                            <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#F7F5EE] transition-colors">
                               {photo.title}
                             </h4>
 
@@ -1396,8 +1427,8 @@ export default function ResortPageContent() {
                   return (
                     <div key={ch.id} className="space-y-8">
                       {/* Chapter Overview Box */}
-                      <div className="glassmorphism rounded-3xl p-8 border border-[#708564]/20 shadow-sm bg-[#FBFAF6]">
-                        <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#EEF1DE] px-3 py-1 rounded-full border border-[#708564]/30">
+                      <div className="glassmorphism rounded-3xl p-8 border border-[#708564]/20 shadow-sm bg-[#FFFFFF]">
+                        <span className="font-mono text-xs uppercase font-extrabold tracking-widest text-[#134630] bg-[#F7F5EE] px-3 py-1 rounded-full border border-[#708564]/30">
                           Focusing Chapter {ch.chapterNum}
                         </span>
                         <h3 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#134630] mt-3 mb-2">
@@ -1448,7 +1479,7 @@ export default function ResortPageContent() {
                             {/* Text Content Layer */}
                             <div className="relative z-10 p-4 sm:p-5 text-white flex flex-col">
                               {/* Title (Full width, bold, radiant) */}
-                              <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#EEF1DE] transition-colors">
+                              <h4 className="font-heading text-base sm:text-lg font-bold text-white leading-snug line-clamp-2 group-hover:text-[#F7F5EE] transition-colors">
                                 {photo.title}
                               </h4>
 
@@ -1480,7 +1511,7 @@ export default function ResortPageContent() {
       <section id="zones" className="py-20 border-t border-[#708564]/20 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FBFAF6] px-3.5 py-1 rounded-full border border-[#708564]/30">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#134630] bg-[#FFFFFF] px-3.5 py-1 rounded-full border border-[#708564]/30">
               Zoning Breakdown
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-[#134630] mt-3">
@@ -1493,9 +1524,9 @@ export default function ResortPageContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Zone 1: Elite sports and athletics */}
-            <div className="rounded-3xl border border-[#708564]/20 border-l-4 !border-l-[#42732E] bg-[#FBFAF6] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-xs">
+            <div className="rounded-3xl border border-[#708564]/20 border-l-4 !border-l-[#42732E] bg-[#FFFFFF] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-xs">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-[#708564]/20">
-                <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 flex items-center justify-center text-[#42732E]">
+                <div className="size-12 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 flex items-center justify-center text-[#42732E]">
                   <Flag className="size-6" />
                 </div>
                 <div>
@@ -1530,9 +1561,9 @@ export default function ResortPageContent() {
             </div>
 
             {/* Zone 2: Aquatic leisure and wellness */}
-            <div className="rounded-3xl border border-[#708564]/20 border-l-4 !border-l-[#708564] bg-[#FBFAF6] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-xs">
+            <div className="rounded-3xl border border-[#708564]/20 border-l-4 !border-l-[#708564] bg-[#FFFFFF] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-xs">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-[#708564]/20">
-                <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 flex items-center justify-center text-[#708564]">
+                <div className="size-12 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 flex items-center justify-center text-[#708564]">
                   <Waves className="size-6" />
                 </div>
                 <div>
@@ -1567,9 +1598,9 @@ export default function ResortPageContent() {
             </div>
 
             {/* Zone 3: Entertainment and hospitality */}
-            <div className="rounded-3xl border border-[#708564]/20 border-l-4 !border-l-[#134630] bg-[#FBFAF6] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-xs">
+            <div className="rounded-3xl border border-[#708564]/20 border-l-4 !border-l-[#134630] bg-[#FFFFFF] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-xs">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-[#708564]/20">
-                <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 flex items-center justify-center text-[#134630]">
+                <div className="size-12 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 flex items-center justify-center text-[#134630]">
                   <Home className="size-6" />
                 </div>
                 <div>
@@ -1608,9 +1639,9 @@ export default function ResortPageContent() {
             </div>
 
             {/* Zone 4: Nature and agro-ecosystem */}
-            <div className="rounded-3xl border border-[#708564]/20 border-l-4 !border-l-[#42732E] bg-[#FBFAF6] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-xs">
+            <div className="rounded-3xl border border-[#708564]/20 border-l-4 !border-l-[#42732E] bg-[#FFFFFF] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-xs">
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-[#708564]/20">
-                <div className="size-12 rounded-xl bg-[#EEF1DE] border border-[#708564]/30 flex items-center justify-center text-[#42732E]">
+                <div className="size-12 rounded-xl bg-[#F7F5EE] border border-[#708564]/30 flex items-center justify-center text-[#42732E]">
                   <Sprout className="size-6" />
                 </div>
                 <div>
@@ -1649,7 +1680,7 @@ export default function ResortPageContent() {
           <div className="rounded-3xl bg-[#134630] text-white p-8 sm:p-12 shadow-2xl border border-[#708564]/30">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="max-w-2xl">
-                <span className="inline-block text-xs uppercase tracking-widest text-[#EEF1DE] font-bold bg-white/10 px-3.5 py-1 rounded-full mb-3 border border-white/15">
+                <span className="inline-block text-xs uppercase tracking-widest text-[#F7F5EE] font-bold bg-white/10 px-3.5 py-1 rounded-full mb-3 border border-white/15">
                   Site Visit &amp; Tours
                 </span>
                 <h3 className="font-heading text-2xl sm:text-4xl font-extrabold text-white mb-2">
@@ -1670,7 +1701,7 @@ export default function ResortPageContent() {
                 </Link>
                 <Link
                   href="/invest"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#EEF1DE]/40 bg-[#FBFAF6]/10 px-6 py-3.5 text-xs uppercase tracking-wider font-bold text-[#EEF1DE] hover:bg-[#FBFAF6]/20 transition-all text-center"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#F7F5EE]/40 bg-[#FFFFFF]/10 px-6 py-3.5 text-xs uppercase tracking-wider font-bold text-[#F7F5EE] hover:bg-[#FFFFFF]/20 transition-all text-center"
                 >
                   <span>See Ownership Options</span>
                 </Link>
@@ -1695,10 +1726,10 @@ export default function ResortPageContent() {
             {/* Top Lightbox Bar */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-[#708564]/30 bg-[#134630] text-white">
               <div className="flex items-center gap-3">
-                <span className="text-xs uppercase font-extrabold tracking-widest text-[#EEF1DE] bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                <span className="text-xs uppercase font-extrabold tracking-widest text-[#F7F5EE] bg-white/10 px-3 py-1 rounded-full border border-white/10">
                   {selectedPhoto.tag}
                 </span>
-                <span className="text-xs text-[#EEF1DE]/70 font-mono">
+                <span className="text-xs text-[#F7F5EE]/70 font-mono">
                   {selectedIndex + 1} of {currentPhotoList.length}
                 </span>
               </div>
@@ -1754,7 +1785,7 @@ export default function ResortPageContent() {
             <div className="p-6 bg-[#134630] text-white border-t border-[#708564]/30">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FBFAF6] mb-0.5">
+                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-[#FFFFFF] mb-0.5">
                     {selectedPhoto.title}
                   </h3>
                   {selectedPhoto.desc && (

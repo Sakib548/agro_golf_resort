@@ -5,39 +5,40 @@
   --font-serif: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
 
-  --color-outer: #708564;
-  --color-forest: #42732E;
-  --color-pale-sage: #EEF1DE;
-  --color-warm-white: #FBFAF6;
-  --color-dark-emerald: #134630;
-  --color-dark-olive: #134630;
+  --color-outer: #7B8F7D;
+  --color-forest: #2B5738;
+  --color-pale-sage: #F7F5EE;
+  --color-warm-white: #FFFFFF;
+  --color-dark-emerald: #143224;
+  --color-dark-olive: #143224;
 }
 
 :root {
-  --bg: #EEF1DE;
-  /* Pale Sage */
-  --outer: #708564;
-  /* Muted Sage Green */
-  --surface: #FBFAF6;
-  /* Warm Off-White */
-  --ink: #134630;
+  --bg: #F7F5EE;
+  /* Architectural Warm Ivory Linen */
+  --outer: #7B8F7D;
+  /* Soft Muted Sage */
+  --surface: #FFFFFF;
+  /* Pure Clean White */
+  --ink: #143224;
+  /* Deep Botanical Emerald */
+  --mute: #6C7D6E;
+  /* Muted Sage-Gray */
+  --green: #2B5738;
+  /* Rich Forest Green */
+  --green-dark: #143224;
   /* Deep Forest Emerald */
-  --mute: #708564;
-  /* Muted Sage */
-  --green: #42732E;
-  /* Forest / Leaf Green */
-  --green-dark: #134630;
-  /* Deep Forest Emerald */
-  --sage: #708564;
-  /* Muted Sage */
-  --lime: #42732E;
+  --sage: #DFE7DD;
+  /* Soft Sage Tint */
+  --lime: #2B5738;
   /* Forest Green */
-  --lime-hover: #365e25;
-  --gold: #42732E;
+  --lime-hover: #22472D;
+  --gold: #2B5738;
   /* Forest Green accent */
-  --gold-light: #708564;
-  --line: #708564;
-  --hero: #134630;
+  --gold-light: #EFE9DC;
+  /* Warm Sand accent */
+  --line: rgba(20, 50, 36, 0.12);
+  --hero: #143224;
   /* Deep Forest Emerald */
 }
 
@@ -79,16 +80,16 @@ h4,
 }
 
 ::-webkit-scrollbar-track {
-  background: #EEF1DE;
+  background: #F7F5EE;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #708564;
+  background: #7B8F7D;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #42732E;
+  background: #2B5738;
 }
 
 /* Focus outline */
@@ -96,53 +97,169 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #42732E;
+  outline: 3px solid #2B5738;
   outline-offset: 2px;
+}
+
+/* ========================================================
+   MILKY FROSTED SPATIAL GLASS (Opal Diffusion)
+   ======================================================== */
+.card-glass {
+  position: relative;
+  /* Dense milky frosted diffusion: only soft ambient colors seep through, no sharp image details */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(248, 250, 246, 0.78) 45%,
+    rgba(235, 244, 236, 0.70) 100%
+  ) !important;
+  backdrop-filter: blur(50px) saturate(190%) brightness(105%);
+  -webkit-backdrop-filter: blur(50px) saturate(190%) brightness(105%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow:
+    0 24px 48px -10px rgba(19, 70, 48, 0.16),
+    0 8px 18px -4px rgba(19, 70, 48, 0.08),
+    inset 0 2px 2.5px 0 rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px 0 rgba(112, 133, 100, 0.15) !important;
+  border-radius: 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #143224 !important;
+}
+
+.card-glass:hover {
+  transform: translateY(-4px) scale(1.01);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(250, 252, 248, 0.85) 45%,
+    rgba(238, 248, 240, 0.78) 100%
+  ) !important;
+  border-color: #FFFFFF !important;
+  box-shadow:
+    0 32px 64px -12px rgba(19, 70, 48, 0.22),
+    0 12px 24px -4px rgba(19, 70, 48, 0.10),
+    inset 0 2.5px 3px 0 rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px 0 rgba(112, 133, 100, 0.18) !important;
+}
+
+/* Crisp Dark Botanical Typography on Milky Frosted Glass */
+.card-glass h3,
+.card-glass h4 {
+  color: #143224 !important;
+  font-weight: 800;
+  text-shadow: none;
+}
+
+.card-glass p {
+  color: rgba(30, 50, 40, 0.82) !important;
+  text-shadow: none;
+}
+
+/* Luminous Glass Icon Pill Tile */
+.card-glass .icon-glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(238, 244, 236, 0.75) 50%,
+    rgba(225, 235, 222, 0.85) 100%
+  ) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 1) !important;
+  box-shadow:
+    0 8px 18px -4px rgba(19, 70, 48, 0.14),
+    inset 0 2px 2px 0 rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px 0 rgba(112, 133, 100, 0.2) !important;
+  color: #2B5738 !important;
+}
+
+.card-glass .icon-glass svg {
+  color: #2B5738 !important;
+  filter: none;
+}
+
+.card-glass-dark {
+  position: relative;
+  background: linear-gradient(135deg, rgba(20, 50, 36, 0.88) 0%, rgba(15, 38, 27, 0.75) 100%) !important;
+  backdrop-filter: blur(50px) saturate(190%);
+  -webkit-backdrop-filter: blur(50px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow:
+    0 20px 40px -8px rgba(0, 0, 0, 0.35),
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.25) !important;
+  border-radius: 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-glass-dark:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, rgba(20, 50, 36, 0.94) 0%, rgba(15, 38, 27, 0.85) 100%) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow:
+    0 28px 56px -10px rgba(0, 0, 0, 0.45),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 0.6) !important;
 }
 
 /* Warm Off-White Card / Glassmorphism Utility Classes */
 .glassmorphism {
-  background: #FBFAF6 !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(112, 133, 100, 0.25) !important;
-  box-shadow: 0 8px 30px 0 rgba(19, 70, 48, 0.05) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(247, 245, 238, 0.52) 45%, rgba(223, 231, 221, 0.4) 100%) !important;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow:
+    0 16px 36px -8px rgba(20, 50, 36, 0.08),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 1) !important;
+  border-radius: 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glassmorphism:hover {
-  background: #ffffff !important;
-  border-color: rgba(66, 115, 46, 0.45) !important;
-  box-shadow: 0 12px 36px 0 rgba(19, 70, 48, 0.1) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(247, 245, 238, 0.65) 100%) !important;
+  border-color: #ffffff !important;
+  box-shadow:
+    0 24px 48px -10px rgba(20, 50, 36, 0.14),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 1) !important;
 }
 
 .glassmorphism-dark {
-  background: rgba(19, 70, 48, 0.92) !important;
+  background: rgba(20, 50, 36, 0.94) !important;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(238, 241, 222, 0.2) !important;
+  border: 1px solid rgba(247, 245, 238, 0.15) !important;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35) !important;
 }
 
 .glassmorphism-pill {
-  background: #FBFAF6 !important;
-  border: 1px solid rgba(112, 133, 100, 0.3) !important;
-  box-shadow: 0 2px 8px 0 rgba(19, 70, 48, 0.05) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 12px 0 rgba(20, 50, 36, 0.05), inset 0 1px 2px 0 rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Neo-Minimalist Bento Card & Glow Utilities */
 .bento-card {
   position: relative;
-  background-color: #FBFAF6;
-  border: 1px solid rgba(112, 133, 100, 0.25);
-  border-radius: 1.5rem;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 20px -2px rgba(19, 70, 48, 0.04);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(247, 245, 238, 0.52) 50%, rgba(223, 231, 221, 0.38) 100%);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 14px 32px -6px rgba(20, 50, 36, 0.07),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px 0 rgba(123, 143, 125, 0.15);
 }
 
 .bento-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(66, 115, 46, 0.5);
-  box-shadow: 0 20px 40px -10px rgba(19, 70, 48, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(247, 245, 238, 0.65) 100%);
+  border-color: #ffffff;
+  box-shadow:
+    0 24px 48px -10px rgba(20, 50, 36, 0.12),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 1);
 }
 
 .bento-glow-gold:hover {
@@ -151,8 +268,8 @@ textarea:focus-visible {
 }
 
 .bento-glow-dark {
-  background: rgba(19, 70, 48, 0.95);
-  border: 1px solid rgba(238, 241, 222, 0.2);
+  background: rgba(20, 50, 36, 0.95);
+  border: 1px solid rgba(247, 245, 238, 0.15);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -160,10 +277,81 @@ textarea:focus-visible {
 
 .bento-glow-dark:hover {
   transform: translateY(-4px);
-  border-color: rgba(66, 115, 46, 0.6);
+  border-color: rgba(43, 87, 56, 0.6);
   box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.4);
 }
 
 .neo-hairline {
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px 0 rgba(19, 70, 48, 0.04);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px 0 rgba(20, 50, 36, 0.04);
+}
+
+/* ========================================================
+   FROSTED GLASS ICON CONTAINERS & RIBBONS (Prakriti Inspired)
+   ======================================================== */
+.icon-glass {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(223, 231, 221, 0.8) 0%, rgba(247, 245, 238, 0.55) 50%, rgba(208, 222, 205, 0.75) 100%) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow:
+    0 10px 25px -4px rgba(20, 50, 36, 0.12),
+    0 2px 6px 0 rgba(20, 50, 36, 0.05),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 1),
+    inset 0 -1.5px 2px 0 rgba(112, 133, 100, 0.25) !important;
+  border-radius: 1.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #143224;
+}
+
+.icon-glass:hover {
+  transform: translateY(-3px) scale(1.08);
+  background: linear-gradient(135deg, rgba(198, 218, 195, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%) !important;
+  border-color: #ffffff !important;
+  box-shadow:
+    0 16px 32px -4px rgba(20, 50, 36, 0.18),
+    0 4px 10px 0 rgba(20, 50, 36, 0.08),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 1) !important;
+  color: #2B5738;
+}
+
+.icon-glass-dark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(130% 130% at 25% 20%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.06) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 10px 25px -4px rgba(0, 0, 0, 0.35),
+    inset 0 1.5px 2.5px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #FFFFFF;
+}
+
+.icon-glass-dark:hover {
+  transform: translateY(-2px) scale(1.06);
+  background: radial-gradient(130% 130% at 25% 20%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.12) 100%);
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 16px 32px -4px rgba(0, 0, 0, 0.45),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 0.8);
+}
+
+.glass-ribbon {
+  background: radial-gradient(120% 120% at 30% 20%, rgba(255, 255, 255, 0.75) 0%, rgba(247, 245, 238, 0.4) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 20px 40px -8px rgba(20, 50, 36, 0.08),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 0.95);
+  border-radius: 2rem;
 }
