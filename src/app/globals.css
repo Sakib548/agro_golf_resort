@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-heading: "Fraunces", Georgia, serif;
-  --font-serif: "Fraunces", Georgia, serif;
+  --font-heading: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
 
   --color-outer: #708564;
@@ -14,20 +14,31 @@
 }
 
 :root {
-  --bg: #EEF1DE; /* Pale Sage */
-  --outer: #708564; /* Muted Sage Green */
-  --surface: #FBFAF6; /* Warm Off-White */
-  --ink: #134630; /* Deep Forest Emerald */
-  --mute: #708564; /* Muted Sage */
-  --green: #42732E; /* Forest / Leaf Green */
-  --green-dark: #134630; /* Deep Forest Emerald */
-  --sage: #708564; /* Muted Sage */
-  --lime: #42732E; /* Forest Green */
+  --bg: #EEF1DE;
+  /* Pale Sage */
+  --outer: #708564;
+  /* Muted Sage Green */
+  --surface: #FBFAF6;
+  /* Warm Off-White */
+  --ink: #134630;
+  /* Deep Forest Emerald */
+  --mute: #708564;
+  /* Muted Sage */
+  --green: #42732E;
+  /* Forest / Leaf Green */
+  --green-dark: #134630;
+  /* Deep Forest Emerald */
+  --sage: #708564;
+  /* Muted Sage */
+  --lime: #42732E;
+  /* Forest Green */
   --lime-hover: #365e25;
-  --gold: #42732E; /* Forest Green accent */
+  --gold: #42732E;
+  /* Forest Green accent */
   --gold-light: #708564;
   --line: #708564;
-  --hero: #134630; /* Deep Forest Emerald */
+  --hero: #134630;
+  /* Deep Forest Emerald */
 }
 
 html {
@@ -43,14 +54,18 @@ body {
   letter-spacing: -0.01em;
 }
 
-h1, h2, h3, h4, .font-heading {
-  font-family: "Fraunces", Georgia, serif;
+h1,
+h2,
+h3,
+h4,
+.font-heading {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   letter-spacing: -0.015em;
   font-feature-settings: "kern" 1;
 }
 
 .font-serif-luxury {
-  font-family: "Fraunces", Georgia, serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   letter-spacing: -0.015em;
 }
 
@@ -62,19 +77,25 @@ h1, h2, h3, h4, .font-heading {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #EEF1DE;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #708564;
   border-radius: 9999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #42732E;
 }
 
 /* Focus outline */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
   outline: 3px solid #42732E;
   outline-offset: 2px;
 }
@@ -146,6 +167,3 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .neo-hairline {
   box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.8), 0 1px 3px 0 rgba(19, 70, 48, 0.04);
 }
-
-
-

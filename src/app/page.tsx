@@ -60,12 +60,12 @@ const portalCards: PortalCardItem[] = [
     ],
   },
   {
-    title: "Sampan Metro Square",
+    title: "Sampan City End",
     subtitle: "Commercial & Business High-Rise",
     desc: "A state-of-the-art commercial high-rise development featuring modern corporate office floors, a premium retail atrium, and institutional-grade business infrastructure.",
     href: "/portfolio",
     badge: "Commercial High-Rise",
-    image: "/images/portfolio/metro.webp",
+    image: "/images/portfolio/sampan-city-end.webp",
     action: "Explore Metro Square",
   },
   {

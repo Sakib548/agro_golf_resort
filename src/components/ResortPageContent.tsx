@@ -508,14 +508,6 @@ const galleryPhotos: GalleryPhoto[] = [
     desc: "Stunning night illumination with full moon, shimmering fountains, and glowing neon resort attractions.",
   },
   {
-    id: "le-5",
-    title: "Aerial 3D Master View & Amusement Park",
-    category: "leisure",
-    src: "/images/1.webp",
-    tag: "3D Master View",
-    desc: "Architectural aerial rendering showing signature resort hotel, water park, central lake, and golf fairways.",
-  },
-  {
     id: "le-6",
     title: "Farm-to-Table Gourmet Restaurant",
     category: "leisure",
@@ -643,22 +635,6 @@ const galleryPhotos: GalleryPhoto[] = [
     src: "/images/lake-surrounded-by-greenery-blue-sky-sunlight-daytime.webp",
     tag: "Central Lake",
     desc: "One of 10 preserved natural freshwater lakes reflecting clear blue skies, bordered by lush tropical foliage and walking trails.",
-  },
-  {
-    id: "le-22",
-    title: "Waterfront Resort Architectural Facade",
-    category: "leisure",
-    src: "/images/Web-1.webp",
-    tag: "Waterfront View",
-    desc: "Architectural elevation of the primary resort hospitality complex overlooking water reflection pools.",
-  },
-  {
-    id: "le-23",
-    title: "Lakeside Resort Grounds & Walking Corridors",
-    category: "leisure",
-    src: "/images/Web-2.webp",
-    tag: "Resort Grounds",
-    desc: "Masterfully contoured landscaping uniting recreational waterfronts with natural greenery and shaded promenades.",
   },
 
   // ==========================================
