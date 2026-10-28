@@ -456,7 +456,7 @@ export default function InvestSection() {
               </span>
               <h4 className="font-heading text-lg font-bold text-[#134630] mb-2">Visit the Site</h4>
               <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
-                Experience the 100+ acre estate at Podunapur, Moulvibazar Sadar, inspecting ponds, orchards, and golf contours.
+                Experience the 100+ acre estate along Dhaka-Sylhet Highway, inspecting ponds, orchards, and golf contours.
               </p>
             </div>
 

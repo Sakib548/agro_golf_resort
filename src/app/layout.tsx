@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Sub-kabula land share",
     "Agro tourism Bangladesh",
     "Luxury golf resort Moulvibazar",
-    "Podunapur Moulvibazar",
+    "Dhaka-Sylhet Highway",
   ],
   icons: {
     icon: [

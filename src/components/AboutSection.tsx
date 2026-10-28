@@ -21,7 +21,7 @@ export default function AboutSection() {
             About the project
           </h2>
           <p className="text-stone-600 text-base sm:text-lg mt-4 leading-relaxed">
-            Sampan Agro &amp; Golf Resort is an exclusive green sanctuary spanning <strong className="font-semibold text-[#134630]">100+ acres</strong> in Podunapur, Moulvibazar Sadar. It brings together world-class hospitality, an elite sports ecosystem, and high-yield commercial agro-farming in a unified estate.
+            Sampan Agro &amp; Golf Resort is an exclusive green sanctuary spanning <strong className="font-semibold text-[#134630]">100+ acres</strong> along Dhaka-Sylhet Highway. It brings together world-class hospitality, an elite sports ecosystem, and high-yield commercial agro-farming in a unified estate.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export default function AboutSection() {
           <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-auto max-w-2xl">
             <div className="rounded-2xl p-5 sm:p-7 text-white bg-[#134630]/90 backdrop-blur-md border border-[#708564]/40">
               <span className="inline-block text-xs uppercase tracking-wider font-bold text-[#F7F5EE] bg-white/10 backdrop-blur-md px-3 py-1 rounded-full mb-2 border border-white/15">
-                Podunapur, Moulvibazar
+                Dhaka-Sylhet Highway
               </span>
               <h3 className="font-heading text-xl sm:text-3xl font-bold leading-tight text-[#FFFFFF]">
                 Where untouched nature meets five-star luxury.
@@ -61,7 +61,7 @@ export default function AboutSection() {
 
           <div className="rounded-2xl border border-[#708564]/20 border-l-4 !border-l-[#708564] bg-[#FFFFFF] p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 shadow-xs">
             <span className="text-xs uppercase font-bold text-[#708564] tracking-wider">The Location</span>
-            <h4 className="font-heading text-xl font-bold text-[#134630] mt-2 mb-2">Podunapur, Moulvibazar</h4>
+            <h4 className="font-heading text-xl font-bold text-[#134630] mt-2 mb-2">Dhaka-Sylhet Highway</h4>
             <p className="text-stone-600 text-sm leading-relaxed">
               Nestled amidst the serene rolling topography and tea valleys of Moulvibazar Sadar, spanning an expansive 100+ acres with direct highway connectivity.
             </p>

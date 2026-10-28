@@ -289,7 +289,7 @@ export default function ResortZonesSection() {
                 className="object-cover"
               />
               <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md rounded-xl p-3 text-white text-xs sm:text-sm font-semibold flex items-center justify-between">
-                <span>Lakeside Villa Living &bull; Podunapur</span>
+                <span>Lakeside Villa Living &bull; Dhaka-Sylhet Highway</span>
                 <span className="text-[#F7F5EE]">100% Registered</span>
               </div>
             </div>

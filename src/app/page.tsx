@@ -199,7 +199,7 @@ export default function Home() {
                   Schedule Your Inspection
                 </span>
                 <h3 className="font-heading text-2xl sm:text-4xl font-extrabold text-white mb-2">
-                  Plan your visit to Podunapur, Moulvibazar
+                  Plan your visit to Dhaka-Sylhet Highway
                 </h3>
                 <p className="text-[#F7F5EE]/90 text-sm sm:text-base leading-relaxed">
                   Walk the 100+ acre grounds in person. Inspect our natural ponds, championship golf contours, and thriving mango orchards with our senior advisory team.

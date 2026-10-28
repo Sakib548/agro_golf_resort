@@ -872,7 +872,7 @@ export default function ResortPageContent() {
           <div className="max-w-3xl mb-10">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-4 py-1.5 text-xs uppercase tracking-widest font-bold text-[#F7F5EE] border border-white/15 mb-4">
               <span className="size-2 rounded-full bg-[#42732E] animate-pulse" />
-              <span>Podunapur, Moulvibazar Sadar &bull; 100+ Acres</span>
+              <span>Dhaka-Sylhet Highway &bull; 100+ Acres</span>
             </div>
             <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-5 leading-none">
               The Resort
@@ -1687,7 +1687,7 @@ export default function ResortPageContent() {
                   Experience The Resort in Person
                 </h3>
                 <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
-                  Walk through the nine-hole course, view our authentic thatched cottages, taste fresh farm-to-table harvests, and meet our senior property counselors at Podunapur, Moulvibazar.
+                  Walk through the nine-hole course, view our authentic thatched cottages, taste fresh farm-to-table harvests, and meet our senior property counselors at Dhaka-Sylhet Highway.
                 </p>
               </div>
 

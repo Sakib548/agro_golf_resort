@@ -22,7 +22,7 @@ const faqItems = [
   {
     question: "Can I schedule a site visit before deciding?",
     answer:
-      "Absolutely. We actively encourage prospective owners and club members to visit our 100+ acre grounds in Podunapur, Moulvibazar Sadar. We can arrange guided site tours and transport coordination from Dhaka or Sylhet.",
+      "Absolutely. We actively encourage prospective owners and club members to visit our 100+ acre grounds along Dhaka-Sylhet Highway. We can arrange guided site tours and transport coordination from Dhaka or Sylhet.",
   },
   {
     question: "Are there prayer facilities and family-safe amenities?",
@@ -67,7 +67,7 @@ export default function ContactSection() {
             Visit or enquire
           </h2>
           <p className="text-[#134630]/80 text-base sm:text-lg mt-3 leading-relaxed">
-            Our advisory team is ready to welcome you at our Bashundhara corporate head office in Dhaka, or coordinate your private guided tour to Podunapur, Moulvibazar.
+            Our advisory team is ready to welcome you at our Bashundhara corporate head office in Dhaka, or coordinate your private guided tour to Dhaka-Sylhet Highway.
           </p>
         </div>
 
