@@ -976,7 +976,7 @@ export default function ResortPageContent() {
                 Lakeside Evenings
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Concerts at the MP Centre, evening bonfires, sizzling barbecue zones, 3D cinema, and starlit open-air music.
+                Evening bonfires, sizzling barbecue zones, 3D cinema, and starlit open-air music.
               </p>
             </div>
 
@@ -988,7 +988,7 @@ export default function ResortPageContent() {
                 Aquatics &amp; Wellness
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Premium European spa and salon, 4 swimming pools, 10 natural ponds, gym, and tranquil trails winding through greenery.
+                Premium  spa and salon, 4 swimming pools, 10 natural ponds, gym, and tranquil trails winding through greenery.
               </p>
             </div>
           </div>
@@ -1256,11 +1256,10 @@ export default function ResortPageContent() {
                 <button
                   type="button"
                   onClick={() => handleCategorySelect("all")}
-                  className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-200 ${
-                    activeTab === "all"
-                      ? "bg-[#42732E] text-white font-semibold border border-[#42732E] shadow-sm"
-                      : "bg-[#FFFFFF] border border-[#708564]/30 text-[#134630] font-medium hover:bg-[#F7F5EE] hover:border-[#708564]/50"
-                  }`}
+                  className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-200 ${activeTab === "all"
+                    ? "bg-[#42732E] text-white font-semibold border border-[#42732E] shadow-sm"
+                    : "bg-[#FFFFFF] border border-[#708564]/30 text-[#134630] font-medium hover:bg-[#F7F5EE] hover:border-[#708564]/50"
+                    }`}
                 >
                   <Sparkles className={`size-3.5 shrink-0 ${activeTab === "all" ? "text-white" : "text-[#42732E]"}`} />
                   <span>All Chapters</span>
@@ -1279,11 +1278,10 @@ export default function ResortPageContent() {
                       key={ch.id}
                       type="button"
                       onClick={() => handleCategorySelect(ch.id)}
-                      className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-200 ${
-                        isActive
-                          ? "bg-[#42732E] text-white font-semibold border border-[#42732E] shadow-sm"
-                          : "bg-[#FFFFFF] border border-[#708564]/30 text-[#134630] font-medium hover:bg-[#F7F5EE] hover:border-[#708564]/50"
-                      }`}
+                      className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm whitespace-nowrap shrink-0 transition-all duration-200 ${isActive
+                        ? "bg-[#42732E] text-white font-semibold border border-[#42732E] shadow-sm"
+                        : "bg-[#FFFFFF] border border-[#708564]/30 text-[#134630] font-medium hover:bg-[#F7F5EE] hover:border-[#708564]/50"
+                        }`}
                     >
                       <ChapterIcon className={`size-3.5 shrink-0 ${isActive ? "text-white" : "text-[#42732E]"}`} />
                       <span>{ch.chapterNum}. {ch.navLabel}</span>
