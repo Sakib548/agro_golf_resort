@@ -192,6 +192,150 @@ textarea:focus-visible {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ========================================================
+   FROSTED GREENISH BLUR GLASS (Custom Preview Card)
+   Using the user's reference blurry dark green texture
+   ======================================================== */
+.card-glass-green {
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(19, 70, 48, 0.20) 40%, rgba(10, 32, 20, 0.60) 100%),
+    url('/images/card-blur-green.webp') center/cover no-repeat !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow:
+    0 24px 50px -10px rgba(0, 0, 0, 0.42),
+    0 8px 18px -4px rgba(0, 0, 0, 0.20),
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.30) !important;
+  border-radius: 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #FFFFFF !important;
+  overflow: hidden;
+}
+
+.card-glass-green:hover {
+  transform: translateY(-4px) scale(1.01);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24) 0%, rgba(28, 88, 62, 0.25) 40%, rgba(14, 45, 28, 0.65) 100%),
+    url('/images/card-blur-green.webp') center/cover no-repeat !important;
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  box-shadow:
+    0 32px 64px -12px rgba(0, 0, 0, 0.50),
+    0 12px 24px -4px rgba(0, 0, 0, 0.25),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 0.70),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.35) !important;
+}
+
+.card-glass-green h3,
+.card-glass-green h4 {
+  color: #FFFFFF !important;
+  font-weight: 800;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.card-glass-green p {
+  color: rgba(247, 245, 238, 0.92) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.card-glass-green .icon-glass {
+  background: linear-gradient(
+    135deg,
+    rgba(254, 240, 138, 0.38) 0%,
+    rgba(217, 119, 6, 0.22) 50%,
+    rgba(161, 98, 7, 0.32) 100%
+  ) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(250, 204, 21, 0.60) !important;
+  box-shadow:
+    0 10px 22px -4px rgba(0, 0, 0, 0.38),
+    0 0 16px 0 rgba(234, 179, 8, 0.25),
+    inset 0 1.5px 2px 0 rgba(255, 250, 220, 0.80),
+    inset 0 -1.5px 2px 0 rgba(146, 64, 14, 0.35) !important;
+  color: #FEF9C3 !important;
+  transition: all 0.35s ease;
+}
+
+.card-glass-green .icon-glass svg {
+  color: #FEF9C3 !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 4px rgba(250, 204, 21, 0.35));
+}
+
+.card-glass-green:hover .icon-glass {
+  transform: translateY(-2px) scale(1.05);
+  background: linear-gradient(
+    135deg,
+    rgba(254, 240, 138, 0.50) 0%,
+    rgba(234, 179, 8, 0.30) 50%,
+    rgba(180, 83, 9, 0.40) 100%
+  ) !important;
+  border-color: rgba(253, 224, 71, 0.85) !important;
+  box-shadow:
+    0 14px 28px -4px rgba(0, 0, 0, 0.42),
+    0 0 22px 0 rgba(250, 204, 21, 0.45),
+    inset 0 2px 2.5px 0 rgba(255, 255, 235, 0.90) !important;
+}
+
+/* Alternative: Left Photo variant (Teal/Emerald Bokeh) */
+.card-glass-teal {
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(1, 159, 137, 0.18) 40%, rgba(1, 21, 32, 0.65) 100%),
+    url('/images/card-blur-teal.webp') center/cover no-repeat !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow:
+    0 24px 50px -10px rgba(0, 0, 0, 0.42),
+    0 8px 18px -4px rgba(0, 0, 0, 0.20),
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.30) !important;
+  border-radius: 1.75rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #FFFFFF !important;
+  overflow: hidden;
+}
+
+.card-glass-teal:hover {
+  transform: translateY(-4px) scale(1.01);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24) 0%, rgba(1, 159, 137, 0.24) 40%, rgba(1, 21, 32, 0.70) 100%),
+    url('/images/card-blur-teal.webp') center/cover no-repeat !important;
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  box-shadow:
+    0 32px 64px -12px rgba(0, 0, 0, 0.50),
+    0 12px 24px -4px rgba(0, 0, 0, 0.25),
+    inset 0 2px 3px 0 rgba(255, 255, 255, 0.70) !important;
+}
+
+.card-glass-teal h3,
+.card-glass-teal h4 {
+  color: #FFFFFF !important;
+  font-weight: 800;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.card-glass-teal p {
+  color: rgba(247, 245, 238, 0.92) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.card-glass-teal .icon-glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.30) 0%,
+    rgba(255, 255, 255, 0.12) 100%
+  ) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+  color: #F7F5EE !important;
+}
+
+.card-glass-teal .icon-glass svg {
+  color: #F7F5EE !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
 .card-glass-dark:hover {
   transform: translateY(-4px);
   background: linear-gradient(135deg, rgba(20, 50, 36, 0.94) 0%, rgba(15, 38, 27, 0.85) 100%) !important;

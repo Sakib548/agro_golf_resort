@@ -111,42 +111,42 @@ export default function HeroSection() {
         </div>
 
         <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-          <div className="card-glass p-7 transition-all duration-300">
+          <div className="card-glass-green p-7 transition-all duration-300">
             <div className="icon-glass size-14 mb-5">
-              <Flag className="size-6 text-[#2B5738]" />
+              <Flag className="size-6 text-[#FEF9C3]" />
             </div>
-            <h3 className="font-heading text-xl font-bold text-[#143224] mb-2">Golf Lifestyle</h3>
-            <p className="text-[#143224]/80 text-sm leading-relaxed">
+            <h3 className="font-heading text-xl font-bold text-white mb-2">Golf Lifestyle</h3>
+            <p className="text-[#F7F5EE]/85 text-sm leading-relaxed">
               Nine holes, short and long driving ranges, professional trainers, tournaments, and elite corporate outings.
             </p>
           </div>
 
-          <div className="card-glass p-7 transition-all duration-300">
+          <div className="card-glass-green p-7 transition-all duration-300">
             <div className="icon-glass size-14 mb-5">
-              <Sprout className="size-6 text-[#2B5738]" />
+              <Sprout className="size-6 text-[#FEF9C3]" />
             </div>
-            <h3 className="font-heading text-xl font-bold text-[#143224] mb-2">Agro-Farming</h3>
-            <p className="text-[#143224]/80 text-sm leading-relaxed">
+            <h3 className="font-heading text-xl font-bold text-white mb-2">Agro-Farming</h3>
+            <p className="text-[#F7F5EE]/85 text-sm leading-relaxed">
               Organic farming, dairy, and orchards of sweet mango, dragon fruit, and malta, served organic farm-to-table.
             </p>
           </div>
 
-          <div className="card-glass p-7 transition-all duration-300">
+          <div className="card-glass-green p-7 transition-all duration-300">
             <div className="icon-glass size-14 mb-5">
-              <Home className="size-6 text-[#2B5738]" />
+              <Home className="size-6 text-[#FEF9C3]" />
             </div>
-            <h3 className="font-heading text-xl font-bold text-[#143224] mb-2">Hospitality</h3>
-            <p className="text-[#143224]/80 text-sm leading-relaxed">
+            <h3 className="font-heading text-xl font-bold text-white mb-2">Hospitality</h3>
+            <p className="text-[#F7F5EE]/85 text-sm leading-relaxed">
               Luxury villas, cottages, wellness spa, pools, kayaking, cinema, and lakeside amphitheatre.
             </p>
           </div>
 
-          <div className="card-glass p-7 transition-all duration-300">
+          <div className="card-glass-green p-7 transition-all duration-300">
             <div className="icon-glass size-14 mb-5">
-              <FileCheck className="size-6 text-[#2B5738]" />
+              <FileCheck className="size-6 text-[#FEF9C3]" />
             </div>
-            <h3 className="font-heading text-xl font-bold text-[#143224] mb-2">Secure Land</h3>
-            <p className="text-[#143224]/80 text-sm leading-relaxed">
+            <h3 className="font-heading text-xl font-bold text-white mb-2">Secure Land</h3>
+            <p className="text-[#F7F5EE]/85 text-sm leading-relaxed">
               Real land share with 100% sub-kabula deed registration in your name, professionally managed by Sampan Group.
             </p>
           </div>
